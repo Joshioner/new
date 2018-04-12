@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@drawable/shape_corner"
+    >
+
+   <RelativeLayout
+       android:id="@+id/relative_1"
+       android:layout_width="110dp"
+       android:layout_height="wrap_content"
+       >
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/pharmacy_logo"
+        android:layout_marginLeft="20dp"
+        />
+   </RelativeLayout>
+    <RelativeLayout
+        android:layout_toRightOf="@+id/relative_1"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+       <LinearLayout android:id="@+id/linearLayout_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        >
+        <TextView
+            android:id="@+id/pharmacy_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="奉生大药店"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            />
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout_02"
+            android:layout_below="@+id/linearLayout_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+           <ImageView
+               android:layout_width="18dp"
+               android:layout_height="18dp"
+               android:src="@mipmap/icon_time"
+               />
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30分钟"
+                android:textColor="@color/text_gray"
+                android:textSize="12dp"
+                android:layout_marginLeft="8dp"
+                />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/icon_distance"
+                />
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="853m"
+                android:textColor="@color/text_gray"
+                android:textSize="12dp"
+                android:layout_marginLeft="8dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="20dp"
+            >
+            <TextView
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="起送￥0"
+                android:textColor="@color/text_gray"
+                android:textSize="12dp"
+                />
+            <TextView
+                android:id="@+id/distribution"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="配送￥8"
+                android:textColor="@color/text_gray"
+                android:layout_marginLeft="20dp"
+                android:textSize="12dp"
+                />
+            <TextView
+                android:id="@+id/average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人均￥38"
+                android:textColor="@color/text_gray"
+                android:layout_marginLeft="20dp"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

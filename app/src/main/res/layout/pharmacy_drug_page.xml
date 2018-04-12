@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/general_background"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_gradient">
+            <RelativeLayout
+                android:id="@+id/relative_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="36dp"
+                android:layout_alignParentTop="true">
+                <ImageView
+                    android:id="@+id/icon_more"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="24dp"
+                    android:src="@mipmap/icon_back"
+                    android:layout_alignBottom="@+id/textView2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="居家药房"
+                    android:textSize="18dp"
+                    android:layout_centerHorizontal="true"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relative_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relative_01"
+                >
+                <ImageView
+                    android:id="@+id/pharmacySearchBox"
+                    android:layout_width="632dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/pharmacy_searchbox"
+                    />
+            </RelativeLayout>
+
+            <!--<TableLayout-->
+                <!--android:id="@+id/tableLayout"-->
+                <!--android:layout_below="@+id/relative_02"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/white"-->
+                <!--android:stretchColumns="*"-->
+                <!--&gt;-->
+                <!--<TableRow-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/white"-->
+                    <!--&gt;-->
+                    <!--<Button-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="综合排序"-->
+                        <!--android:textColor="@drawable/top_icon_text_selector"-->
+                        <!--android:background="@color/white"-->
+                        <!--/>-->
+                    <!--<Button-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="销量优先"-->
+                        <!--android:textColor="@drawable/top_icon_text_selector"-->
+                        <!--android:background="@color/white"-->
+                        <!--/>-->
+                    <!--<Button-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="信用"-->
+                        <!--android:textColor="@drawable/top_icon_text_selector"-->
+                        <!--android:background="@color/white"-->
+                        <!--/>-->
+                 <!--</TableRow>-->
+            <!--</TableLayout>-->
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabSelectedTextColor="@color/text_pressed"
+                app:tabTextColor="@color/black"
+                >
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="综合排序"
+                    />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="销量优先"
+                    />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="信用"
+                    />
+            </android.support.design.widget.TabLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="@color/bg_gray"
+            >
+
+            <ListView
+                android:id="@+id/drug_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dividerHeight="10dp"
+                >
+            </ListView>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <!--android:layout_gravity="start"-->
+
+
+</LinearLayout>

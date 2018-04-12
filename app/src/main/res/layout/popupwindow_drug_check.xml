@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/general_background">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/bg_white"
+                    android:orientation="vertical">
+                   //批准文号
+                    <RelativeLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/pizhun"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center|left"
+                            android:text="批准文号"
+                            android:textColor="@color/text_gray"
+                            android:textSize="20dp" />
+                        <View
+                            android:layout_below="@+id/pizhun"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/general_background"
+                            />
+                        <TextView
+                            android:id="@+id/pizhun_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="13.83"
+                            android:background="@null"
+                            android:gravity="center|right"
+                            android:textColor="@color/bg_black"
+                            android:textSize="20dp" />
+                    </RelativeLayout>
+                   //产品名称
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="产品名称"
+                            android:gravity="center|left"
+                            android:textColor="@color/text_gray"
+                            android:textSize="20dp" />
+
+
+                        <TextView
+                            android:id="@+id/product_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="13.83"
+                            android:background="@null"
+                            android:gravity="center|right"
+                            android:textColor="@color/bg_black"
+                            android:textSize="20dp" />
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_below="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/bg_white"
+                    android:orientation="vertical">
+
+                    //剂型
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/type_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="剂型"
+                            android:gravity="center|left"
+                            android:textColor="@color/text_gray"
+                            android:textSize="20dp" />
+
+                        <View
+                            android:layout_below="@+id/type_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/general_background"
+                            />
+                        <TextView
+                            android:id="@+id/jixing"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="13.83"
+                            android:background="@null"
+                            android:gravity="center|right"
+                            android:textColor="@color/bg_black"
+                            android:textSize="20dp" />
+                    </RelativeLayout>
+                    //规格
+                    <RelativeLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/guige_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="规格"
+                            android:gravity="center|left"
+                            android:textColor="@color/text_gray"
+                            android:textSize="20dp" />
+
+                        <View
+                            android:id="@+id/guige_id_line"
+                            android:layout_below="@+id/guige_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/general_background"
+                            />
+                        <TextView
+                            android:id="@+id/guige"
+                            android:layout_below="@id/guige_id_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="13.83"
+                            android:background="@null"
+                            android:gravity="center|left"
+                            android:textColor="@color/bg_black"
+                            android:textSize="20dp" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_below="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/bg_white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/product_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="生产单位"
+                            android:gravity="center|left"
+                            android:textColor="@color/text_gray"
+                            android:textSize="20dp" />
+                        <View
+                            android:layout_below="@+id/product_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/general_background"
+                            />
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+                        <TextView
+                            android:id="@+id/product_address_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="13.83"
+                            android:background="@null"
+                            android:textColor="@color/bg_black"
+                            android:textSize="20dp"
+                            />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/general_background"
+                        />
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="健康小提示"
+                        android:textSize="20dp"
+                        android:textColor="@color/green"
+                        />
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" 正规药品的批准文号与生产单位都是一一对应的"
+                        android:textSize="15dp"
+                        android:textColor="@color/green"
+                        />
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

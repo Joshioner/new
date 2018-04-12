@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="426px"
+                android:background="@mipmap/photo_bg">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="33dp"
+                    android:gravity="center_horizontal"
+                    android:text="我的"
+                    android:textColor="#FFFFFF"
+                    android:textSize="48px"
+                    android:typeface="sans" />
+
+                <com.blk.common.identify.XCRoundImageView
+                    android:id="@+id/XCRoundImageView"
+                    android:layout_width="160px"
+                    android:layout_height="160px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="41dp"
+                    android:background="@mipmap/my_avatar"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50px"
+
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/my_name"
+                    android:textColor="#333333"
+                    android:textSize="36px"
+                    android:typeface="sans" />
+            </RelativeLayout>
+
+
+            <RadioGroup
+                android:id="@+id/mid_bar"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/shape_coener_with_shadow"
+                android:orientation="horizontal"
+              >
+
+                //待收货
+                <RadioButton
+                    android:id="@+id/daishouhuo"
+                    style="@style/tab_menu_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="待收货"
+                    android:textSize="12dp"
+                    android:button="@null"
+                    android:background="@null"
+                    android:drawablePadding="5dp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="@drawable/bottom_icon_text_selector"
+                    android:drawableTop="@drawable/daishouhuo"
+                    android:checked="true"
+                    />
+
+                //收藏夹
+                <RadioButton
+                    android:id="@+id/shoucang"
+                    style="@style/tab_menu_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawablePadding="5dp"
+                    android:layout_marginTop="25dp"
+                    android:drawableTop="@drawable/shou_cang"
+                    android:text="收藏夹"
+                    android:textSize="12dp"
+                    android:textColor="@drawable/bottom_icon_text_selector" />
+
+                //关注店铺
+                <RadioButton
+                    android:id="@+id/dianpu"
+                    style="@style/tab_menu_item"
+                    android:layout_width="0dp"
+                    android:button="@null"
+                    android:background="@null"
+                    android:drawablePadding="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="关注店铺"
+                    android:textSize="12dp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="@drawable/bottom_icon_text_selector"
+                    android:drawableTop="@drawable/dian_pu"
+                    />
+
+                //订单
+                <RadioButton
+                    android:id="@+id/dingdan"
+                    style="@style/tab_menu_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/ding_dan"
+                    android:layout_marginTop="25dp"
+                    android:text="订单"
+                    android:textSize="12dp"
+                    android:textColor="@drawable/bottom_icon_text_selector" />
+
+            </RadioGroup>
+
+
+
+            <!--<com.blk.fragment.CustomViewPager-->
+                <!--android:id="@+id/vpager_me"-->
+                <!--android:background="@color/black"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_gravity="bottom"-->
+                <!--android:layout_below="@+id/mid_bar"-->
+                <!--/>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_gray"
+                >
+
+                <ListView
+                    android:id="@+id/me_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dividerHeight="10dp"
+                    >
+                </ListView>
+
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+</LinearLayout>

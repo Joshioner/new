@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#72DD98</color>
+    <color name="colorPrimaryDark">#72DD98</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="button_fous">#af1e4f</color>
+    <color name="button_nomarl">#b95779</color>
+    <color name="text_milk">#ffffff</color>
+    <color name="font_common_1">#424242</color>
+    <color name="commom_background">#f3f3f3</color>
+    <color name="font_common_2">#a1a1a1</color>
+    <color name="font_blue">#42369a</color>
+
+    <color name="bg_black">#000000</color>
+    <color name="bg_white">#FFFFFF</color>
+    <!--<color name="bg_topbar">#FCFCFC</color>-->
+    <color name="bg_topbar">#5599FF</color>
+    <color name="bg_gray">#00F1F1F1</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="text_white">#FFFFFF</color>
+    <!--<color name="text_blue">#5599FF</color>-->
+    <color name="text_topbar">#FFFFFF</color>
+    <color name="div_white">#E5E5E5</color>
+
+
+
+
+
+    //分割线
+
+    <color name="green">#72DD98</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="black">#000000</color>
+    <color name="border_background">#DCDCDC</color>
+    <color name="red">#FF0000</color>
+    <color name="text_blue">#9FD1FF</color>
+
+
+
+  //最新版
+    <color name="text_gray">#8B8989</color>
+    <color name="text_normal">#6B6B6B</color>
+   <color name="text_pressed">#1CBD82</color>
+
+    <color name="start_color">#02aab0</color>
+    <color name="end_color">#00cdac</color>
+
+    //对话框提示的颜色
+    <color name="tip_color">#383838</color>
+    //对话框确认的颜色
+    <color name="confirm_color">#1CBD82</color>
+    <color name="text_black">#333333</color>
+
+    <color name="general_background">#E9F1F3</color>
+    <color name="search_content">#29A47B</color>
+
+    //病历搜索内容ListView点击颜色
+    <color name="search_content_pressed">#84CCC9</color>
+
+    //健康资讯
+    <color name="news_title">#4C4C4C</color>
+    <color name="news_content">#BDBAD0</color>
+</resources>

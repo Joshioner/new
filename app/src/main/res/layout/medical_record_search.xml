@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_gradient"
+        android:paddingBottom="5dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relative_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/icon_more"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="17dp"
+                android:src="@mipmap/icon_back" />
+            <LinearLayout
+                android:layout_toRightOf="@+id/icon_more"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/rectangle_shape"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/icon_search"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/search_icon"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/search_content"
+                    android:gravity="center|left"
+                    android:textColor="@color/text_gray"
+                    android:textColorHint="@color/text_gray" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/icon_search"
+                android:layout_width="50dp"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/chsearch_bt_search" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/search_content_design"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="搜索指定内容"
+                android:textColor="@color/search_content"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_content_design"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/doctor"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:src="@mipmap/chsearch_bt_doctor" />
+
+            <ImageView
+                android:id="@+id/state"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@+id/doctor"
+                android:src="@mipmap/chsearch_bt_state" />
+
+            <ImageView
+                android:id="@+id/office"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@+id/state"
+                android:src="@mipmap/chsearch_bt_office" />
+
+          <!--<RelativeLayout-->
+              <!--android:layout_width="match_parent"-->
+              <!--android:layout_height="wrap_content"-->
+              <!--android:layout_below="@+id/office"-->
+              <!--android:orientation="horizontal"-->
+              <!--&gt;-->
+              <!--<ImageView-->
+                  <!--android:id="@+id/hospital"-->
+                  <!--android:layout_width="80dp"-->
+                  <!--android:layout_height="0dp"-->
+                  <!--android:layout_marginLeft="50dp"-->
+                  <!--android:src="@mipmap/chsearch_bt_hospital"-->
+                  <!--android:layout_alignParentLeft="true"-->
+                  <!--/>-->
+
+              <!--<ImageView-->
+                  <!--android:id="@+id/date"-->
+                  <!--android:layout_width="60dp"-->
+                  <!--android:layout_height="50dp"-->
+                  <!--android:layout_alignLeft="@+id/office"-->
+                  <!--android:layout_alignParentRight="true"-->
+                  <!--android:src="@mipmap/chsearch_bt_date" />-->
+          <!--</RelativeLayout>-->
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

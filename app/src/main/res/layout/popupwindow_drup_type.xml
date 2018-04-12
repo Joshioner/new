@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_white"
+                android:orientation="vertical">
+                //感冒发热
+                <RelativeLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/ganmao"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center|left"
+                        android:text="感冒用药"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                    <View
+                        android:layout_below="@+id/ganmao"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/general_background"
+                        />
+
+                </RelativeLayout>
+                //抗菌消炎
+                <RelativeLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/kangjun"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center|left"
+                        android:text="抗菌消炎"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                    <View
+                        android:layout_below="@+id/kangjun"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/general_background"
+                        />
+
+                </RelativeLayout>
+                //五官用药
+                <RelativeLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/wuguan"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center|left"
+                        android:text="五官用药"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                    <View
+                        android:layout_below="@+id/wuguan"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/general_background"
+                        />
+
+                </RelativeLayout>
+                //皮肤用药
+                <RelativeLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/pifu"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center|left"
+                        android:text="皮肤用药"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                    <View
+                        android:layout_below="@+id/pifu"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/general_background"
+                        />
+
+                </RelativeLayout>
+                //肠胃用药
+                <RelativeLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/changwei"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center|left"
+                        android:text="肠胃用药"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                    <View
+                        android:layout_below="@+id/changwei"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/general_background"
+                        />
+
+                </RelativeLayout>
+                //风湿骨伤
+                <RelativeLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/fengshi"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center|left"
+                        android:text="风湿骨伤"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                    <View
+                        android:layout_below="@+id/fengshi"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/general_background"
+                        />
+
+                </RelativeLayout>
+                //营养保健
+                <RelativeLayout
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/yingyang"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center|left"
+                        android:text="营养保健"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                    <View
+                        android:layout_below="@+id/yingyang"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/general_background"
+                        />
+
+                </RelativeLayout>
+                //神经用药
+                <RelativeLayout
+                    android:id="@+id/linearLayout8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/shengjing"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center|left"
+                        android:text="神经用药"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                    <View
+                        android:layout_below="@+id/shengjing"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/general_background"
+                        />
+
+                </RelativeLayout>
+                //中药滋补
+                <RelativeLayout
+                    android:id="@+id/linearLayout9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/zhongyao"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center|left"
+                        android:text="中药滋补"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                    <View
+                        android:layout_below="@+id/zhongyao"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/general_background"
+                        />
+
+                </RelativeLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

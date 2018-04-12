@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_gradient"
+    >
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/set_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置日期"
+        android:textColor="#333333"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
+        />
+    <View
+        android:id="@+id/set_line"
+        android:layout_below="@+id/set_time"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/border_background"/>
+    <DatePicker
+        android:id="@+id/dataPicker"
+        android:layout_below="@+id/set_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:endYear="2027"
+        android:startYear="2017"
+        android:calendarTextColor="@color/black"
+        android:calendarViewShown="false"
+        >
+
+    </DatePicker>
+
+    <TableLayout
+        android:layout_below="@+id/dataPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:layout_marginBottom="15dp"
+        >
+        <TableRow>
+            <TextView
+                android:id="@+id/date_picker_cancel"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textSize="36px"
+                android:textColor="#333333"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/date_picker_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设置"
+                android:textSize="36px"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

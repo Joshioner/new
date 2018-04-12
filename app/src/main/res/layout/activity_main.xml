@@ -1,0 +1,91 @@
+<RelativeLayout
+    android:id="@+id/view1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.blk.MainActivity">
+
+    <RadioGroup
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/bg_white"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:id="@+id/homePage"
+            style="@style/tab_menu_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/homePage"
+            android:textSize="12dp"
+            android:button="@null"
+            android:background="@null"
+            android:drawablePadding="5dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@drawable/bottom_icon_text_selector"
+           android:drawableTop="@drawable/home_page" />
+
+        <RadioButton
+            android:id="@+id/medicalRecord"
+            style="@style/tab_menu_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@null"
+            android:drawablePadding="5dp"
+            android:layout_marginTop="15dp"
+            android:drawableTop="@drawable/medical_record"
+            android:text="@string/medicalRecord"
+            android:textSize="12dp"
+            android:textColor="@drawable/bottom_icon_text_selector" />
+
+        <RadioButton
+            android:id="@+id/healthyTool"
+            style="@style/tab_menu_item"
+            android:layout_width="0dp"
+            android:button="@null"
+            android:background="@null"
+            android:drawablePadding="5dp"
+            android:layout_height="wrap_content"
+            android:text="@string/healthyTool"
+            android:textSize="12dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@drawable/bottom_icon_text_selector"
+            android:drawableTop="@drawable/healthy_tool"
+            />
+
+        <RadioButton
+            android:id="@+id/me"
+            style="@style/tab_menu_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/me"
+            android:layout_marginTop="15dp"
+            android:text="@string/me"
+            android:textSize="12dp"
+            android:textColor="@drawable/bottom_icon_text_selector" />
+
+    </RadioGroup>
+
+
+
+    <com.blk.fragment.CustomViewPager
+        android:id="@+id/vpager"
+        android:background="@color/div_white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/bottom_bar" />
+
+
+</RelativeLayout>

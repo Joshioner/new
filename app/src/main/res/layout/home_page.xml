@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@mipmap/home_bg_banner"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/blkText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="38dp"
+            android:layout_weight="0.25"
+            android:fontFamily="AdobeSongStd-Light"
+            android:gravity="center"
+            android:text="病历刊"
+            android:textColor="@color/bg_white"
+            android:textSize="22dp" />
+
+     <!--<RelativeLayout-->
+         <!--android:layout_width="match_parent"-->
+         <!--android:layout_height="match_parent"-->
+         <!--android:orientation="horizontal"-->
+         <!--android:layout_below="@id/blkText"-->
+         <!--&gt;-->
+         <!--<ImageView-->
+             <!--android:id="@+id/banner_left"-->
+             <!--android:layout_width="wrap_content"-->
+             <!--android:layout_height="150dp"-->
+             <!--android:src="@mipmap/banner_left"-->
+             <!--android:layout_marginTop="18dp"-->
+             <!--android:layout_alignParentTop="true" />-->
+         <!--<ImageView-->
+             <!--android:layout_width="wrap_content"-->
+             <!--android:layout_height="220dp"-->
+             <!--android:src="@mipmap/home_banner"-->
+             <!--android:layout_marginRight="20dp"-->
+             <!--android:layout_marginLeft="20dp"-->
+             <!--android:layout_alignParentTop="true" />-->
+         <!--<ImageView-->
+             <!--android:id="@+id/banner_right"-->
+             <!--android:layout_width="wrap_content"-->
+             <!--android:layout_height="150dp"-->
+             <!--android:src="@mipmap/banner_right"-->
+             <!--android:layout_marginTop="18dp"-->
+             <!--android:paddingLeft="0dp"-->
+             <!--android:layout_alignParentTop="true"-->
+             <!--android:layout_alignParentRight="true"-->
+             <!--/>-->
+     <!--</RelativeLayout>-->
+        <com.blk.rollviewpager.RollPagerView
+            android:id="@+id/view_pager"
+            android:layout_below="@id/blkText"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="18dp"
+            >
+
+        </com.blk.rollviewpager.RollPagerView>
+
+        <RadioGroup
+            android:id="@+id/home_page_mid"
+            android:layout_below="@id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@mipmap/home_card_mid"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <RadioButton
+                android:id="@+id/myCaseHistory"
+                style="@style/tab_menu_item"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="我的病历"
+                android:textSize="10dp"
+                android:button="@null"
+                android:background="@null"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/text_pressed"
+                android:drawableTop="@mipmap/home_icon_mycasehistory" />
+
+            <RadioButton
+                android:id="@+id/myTool"
+                style="@style/tab_menu_item"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@null"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="15dp"
+                android:drawableTop="@mipmap/home_icon_mytool"
+                android:text="个人工具"
+                android:textSize="10dp"
+                android:textColor="@color/text_pressed"/>
+
+            <RadioButton
+                android:id="@+id/pharmacy"
+                style="@style/tab_menu_item"
+                android:layout_width="0dp"
+                android:button="@null"
+                android:background="@null"
+                android:drawablePadding="5dp"
+                android:layout_height="wrap_content"
+                android:text="居家药房"
+                android:textSize="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/text_pressed"
+                android:drawableTop="@mipmap/home_icon_pharmacy"
+                />
+
+            <RadioButton
+                android:id="@+id/healthyServer"
+                style="@style/tab_menu_item"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawablePadding="5dp"
+                android:drawableTop="@mipmap/home_icon_serve"
+                android:layout_marginTop="15dp"
+                android:text="健康服务"
+                android:textSize="10dp"
+                android:textColor="@color/text_pressed"/>
+
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_marginTop="35px"
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:layout_below="@+id/home_page_mid"
+            android:orientation="vertical"
+            android:background="@color/white">
+            <ImageView
+                android:id="@+id/home_icon_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginLeft="50px"
+                android:layout_marginTop="2dp"
+                android:src="@mipmap/home_icon_msg"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/home_icon_msg"
+                android:text="推荐资讯"
+                android:textColor="@color/text_gray"
+                android:layout_marginLeft="15dp"
+                android:textSize="15dp"
+                />
+            <ImageView
+                android:id="@+id/home_icon_right"
+                android:layout_width="25dp"
+                android:layout_height="10dp"
+                android:layout_marginRight="50px"
+                android:layout_marginTop="4dp"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/mid_right"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:id="@+id/news_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

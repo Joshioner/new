@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e9f1f3">
+    <RelativeLayout
+        android:id="@+id/drug_check_relative"
+        android:layout_width="match_parent"
+        android:layout_height="128px"
+        android:background="@drawable/background_gradient">
+
+        <ImageView
+            android:id="@+id/auscultation_detail_back"
+            android:layout_width="21px"
+            android:layout_height="36px"
+            android:layout_marginTop="62px"
+            android:layout_marginLeft="32px"
+            android:background="@mipmap/icon_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58px"
+            android:layout_centerHorizontal="true"
+            android:text="@string/medical_auscultation"
+            android:textColor="#ffffff"
+            android:textSize="36px" />
+        <TextView
+            android:id="@+id/goto_auscultation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:text="@string/goto_auscultation"
+            android:textColor="#ffffff"
+            android:textSize="32px"/>
+    </RelativeLayout>
+    <ListView
+        android:layout_marginTop="20px"
+        android:id="@+id/auscultation_detail_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+</LinearLayout>

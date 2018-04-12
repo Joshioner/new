@@ -1,0 +1,160 @@
+<resources>
+
+
+    <string name="app_name">病历刊</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="search">查找</string>
+    <string name="add">添加</string>
+
+    <string name="file">病历原件</string>
+    <string name="patient_name">就诊人</string>
+    <string name="date">就诊时间</string>
+    <string name="type">就诊类型</string>
+    <string name="hospital_name">就诊医院</string>
+    <string name="department">科室</string>
+    <string name="doctor_name">医生姓名</string>
+    <string name="next_step">下一步</string>
+    <string name="medicalRecord_information">病历详情</string>
+    <string name="title_activity_result_second">ResultSecondActivity</string>
+    <string name="ChiefComplaint">主诉</string>
+    <string name="PresentIllness">现病史</string>
+    <string name="PhysicalExamination">体格检查</string>
+    <string name="DiagnosisResult">诊断结果</string>
+    <string name="HandleAdvice">处理意见</string>
+    <string name="save">保存</string>
+
+    <string name="test">测试</string>
+    <string name="title_activity_pharmcy">PharmcyActivity</string>
+    <string name="title_activity_my_fragment3_next">MyFragment3NextActivity</string>
+    <string name="title_activity_health_first">HealthFirst</string>
+
+
+    //分割线
+    <string name="homePage">首页</string>
+    <string name="medicalRecord">病历</string>
+    <string name="healthyTool">工具箱</string>
+    <string name="me">我</string>
+    <string name="action_setting1">添加病历</string>
+    <string name="action_setting2">设置</string>
+    <string name="Allmedical">全部病历</string>
+    <string name="medical_time">2017-10</string>
+    <string name="who">张三</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_medical_record_detail">medical_record_detail</string>
+    <string name="title_activity_medical_record_search">medicalRecordSearchActivity</string>
+
+
+    <string name="degree_centigrade">&#176;C</string>
+    <string name="title_activity_data_analyse_acvivity">dataAnalyseAcvivity</string>
+
+
+    //健康工具
+    <string name="healthy_tool">工具箱</string>
+    <string name="alarm_tag1">“ 主人，</string>
+    <string name="alarm_tag2">"还有10分钟，记得按时吃药哦 ”</string>
+    <string name="healthy_bag">健康包</string>
+
+    <string name="medical_auscultation">就医听诊</string>
+    <string name="medical_auscultation_remark">医嘱记录，就医效果做大化</string>
+    <string name="drug_check">药物查询</string>
+    <string name="drug_check_remark">查询药物产地、生产日期等事项</string>
+    <string name="alarm_assistant">闹钟助手</string>
+    <string name="alarm_assistant_remark">实时提醒吃药</string>
+    <string name="vaccine_table">疫苗表</string>
+    <string name="vaccine_table_remark">记录疫苗表，定时提醒打疫苗</string>
+
+    <string name="health_management">自我健康管理</string>
+
+    <string name="rehabilitation_record">康复记录表</string>
+    <string name="rehabilitation_record_remark">让您更好的了解康复情况</string>
+
+    //我的
+    <string name="my">个人信息</string>
+    <string name="my_name">杨洋</string>
+    <string name="family_group">家庭组</string>
+
+    <string name="tel_bind">手机绑定</string>
+    <string name="mail_bind">邮箱绑定</string>
+    <string name="my_msg">消息</string>
+    <string name="my_collect">我的收藏</string>
+    <string name="my_order">订单</string>
+    <string name="help_center">帮助中心</string>
+    <string name="my_set">设置</string>
+    <string name="welcome_load">邀请下载</string>
+
+    //药物查询
+    <string name="medicine_search">搜索</string>
+    <string name="history_search">历史搜索</string>
+
+    //就医听诊
+    <string name="chinese">中文</string>
+    <string name="english">英文</string>
+    <string name="luyin">按下录音</string>
+
+    //闹钟助手
+    <string name="alarm_add">添加</string>
+    <string name="alarm_delete">删除</string>
+    <string name="alarm_add_title">闹钟添加</string>
+    <string name="remind_date_time">提醒日期和时间</string>
+
+    //闹钟添加
+    <string name="now_date">2018-03-08</string>
+    <string name="now_time">13:52</string>
+
+
+    <string name="drug_name">药品名称</string>
+    <string name="drug_cnumber">国药准字</string>
+    <string name="specification">规格</string>
+    <string name="storageInfo">贮藏</string>
+    <string name="usageInfo">用量用法</string>
+    <string name="composition">成分</string>
+    <string name="indication">适用症</string>
+    <string name="adverse">不良反应</string>
+    <string name="contraindication">禁忌</string>
+    <string name="notice">注意事项</string>
+    <string name="no_detail">暂无信息</string>
+    <string name="title_activity_daishouhuo">daishouhuoActivity</string>
+
+
+
+    //药店 - 药品信息
+    <string name="drug_goods">商品</string>
+    <string name="drug_detail">详情</string>
+    <string name="drug_goods_name">999  三九胃泰颗粒20×6袋</string>
+    <string name="drug_goods_function">清热燥湿，行气活血，柔肝止痛...</string>
+    <string name="drug_price">¥16.3</string>
+    <string name="customer_num">21人付款</string>
+    //药品详细信息
+    <string name="trait">性状</string>
+    <string name="function_type">作用类别</string>
+    <string name="drug_function">功能主治</string>
+    <string name="drug_interaction">药物相互作用</string>
+    <string name="pharmacological_action">药理作用</string>
+    <string name="packing">包装</string>
+    <string name="period_of_validity">有效期</string>
+    <string name="honer_name">奉生堂大药房</string>
+    <string name="goods_describe">宝贝描述 4.8</string>
+    <string name="honer_service">卖家服务 4.8</string>
+    <string name="logistics_service">物流服务 4.8</string>
+    //确认订单
+    <string name="firm_order">确认订单</string>
+    <string name="customer_name">吴俊标</string>
+    <string name="customer_address">收件地址：广州市番禺区广东外语外贸大学</string>
+    <string name="customer_tel">13612345678</string>
+    <string name="shipping_methods">配送方式</string>
+    <string name="express">快递</string>
+    <string name="seller_message">卖家留言</string>
+    <string name="order_goods_number">共1件商品</string>
+    <string name="order_total">小计：</string>
+
+    //购物车
+    <string name="shopping_cart">购物车</string>
+    <string name="goods_num">×1</string>
+    <string name="goto_auscultation">录音</string>
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/shape_corner"
+    android:layout_centerVertical="true"
+    >
+    <RelativeLayout
+        android:id="@+id/relative_1"
+        android:layout_below="@id/relative"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        >
+        <ImageView
+            android:id="@+id/drug_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:src="@mipmap/pharmacy_shopper_drug_logo"
+            android:gravity="center|left"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_toRightOf="@+id/relative_1"
+        android:layout_marginLeft="12dp"
+        android:layout_below="@id/relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        >
+        <LinearLayout android:id="@+id/linearLayout_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            >
+            <TextView
+                android:id="@+id/drug_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="999 三九胃泰颗粒20X6袋"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout_02"
+            android:layout_below="@+id/linearLayout_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            >
+            <TextView
+                android:id="@+id/drug_function"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="清热燥湿，行气活血，柔肝止痛"
+                android:textColor="@color/text_gray"
+                android:textSize="13dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="10dp"
+            >
+            <TextView
+                android:id="@+id/price_int"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥16."
+                android:textColor="@color/text_pressed"
+                android:textSize="15dp"
+                />
+            <TextView
+                android:id="@+id/price_double"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="@color/text_pressed"
+                android:textSize="12dp"
+                />
+            <TextView
+                android:id="@+id/payNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21人付款"
+                android:textColor="@color/text_gray"
+                android:layout_marginLeft="20dp"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

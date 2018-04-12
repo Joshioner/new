@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/general_background"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_gradient">
+            <RelativeLayout
+                android:id="@+id/relative_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="36dp"
+                android:layout_alignParentTop="true">
+                <ImageView
+                    android:id="@+id/icon_more"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/icon_back"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <ImageView
+                    android:id="@+id/icon_search"
+                    android:layout_width="235dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@id/icon_more"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/pharmacy_shopper_page_search"
+                    android:layout_marginLeft="15dp"
+                 />
+                <ImageView
+                    android:id="@+id/icon_search_button"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/search_button"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relative_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relative_01"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="15dp"
+                >
+                <ImageView
+                    android:id="@+id/pharmacy_shopper_logo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/pharmacy_logo"
+                    android:layout_marginLeft="20dp"
+                  />
+
+                <TextView
+                    android:id="@+id/pharmacy_shopper_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="奉生大药店"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/pharmacy_shopper_logo"
+                    android:layout_toEndOf="@+id/pharmacy_shopper_logo" />
+                <ImageView
+                    android:id="@+id/shopper_attention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/pharmacy_shopper_attention"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/fan_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:text="粉丝数351"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/shopper_attention"
+                    />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabSelectedTextColor="@color/text_pressed"
+                app:tabTextColor="@color/black"
+                >
+                <android.support.design.widget.TabItem
+                    android:id="@+id/drug_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="感冒用药"
+                    />
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="销量"
+                    />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="价格"
+                    />
+            </android.support.design.widget.TabLayout>
+
+      <!--<TableLayout-->
+          <!--android:layout_width="wrap_content"-->
+          <!--android:layout_height="wrap_content"-->
+          <!--android:stretchColumns="*">-->
+          <!--<TableRow-->
+              <!--android:weightSum="1.0"-->
+              <!--&gt;-->
+              <!--<LinearLayout>-->
+                  <!--<TextView-->
+                      <!--android:layout_width="wrap_content"-->
+                      <!--android:layout_height="wrap_content"-->
+                      <!--android:textSize="20dp"-->
+                      <!--android:text="感冒用药"-->
+                      <!--android:textColor="@color/bg_black"-->
+                      <!--/>-->
+              <!--</LinearLayout>-->
+              <!--<LinearLayout>-->
+                  <!--<TextView-->
+                      <!--android:layout_width="wrap_content"-->
+                      <!--android:layout_height="wrap_content"-->
+                      <!--android:textSize="20dp"-->
+                      <!--android:text="感冒用药"-->
+                      <!--android:textColor="@color/bg_black"-->
+                      <!--/>-->
+              <!--</LinearLayout>-->
+              <!--<LinearLayout>-->
+                  <!--<TextView-->
+                      <!--android:layout_width="wrap_content"-->
+                      <!--android:layout_height="wrap_content"-->
+                      <!--android:textSize="20dp"-->
+                      <!--android:text="感冒用药"-->
+                      <!--android:textColor="@color/bg_black"-->
+                      <!--/>-->
+              <!--</LinearLayout>-->
+          <!--</TableRow>-->
+      <!--</TableLayout>-->
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center_vertical"
+            >
+            <!--android:background="@color/bg_gray"-->
+              <ListView
+                  android:id="@+id/shopper_drug_list"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:dividerHeight="15dp"
+                  android:layout_centerVertical="true"
+                >
+              </ListView>
+
+
+
+            <!--<include layout="@layout/medical_record_detail"/>-->
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <!--android:layout_gravity="start"-->
+
+
+</LinearLayout>

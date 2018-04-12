@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/general_background"
+    >
+    //标题栏
+    <RelativeLayout
+        android:id="@+id/drug_check_relative"
+        android:layout_width="match_parent"
+        android:layout_height="128px"
+        android:background="@drawable/background_gradient">
+
+        <ImageView
+            android:id="@+id/auscultation_back"
+            android:layout_width="21px"
+            android:layout_height="36px"
+            android:layout_marginTop="48px"
+            android:layout_marginLeft="32px"
+            android:background="@mipmap/icon_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44px"
+            android:layout_marginLeft="300px"
+            android:text="@string/medical_auscultation"
+            android:textColor="#ffffff"
+            android:textSize="36px" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:layout_marginLeft="630px"
+            android:text="@string/save"
+            android:textColor="#ffffff"
+            android:textSize="32px"/>
+
+    </RelativeLayout>
+    //录音栏
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_weight="0.5">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/chinese"
+                android:gravity="center"
+                android:textSize="32px"
+                android:textColor="#333333"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/transfer_english"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_weight="0.5">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/english"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textSize="32px"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="470px">
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#e8eff1"
+            android:gravity="left"
+            android:hint="  正在输入..."
+            android:textColorHint="#333333"
+            android:textColor="#333333"
+            android:textSize="30px"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/btnStartSpeak"
+        android:layout_width="240px"
+        android:layout_height="240px"
+        android:src="@mipmap/tool_jiuyi_rec"
+        android:layout_gravity="center"
+        android:layout_marginTop="170px"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#666666"
+        android:text="@string/luyin"
+        android:gravity="center"
+        />
+
+
+
+</LinearLayout>

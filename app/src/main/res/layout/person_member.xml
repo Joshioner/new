@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/person_member_photo"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="1dp"
+        android:src="@mipmap/cardhistory_icon_member"
+        />
+
+    <TextView
+        android:id="@+id/person_member_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="胡先生"
+        android:textColor="@color/text_black"
+        android:textSize="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/person_member_photo"
+        android:layout_toEndOf="@+id/person_member_photo" />
+
+</RelativeLayout>
