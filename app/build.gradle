@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.baidu.ocr.user"
         minSdkVersion 14
@@ -32,4 +32,11 @@ dependencies {
     compile 'com.android.support:design:25.1.1'
     compile 'com.jude:rollviewpager:1.2.9'
     compile 'com.bm.photoview:library:1.4.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.jude:rollviewpager:1.2.9'
+
+    apply plugin: 'announce'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //compile 'com.android.support:appcompat-v7:27.0.1'
 }
