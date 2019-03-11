@@ -9,12 +9,14 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -32,14 +34,22 @@ import com.baidu.ocr.ui.camera.CameraActivity;
 import com.blk.MainActivity;
 import com.blk.R;
 import com.blk.common.CommomDialog;
-import com.blk.common.FileUtil;
-import com.blk.common.HttpCallbackListener;
-import com.blk.common.HttpSendUtil;
+import com.blk.common.util.FileUtil;
+import com.blk.common.util.HttpCallbackListener;
+import com.blk.common.util.HttpSendUtil;
 import com.blk.common.ToolBarSet;
-import com.blk.common.WeiboDialogUtils;
+import com.blk.common.util.WeiboDialogUtils;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.HashMap;
@@ -67,6 +77,7 @@ public class medicalRecordContentActivity extends AppCompatActivity {
     private byte[] bytes;
     private ImageView icon_back;                       //返回键按钮
     private Map<String,String> map;
+    private String imagePath;                         //图片路径
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,13 +89,14 @@ public class medicalRecordContentActivity extends AppCompatActivity {
         InitView();
         //事件
         InitEvent();
-              /*获取Intent中的Bundle对象*/
+        /*获取Intent中的Bundle对象*/
         Bundle bundle = this.getIntent().getExtras();
 
         int data=bundle.getInt("data");
 
 
         //data ==0 || data == 1 表示是通过拍照识别，data == 2 表示点击病历查看具体病历详情
+        //选择图片
         if(data==0)
         {
             weiboDialogUtils = WeiboDialogUtils.createLoadingDialog(this,"识别中");
@@ -101,7 +113,9 @@ public class medicalRecordContentActivity extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_PICK);
             intent.setType("image/*");
             startActivityForResult(intent, REQUEST_CODE_PICK_IMAGE);
+
         }
+        //进行拍照
         else if(data==1)
         {
             weiboDialogUtils = WeiboDialogUtils.createLoadingDialog(this,"识别中");
@@ -170,6 +184,8 @@ public class medicalRecordContentActivity extends AppCompatActivity {
                     public void onClick(Dialog dialog, boolean confirm) {
                         //保存成功
                         if (confirm) {
+                            //保存病历图片到本地
+                            downloadImage();
                             //病历保存成功，对话框消失，跳转到病历详情页面
                             dialog.dismiss();
                             Intent confirmIntent = new Intent(medicalRecordContentActivity.this, MainActivity.class);
@@ -274,14 +290,22 @@ public class medicalRecordContentActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        //选择图片，sd卡上
         if (requestCode == REQUEST_CODE_PICK_IMAGE && resultCode == Activity.RESULT_OK) {
             Uri uri = data.getData();
             String filePath = getRealPathFromURI(uri);
+            //识别图片并给ui赋值
             recGeneral(filePath);
+            //图片路径
+            imagePath = filePath;
         }
 
+        //拍照
         else if (requestCode == REQUEST_CODE_CAMERA && resultCode == Activity.RESULT_OK) {
+            //识别图片并给ui赋值
             recGeneral(FileUtil.getSaveFile(getApplicationContext()).getAbsolutePath());
+            //图片路径
+            imagePath = FileUtil.getSaveFile(getApplicationContext()).getAbsolutePath();
         }
 //        //返回键
 //        else if(resultCode == 5)
@@ -291,6 +315,45 @@ public class medicalRecordContentActivity extends AppCompatActivity {
         else
             finish();
 
+    }
+
+    /**
+     * 保存图片到本地data/files/image文件夹中
+     * @return
+     */
+    private Void downloadImage(){
+        File inFile = new File(this.imagePath);
+        FileInputStream inputStream = null;
+        FileOutputStream outputStream = null;
+        try {
+            inputStream = new FileInputStream(inFile);
+            File dir = new File(getFilesDir().getAbsolutePath() + "/image/");
+            if (!dir.exists()){
+                dir.mkdir();
+            }
+            File file = new File(dir,"1." + imagePath.substring(imagePath.lastIndexOf(".") + 1));
+            Log.i("REQUEST_CODE_CAMERA","---->" + file.getAbsolutePath());
+            outputStream = new FileOutputStream(file);
+            byte[] bytes = new byte[1024];
+            while ( inputStream.read(bytes) != -1){
+                outputStream.write(bytes,0,bytes.length);
+                outputStream.flush();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            try{
+                if (outputStream != null){
+                    outputStream.close();
+                }
+                if (inputStream != null){
+                    inputStream.close();
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return null;
     }
 
     private String getRealPathFromURI(Uri contentURI) {

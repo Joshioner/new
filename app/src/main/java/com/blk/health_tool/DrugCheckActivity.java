@@ -17,8 +17,8 @@ import android.widget.Toast;
 
 import com.blk.MainActivity;
 import com.blk.R;
-import com.blk.common.HttpCallbackListener;
-import com.blk.common.HttpSendUtil;
+import com.blk.common.util.HttpCallbackListener;
+import com.blk.common.util.HttpSendUtil;
 import com.blk.common.ToolBarSet;
 
 import org.json.JSONException;

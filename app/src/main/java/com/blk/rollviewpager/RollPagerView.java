@@ -123,7 +123,7 @@ public class RollPagerView extends RelativeLayout implements OnPageChangeListene
             @Override
             public boolean onSingleTapUp(MotionEvent e) {
                 if (mOnItemClickListener!=null){
-                    if (mAdapter instanceof LoopPagerAdapter){//原谅我写了这么丑的代码
+                    if (mAdapter instanceof LoopPagerAdapter){
                         mOnItemClickListener.onItemClick(mViewPager.getCurrentItem()%((LoopPagerAdapter) mAdapter).getRealCount());
                     }else {
                         mOnItemClickListener.onItemClick(mViewPager.getCurrentItem());

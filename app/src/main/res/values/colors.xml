@@ -18,11 +18,10 @@
     <color name="bg_gray">#00F1F1F1</color>
     <color name="transparent">#00FFFFFF</color>
 
-    <color name="text_white">#FFFFFF</color>
+    <!--<color name="text_white">#FFFFFF</color>-->
     <!--<color name="text_blue">#5599FF</color>-->
     <color name="text_topbar">#FFFFFF</color>
     <color name="div_white">#E5E5E5</color>
-
 
 
 
@@ -62,4 +61,6 @@
     //健康资讯
     <color name="news_title">#4C4C4C</color>
     <color name="news_content">#BDBAD0</color>
+
+    <color name="text_white">#FBF8F8</color>
 </resources>

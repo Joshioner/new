@@ -1,4 +1,4 @@
-package com.blk.common;
+package com.blk.common.util;
 
 import android.app.Dialog;
 import android.content.Context;

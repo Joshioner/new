@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
  */
-package com.blk.common;
+package com.blk.common.util;
 
 import android.content.Context;
 

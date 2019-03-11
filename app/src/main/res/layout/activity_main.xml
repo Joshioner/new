@@ -22,7 +22,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/homePage"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:button="@null"
             android:background="@null"
             android:drawablePadding="5dp"
@@ -41,7 +41,7 @@
             android:layout_marginTop="15dp"
             android:drawableTop="@drawable/medical_record"
             android:text="@string/medicalRecord"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:textColor="@drawable/bottom_icon_text_selector" />
 
         <RadioButton
@@ -53,8 +53,8 @@
             android:drawablePadding="5dp"
             android:layout_height="wrap_content"
             android:text="@string/healthyTool"
-            android:textSize="12dp"
-            android:layout_marginTop="15dp"
+            android:textSize="12sp"
+            android:layout_marginTop="15sp"
             android:textColor="@drawable/bottom_icon_text_selector"
             android:drawableTop="@drawable/healthy_tool"
             />
@@ -71,7 +71,7 @@
             android:drawableTop="@drawable/me"
             android:layout_marginTop="15dp"
             android:text="@string/me"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:textColor="@drawable/bottom_icon_text_selector" />
 
     </RadioGroup>

@@ -15,8 +15,8 @@ import com.baidu.ocr.sdk.model.GeneralResult;
 import com.baidu.ocr.sdk.model.Word;
 import com.baidu.ocr.ui.camera.CameraActivity;
 import com.blk.R;
-import com.blk.common.FileUtil;
-import com.blk.common.WeiboDialogUtils;
+import com.blk.common.util.FileUtil;
+import com.blk.common.util.WeiboDialogUtils;
 
 import java.io.File;
 import java.util.regex.Pattern;

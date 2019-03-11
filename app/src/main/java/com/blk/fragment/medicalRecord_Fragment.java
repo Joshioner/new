@@ -31,8 +31,8 @@ import com.baidu.ocr.sdk.exception.OCRError;
 import com.baidu.ocr.sdk.model.AccessToken;
 import com.blk.R;
 import com.blk.common.CommomDialog;
-import com.blk.common.HttpCallbackListener;
-import com.blk.common.HttpSendUtil;
+import com.blk.common.util.HttpCallbackListener;
+import com.blk.common.util.HttpSendUtil;
 import com.blk.common.ShowAllListView;
 import com.blk.medical_record.Adapter.medicalRecordDetailBaseAdapter;
 import com.blk.medical_record.Adapter.person_member_info_baseAdapter;
@@ -101,7 +101,14 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-      view=inflater.inflate(R.layout.medical_record,container,false);
+       if (view == null){
+           view=inflater.inflate(R.layout.medical_record,container,false);
+       }else {
+           ViewGroup parent = (ViewGroup) view.getParent();
+           if(parent != null) {
+               parent.removeView(view);
+           }
+       }
         //初始化控件
         initView();
         //事件
@@ -289,7 +296,18 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
     {
         //初始化
           popupView = LayoutInflater.from(getActivity()).inflate(R.layout.choose_take_select_popupwindow,null);
-          chooseTakeSelectPop = new PopupWindow(getActivity().getWindow().getAttributes().width,getActivity().getWindow().getAttributes().height);
+        // 创建PopupWindow对象，其中：
+         // 第一个参数是用于PopupWindow中的View，第二个参数是PopupWindow的宽度，
+        // 第三个参数是PopupWindow的高度，第四个参数指定PopupWindow能否获得焦点
+          chooseTakeSelectPop = new PopupWindow(popupView,getActivity().getWindow().getAttributes().width,getActivity().getWindow().getAttributes().height,true);
+          chooseTakeSelectPop.setClippingEnabled(false);
+        // 设置PopupWindow是否能响应外部点击事件
+          chooseTakeSelectPop.setTouchable(true);
+        // 设置PopupWindow是否能响应外部点击事件
+          chooseTakeSelectPop.setOutsideTouchable(true);
+        // 设置PopupWindow的背景
+          chooseTakeSelectPop.setBackgroundDrawable(new BitmapDrawable());
+
           closeSelect = (ImageView) popupView.findViewById(R.id.closeChoose);
           takePhoto = (ImageView) popupView.findViewById(R.id.takePhoto);
           choosePhoto = (ImageView) popupView.findViewById(R.id.choosePhoto);
@@ -298,14 +316,10 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
           //选择病历图片，并识别病历信息
           choosePhoto.setOnClickListener(this);
           //关闭弹出选择框
-        closeSelect.setOnClickListener(this);
+          closeSelect.setOnClickListener(this);
 
-        chooseTakeSelectPop.setContentView(popupView);
-        chooseTakeSelectPop.setClippingEnabled(false);
-        chooseTakeSelectPop.setFocusable(true);
-        chooseTakeSelectPop.setTouchable(true);
-        chooseTakeSelectPop.setOutsideTouchable(true);
-        chooseTakeSelectPop.setBackgroundDrawable(new BitmapDrawable());
+
+
 
     }
     private void backgroundAlpha(float f) {
@@ -335,7 +349,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                 break;
             //对病历进行拍照，并识别病历信息
             case R.id.takePhoto:
-                Intent takePhotointent = new Intent(getActivity(),medicalRecordContentActivity.class);
+                Intent takePhotoIntent = new Intent(getActivity(),medicalRecordContentActivity.class);
                 backgroundAlpha(1.0f);
                 chooseTakeSelectPop.dismiss();
                 chooseTakeSelectPop = null;
@@ -343,12 +357,12 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                 Bundle bundleTake=new Bundle();
                 bundleTake.putInt("data",1);
                 /*把bundle对象assign给Intent*/
-                takePhotointent.putExtras(bundleTake);
-                startActivity(takePhotointent);
+                takePhotoIntent.putExtras(bundleTake);
+                startActivity(takePhotoIntent);
                 break;
             //选择病历图片，并识别病历信息
             case R.id.choosePhoto:
-                Intent choosePhotointent = new Intent(getActivity(),medicalRecordContentActivity.class);
+                Intent choosePhotoIntent = new Intent(getActivity(),medicalRecordContentActivity.class);
                 backgroundAlpha(1.0f);
                 chooseTakeSelectPop.dismiss();
                 chooseTakeSelectPop = null;
@@ -356,8 +370,8 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                 Bundle bundleChoose=new Bundle();
                 bundleChoose.putInt("data",0);
                 /*把bundle对象assign给Intent*/
-                choosePhotointent.putExtras(bundleChoose);
-                startActivity(choosePhotointent);
+                choosePhotoIntent.putExtras(bundleChoose);
+                startActivity(choosePhotoIntent);
                 break;
             //关闭弹出选择框
             case R.id.closeChoose:

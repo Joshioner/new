@@ -1,4 +1,4 @@
-package com.blk.common;
+package com.blk.common.util;
 
 /**
  * Created by asus on 2017/10/25.

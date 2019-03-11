@@ -41,8 +41,21 @@ public class homePage_Fragment extends Fragment implements View.OnClickListener{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view=inflater.inflate(R.layout.home_page,container,false);
+        if (view == null){
+            view=inflater.inflate(R.layout.home_page,container,false);
+        }else {
+            ViewGroup parent = (ViewGroup) view.getParent();
+            if(parent != null) {
+                parent.removeView(view);
+            }
+        }
+
         mViewPager = (RollPagerView)view.findViewById(R.id.view_pager);
+        //设置播放时间间隔
+        mViewPager.setPlayDelay(2000);
+       //设置滑动播放时间
+        mViewPager.setAnimationDurtion(500);
+       //设置适配器
         mViewPager.setAdapter(new ImageNormalAdapter());
         initRadio();
         //初始化控件
@@ -90,7 +103,7 @@ public class homePage_Fragment extends Fragment implements View.OnClickListener{
          myCaseHistory = (RadioButton) view.findViewById(R.id.myCaseHistory);
          healthyTool = (RadioButton) view.findViewById(R.id.myTool);
          pharmacy = (RadioButton)view.findViewById(R.id.pharmacy);
-         healthyServer = (RadioButton)view.findViewById(R.id.healthyServer);
+         //healthyServer = (RadioButton)view.findViewById(R.id.healthyServer);
 
         //定义底部标签图片大小和位置
         Drawable home_icon_mycasehistory = getResources().getDrawable(R.mipmap.home_icon_mycasehistory);
@@ -118,7 +131,7 @@ public class homePage_Fragment extends Fragment implements View.OnClickListener{
         //当这个图片被绘制时，给他绑定一个矩形 ltrb规定这个矩形
         home_icon_serve.setBounds(0, 0, 30, 40);
         //设置图片在文字的哪个方向
-        healthyServer.setCompoundDrawables(null, home_icon_serve, null, null);
+   //     healthyServer.setCompoundDrawables(null, home_icon_serve, null, null);
     }
 
     @Override
@@ -129,15 +142,18 @@ public class homePage_Fragment extends Fragment implements View.OnClickListener{
         Bundle bundle = new Bundle();
         switch (id)
         {
+            //药房
             case R.id.pharmacy :
                 intent = new Intent(getActivity(), com.blk.pharmacy.MainActivity.class);
                 startActivity(intent);
                 break;
+            // 个人工具
             case R.id.myTool:
                 bundle.putInt("data",2);
                 intent.putExtras(bundle);
                 startActivity(intent);
                 break;
+            // 我的病历
             case R.id.myCaseHistory:
                 bundle.putInt("data",1);
                 intent.putExtras(bundle);

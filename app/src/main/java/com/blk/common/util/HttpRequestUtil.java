@@ -1,4 +1,4 @@
-package com.blk.common;
+package com.blk.common.util;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

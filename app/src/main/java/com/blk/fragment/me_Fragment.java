@@ -22,7 +22,14 @@ public class me_Fragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view=inflater.inflate(R.layout.me,container,false);
+       if (view == null){
+           view = inflater.inflate(R.layout.me,container,false);
+       }else {
+           ViewGroup parent = (ViewGroup) view.getParent();
+             if(parent != null) {
+               parent.removeView(view);
+               }
+       }
         return view;
    //     return inflater.inflate(R.layout.view5, container, false);
     }

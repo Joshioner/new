@@ -54,7 +54,6 @@
             android:name=".medical_record.medicalRecordSearchActivity"
             android:label="@string/title_activity_medical_record_search" />
         <activity android:name=".medical_record.medicalRecordContentActivity" />
-        <activity android:name=".test.test" />
         <activity android:name=".easychartwidget.MainActivity" />
         <activity android:name=".easychartwidget.activity.BarChartActivity" />
         <activity android:name=".easychartwidget.activity.CombineChartActivity" />

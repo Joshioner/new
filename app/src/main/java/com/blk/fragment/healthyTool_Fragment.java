@@ -32,8 +32,14 @@ public class healthyTool_Fragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-         view=inflater.inflate(R.layout.healthy_tool,container,false);
-
+        if (view == null){
+            view=inflater.inflate(R.layout.healthy_tool,container,false);
+        } else {
+            ViewGroup parent = (ViewGroup) view.getParent();
+            if(parent != null) {
+                parent.removeView(view);
+            }
+        }
         initView();
         initEvent();
 
