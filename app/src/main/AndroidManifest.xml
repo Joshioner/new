@@ -35,13 +35,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity"></activity>
 
         <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -63,7 +57,7 @@
         <activity android:name=".easychartwidget.activity.PieChartActivity" />
         <activity android:name=".easychartwidget.activity.ScaleActivity" />
         <activity
-            android:name=".medical_record.dataAnalyseAcvivity"
+            android:name=".medical_record.dataAnalyseActivity"
             android:label="@string/title_activity_data_analyse_acvivity" />
         <activity android:name=".health_tool.checkResultActivity" />
         <activity android:name=".health_tool.medical_auscultation" />
@@ -74,22 +68,17 @@
         <activity android:name=".pharmacy.homePage.DrugListSearchActivity" />
         <activity android:name=".health_tool.DrugCheckActivity" />
         <activity android:name=".pharmacy.homePage.pharmacyShopperPageActivity" />
-
-
-
-        <activity android:name=".pharmacy.homePage.drug_information_detail">
-        </activity>
+        <activity android:name=".pharmacy.homePage.drug_information_detail" />
         <activity android:name=".pharmacy.homePage.firm_Order">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
-        <activity android:name=".health_tool.auscultation_detail">
-        </activity>
 
-        <activity android:name=".medical_record.testActivity">
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
+        <activity android:name=".health_tool.auscultation_detail" />
+        <activity android:name=".medical_record.testActivity" />
+
         <service
             android:name=".common.identify.AlarmService"
             android:enabled="true"
@@ -97,12 +86,24 @@
 
         <receiver android:name=".common.identify.AlarmbroadcasReceiver">
             <intent-filter>
-                <action
-                    android:name="com.baidu.ocr.user.identify.ServBroad.myThread">
-
-                </action>
+                <action android:name="com.baidu.ocr.user.identify.ServBroad.myThread" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--android:windowSoftInputMode="stateHidden"  页面跳转时不显示输入框-->
+        <activity
+            android:name=".RegisterActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:label="@string/title_activity_register"></activity>
     </application>
 
 </manifest>

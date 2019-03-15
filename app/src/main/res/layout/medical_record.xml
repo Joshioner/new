@@ -91,7 +91,7 @@
 
     </LinearLayout>
 
-    <!--android:layout_gravity="start"-->
+    <!--android:layout_gravity="start"  指定左边弹出框-->
     <RelativeLayout
         android:layout_width="240dp"
         android:layout_gravity="start"
@@ -152,6 +152,7 @@
             android:layout_marginTop="31dp" />
         <RelativeLayout
             android:id="@+id/manageRela"
+            android:visibility="gone"
             android:orientation="horizontal" android:layout_width="match_parent"
             android:layout_below="@id/managePhoto"
             android:layout_marginTop="25dp"

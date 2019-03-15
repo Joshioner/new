@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_background"
+  >
+
+    //注册账号
+    <RelativeLayout
+        android:id="@+id/register_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="36dp"
+        android:background="@color/login_background"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/icon_back"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:gravity="center|left"
+            android:layout_marginLeft="11dp"
+            android:src="@mipmap/icon_back"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_title"
+            android:textSize="20dp"
+            android:textColor="@color/text_white"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/register_title"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white">
+
+        <ScrollView
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fadingEdge="vertical"
+            android:scrollbars="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                //上传头像
+                <LinearLayout
+                    android:id="@+id/photoLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/photoRelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/person_photo_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="center|left"
+                            android:text="@string/register_person_photo"
+                            android:textColor="@color/text_black"
+                            android:textSize="15dp" />
+                        <View
+                            android:layout_below="@+id/person_photo_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/general_background"
+                            />
+
+                        <EditText
+                            android:id="@+id/person_photo_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="13.83"
+                            android:focusable="false"
+                            android:textColor="@color/text_gray"
+                            android:background="@null"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/person_photo_text"
+                            android:hint="@string/register_person_photo_hint"
+                            android:textColorHint="@color/text_gray"
+                            android:textSize="15dp" />
+                           <ImageView
+                               android:layout_width="40dp"
+                               android:layout_height="40dp"
+                               android:src="@mipmap/upload_photo"
+                               android:layout_alignParentRight="true"
+                               />
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+                //账号
+                <LinearLayout
+                    android:id="@+id/accountLinearLayout"
+                    android:layout_below="@+id/photoLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/accountRelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/account_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="center|left"
+                            android:text="@string/register_account"
+                            android:textColor="@color/text_black"
+                            android:textSize="15dp" />
+                        <View
+                            android:layout_below="@+id/account_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/general_background"
+                            />
+
+                        <EditText
+                            android:id="@+id/account_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="13.83"
+                            android:background="@null"
+                            android:textColor="@color/text_gray"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/account_text"
+                            android:hint="@string/register_account_hint"
+                            android:textColorHint="@color/text_gray"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                //密码
+                <LinearLayout
+                android:id="@+id/passwordLinearLayout"
+                android:layout_below="@+id/accountLinearLayout"
+                    android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/passwordRelativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/password_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:gravity="center|left"
+                        android:text="@string/register_password"
+                        android:textColor="@color/text_black"
+                        android:textSize="15dp" />
+                    <View
+                        android:layout_below="@+id/password_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/general_background"
+                        />
+
+                    <EditText
+                        android:id="@+id/password_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_weight="13.83"
+                        android:background="@null"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/text_gray"
+                        android:layout_toRightOf="@+id/password_text"
+                        android:hint="@string/register_password_hint"
+                        android:textColorHint="@color/text_gray"
+                        android:inputType="textPassword"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+                //确认密码
+                <LinearLayout
+                    android:id="@+id/repeatPasswordLinearLayout"
+                    android:layout_below="@+id/passwordLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/repeatPasswordRelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/repeat_password_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="center|left"
+                            android:text="@string/register_password_repeat"
+                            android:textColor="@color/text_black"
+                            android:textSize="15dp" />
+                        <View
+                            android:layout_below="@+id/repeat_password_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/general_background"
+                            />
+
+                        <EditText
+                            android:id="@+id/repeat_password_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="13.83"
+                            android:background="@null"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/text_gray"
+                            android:layout_toRightOf="@+id/repeat_password_text"
+                            android:hint="@string/register_password_hint"
+                            android:inputType="textPassword"
+                            android:textColorHint="@color/text_gray"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+                //性别
+
+                <LinearLayout
+                    android:id="@+id/sexLinearLayout"
+                    android:layout_below="@+id/repeatPasswordLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                       android:id="@+id/sexRelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/sex_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="center|left"
+                            android:text="@string/register_sex"
+                            android:textColor="@color/text_black"
+                            android:textSize="15dp" />
+                        <View
+                            android:layout_below="@+id/sex_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/general_background"
+                            />
+                        <RadioGroup
+                        android:id="@+id/sexRadio"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_toRightOf="@+id/sex_text"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/male"
+                                style="@style/tab_menu_item"
+                                android:background="@null"
+                                android:button="@null"
+                                android:drawablePadding="0dp"
+                                android:layout_marginTop="5dp"
+                                android:drawableLeft="@drawable/register_sex_male"
+                                android:text="@string/register_male"
+                                android:textColor="@drawable/bottom_icon_text_selector"
+                                android:textSize="15sp" />
+
+
+                            <RadioButton
+                                android:id="@+id/female"
+                                style="@style/tab_menu_item"
+                                android:background="@null"
+                                android:button="@null"
+                                android:drawableLeft="@drawable/register_sex_female"
+                                android:drawablePadding="0dp"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/register_female"
+                                android:textColor="@drawable/bottom_icon_text_selector"
+                                android:textSize="15sp" />
+
+                        </RadioGroup>
+
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+                //出生日期
+                <LinearLayout
+                    android:id="@+id/birthdayLinearLayout"
+                    android:layout_below="@+id/sexLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/birthdayRelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/birthday_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="center|left"
+                            android:text="@string/register_birthday"
+                            android:textColor="@color/text_black"
+                            android:textSize="15dp" />
+
+
+                        <EditText
+                            android:id="@+id/birthday_text_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="13.83"
+                            android:background="@null"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/birthday_text"
+                            android:hint="@string/register_birthday_hint"
+                            android:focusable="false"
+                            android:textColor="@color/text_gray"
+                            android:textColorHint="@color/text_gray"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                //注册按钮
+                <LinearLayout
+                    android:id="@+id/register_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/birthdayLinearLayout"
+                    android:layout_marginTop="70dp"
+                    android:background="@drawable/rectangle_shape"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/login_btn"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/login_btn_circle"
+                        android:text="@string/register_btn"
+                        />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

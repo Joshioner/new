@@ -3,6 +3,8 @@ package com.blk.fragment;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -35,10 +37,10 @@ import com.blk.common.util.HttpCallbackListener;
 import com.blk.common.util.HttpSendUtil;
 import com.blk.common.ShowAllListView;
 import com.blk.medical_record.Adapter.medicalRecordDetailBaseAdapter;
-import com.blk.medical_record.Adapter.person_member_info_baseAdapter;
-import com.blk.medical_record.dataAnalyseAcvivity;
+import com.blk.medical_record.Adapter.personMemberInfoBaseAdapter;
+import com.blk.medical_record.dataAnalyseActivity;
+import com.blk.medical_record.entity.PersonMemberInfo;
 import com.blk.medical_record.entity.medicalRecordDetail;
-import com.blk.medical_record.entity.person_member_info;
 import com.blk.medical_record.medicalRecordContentActivity;
 import com.blk.medical_record.medicalRecordSearchActivity;
 import com.blk.medical_record.testActivity;
@@ -60,9 +62,9 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
     private DrawerLayout drawerLayout;
     private ImageView icon_more,icon_add;   //点击更多的图片,选择拍照或者选择照片
     private ListView memberListView ;    //显示家庭成员的memberList
-    private List<person_member_info> memberlist;   //家庭成员具体信息的列表
-    private person_member_info_baseAdapter member_info_baseAdapter;  //传递给memberListView的适配器
-  //  private person_member_info member_info ;   //家庭成员具体信息
+    private List<PersonMemberInfo> memberlist;   //家庭成员具体信息的列表
+    private personMemberInfoBaseAdapter member_info_baseAdapter;  //传递给memberListView的适配器
+  //  private PersonMemberInfo member_info ;   //家庭成员具体信息
     private AlertDialog.Builder alertDialog;
     private ListView medicalListView;    //显示病历详细信息的ListView
     private List<medicalRecordDetail> medicalDetailList;  //病历信息的列表
@@ -74,10 +76,13 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
 
     private ImageView medicalRecordSearchBox;   //病历搜索框
 
+    private ImageView personImage;     //用户头像
+
     private final int medicalRecordSearchRequestCode = 101;   //病历搜索框请求码
 
     private TextView member_manage,data_analyse;       //成员管理、数据对比
 
+    private TextView personName;   //当前用户名
 
     private final Handler handler = new Handler() {
         @Override
@@ -126,7 +131,8 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         medicalListView = (ListView) view.findViewById(R.id.medical_record_detail_list);
         member_manage = (TextView) view.findViewById(R.id.member_manage);
         data_analyse = (TextView) view.findViewById(R.id.data_analyse);
-
+        personImage = (ImageView) view.findViewById(R.id.person_photo);
+        personName = (TextView) view.findViewById(R.id.person_name);
         medicalDetailList = new ArrayList<medicalRecordDetail>();
         medicalRecordSearchBox = (ImageView) view.findViewById(R.id.medicalRecordSearchBox);
         AddMedicalRecordDetailList("123");   //填充病历详细信息列表
@@ -135,10 +141,10 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         //解决scrollview中嵌套listview只显示一个item的问题
         //ShowAllListView.setListViewHeightBasedOnChildren(medicalListView);
         memberListView = (ListView) view.findViewById(R.id.person_member_list);
-        memberlist = new ArrayList<person_member_info>();
-       // list.add(new person_member_info("张三"));
+        memberlist = new ArrayList<PersonMemberInfo>();
+       // list.add(new PersonMemberInfo("张三"));
         AddpersonMemberInfoList();   //填充list列表
-        member_info_baseAdapter = new person_member_info_baseAdapter(getActivity(),memberlist);  //初始化适配器
+        member_info_baseAdapter = new personMemberInfoBaseAdapter(getActivity(),memberlist);  //初始化适配器
         memberListView.setAdapter(member_info_baseAdapter);  //将适配器传递给memberList，类似于填充数据
         //解决scrollview中嵌套listview只显示一个item的问题
       //  ShowAllListView.setListViewHeightBasedOnChildren(memberListView);
@@ -167,10 +173,15 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
     //方法：填充家庭成员信息的list列表
     private void AddpersonMemberInfoList() {
         String person_member_name = "胡先生";
-       // person_member_info member_info  = new person_member_info(person_member_name);
-        memberlist.add( new person_member_info(person_member_name));
-        memberlist.add( new person_member_info("张三"));
-        memberlist.add( new person_member_info("李四"));
+       // PersonMemberInfo member_info  = new PersonMemberInfo(person_member_name);
+        memberlist.add( new PersonMemberInfo(person_member_name,1));
+        memberlist.add( new PersonMemberInfo("张三",2));
+        memberlist.add( new PersonMemberInfo("李四",3));
+        //设置用户头像
+        String path = getActivity().getFilesDir().getAbsolutePath() + "/image/";
+        Bitmap bitmap = BitmapFactory.decodeFile(path + "1.jpg");
+        personImage.setImageBitmap(bitmap);
+
 //        //找到头像的目标文件
 //        File file = new File("D:\\test_photo.png");
 //        //建立缓冲字符串对象
@@ -279,6 +290,19 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
             }
         });
 
+        //用户家庭组病历信息管理
+        memberListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                TextView personMemberName = (TextView) view.findViewById(R.id.person_member_name);
+                memberlist.add(new PersonMemberInfo((String) personName.getText(),4));
+                memberlist.remove(new PersonMemberInfo(personMemberName.getText().toString(),1));
+                personName.setText(personMemberName.getText());
+                Toast.makeText(getActivity(),  personMemberName.getText(),Toast.LENGTH_LONG).show();
+                member_info_baseAdapter.notifyDataSetChanged();
+
+            }
+        });
 
         // 请选择您的初始化方式
         initAccessToken();
@@ -384,7 +408,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                 break;
             //数据对比
             case R.id.data_analyse:
-                Intent dataAnalyseIntent = new Intent(getActivity(),dataAnalyseAcvivity.class);
+                Intent dataAnalyseIntent = new Intent(getActivity(),dataAnalyseActivity.class);
                 startActivity(dataAnalyseIntent);
                 break;
 

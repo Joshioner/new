@@ -1,7 +1,7 @@
 <resources>
 
 
-    <string name="app_name">病历刊</string>
+    <string name="app_name">Be Healthy</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -122,7 +122,6 @@
     <string name="title_activity_daishouhuo">daishouhuoActivity</string>
 
 
-
     //药店 - 药品信息
     <string name="drug_goods">商品</string>
     <string name="drug_detail">详情</string>
@@ -157,4 +156,39 @@
     <string name="shopping_cart">购物车</string>
     <string name="goods_num">×1</string>
     <string name="goto_auscultation">录音</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    //登陆
+    <string name="login_account">请输入账号名</string>
+    <string name="login_password">请输入密码</string>
+    <string name="login_btn">登录</string>
+    <string name="login_forget_password">忘记密码</string>
+    <string name="login_register">注册</string>
+
+    //注册
+    <string name="register_title">be healthy 账号注册</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="register_account">账号</string>
+    <string name="register_account_hint">请输入账号</string>
+    <string name="register_password">密码</string>
+    <string name="register_password_hint">请输入密码</string>
+    <string name="register_password_repeat">输认密码</string>
+    <string name="register_password_repeat_hint">请再次输入密码</string>
+    <string name="register_sex">性别</string>
+    <string name="register_male">男</string>
+    <string name="register_female">女</string>
+    <string name="register_person_photo">头像</string>
+    <string name="register_person_photo_hint">选择头像</string>
+    <string name="register_birthday">出生日期</string>
+    <string name="register_birthday_hint">年 - 月 - 日</string>
+    <string name="register_btn">注册</string>
+
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_seconds">秒</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
 </resources>

@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.blk.R;
-import com.blk.medical_record.entity.person_member_info;
+import com.blk.medical_record.entity.PersonMemberInfo;
 
 import java.util.List;
 
@@ -16,11 +16,11 @@ import java.util.List;
  * Created by asus on 2018/1/28.
  */
 
-public class person_member_info_baseAdapter extends BaseAdapter {
+public class personMemberInfoBaseAdapter extends BaseAdapter {
     private Context context;
-    private List<person_member_info> list;
+    private List<PersonMemberInfo> list;
 
-    public person_member_info_baseAdapter(Context context,List<person_member_info> list)
+    public personMemberInfoBaseAdapter(Context context, List<PersonMemberInfo> list)
     {
         this.context = context;
         this.list = list;

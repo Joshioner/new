@@ -5,7 +5,7 @@ import android.app.Activity;
 
 import com.blk.R;
 
-public class dataAnalyseAcvivity extends Activity {
+public class dataAnalyseActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
