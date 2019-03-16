@@ -166,7 +166,7 @@
     <string name="login_register">注册</string>
 
     //注册
-    <string name="register_title">be healthy 账号注册</string>
+    <string name="register_title">Be Healthy 账号注册</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="register_account">账号</string>
     <string name="register_account_hint">请输入账号</string>
@@ -191,4 +191,14 @@
     <string name="pickerview_seconds">秒</string>
     <string name="pickerview_submit">确定</string>
     <string name="pickerview_year">年</string>
+
+    //成员管理
+    <string name="member_manage_title">家庭成员</string>
+    <string name="add_member">添加成员</string>
+    <string name="title_activity_add_member">AddMemberActivity</string>
+    <string name="member_name">姓名</string>
+    <string name="member_name_hint">请输入姓名</string>
+    <string name="member_relation">关系</string>
+    <string name="member_relation_hint">请输入家属与您的关系</string>
+    <string name="finish_btn">完成</string>
 </resources>

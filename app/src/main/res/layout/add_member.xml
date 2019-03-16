@@ -3,17 +3,17 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_background"
-  >
+    android:background="@drawable/background_gradient"
+    >
 
-    //注册账号
+    //添加成员
     <RelativeLayout
-        android:id="@+id/register_title"
+        android:id="@+id/add_member"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="36dp"
-        android:background="@color/login_background"
+        android:background="@drawable/background_gradient"
         android:layout_alignParentTop="true"
         android:paddingBottom="10dp"
         >
@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/register_title"
+            android:text="@string/add_member"
             android:textSize="20dp"
             android:textColor="@color/text_white"
             android:layout_centerHorizontal="true"
@@ -45,7 +45,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/register_title"
+        android:layout_below="@id/add_member"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
@@ -86,19 +86,20 @@
                         android:orientation="horizontal"
                         android:weightSum="1">
 
-                        <TextView
-                            android:id="@+id/person_photo_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:gravity="center|left"
-                            android:text="@string/register_person_photo"
-                            android:textColor="@color/text_black"
-                            android:textSize="15dp" />
+                        <ImageView
+                            android:id="@+id/person_photo"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="0dp"
+                            android:src="@mipmap/person_photo" />
                         <View
-                            android:layout_below="@+id/person_photo_text"
+                            android:layout_below="@+id/person_photo"
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="@color/general_background"
+                            android:layout_marginTop="10dp"
                             />
 
                         <EditText
@@ -111,17 +112,17 @@
                             android:textColor="@color/text_gray"
                             android:background="@null"
                             android:layout_marginLeft="20dp"
-                            android:layout_toRightOf="@+id/person_photo_text"
+                            android:layout_toRightOf="@+id/person_photo"
                             android:hint="@string/register_person_photo_hint"
                             android:textColorHint="@color/text_gray"
                             android:textSize="15dp" />
-                           <ImageView
-                               android:id="@+id/upload_photo"
-                               android:layout_width="40dp"
-                               android:layout_height="40dp"
-                               android:src="@mipmap/upload_photo"
-                               android:layout_alignParentRight="true"
-                               />
+                        <ImageView
+                            android:id="@+id/upload_photo"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@mipmap/upload_photo"
+                            android:layout_alignParentRight="true"
+                            />
                     </RelativeLayout>
 
 
@@ -129,9 +130,9 @@
 
                 </LinearLayout>
 
-                //账号
+                //姓名
                 <LinearLayout
-                    android:id="@+id/accountLinearLayout"
+                    android:id="@+id/memberNameLinearLayout"
                     android:layout_below="@+id/photoLinearLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -141,7 +142,7 @@
                     android:orientation="vertical">
 
                     <RelativeLayout
-                        android:id="@+id/accountRelativeLayout"
+                        android:id="@+id/memberNameRelativeLayout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -149,23 +150,24 @@
                         android:orientation="horizontal"
                         android:weightSum="1">
 
-                        <TextView
-                            android:id="@+id/account_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:gravity="center|left"
-                            android:text="@string/register_account"
-                            android:textColor="@color/text_black"
-                            android:textSize="15dp" />
+                        <ImageView
+                            android:id="@+id/member_name"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="0dp"
+                            android:src="@mipmap/member_name" />
                         <View
-                            android:layout_below="@+id/account_text"
+                            android:layout_below="@+id/member_name"
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="@color/general_background"
+                            android:layout_marginTop="10dp"
                             />
 
                         <EditText
-                            android:id="@+id/account_hint"
+                            android:id="@+id/member_name_hint"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_alignParentTop="true"
@@ -173,8 +175,8 @@
                             android:background="@null"
                             android:textColor="@color/text_gray"
                             android:layout_marginLeft="20dp"
-                            android:layout_toRightOf="@+id/account_text"
-                            android:hint="@string/register_account_hint"
+                            android:layout_toRightOf="@+id/member_name"
+                            android:hint="@string/member_name_hint"
                             android:textColorHint="@color/text_gray"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -185,75 +187,19 @@
                 </LinearLayout>
 
 
-                //密码
+                //关系
                 <LinearLayout
-                android:id="@+id/passwordLinearLayout"
-                android:layout_below="@+id/accountLinearLayout"
+                    android:id="@+id/relationLinearLayout"
+                    android:layout_below="@+id/memberNameLinearLayout"
                     android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:id="@+id/passwordRelativeLayout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <TextView
-                        android:id="@+id/password_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:gravity="center|left"
-                        android:text="@string/register_password"
-                        android:textColor="@color/text_black"
-                        android:textSize="15dp" />
-                    <View
-                        android:layout_below="@+id/password_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:background="@color/general_background"
-                        />
-
-                    <EditText
-                        android:id="@+id/password_hint"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_weight="13.83"
-                        android:background="@null"
-                        android:layout_marginLeft="20dp"
-                        android:textColor="@color/text_gray"
-                        android:layout_toRightOf="@+id/password_text"
-                        android:hint="@string/register_password_hint"
-                        android:textColorHint="@color/text_gray"
-                        android:inputType="textPassword"
-                        android:textSize="15dp" />
-                </RelativeLayout>
-
-
-
-
-            </LinearLayout>
-
-                //确认密码
-                <LinearLayout
-                    android:id="@+id/repeatPasswordLinearLayout"
-                    android:layout_below="@+id/passwordLinearLayout"
                     android:layout_width="match_parent"
-                    android:layout_marginTop="10dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:orientation="vertical">
 
                     <RelativeLayout
-                        android:id="@+id/repeatPasswordRelativeLayout"
+                        android:id="@+id/relationRelativeLayout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -261,23 +207,24 @@
                         android:orientation="horizontal"
                         android:weightSum="1">
 
-                        <TextView
-                            android:id="@+id/repeat_password_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:gravity="center|left"
-                            android:text="@string/register_password_repeat"
-                            android:textColor="@color/text_black"
-                            android:textSize="15dp" />
+                        <ImageView
+                            android:id="@+id/member_relation"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="0dp"
+                            android:src="@mipmap/relation" />
                         <View
-                            android:layout_below="@+id/repeat_password_text"
+                            android:layout_below="@+id/member_relation"
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="@color/general_background"
+                            android:layout_marginTop="10dp"
                             />
 
                         <EditText
-                            android:id="@+id/repeat_password_hint"
+                            android:id="@+id/member_relation_hint"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_alignParentTop="true"
@@ -285,10 +232,10 @@
                             android:background="@null"
                             android:layout_marginLeft="20dp"
                             android:textColor="@color/text_gray"
-                            android:layout_toRightOf="@+id/repeat_password_text"
-                            android:hint="@string/register_password_hint"
-                            android:inputType="textPassword"
+                            android:layout_toRightOf="@+id/member_relation"
+                            android:hint="@string/member_relation_hint"
                             android:textColorHint="@color/text_gray"
+                            android:inputType="textPassword"
                             android:textSize="15dp" />
                     </RelativeLayout>
 
@@ -300,10 +247,9 @@
 
 
                 //性别
-
                 <LinearLayout
                     android:id="@+id/sexLinearLayout"
-                    android:layout_below="@+id/repeatPasswordLinearLayout"
+                    android:layout_below="@+id/relationLinearLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -312,7 +258,7 @@
                     android:orientation="vertical">
 
                     <RelativeLayout
-                       android:id="@+id/sexRelativeLayout"
+                        android:id="@+id/sexRelativeLayout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -320,28 +266,29 @@
                         android:orientation="horizontal"
                         android:weightSum="1">
 
-                        <TextView
-                            android:id="@+id/sex_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:gravity="center|left"
-                            android:text="@string/register_sex"
-                            android:textColor="@color/text_black"
-                            android:textSize="15dp" />
+                        <ImageView
+                            android:id="@+id/sex"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="0dp"
+                            android:src="@mipmap/sex" />
                         <View
-                            android:layout_below="@+id/sex_text"
+                            android:layout_below="@+id/sex"
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="@color/general_background"
+                            android:layout_marginTop="10dp"
                             />
                         <RadioGroup
-                        android:id="@+id/sexRadio"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_toRightOf="@+id/sex_text"
-                        android:layout_marginLeft="30dp"
-                        android:orientation="horizontal">
+                            android:id="@+id/sexRadio"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_toRightOf="@+id/sex"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/male"
@@ -397,15 +344,14 @@
                         android:orientation="horizontal"
                         android:weightSum="1">
 
-                        <TextView
-                            android:id="@+id/birthday_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:gravity="center|left"
-                            android:text="@string/register_birthday"
-                            android:textColor="@color/text_black"
-                            android:textSize="15dp" />
-
+                        <ImageView
+                            android:id="@+id/birthday"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="0dp"
+                            android:src="@mipmap/birthday" />
 
                         <EditText
                             android:id="@+id/birthday_text_hint"
@@ -415,7 +361,7 @@
                             android:layout_weight="13.83"
                             android:background="@null"
                             android:layout_marginLeft="20dp"
-                            android:layout_toRightOf="@+id/birthday_text"
+                            android:layout_toRightOf="@+id/birthday"
                             android:hint="@string/register_birthday_hint"
                             android:focusable="false"
                             android:textColor="@color/text_gray"
@@ -429,9 +375,9 @@
                 </LinearLayout>
 
 
-                //注册按钮
+                //完成按钮
                 <LinearLayout
-                    android:id="@+id/register_save"
+                    android:id="@+id/add_finish"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/birthdayLinearLayout"
@@ -439,13 +385,13 @@
                     android:background="@drawable/rectangle_shape"
                     android:orientation="vertical">
                     <Button
-                        android:id="@+id/login_btn"
+                        android:id="@+id/finish_btn"
                         android:layout_width="match_parent"
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="30dp"
                         android:layout_height="50dp"
                         android:background="@drawable/login_btn_circle"
-                        android:text="@string/register_btn"
+                        android:text="@string/finish_btn"
                         />
 
 

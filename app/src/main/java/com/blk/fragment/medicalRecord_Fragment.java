@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -38,6 +39,7 @@ import com.blk.common.util.HttpSendUtil;
 import com.blk.common.ShowAllListView;
 import com.blk.medical_record.Adapter.medicalRecordDetailBaseAdapter;
 import com.blk.medical_record.Adapter.personMemberInfoBaseAdapter;
+import com.blk.medical_record.MemberManageActivity;
 import com.blk.medical_record.dataAnalyseActivity;
 import com.blk.medical_record.entity.PersonMemberInfo;
 import com.blk.medical_record.entity.medicalRecordDetail;
@@ -80,10 +82,11 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
 
     private final int medicalRecordSearchRequestCode = 101;   //病历搜索框请求码
 
-    private TextView member_manage,data_analyse;       //成员管理、数据对比
+    private TextView data_analyse;       //成员管理、数据对比
 
     private TextView personName;   //当前用户名
 
+    private TextView memberManage;  //成员管理
     private final Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -129,15 +132,13 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         icon_more = (ImageView) view.findViewById(R.id.icon_more);
         icon_add = (ImageView) view.findViewById(R.id.icon_add);
         medicalListView = (ListView) view.findViewById(R.id.medical_record_detail_list);
-        member_manage = (TextView) view.findViewById(R.id.member_manage);
+        memberManage = (TextView) view.findViewById(R.id.member_manage);
         data_analyse = (TextView) view.findViewById(R.id.data_analyse);
         personImage = (ImageView) view.findViewById(R.id.person_photo);
         personName = (TextView) view.findViewById(R.id.person_name);
-        medicalDetailList = new ArrayList<medicalRecordDetail>();
         medicalRecordSearchBox = (ImageView) view.findViewById(R.id.medicalRecordSearchBox);
-        AddMedicalRecordDetailList("123");   //填充病历详细信息列表
-        detail_baseAdapter = new medicalRecordDetailBaseAdapter(getActivity(),medicalDetailList);//初始化适配器
-        medicalListView.setAdapter(detail_baseAdapter);//将适配器传递给medicalListView，类似于填充数据
+        //加载病历信息
+        new MedicalRecordDetailThread().execute(123);
         //解决scrollview中嵌套listview只显示一个item的问题
         //ShowAllListView.setListViewHeightBasedOnChildren(medicalListView);
         memberListView = (ListView) view.findViewById(R.id.person_member_list);
@@ -152,23 +153,45 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
 //
     //根据用户的id来查询所有病历列表
     private void AddMedicalRecordDetailList(String pid) {
-        String address = "http://47.95.246.177:8080/gdufs_blk_ssh/case_findPerson";
-        String data = "pid=" + pid;
-        HttpSendUtil.sendHttpRequest(address,data,new HttpCallbackListener() {
-            @Override
-            public void onFinish(String response) {
-                // Toast.makeText(medical_record_detail.this, "6666", Toast.LENGTH_SHORT).show();
-                Message message = new Message();
-                message.what = SHOW_MEDICAL_RECORD;
-                message.obj = response;
-                handler.sendMessage(message);
-            }
 
-            @Override
-            public void onError(Exception e) {
-            }
-        });
+//        String address = "http://47.95.246.177:8080/gdufs_blk_ssh/case_findPerson";
+//        String data = "pid=" + pid;
+//        HttpSendUtil.sendHttpRequest(address,data,new HttpCallbackListener() {
+//            @Override
+//            public void onFinish(String response) {
+//                // Toast.makeText(medical_record_detail.this, "6666", Toast.LENGTH_SHORT).show();
+//                Message message = new Message();
+//                message.what = SHOW_MEDICAL_RECORD;
+//                message.obj = response;
+//                handler.sendMessage(message);
+//            }
+//
+//            @Override
+//            public void onError(Exception e) {
+//            }
+//        });
 
+    }
+
+    class MedicalRecordDetailThread extends AsyncTask<Integer,Void,Void>{
+        @Override
+        protected void onPreExecute() {
+            medicalDetailList = new ArrayList<medicalRecordDetail>();
+            medicalDetailList.add(new medicalRecordDetail("1","2019-12-11","广东省大学城省中医","急诊室"));
+            medicalDetailList.add(new medicalRecordDetail("1","2018-11-10","中山第一附属医院","五官科"));
+            medicalDetailList.add(new medicalRecordDetail("1","2017-03-11","汕头第一人民医院","内科"));
+        }
+
+        @Override
+        protected Void doInBackground(Integer... integers) {
+            detail_baseAdapter = new medicalRecordDetailBaseAdapter(getActivity(),medicalDetailList);//初始化适配器
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            medicalListView.setAdapter(detail_baseAdapter);//将适配器传递给medicalListView，类似于填充数据
+        }
     }
     //方法：填充家庭成员信息的list列表
     private void AddpersonMemberInfoList() {
@@ -246,7 +269,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         //病历信息搜索框
         medicalRecordSearchBox.setOnClickListener(this);
         //成员管理事件
-        member_manage.setOnClickListener(this);
+        memberManage.setOnClickListener(this);
         //数据对比
         data_analyse.setOnClickListener(this);
         //病历信息列表的点击
@@ -405,6 +428,8 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                 break;
             //家庭成员管理
             case R.id.member_manage:
+                Intent intent = new Intent(getActivity(),MemberManageActivity.class);
+                startActivity(intent);
                 break;
             //数据对比
             case R.id.data_analyse:

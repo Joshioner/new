@@ -1,7 +1,6 @@
-package com.blk;
+package com.blk.medical_record;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -12,6 +11,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.app.Activity;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -23,18 +23,17 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.baidu.ocr.ui.camera.CameraActivity;
+import com.blk.R;
 import com.blk.common.TimePickerView;
 import com.blk.common.ToolBarSet;
 import com.blk.common.alterdialog.ActionSheetDialog;
 import com.blk.common.util.FileUtil;
-import com.blk.medical_record.medicalRecordContentActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-
-public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
+public class AddMemberActivity extends AppCompatActivity implements View.OnClickListener {
 
     private RadioButton maleRadio,femaleRadio;  //男、女单选框
     private EditText birthday;
@@ -47,7 +46,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         Window window = getWindow();
         ToolBarSet.setBar(window);
-        setContentView(R.layout.register);
+        setContentView(R.layout.add_member);
 
         //初始化控件
         initView();
@@ -92,8 +91,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
      */
     public void initEvent(){
         //出生日期
-       birthday.setOnClickListener(this);
-       //上传头像
+        birthday.setOnClickListener(this);
+        //上传头像
         uploadPhoto.setOnClickListener(this);
     }
 
@@ -103,11 +102,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         switch (id){
             //出生日期
             case R.id.birthday_text_hint:
-                TimePickerView pvTime = new TimePickerView.Builder(RegisterActivity.this, new TimePickerView.OnTimeSelectListener() {
+                TimePickerView pvTime = new TimePickerView.Builder(AddMemberActivity.this, new TimePickerView.OnTimeSelectListener() {
                     @Override
                     public void onTimeSelect(Date date, View v) {//选中事件回调
                         String time = getTime(date);
-                        Toast.makeText(RegisterActivity.this,time,Toast.LENGTH_LONG).show();
+                        Toast.makeText(AddMemberActivity.this,time,Toast.LENGTH_LONG).show();
                         birthday.setFocusable(true);
                         birthday.setText(time);
                         birthday.setFocusable(false);
@@ -130,9 +129,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 pvTime.setDate(Calendar.getInstance());//注：根据需求来决定是否使用该方法（一般是精确到秒的情况），此项可以在弹出选择器的时候重新设置当前时间，避免在初始化之后由于时间已经设定，导致选中时间与当前时间不匹配的问题。
                 pvTime.show();
                 break;
-             //上传头像
+            //上传头像
             case R.id.upload_photo:
-                new ActionSheetDialog(RegisterActivity.this)
+                new ActionSheetDialog(AddMemberActivity.this)
                         .builder()
                         .setCancelable(false)
                         .setCanceledOnTouchOutside(false)
@@ -140,9 +139,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         .addSheetItem("拍照", ActionSheetDialog.SheetItemColor.Blue, new ActionSheetDialog.OnSheetItemClickListener() {
                             @Override
                             public void onClick(int which) {
-                                Intent intent = new Intent(RegisterActivity.this, CameraActivity.class);
+                                Intent intent = new Intent(AddMemberActivity.this, CameraActivity.class);
                                 intent.putExtra(CameraActivity.KEY_OUTPUT_FILE_PATH,
-                                        FileUtil.getPersonPhoto(getApplication()).getAbsolutePath());
+                                        FileUtil.getMemberPhoto(getApplication()).getAbsolutePath());
                                 intent.putExtra(CameraActivity.KEY_CONTENT_TYPE,
                                         CameraActivity.CONTENT_TYPE_GENERAL);
                                 startActivityForResult(intent, REQUEST_CODE_CAMERA);
@@ -152,10 +151,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             @Override
                             public void onClick(int which) {
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                                    int ret = ActivityCompat.checkSelfPermission(RegisterActivity.this, Manifest.permission
+                                    int ret = ActivityCompat.checkSelfPermission(AddMemberActivity.this, Manifest.permission
                                             .READ_EXTERNAL_STORAGE);
                                     if (ret != PackageManager.PERMISSION_GRANTED) {
-                                        ActivityCompat.requestPermissions(RegisterActivity.this,
+                                        ActivityCompat.requestPermissions(AddMemberActivity.this,
                                                 new String[] {Manifest.permission.READ_EXTERNAL_STORAGE},
                                                 1000);
                                         return;
@@ -167,8 +166,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             }
                         }).show();
                 break;
-             default:
-                 break;
+            default:
+                break;
         }
     }
 
@@ -190,8 +189,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         //拍照
         else if (requestCode == REQUEST_CODE_CAMERA && resultCode == Activity.RESULT_OK) {
             //图片路径
-          String  imagePath = FileUtil.getPersonPhoto(getApplicationContext()).getAbsolutePath();
-          //填充用户头像
+            String  imagePath = FileUtil.getMemberPhoto(getApplicationContext()).getAbsolutePath();
+            //填充用户头像
             setPersonPhoto(imagePath);
         }
     }
@@ -224,3 +223,4 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         uploadPhoto.setImageBitmap(bitmap);
     }
 }
+

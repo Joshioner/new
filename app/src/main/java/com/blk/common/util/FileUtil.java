@@ -15,6 +15,15 @@ public class FileUtil {
         return file;
     }
 
+    public static File getPersonPhoto(Context context) {
+        File file = new File(context.getFilesDir(), "person.jpg");
+        return file;
+    }
+    public static File getMemberPhoto(Context context) {
+        File file = new File(context.getFilesDir(), "member.jpg");
+        return file;
+    }
+
     public static boolean getSavpplication() {
         return savpplication;
     }

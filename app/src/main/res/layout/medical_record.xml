@@ -67,15 +67,18 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_height="match_parent"
+            android:background="@color/medical_record_background"
             >
 
                 <ListView
                     android:id="@+id/medical_record_detail_list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:dividerHeight="-10dp"
+                    android:dividerHeight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     >
                 </ListView>
 
@@ -121,14 +124,6 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="50dp"
             android:textSize="18dp" />
-        <!--<ScrollView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:id="@+id/person_member_scroll"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_below="@+id/person_name"-->
-            <!--android:layout_marginLeft="15dp"-->
-            <!--android:layout_marginTop="20dp"-->
-            <!--&gt;-->
             <ListView
                 android:id="@+id/person_member_list"
                 android:layout_below="@+id/person_name"
@@ -138,6 +133,7 @@
                 android:dividerHeight="18dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
+                android:background="@color/medical_record_background"
                 >
             </ListView>
         <!--</ScrollView>-->
@@ -152,7 +148,6 @@
             android:layout_marginTop="31dp" />
         <RelativeLayout
             android:id="@+id/manageRela"
-            android:visibility="gone"
             android:orientation="horizontal" android:layout_width="match_parent"
             android:layout_below="@id/managePhoto"
             android:layout_marginTop="25dp"
@@ -182,6 +177,7 @@
         <RelativeLayout
             android:id="@+id/dataAnaRela"
             android:orientation="horizontal"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_below="@id/manageRela"
             android:layout_marginTop="20dp"

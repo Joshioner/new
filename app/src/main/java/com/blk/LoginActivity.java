@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -13,6 +14,7 @@ import com.blk.common.ToolBarSet;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView forgetPassword,register;
+    private Button loginButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,11 +37,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void initView(){
         forgetPassword = (TextView) findViewById(R.id.forget_password);
         register = (TextView) findViewById(R.id.register);
+        loginButton = (Button) findViewById(R.id.login_btn);
     }
 
     public void initEvent(){
         //注册事件
         register.setOnClickListener(this);
+        //登录验证
+        loginButton.setOnClickListener(this);
     }
     /**
      * 重写点击事件
@@ -52,6 +57,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.register:
                 Intent registerIntent = new Intent(this,RegisterActivity.class);
                 startActivity(registerIntent);
+                break;
+            case R.id.login_btn:
+                Intent loginIntent = new Intent(this,MainActivity.class);
+                startActivity(loginIntent);
                 break;
             default:
                 break;

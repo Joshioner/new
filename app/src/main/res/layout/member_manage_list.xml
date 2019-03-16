@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150px"
+    android:background="@drawable/member_manage_circle"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    >
+    <com.blk.common.identify.XCRoundImageView
+        android:id="@+id/member_photo"
+        android:layout_width="110px"
+        android:layout_height="120px"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="46px"
+        android:src="@mipmap/my_avatar"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/member_photo">
+
+        <TextView
+            android:id="@+id/member_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:text="刘浩强"
+            android:textColor="@color/text_black"
+            android:textSize="32px" />
+
+        <ImageView
+            android:id="@+id/sex"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignTop="@+id/member_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/member_name"
+            android:src="@mipmap/male_normal" />
+
+        <TextView
+            android:id="@+id/relation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/member_name"
+            android:layout_marginTop="8dp"
+            android:text="关系：本人"
+            android:textColor="@color/text_black"
+            android:layout_marginRight="10dp"
+            android:textSize="32px" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:text="2017-12-11"
+        android:textColor="@color/text_black"
+        android:layout_marginRight="10dp"
+        android:textSize="32px"
+       />
+
+</RelativeLayout>
