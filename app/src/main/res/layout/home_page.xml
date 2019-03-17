@@ -22,7 +22,7 @@
             android:layout_marginTop="38dp"
             android:fontFamily="AdobeSongStd-Light"
             android:gravity="center"
-            android:text="e  健 康"
+            android:text="Be Healthy"
             android:textColor="@color/bg_white"
             android:textStyle="italic"
             android:textSize="22sp" />

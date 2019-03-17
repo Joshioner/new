@@ -11,386 +11,291 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <RelativeLayout
-                android:layout_marginTop="34px"
-                android:layout_width="match_parent"
-                android:layout_height="188px"
-                android:background="@drawable/shape_corner"
-                android:gravity="center_vertical"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_marginLeft="70px"
-                    android:layout_width="81px"
-                    android:layout_height="88px"
-                    app:srcCompat="@mipmap/tool_icon_remind"
-                    />
-                <LinearLayout
-                    android:layout_marginLeft="201px"
-                    android:layout_width="match_parent"
-                    android:layout_height="88px"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="match_parent"
-                        android:layout_height="44px"
-                        android:textSize="30px"
-                        android:textColor="#333333"
-                        android:text="@string/alarm_tag1" />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="44px"
-                        android:textSize="30px"
-                        android:textColor="#333333"
-                        android:text="@string/alarm_tag2"/>
-                </LinearLayout>
-            </RelativeLayout>
-
-            //健康包
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="120px"
-                android:gravity="center"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="48px"
-                    android:text="@string/healthy_bag"
-                    android:typeface="sans"
-                    android:gravity="center"
-                    android:textSize="40px"
-                    android:textColor="#24ac7f"
-                    android:layout_gravity="center_horizontal"
-                    />
-            </RelativeLayout>
 
             //就医听诊
+
             <RelativeLayout
                 android:id="@+id/auscultation_right"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:background="@drawable/shape_corner_up"
-                android:orientation="horizontal"
+                android:layout_height="60dp"
+                android:background="@drawable/shape_corner_none"
                 android:gravity="center_vertical"
-                >
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/auscultationImage"
-                    android:layout_width="88px"
-                    android:layout_height="79px"
-                    android:layout_marginLeft="20dp"
-                    android:src="@mipmap/too_icon_auscultation"
+                    android:layout_width="50px"
+                    android:layout_height="50px"
                     android:layout_centerVertical="true"
-                    android:layout_alignBottom="@+id/linearLayout"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_marginLeft="20dp"
+                    android:src="@mipmap/too_icon_auscultation" />
+
                 <LinearLayout
                     android:id="@+id/linearLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/auscultationImage"
-                    android:layout_marginLeft="18dp"
                     android:layout_centerInParent="true"
-                    android:orientation="vertical"
-                    >
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/auscultationImage"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/auscultation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/medical_auscultation"
-                        android:typeface="sans"
                         android:textColor="#333333"
-                        android:textSize="32px" />
+                        android:textSize="32px"
+                        android:typeface="sans" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/medical_auscultation_remark"
-                        android:typeface="sans"
                         android:textColor="#939599"
-                        android:textSize="26px" />
+                        android:textSize="26px"
+                        android:typeface="sans" />
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="21px"
-                    android:layout_height="48px"
-                    android:layout_marginRight="68px"
-                    android:src="@mipmap/tool_icon_enter"
-                    android:layout_centerVertical="true"
+                    android:layout_width="20px"
+                    android:layout_height="30px"
                     android:layout_alignParentRight="true"
-                    />
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="68px"
+                    android:src="@mipmap/tool_icon_enter" />
             </RelativeLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/border_background"
-                />
+
 
             //药物查伪
+
             <RelativeLayout
                 android:id="@+id/drugCheck_right"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/shape_corner_none"
-                android:orientation="horizontal"
                 android:gravity="center_vertical"
-                >
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/DrugCheckImage"
-                    android:layout_width="88px"
-                    android:layout_height="88px"
-                    android:layout_marginLeft="20dp"
-                    android:src="@mipmap/tool_icon_medicine"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
+                    android:layout_width="50px"
+                    android:layout_height="50px"
                     android:layout_centerVertical="true"
-                    />
+                    android:layout_marginLeft="20dp"
+                    android:src="@mipmap/tool_icon_medicine" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/DrugCheckImage"
                     android:layout_centerInParent="true"
                     android:layout_marginLeft="18dp"
-                    android:orientation="vertical"
-                    >
+                    android:layout_toRightOf="@+id/DrugCheckImage"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/drugCheck"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/drug_check"
-                        android:typeface="sans"
                         android:textColor="#333333"
-                        android:textSize="32px" />
+                        android:textSize="32px"
+                        android:typeface="sans" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/drug_check_remark"
-                        android:typeface="sans"
                         android:textColor="#939599"
-                        android:textSize="26px" />
+                        android:textSize="26px"
+                        android:typeface="sans" />
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="21px"
-                    android:layout_height="48px"
-                    android:layout_marginRight="68px"
-                    android:src="@mipmap/tool_icon_enter"
-                    android:layout_centerVertical="true"
+                    android:layout_width="20px"
+                    android:layout_height="30px"
                     android:layout_alignParentRight="true"
-                    />
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="68px"
+                    android:src="@mipmap/tool_icon_enter" />
             </RelativeLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/border_background"
-                />
+
 
             //闹钟助手
+
             <RelativeLayout
                 android:id="@+id/alarm_assistant_right"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/shape_corner_none"
-                android:orientation="horizontal"
                 android:gravity="center_vertical"
-                >
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/alarmAssistantImage"
-                    android:layout_width="82px"
-                    android:layout_height="88px"
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:layout_centerVertical="true"
                     android:layout_marginLeft="20dp"
-                    android:src="@mipmap/tool_icon_clock"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true" />
+                    android:src="@mipmap/tool_icon_clock" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/alarmAssistantImage"
                     android:layout_centerInParent="true"
-                    android:orientation="vertical"
                     android:layout_marginLeft="18dp"
-                    >
+                    android:layout_toRightOf="@+id/alarmAssistantImage"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/alarmAssistant"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/alarm_assistant"
-                        android:typeface="sans"
                         android:textColor="#333333"
-                        android:textSize="32px" />
+                        android:textSize="32px"
+                        android:typeface="sans" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/alarm_assistant_remark"
-                        android:typeface="sans"
                         android:textColor="#939599"
-                        android:textSize="26px" />
+                        android:textSize="26px"
+                        android:typeface="sans" />
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="21px"
-                    android:layout_height="48px"
-                    android:layout_marginRight="68px"
-                    android:src="@mipmap/tool_icon_enter"
-                    android:layout_centerVertical="true"
+                    android:layout_width="20px"
+                    android:layout_height="30px"
                     android:layout_alignParentRight="true"
-                    />
-            </RelativeLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/border_background"
-                />
-
-            //疫苗表
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:background="@drawable/shape_corner_down"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                >
-
-                <ImageView
-                    android:id="@+id/vaccineListImage"
-                    android:layout_width="79px"
-                    android:layout_height="88px"
-                    android:layout_marginLeft="20dp"
-                    android:src="@mipmap/tool_icon_yimiao"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/vaccineListImage"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical"
-                    android:layout_marginLeft="18dp"
-                    >
-
-                    <TextView
-                        android:id="@+id/vaccineList"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/vaccine_table"
-                        android:typeface="sans"
-                        android:textColor="#333333"
-                        android:textSize="32px" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/vaccine_table_remark"
-                        android:typeface="sans"
-                        android:textColor="#939599"
-                        android:textSize="26px" />
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="21px"
-                    android:layout_height="48px"
-                    android:layout_marginRight="68px"
-                    android:src="@mipmap/tool_icon_enter"
                     android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    />
+                    android:layout_marginRight="68px"
+                    android:src="@mipmap/tool_icon_enter" />
             </RelativeLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/border_background"
-                />
-            //自我健康管理
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="120px"
-                android:gravity="center"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="48px"
-                    android:text="@string/health_management"
-                    android:typeface="sans"
-                    android:gravity="center"
-                    android:textSize="40px"
-                    android:textColor="#24ac7f"
-                    android:layout_gravity="center_horizontal"
-                    />
-            </RelativeLayout>
+
 
             //康复记录表
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/shape_corner"
-                android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:paddingBottom="8dp"
-                >
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
 
                 <ImageView
                     android:id="@+id/recoveryConditionImage"
-                    android:layout_width="77px"
-                    android:layout_height="88px"
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:layout_centerVertical="true"
                     android:layout_marginLeft="20dp"
-                    android:src="@mipmap/tool_icon_recordchart"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"/>
+                    android:src="@mipmap/tool_icon_recordchart" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/recoveryConditionImage"
                     android:layout_centerInParent="true"
-                    android:orientation="vertical"
                     android:layout_marginLeft="18dp"
-                    >
+                    android:layout_toRightOf="@+id/recoveryConditionImage"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/recoveryCondition"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/rehabilitation_record"
-                        android:typeface="sans"
                         android:textColor="#333333"
-                        android:textSize="32px" />
+                        android:textSize="32px"
+                        android:typeface="sans" />
+
                     <TextView
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:text="@string/rehabilitation_record_remark"
-                        android:typeface="sans"
                         android:textColor="#939599"
-                        android:textSize="26px" />
+                        android:textSize="26px"
+                        android:typeface="sans" />
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="21px"
-                    android:layout_height="48px"
-                    android:layout_marginRight="68px"
-                    android:src="@mipmap/tool_icon_enter"
-                    android:layout_centerVertical="true"
+                    android:layout_width="20px"
+                    android:layout_height="30px"
                     android:layout_alignParentRight="true"
-                    />
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="68px"
+                    android:src="@mipmap/tool_icon_enter" />
             </RelativeLayout>
-            <View
+
+            //健康资讯
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/border_background"
-                />
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_corner_down"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/healthyNewsImage"
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@mipmap/healthy_news" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/healthyNewsImage"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/vaccineList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/healthy_news"
+                        android:textColor="#333333"
+                        android:textSize="32px"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/healthy_news_remark"
+                        android:textColor="#939599"
+                        android:textSize="26px"
+                        android:typeface="sans" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="20px"
+                    android:layout_height="30px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="68px"
+                    android:src="@mipmap/tool_icon_enter" />
+            </RelativeLayout>
+
 
         </LinearLayout>
     </ScrollView>

@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?><!-- ~ Copyright (C) 2017 Baidu, Inc. All Rights Reserved. -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.blk">
+
+    <!--获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <!--<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>-->
+    <!-- SD卡权限  -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
     <!-- 连接网络权限，用于执行云端语音能力 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
@@ -66,7 +81,7 @@
             android:name=".medical_record.dataAnalyseActivity"
             android:label="@string/title_activity_data_analyse_acvivity" />
         <activity android:name=".health_tool.checkResultActivity" />
-        <activity android:name=".health_tool.medical_auscultation" />
+        <activity android:name=".health_tool.MedicalAuscultationActivity" />
         <activity android:name=".health_tool.alarm_assistant" />
         <activity android:name=".health_tool.alarm_add" />
         <activity android:name=".pharmacy.MainActivity" />
@@ -82,7 +97,7 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".health_tool.auscultation_detail" />
+        <activity android:name=".health_tool.AuscultationDetail" />
         <activity android:name=".medical_record.testActivity" />
 
         <service

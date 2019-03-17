@@ -44,7 +44,7 @@ public class RequestUtils {
 
         // 对appId+源文+随机数+token计算md5值
         //应该对 appid+q+salt+密钥 拼接成的字符串做MD5得到32位小写的sign。确保要翻译的文本q为UTF-8编码。
-        String md5String=appId+new String(q.getBytes(),"utf-8")+salt+token;
+        String md5String=appId + new String(q.getBytes(),"utf-8") + salt + token;
         final String sign = MD5Encoder.encode(md5String.toString());
 
         //注意在生成签名拼接 appid+q+salt+密钥 字符串时，q不需要做URL encode，在生成签名之后，发送HTTP请求之前才需要对要发送的待翻译文本字段q做URL encode。

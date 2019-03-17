@@ -68,6 +68,8 @@
     <string name="alarm_assistant_remark">实时提醒吃药</string>
     <string name="vaccine_table">疫苗表</string>
     <string name="vaccine_table_remark">记录疫苗表，定时提醒打疫苗</string>
+    <string name="healthy_news">健康资讯</string>
+    <string name="healthy_news_remark">实时推荐，有效预防</string>
 
     <string name="health_management">自我健康管理</string>
 

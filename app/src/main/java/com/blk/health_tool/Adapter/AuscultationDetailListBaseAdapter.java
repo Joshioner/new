@@ -16,10 +16,10 @@ import java.util.List;
  * Created by lzx on 2018/3/28.
  */
 
-public class auscultationDetailListBaseAdapter extends BaseAdapter {
+public class AuscultationDetailListBaseAdapter extends BaseAdapter {
     private Context context;
     private List<auscultation_detail_list> list;
-    public auscultationDetailListBaseAdapter(Context context, List<auscultation_detail_list> list)
+    public AuscultationDetailListBaseAdapter(Context context, List<auscultation_detail_list> list)
     {
         this.context = context;
         this.list = list;

@@ -5,6 +5,11 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="TestTest" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
@@ -12,38 +17,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ebb1d3f-03b0-4631-bd50-745c05f82753" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/common/alterdialog/ActionSheetDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/common/util/BitmapFactoryUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/Adapter/MemberManageBaseAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/AddMemberActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/MemberManageActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/actionsheet_dialog_in.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/actionsheet_dialog_out.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/actionsheet_bottom_normal.9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/actionsheet_bottom_pressed.9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/actionsheet_bottom_selector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/actionsheet_middle_normal.9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/actionsheet_middle_pressed.9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/actionsheet_middle_selector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/actionsheet_single_normal.9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/actionsheet_single_pressed.9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/actionsheet_single_selector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/actionsheet_top_normal.9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/actionsheet_top_pressed.9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/actionsheet_top_selector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/member_manage_circle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/add_member.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/member_manage.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/member_manage_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/view_actionsheet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/birthday.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/department.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/medical_record.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/member_name.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/person_photo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/relation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/sex.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/MedicalAuscultationActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/alarm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/auscultation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/finish_record.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/healthy_news.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/healthy_tool_background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/healthy_tool_image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/healthy_tool_top_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/icon_circle_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/icon_circle_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/icon_circle_small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/icon_microphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/icon_start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/icon_stop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/medical_record_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/medicine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/pause_play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/pausr_record.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/play_record.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/record.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/record_ing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/record_table.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/reset.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/start_record.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/stop_play.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
@@ -53,25 +52,24 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/RegisterActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/common/CommomDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/common/CommomDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/common/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/common/util/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/login_btn_circle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/login_btn_circle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_commom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_commom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/common/yuyin_fanyi/RequestUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/common/yuyin_fanyi/RequestUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/auscultationDetailListBaseAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/AuscultationDetailListBaseAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/auscultation_detail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AuscultationDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/medical_auscultation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/shape_corner_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_corner_up.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/auscultation_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/auscultation_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/healthy_tool_content.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/healthy_tool_content.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/home_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home_page.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/medical_auscultation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/medical_auscultation.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/medical_record.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/medical_record.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/medical_record_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/medical_record_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/register.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap/cardhistory_icon_address.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/cardhistory_icon_address.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap/cardhistory_icon_enter.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/cardhistory_icon_enter.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap/cardhistory_icon_time.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/cardhistory_icon_time.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -94,11 +92,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="homePage_Fragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/homePage_Fragment.java">
+      <file leaf-file-name="MedicalAuscultationActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/MedicalAuscultationActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            <state relative-caret-position="251">
+              <caret line="378" column="66" selection-start-line="378" selection-start-column="61" selection-end-line="378" selection-end-column="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1416#1424#0" expanded="true" />
+                <element signature="e#1489#1497#0" expanded="true" />
+                <element signature="e#13963#14206#0" expanded="true" />
+                <element signature="e#14205#14206#0" expanded="true" />
+                <element signature="e#14283#14697#0" expanded="true" />
+                <element signature="e#14696#14697#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="medical_auscultation.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/medical_auscultation.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="139" column="24" selection-start-line="139" selection-start-column="24" selection-end-line="139" selection-end-column="24" />
+              <folding>
+                <element signature="e#1024#1054#0" expanded="true" />
+                <element signature="e#1485#2510#0" />
+                <element signature="e#2516#2831#0" />
+                <element signature="e#4007#4889#0" />
+                <element signature="e#10392#11266#0" />
+                <element signature="e#11291#12161#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="background_gradient.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/background_gradient.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="4" column="40" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="45" column="37" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -114,29 +171,47 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>icon_add</find>
-      <find>getSaveFile</find>
-      <find>icon_back</find>
-      <find>icon_more</find>
-      <find>titleTxt</find>
-      <find>save</find>
-      <find>title_activity_add_member</find>
-      <find>RegisterActivity</find>
-      <find>getPersonPhoto</find>
-      <find>auscultation_detail_listview</find>
-      <find>text_black</find>
-      <find>auscultationDetailListBaseAdapter</find>
-      <find>XCRoundImageView</find>
-      <find>detail_baseAdapter</find>
-      <find>android:layout_marginLeft=&quot;35dp&quot;</find>
-      <find>android:background=&quot;@color/medical_record_background&quot;</find>
-      <find>medicalDetailList</find>
+      <find>shape_corner_up</find>
+      <find>goto_auscultation</find>
+      <find>auscultation_detail_back</find>
+      <find>transfer_english</find>
+      <find>auscultation_back</find>
+      <find>MainActivity</find>
+      <find>UploadingService</find>
+      <find>audioRecorder</find>
+      <find>path</find>
+      <find>playRecord</find>
+      <find>mList</find>
+      <find>fileName1</find>
+      <find>startRecord</find>
+      <find>startRecordText</find>
+      <find>finishRecordText</find>
+      <find>R.mipmap</find>
+      <find>重置</find>
+      <find>完成</find>
+      <find>src</find>
+      <find>mRecorder</find>
+      <find>LENGTH_LONG</find>
+      <find>开始</find>
+      <find>startR</find>
+      <find>完成录音</find>
+      <find>开始播放</find>
+      <find>暂停</find>
+      <find>startPlay</find>
+      <find>开始录音</find>
+      <find>filenAME</find>
+      <find>amr</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>AddMemberActivity</replace>
       <replace>getMemberPhoto</replace>
       <replace>MemberManageBaseAdapter</replace>
+      <replace>MedicalAuscultationActivity</replace>
+      <replace>mediaRecorder</replace>
+      <replace>startPlay</replace>
+      <replace>LENGTH_SHORT</replace>
+      <replace>setClickable</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -3442,7 +3517,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/common/CommomDialog.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_commom.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/common/util/FileUtil.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/AddMemberActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/btn_circle.xml" />
@@ -3456,12 +3530,29 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/member_manage.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/member_manage_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/MemberManageActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/healthy_tool_content.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/medical_record.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/medical_record_detail.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/medical_record.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/shape_corner_up.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/healthy_tool.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/home_page.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/healthy_tool_content.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/AuscultationDetailListBaseAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/auscultation_detail.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AuscultationDetail.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/common/yuyin_fanyi/RequestUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/MedicalAuscultation.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/handler/MyHandler.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Listeners/CustomPhoneStateListener.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/service/UploadingService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/utils/AudioRecorder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/medical_auscultation.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/utils/FileUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/MedicalAuscultationActivity.java" />
       </list>
     </option>
   </component>
@@ -3476,9 +3567,22 @@
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="new" type="58d84e3e:PackageViewProjectNode" />
+              <item name="app" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -3535,42 +3639,6 @@
               <item name="new" type="b2602c69:ProjectViewProjectNode" />
               <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="generated" type="462c0819:PsiDirectoryNode" />
-              <item name="not_namespaced_r_class_sources" type="462c0819:PsiDirectoryNode" />
-              <item name="debug" type="462c0819:PsiDirectoryNode" />
-              <item name="processDebugResources" type="462c0819:PsiDirectoryNode" />
-              <item name="r" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="generated" type="462c0819:PsiDirectoryNode" />
-              <item name="not_namespaced_r_class_sources" type="462c0819:PsiDirectoryNode" />
-              <item name="debug" type="462c0819:PsiDirectoryNode" />
-              <item name="processDebugResources" type="462c0819:PsiDirectoryNode" />
-              <item name="r" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="generated" type="462c0819:PsiDirectoryNode" />
-              <item name="not_namespaced_r_class_sources" type="462c0819:PsiDirectoryNode" />
-              <item name="debug" type="462c0819:PsiDirectoryNode" />
-              <item name="processDebugResources" type="462c0819:PsiDirectoryNode" />
-              <item name="r" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="blk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -3622,28 +3690,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="blk" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="identify" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blk" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blk" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="yuyin_fanyi" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new" type="b2602c69:ProjectViewProjectNode" />
@@ -3684,40 +3731,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="blk" type="462c0819:PsiDirectoryNode" />
-              <item name="health_tool" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blk" type="462c0819:PsiDirectoryNode" />
               <item name="medical_record" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blk" type="462c0819:PsiDirectoryNode" />
-              <item name="medical_record" type="462c0819:PsiDirectoryNode" />
-              <item name="Adapter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blk" type="462c0819:PsiDirectoryNode" />
-              <item name="medical_record" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new" type="b2602c69:ProjectViewProjectNode" />
@@ -3753,15 +3767,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
               <item name="mipmap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="values" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new" type="b2602c69:ProjectViewProjectNode" />
@@ -3861,19 +3866,23 @@
               <item name="&lt; Android API 25 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
               <item name="android.jar" type="462c0819:PsiDirectoryNode" />
               <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Android API 25 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="android.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
               <item name="os" type="462c0819:PsiDirectoryNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
             <path>
-              <item name="new" type="58d84e3e:PackageViewProjectNode" />
-              <item name="app" type="616d4139:PackageViewModuleNode" />
+              <item name="new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Android API 25 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="android.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -3904,13 +3913,18 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="homeP&#9;PSI&#9;JAVA://com.blk.fragment.homePage_Fragment&#10;member&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/member_manage.xml&#10;colo&#9;FILE&#9;file://E:/Android/new/app/src/main/res/values/colors.xml&#10;healthyt&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/healthy_tool.xml&#10;medical&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java&#10;Android&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;me_fra&#9;PSI&#9;JAVA://com.blk.fragment.me_Fragment&#10;medical_re&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/medical_record.xml&#10;User&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/entity/User.java&#10;heal&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java&#10;And&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;Register&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/RegisterActivity.java&#10;regi&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/register.xml&#10;Medicas&#9;PSI&#9;JAVA://com.blk.medical_record.medicalRecordSearchActivity&#10;A&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;Heal&#9;PSI&#9;JAVA://com.blk.fragment.healthyTool_Fragment&#10;medic&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java&#10;Medica&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java&#10;LoginAc&#9;PSI&#9;JAVA://com.blk.LoginActivity&#10;Re&#9;PSI&#9;JAVA://com.blk.RegisterActivity&#10;re&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/register.xml&#10;style.&#9;FILE&#9;file://E:/Android/new/app/src/main/res/values/styles.xml&#10;colors.&#9;FILE&#9;file://E:/Android/new/app/src/main/res/values/colors.xml&#10;register.xml&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/register.xml" />
+    <property name="SearchEverywhereHistoryKey" value="Fileuti&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/utils/FileUtils.java&#10;medi&#9;PSI&#9;JAVA://com.blk.medical_record.medicalRecordContentActivity&#10;Android&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;Me&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/MedicalAuscultation.java&#10;IAudioCallback&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/interfaces/IAudioCallback.java&#10;me&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/MedicalAuscultation.java&#10;And&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;Heal&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java&#10;home&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/home_page.xml&#10;healthy_tool_content&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/healthy_tool_content.xml&#10;activity_ma&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/activity_main.xml&#10;home_&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/home_page.xml&#10;me.xml&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/me.xml&#10;medica&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/medical_record.xml&#10;Healthy&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java&#10;med&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/medical_record.xml&#10;homeP&#9;PSI&#9;JAVA://com.blk.fragment.homePage_Fragment&#10;member&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/member_manage.xml&#10;colo&#9;FILE&#9;file://E:/Android/new/app/src/main/res/values/colors.xml&#10;healthyt&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/healthy_tool.xml&#10;medical&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java&#10;me_fra&#9;PSI&#9;JAVA://com.blk.fragment.me_Fragment&#10;medical_re&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/medical_record.xml&#10;User&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/entity/User.java&#10;heal&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java&#10;Register&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/RegisterActivity.java&#10;regi&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/register.xml&#10;Medicas&#9;PSI&#9;JAVA://com.blk.medical_record.medicalRecordSearchActivity&#10;A&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;medic&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java&#10;Medica&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java&#10;LoginAc&#9;PSI&#9;JAVA://com.blk.LoginActivity&#10;Re&#9;PSI&#9;JAVA://com.blk.RegisterActivity&#10;re&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/register.xml&#10;style.&#9;FILE&#9;file://E:/Android/new/app/src/main/res/values/styles.xml&#10;colors.&#9;FILE&#9;file://E:/Android/new/app/src/main/res/values/colors.xml&#10;register.xml&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/register.xml" />
+    <property name="android.project.structure.last.selected" value="SDK Location" />
+    <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="device.picker.selection" value="7N3GSN158E091849" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ImageSelector" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Voice2Txt" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Android\new\app\src\main\res\mipmap" />
+    </key>
     <key name="android.template.packageName">
       <recent name="com.blk.medical_record" />
     </key>
@@ -3919,6 +3933,7 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Android\new\app\src\main\res\mipmap" />
+      <recent name="E:\Android\new\app\src\main\java\com\blk\health_tool" />
       <recent name="E:\Android\new\app\src\main\res\drawable" />
       <recent name="E:\Android\new\app\src\main\res\layout" />
       <recent name="E:\Android\new\app\src\main\res\anim" />
@@ -4047,264 +4062,84 @@
       <option name="presentableId" value="Default" />
       <updated>1552626345459</updated>
     </task>
+    <task id="LOCAL-00001" summary="家庭组管理功能">
+      <created>1552712049844</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552712049844</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="Android Profiler" order="7" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" weight="0.43696162" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32811275" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Preview" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Logcat" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32811275" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32654658" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32811275" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="7" visible="true" weight="0.32498044" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17527822" />
-      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.22161315" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20866455" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.2576351" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32967892" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" weight="0.3298887" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Assistant" order="3" weight="0.3298887" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="家庭组管理功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="家庭组管理功能" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Entity/auscultation_detail_list.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/register.xml">
-      <provider editor-type-id="android-designer2">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/medical_record_detail.xml">
+      <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="104" column="63" lean-forward="true" selection-end-line="461" selection-end-column="17" />
-          <folding>
-            <element signature="e#301#1553#0" />
-          </folding>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="94" column="19" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/Adapter/healthyNewsBaseAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="686">
-          <caret line="202" column="32" selection-start-line="202" selection-start-column="32" selection-end-line="202" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/util/FileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/member_name.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/rectangle_shape.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/AddMemberActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="192" column="20" selection-start-line="192" selection-start-column="20" selection-end-line="192" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3381#3870#0" expanded="true" />
-            <element signature="e#3869#3870#0" expanded="true" />
-            <element signature="e#5251#5993#0" expanded="true" />
-            <element signature="e#5992#5993#0" expanded="true" />
-            <element signature="e#6080#7256#0" expanded="true" />
-            <element signature="e#7255#7256#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/btn_circle.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/add_member.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="383" column="51" lean-forward="true" selection-start-line="383" selection-start-column="51" selection-end-line="383" selection-end-column="51" />
-          <folding>
-            <element signature="e#1325#1345#0" expanded="true" />
-            <element signature="e#2519#5473#0" />
-            <element signature="e#4883#4919#0" expanded="true" />
-            <element signature="e#5512#8063#0" />
-            <element signature="e#7915#7941#0" expanded="true" />
-            <element signature="e#8103#10545#0" />
-            <element signature="e#10584#10614#0" expanded="true" />
-            <element signature="e#13298#16931#0" />
-            <element signature="e#13626#13649#0" expanded="true" />
-            <element signature="e#14327#14352#0" expanded="true" />
-            <element signature="e#16578#16610#0" expanded="true" />
-            <element signature="e#17803#17823#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/RegisterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="216" selection-start-line="216" selection-end-line="216" />
-          <folding>
-            <element signature="method#getTime#0;class#RegisterActivity#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="64" column="70" lean-forward="true" selection-start-line="64" selection-start-column="70" selection-end-line="64" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/auscultation_detail_list.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/auscultationDetailListBaseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="67" column="5" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="67" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/Adapter/personMemberInfoBaseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-665">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/graphics/BitmapFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="34" column="45" lean-forward="true" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/content/res/Resources.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/util/BitmapFactoryUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#192#193#0" expanded="true" />
-            <element signature="e#240#241#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/auscultation_detail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="28" column="33" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/huawei-chm_tl00h-7N3GSN158E091849/data/data/com.baidu.ocr.user/files/image/1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/huawei-chm_tl00h-7N3GSN158E091849/data/data/com.baidu.ocr.user/files/member.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/huawei-chm_tl00h-7N3GSN158E091849/data/data/com.baidu.ocr.user/files/person.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/Adapter/MemberManageBaseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="58" column="66" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-            <element signature="e#920#921#0" expanded="true" />
-            <element signature="e#977#978#0" expanded="true" />
-            <element signature="e#1018#1019#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="e#1106#1107#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/my_avatar.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="32" column="42" lean-forward="true" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/background_gradient.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        <state relative-caret-position="700">
+          <caret line="54" column="70" lean-forward="true" selection-start-line="54" selection-start-column="70" selection-end-line="54" selection-end-column="70" />
         </state>
       </provider>
     </entry>
@@ -4313,130 +4148,91 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="46" column="52" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/me_Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/identify/XCRoundImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-146">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/member_manage_list.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/MemberManageActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="121" column="50" selection-start-line="121" selection-start-column="50" selection-end-line="121" selection-end-column="50" />
+        <state relative-caret-position="490">
+          <caret line="14" selection-end-line="325" selection-end-column="15" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#744#2705#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/login_btn_circle.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/homePage_Fragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        <state relative-caret-position="525">
+          <caret line="170" column="38" selection-start-line="170" selection-start-column="13" selection-end-line="170" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/cardhistory_icon_address.png">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/home_bg_left.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/dialog_loading_img.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/loading_bg.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/os/AsyncTask.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/cardhistory_card.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/entity/medicalRecordDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/Adapter/medicalRecordDetailBaseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_tool.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+        <state relative-caret-position="490">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+          <folding>
+            <element signature="e#2102#2123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/healthy_tool_background.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/healthy_tool_top_bg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_corner_up.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_corner_none.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/home_page.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding>
+            <element signature="e#1499#4559#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_tool_content.xml">
-      <provider editor-type-id="android-designer2">
+      <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/department.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/cardhistory_person_bg.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/medical_record_detail.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="65" column="18" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="278" column="47" selection-start-line="278" selection-start-column="22" selection-end-line="278" selection-end-column="47" />
+          <folding>
+            <element signature="e#3082#5657#0" />
+            <element signature="e#2322#2352#0" expanded="true" />
+            <element signature="e#2693#2730#0" expanded="true" />
+            <element signature="e#5885#8329#0" />
+            <element signature="e#8557#11009#0" />
+            <element signature="e#14545#16999#0" />
+            <element signature="e#11687#11709#0" expanded="true" />
+            <element signature="e#12050#12079#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -4445,58 +4241,272 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1328">
-          <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+        <state relative-caret-position="385">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#3573#8448#0" />
+            <element signature="e#3597#8160#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/auscultation_detail_list.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="286" column="11" selection-start-line="286" selection-start-column="11" selection-end-line="286" selection-end-column="11" />
+        <state relative-caret-position="560">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/AuscultationDetailListBaseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="53" column="85" selection-start-line="53" selection-start-column="85" selection-end-line="53" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_tool.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/auscultation_detail.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
           <folding>
-            <element signature="e#10542#11627#0" expanded="true" />
-            <element signature="e#11626#11627#0" expanded="true" />
+            <element signature="e#999#1029#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AuscultationDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/yuyin_fanyi/RequestUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="54" column="59" selection-start-line="54" selection-start-column="59" selection-end-line="54" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/yuyin_fanyi/DictationResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-980">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/libs/gson-2.2.4.jar!/com/google/gson/reflect/TypeToken.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/libs/Msc.jar!/com/iflytek/cloud/ui/RecognizerDialog.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/blk/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="3776" column="28" selection-start-line="3776" selection-start-column="28" selection-end-line="3776" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/interfaces/IPhoneState.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/interfaces/IAudioCallback.java" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/os/Build.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Listeners/CustomPhoneStateListener.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/handler/MyHandler.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/service/UploadingService.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/utils/PcmToWav.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/utils/WaveHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/utils/AudioRecorder.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/background_gradient.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="79" column="42" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="42" />
+        <state relative-caret-position="325">
+          <caret line="45" column="37" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/member_manage_circle.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/utils/AudioStatus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+        <state relative-caret-position="210">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/member_manage.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="46" column="36" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/icon_auscultation.png">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/reset.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/homePage_Fragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        <state relative-caret-position="210">
+          <caret line="84" column="34" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="84" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/content/DialogInterface.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/os/Environment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/record.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/finish_record.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/utils/TimeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/medical_auscultation.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="139" column="24" selection-start-line="139" selection-start-column="24" selection-end-line="139" selection-end-column="24" />
+          <folding>
+            <element signature="e#1024#1054#0" expanded="true" />
+            <element signature="e#1485#2510#0" />
+            <element signature="e#2516#2831#0" />
+            <element signature="e#4007#4889#0" />
+            <element signature="e#10392#11266#0" />
+            <element signature="e#11291#12161#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/view/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="638" column="44" lean-forward="true" selection-start-line="638" selection-start-column="44" selection-end-line="638" selection-end-column="44" />
+          <folding>
+            <element signature="e#22446#22447#0" expanded="true" />
+            <element signature="e#22497#22498#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/media/MediaRecorder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="174" column="32" selection-start-line="174" selection-start-column="32" selection-end-line="174" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/MedicalAuscultationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="378" column="66" selection-start-line="378" selection-start-column="61" selection-end-line="378" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1416#1424#0" expanded="true" />
+            <element signature="e#1489#1497#0" expanded="true" />
+            <element signature="e#13963#14206#0" expanded="true" />
+            <element signature="e#14205#14206#0" expanded="true" />
+            <element signature="e#14283#14697#0" expanded="true" />
+            <element signature="e#14696#14697#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

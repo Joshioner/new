@@ -10,10 +10,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.blk.MainActivity;
 import com.blk.R;
 import com.blk.common.ToolBarSet;
-import com.blk.health_tool.Adapter.auscultationDetailListBaseAdapter;
+import com.blk.health_tool.Adapter.AuscultationDetailListBaseAdapter;
 import com.blk.health_tool.Entity.auscultation_detail_list;
 
 import java.util.ArrayList;
@@ -23,10 +22,10 @@ import java.util.List;
  * Created by lzx on 2018/3/28.
  */
 
-public class auscultation_detail extends AppCompatActivity implements View.OnClickListener {
+public class AuscultationDetail extends AppCompatActivity implements View.OnClickListener {
     private ListView auscultation_detail_listview;
     private List<auscultation_detail_list>  auscultation_detail_list;
-    private auscultationDetailListBaseAdapter auscultationListAdapter;
+    private AuscultationDetailListBaseAdapter auscultationListAdapter;
     private TextView goto_auscultation;
     private ImageView auscultation_detail_back;
     @Override
@@ -43,7 +42,7 @@ public class auscultation_detail extends AppCompatActivity implements View.OnCli
         auscultation_detail_listview = (ListView)findViewById(R.id.auscultation_detail_listview);
         auscultation_detail_list = new ArrayList<auscultation_detail_list>();
         AddAuscultation();
-        auscultationListAdapter = new auscultationDetailListBaseAdapter(auscultation_detail.this,auscultation_detail_list);
+        auscultationListAdapter = new AuscultationDetailListBaseAdapter(AuscultationDetail.this,auscultation_detail_list);
         auscultation_detail_listview.setAdapter(auscultationListAdapter);
         goto_auscultation = (TextView)findViewById(R.id.goto_auscultation);
         auscultation_detail_back = (ImageView) findViewById(R.id.auscultation_detail_back);
@@ -72,12 +71,11 @@ public class auscultation_detail extends AppCompatActivity implements View.OnCli
         switch (id)
         {
             case R.id.goto_auscultation:
-                intent = new Intent(auscultation_detail.this,medical_auscultation.class);
+                intent = new Intent(AuscultationDetail.this,MedicalAuscultationActivity.class);
                 startActivity(intent);
                 break;
             case R.id.auscultation_detail_back:
-                intent = new Intent(auscultation_detail.this ,MainActivity.class);
-                startActivity(intent);
+                this.finish();
                 break;
         }
     }

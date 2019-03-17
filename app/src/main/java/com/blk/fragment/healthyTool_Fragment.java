@@ -12,7 +12,7 @@ import android.widget.RelativeLayout;
 import com.blk.R;
 import com.blk.health_tool.DrugCheckActivity;
 import com.blk.health_tool.alarm_assistant;
-import com.blk.health_tool.auscultation_detail;
+import com.blk.health_tool.AuscultationDetail;
 
 
 /**
@@ -62,7 +62,7 @@ public class healthyTool_Fragment extends Fragment {
         auscultation_right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), auscultation_detail.class);
+                Intent intent = new Intent(getActivity(), AuscultationDetail.class);
                 startActivity(intent);
             }
         });
