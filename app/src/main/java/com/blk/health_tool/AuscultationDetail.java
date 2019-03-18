@@ -71,7 +71,7 @@ public class AuscultationDetail extends AppCompatActivity implements View.OnClic
         switch (id)
         {
             case R.id.goto_auscultation:
-                intent = new Intent(AuscultationDetail.this,MedicalAuscultationActivity.class);
+                intent = new Intent(this,MedicalAuscultationActivity.class);
                 startActivity(intent);
                 break;
             case R.id.auscultation_detail_back:
