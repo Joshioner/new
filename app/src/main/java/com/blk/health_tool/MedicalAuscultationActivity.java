@@ -3,7 +3,9 @@ package com.blk.health_tool;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -11,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.blk.R;
@@ -18,6 +21,7 @@ import com.blk.common.ToolBarSet;
 import com.blk.common.yuyin_fanyi.DictationResult;
 import com.blk.common.yuyin_fanyi.HttpCallBack;
 import com.blk.common.yuyin_fanyi.RequestUtils;
+import com.blk.health_tool.util.ResultBean;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.iflytek.cloud.ErrorCode;
@@ -29,18 +33,25 @@ import com.iflytek.cloud.SpeechUtility;
 import com.iflytek.cloud.ui.RecognizerDialog;
 import com.iflytek.cloud.ui.RecognizerDialogListener;
 
+import org.w3c.dom.Text;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class MedicalAuscultationActivity extends Activity implements View.OnClickListener{
     private ImageView auscultation_back;
     private EditText editText;
     private RelativeLayout btnStartSpeak;
+    private TextView save;
   //  private LinearLayout transfer_english;
     private static final String APP_ID = "20170913000082585";
     private static final String SECURITY_KEY = "Y0brcHKoldDb9MobxcXU";
     private String from="auto";
     private String to="auto";
 
+    private String path;
     //有动画效果
     private RecognizerDialog iatDialog;
     //无动画效果
@@ -61,6 +72,7 @@ public class MedicalAuscultationActivity extends Activity implements View.OnClic
         auscultation_back = (ImageView)findViewById(R.id.auscultation_back);
         editText = (EditText) findViewById(R.id.editText);
         btnStartSpeak = (RelativeLayout) findViewById(R.id.btnStartSpeak);
+        save = (TextView) findViewById(R.id.save);
       //  transfer_english = (LinearLayout)findViewById(R.id.transfer_english);
 
     }
@@ -69,6 +81,7 @@ public class MedicalAuscultationActivity extends Activity implements View.OnClic
         auscultation_back.setOnClickListener(this);
         //开始语音识别
         btnStartSpeak.setOnClickListener(this);
+        save.setOnClickListener(this);
         //翻译
     //    transfer_english.setOnClickListener(this);
     }
@@ -83,69 +96,45 @@ public class MedicalAuscultationActivity extends Activity implements View.OnClic
                 this.finish();
                 startActivity(intent);
                 break;
-//            case R.id.transfer_english:
-//                final String request = editText.getText().toString();
-//                RequestUtils requestUtils=new RequestUtils();
-//                if (!request.isEmpty()){
-//                    try {
-//                        requestUtils.translate(request, from, to, new HttpCallBack() {
-//                            @Override
-//                            public void onSuccess(String result) {
-//                                editText.setText(result);
-//                            }
-//                            @Override
-//                            public void onFailure(String exception) {
-//                                editText.setText(exception);
-//                            }
-//                        });
-//                    } catch (Exception e) {
-//                        e.printStackTrace();
-//                    }
-//                }else{
-//                    Toast.makeText(medical_auscultation.this,"请输入要翻译的内容!",Toast.LENGTH_SHORT).show();
-//                }
-//                break;
             case R.id.btnStartSpeak:
                 // 有交互动画的语音识别器
                 iatDialog = new RecognizerDialog(MedicalAuscultationActivity.this, mInitListener);
-                //1.创建SpeechRecognizer对象(没有交互动画的语音识别器)，第2个参数：本地听写时传InitListener
-                //mIat = SpeechRecognizer.createRecognizer(MainActivity.this, mInitListener);
-//                // 2.设置听写参数
-//                mIat.setParameter(SpeechConstant.DOMAIN, "iat"); // domain:域名
-//                mIat.setParameter(SpeechConstant.LANGUAGE, "zh_cn");
-//                mIat.setParameter(SpeechConstant.ACCENT, "mandarin"); // mandarin:普通话
-                //保存音频文件到本地（有需要的话）   仅支持pcm和wav
-                //  mIat.setParameter(SpeechConstant.ASR_AUDIO_PATH, Environment.getExternalStorageDirectory() + "/msc/mIat.wav");
-                //mIat.startListening(mRecognizerListener);//
+
+                 path = Environment.getExternalStorageDirectory().getAbsolutePath()
+                        + "/Davie/" + getPackageName() + "/Record";
+                iatDialog.setParameter(SpeechConstant.ASR_AUDIO_PATH, path + "/" + getTime() + ".wav");    //识别完成后在本地保存一个音频文
+                // 设置语音前端点:静音超时时间，即用户多长时间不说话则当做超时处理
+                iatDialog.setParameter(SpeechConstant.VAD_BOS, "4000");
+                // 设置语音后端点:后端点静音检测时间，即用户停止说话多长时间内即认为不再输入， 自动停止录音
+                iatDialog.setParameter(SpeechConstant.VAD_EOS, "4000");
+                // 设置音频保存路径，保存音频格式支持pcm、wav，设置路径为sd卡请注意WRITE_EXTERNAL_STORAGE权限
+                // 注：AUDIO_FORMAT参数语记需要更新版本才能生效
+                //这句话必须加,否则音频文件无法播放
+                iatDialog.setParameter(SpeechConstant.AUDIO_FORMAT,"wav");
 
                 iatDialog.setListener(new RecognizerDialogListener() {
-                    String resultJson = "[";           //放置在外边做类的变量则报错，会造成json格式不对（？）
-
                     @Override
                     public void onResult(RecognizerResult recognizerResult, boolean isLast) {
-                        System.out.println("-----------------   onResult   -----------------");
-                        if (!isLast) {
-                            resultJson += recognizerResult.getResultString() + ",";
-                        } else {
-                            resultJson += recognizerResult.getResultString() + "]";
-                        }
-
                         if (isLast) {
-                            //解析语音识别后返回的json格式的结果
-                            Gson gson = new Gson();
-                            List<DictationResult> resultList = gson.fromJson(resultJson,
-                                    new TypeToken<List<DictationResult>>() {
-                                    }.getType());
-                            String result = "";
-                            for (int i = 0; i < resultList.size() - 1; i++) {
-                                result += resultList.get(i).toString();
+                            return;
+                        }
+                        Gson mGson = new Gson();
+                        ResultBean resultBean = mGson.fromJson(recognizerResult.getResultString(), ResultBean.class);
+                        List<ResultBean.WsBean> ws = resultBean.getWs();
+                        String result = "";
+                        for (int i = 0; i < ws.size(); i++) {
+                            List<ResultBean.WsBean.CwBean> cw = ws.get(i).getCw();
+                            for (int j = 0; j < cw.size(); j++) {
+                                result += cw.get(j).getW();
                             }
-                            editText.setText(result);
+                        }
+                            editText.append(result);
+                           // editText.setText(result);
                             //获取焦点
                             editText.requestFocus();
                             //将光标定位到文字最后，以便修改
                             editText.setSelection(result.length());
-                        }
+//                        }
                     }
 
                     @Override
@@ -157,10 +146,36 @@ public class MedicalAuscultationActivity extends Activity implements View.OnClic
                 //开始听写，需将sdk中的assets文件下的文件夹拷入项目的assets文件夹下（没有的话自己新建）
                 iatDialog.show();
                 break;
+            case R.id.save:
+                /* 获得MeidaPlayer对象 */
+                MediaPlayer mediaPlayer = new MediaPlayer();
+
+                /* 得到文件路径 *//* 注：文件存放在SD卡的根目录，一定要进行prepare()方法，使硬件进行准备 */
+                File file = new File(path);
+
+                try{
+                    /* 为MediaPlayer 设置数据源 */
+                    mediaPlayer.setDataSource(file.getAbsolutePath());
+
+                    /* 准备 */
+                    mediaPlayer.prepare();
+                    mediaPlayer.start();
+                }catch(Exception ex){
+                    ex.printStackTrace();
+                }
+                break;
         }
     }
 
 
+
+    // 获得当前时间
+    private String getTime() {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH：mm：ss");
+        Date curDate = new Date(System.currentTimeMillis());// 获取当前时间
+        String time = formatter.format(curDate);
+        return time;
+    }
 
 
     public static final String TAG = "MainActivity";
