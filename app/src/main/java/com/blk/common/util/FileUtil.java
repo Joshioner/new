@@ -16,7 +16,7 @@ public class FileUtil {
     }
 
     public static File getPersonPhoto(Context context) {
-        File file = new File(context.getFilesDir(), "person.jpg");
+        File file = new File(context.getFilesDir(), "AlarmDbjpg");
         return file;
     }
     public static File getMemberPhoto(Context context) {

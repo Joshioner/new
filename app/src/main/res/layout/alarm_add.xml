@@ -9,159 +9,394 @@
     <RelativeLayout
         android:id="@+id/drug_check_relative"
         android:layout_width="match_parent"
-        android:layout_height="128px"
+        android:layout_height="140px"
         android:background="@drawable/background_gradient">
         <ImageView
             android:id="@+id/add_alarm_back"
-            android:layout_width="21px"
-            android:layout_height="36px"
-            android:layout_marginTop="48px"
+            android:layout_width="20px"
+            android:layout_height="35px"
+            android:layout_marginTop="70px"
             android:layout_marginLeft="32px"
             android:background="@mipmap/icon_back"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44px"
+            android:layout_marginTop="65px"
             android:layout_centerHorizontal="true"
             android:text="@string/alarm_add_title"
             android:textColor="#ffffff"
             android:textSize="36px" />
         <TextView
-            android:id="@+id/firm_add_alarm"
+            android:id="@+id/delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="44px"
+            android:layout_marginTop="65px"
             android:layout_marginRight="30px"
-            android:text="@string/save"
+            android:text="@string/delete"
             android:textColor="#ffffff"
             android:textSize="28px"
+            android:visibility="gone"
             />
     </RelativeLayout>
-    //输入栏
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300px"
-        >
+        android:layout_height="match_parent"
+        android:layout_below="@id/drug_check_relative"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white">
 
-        <EditText
-            android:id="@+id/add_alarm_content"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#e9f1f3"
-            android:textColorHint="#999999"
-            android:gravity="left"
-            android:textColor="#333333"
-            android:textSize="30px"
-            android:hint="输入闹钟提示内容..."/>
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                //药名
+                <LinearLayout
+                    android:id="@+id/drugNameLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/drugNameRelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/drug_name_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="center|left"
+                            android:text="@string/drug_name"
+                            android:textColor="@color/text_gray"
+                            android:textSize="15dp" />
+                        <View
+                            android:layout_below="@+id/drug_name_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/general_background"
+                            />
+
+                        <EditText
+                            android:id="@+id/drug_name_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="13.83"
+                            android:background="@null"
+                            android:textColor="@color/text_black"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/drug_name_text"
+                            android:hint="@string/drug_name_hint"
+                            android:textColorHint="@color/text_gray"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+               //用量
+               <LinearLayout
+                android:id="@+id/dosageLinearLayout"
+                   android:layout_below="@+id/drugNameLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/dosageRelativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/dosage_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:gravity="center|left"
+                        android:text="@string/dosage_text"
+                        android:textColor="@color/text_gray"
+                        android:textSize="15dp" />
+
+                    //每天
+                    <TextView
+                        android:id="@+id/every_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/dosage_text"
+                        android:layout_weight="13.83"
+                        android:background="@null"
+                        android:text="每天"
+                        android:textColor="@color/text_black" />
+                    //次数
+                    <EditText
+                        android:id="@+id/times"
+                        android:focusable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:layout_toRightOf="@+id/every_day"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/text_black"
+                        android:drawableBottom="@drawable/line_short"
+                        android:paddingBottom="10dp"
+                       />
+                    <TextView
+                        android:id="@+id/times_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="次，每次"
+                        android:textColor="@color/text_black"
+                        android:layout_toRightOf="@+id/times"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        />
+                    //粒数
+                    <EditText
+                        android:focusable="false"
+                        android:id="@+id/nums"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:textColor="@color/text_black"
+                        android:layout_toRightOf="@+id/times_text"
+                        android:layout_marginLeft="5dp"
+                        android:drawableBottom="@drawable/line_short"
+                        android:paddingBottom="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/nums_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="粒/瓶/ml"
+                        android:textColor="@color/text_black"
+                        android:layout_toRightOf="@+id/nums"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        />
+                    <RelativeLayout
+                        android:id="@+id/timesRelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dosage_text"
+                        android:layout_marginLeft="35dp"
+                        >
+                        //时间
+                        <EditText
+                            android:focusable="false"
+                            android:id="@+id/time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:textColor="@color/text_black"
+                            android:layout_marginLeft="25dp"
+                            android:drawableBottom="@drawable/line_middle"
+                            android:paddingBottom="10dp"
+                            />
+                        <TextView
+                            android:id="@+id/time_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="开始，间隔"
+                            android:textColor="@color/text_black"
+                            android:layout_toRightOf="@+id/time"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            />
+                        //间隔时间
+                        <EditText
+                            android:focusable="false"
+                            android:id="@+id/interval_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:textColor="@color/text_black"
+                            android:layout_toRightOf="@+id/time_text"
+                            android:layout_marginLeft="5dp"
+                            android:drawableBottom="@drawable/line_short"
+                            android:paddingBottom="10dp"
+                            />
+                        <TextView
+                            android:id="@+id/interval_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="小时"
+                            android:textColor="@color/text_black"
+                            android:layout_toRightOf="@+id/interval_time"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            />
+                    </RelativeLayout>
+                    <View
+                        android:layout_below="@+id/timesRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/general_background"
+                        />
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+            //周期
+            <LinearLayout
+                android:id="@+id/periodLinearLayout"
+                android:layout_below="@+id/dosageLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/periodRelativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/period_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:gravity="center|left"
+                        android:text="@string/period"
+                        android:textColor="@color/text_gray"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/period_text"
+                        android:layout_weight="13.83"
+                        android:background="@null"
+                        android:text="从"
+                        android:textColor="@color/text_black" />
+                    //天数
+                    <EditText
+                        android:focusable="false"
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:textColor="@color/text_black"
+                        android:layout_toRightOf="@+id/from"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:drawableBottom="@drawable/line_long"
+                        android:paddingBottom="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="开始，持续"
+                        android:textColor="@color/text_black"
+                        android:layout_toRightOf="@+id/date"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        />
+                    //天
+                    <EditText
+                        android:id="@+id/days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:layout_toRightOf="@+id/date_text"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/text_black"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:drawableBottom="@drawable/line_short"
+                        android:paddingBottom="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/days_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="天"
+                        android:textColor="@color/text_black"
+                        android:layout_toRightOf="@+id/days"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+            //设置提醒
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/periodLinearLayout"
+                android:layout_marginTop="70dp"
+                android:background="@drawable/rectangle_shape"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/save_btn"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:background="@drawable/login_btn_circle"
+                    android:text="设置提醒"
+                    />
+
+
+            </LinearLayout>
+
+            </RelativeLayout>
+
+
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ffffff">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="80px"
-            android:layout_marginTop="40px"
-            android:text="@string/remind_date_time"
-            android:textColor="#333333"
-            android:textSize="36px" />
-
-        <RelativeLayout
-            android:layout_width="600px"
-            android:layout_height="300px"
-            android:layout_marginLeft="80px"
-            android:layout_marginTop="150px">
-            //1
-
-            <ImageView
-                android:layout_width="24px"
-                android:layout_height="24px"
-                android:layout_marginTop="10px"
-                android:background="@mipmap/tool_clock_icon_time" />
-
-            <TextView
-                android:id="@+id/select_date_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="60px"
-                android:text="@string/now_date"
-                android:textColor="#939599"
-                android:textSize="36px" />
-
-            <TextView
-                android:id="@+id/select_time_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="280px"
-                android:text="@string/now_time"
-                android:textColor="#939599"
-                android:textSize="36px" />
-            //2
-
-            <ImageView
-                android:layout_width="24px"
-                android:layout_height="24px"
-                android:layout_marginTop="112px"
-                android:background="@mipmap/tool_clock_icon_time" />
-
-            <TextView
-                android:id="@+id/select_date_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="60px"
-                android:layout_marginTop="104px"
-                android:text="@string/now_date"
-                android:textColor="#939599"
-                android:textSize="36px" />
-
-            <TextView
-                android:id="@+id/select_time_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="280px"
-                android:layout_marginTop="104px"
-                android:text="@string/now_time"
-                android:textColor="#939599"
-                android:textSize="36px" />
-            //3
-
-            <ImageView
-                android:layout_width="24px"
-                android:layout_height="24px"
-                android:layout_marginTop="218px"
-                android:background="@mipmap/tool_clock_icon_time" />
-
-            <TextView
-                android:id="@+id/select_date_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="60px"
-                android:layout_marginTop="208px"
-                android:text="@string/now_date"
-                android:textColor="#939599"
-                android:textSize="36px" />
-
-            <TextView
-                android:id="@+id/select_time_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="280px"
-                android:layout_marginTop="208px"
-                android:text="@string/now_time"
-                android:textColor="#939599"
-                android:textSize="36px" />
-
-        </RelativeLayout>
-
-
-
-    </RelativeLayout>
 
 
 </LinearLayout>

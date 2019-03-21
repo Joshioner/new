@@ -26,6 +26,7 @@
     <string name="DiagnosisResult">诊断结果</string>
     <string name="HandleAdvice">处理意见</string>
     <string name="save">保存</string>
+    <string name="delete">删除</string>
 
     <string name="test">测试</string>
     <string name="title_activity_pharmcy">PharmcyActivity</string>
@@ -57,7 +58,7 @@
     //健康工具
     <string name="healthy_tool">工具箱</string>
     <string name="alarm_tag1">“ 主人，</string>
-    <string name="alarm_tag2">"还有10分钟，记得按时吃药哦 ”</string>
+    <string name="alarm_tag2">请记得按时吃药哦 </string>
     <string name="healthy_bag">健康包</string>
 
     <string name="medical_auscultation">就医听诊</string>
@@ -102,7 +103,7 @@
     //闹钟助手
     <string name="alarm_add">添加</string>
     <string name="alarm_delete">删除</string>
-    <string name="alarm_add_title">闹钟添加</string>
+    <string name="alarm_add_title">添加用药提醒</string>
     <string name="remind_date_time">提醒日期和时间</string>
 
     //闹钟添加
@@ -203,4 +204,9 @@
     <string name="member_relation">关系</string>
     <string name="member_relation_hint">请输入家属与您的关系</string>
     <string name="finish_btn">完成</string>
+    
+    //闹钟助手
+     <string name="drug_name_hint">请输入药品名称</string>
+    <string name="dosage_text">用  量</string>
+    <string name="period">周  期</string>
 </resources>

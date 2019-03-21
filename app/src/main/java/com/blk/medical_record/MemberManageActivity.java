@@ -107,10 +107,10 @@ public class MemberManageActivity extends AppCompatActivity implements View.OnCl
         //执行加载数据
         @Override
         protected Void doInBackground(Void... voids) {
-            String imagePath = getApplicationContext().getFilesDir().getAbsolutePath() + "/image/1.jpg";
+            String imagePath = getApplicationContext().getFilesDir().getAbsolutePath() + "/pic.jpg";
             userArrayList.add(new User(imagePath,"张三","关系 : " +"父子",1,"1975-11-15"));
-            userArrayList.add(new User(getApplicationContext().getFilesDir().getAbsolutePath()+ "/member.jpg","李四","关系 : " +"兄弟",1,"1996-12-16"));
-            userArrayList.add(new User(getApplicationContext().getFilesDir().getAbsolutePath() + "/person.jpg","刘艺","关系 : " +"母子",0,"1974-10-22"));
+            userArrayList.add(new User(getApplicationContext().getFilesDir().getAbsolutePath()+ "/pic.jpg","李四","关系 : " +"兄弟",1,"1996-12-16"));
+            userArrayList.add(new User(getApplicationContext().getFilesDir().getAbsolutePath() + "/pic.jpg","刘艺","关系 : " +"母子",0,"1974-10-22"));
             //初始化适配器
             memberManageBaseAdapter = new MemberManageBaseAdapter(getApplicationContext(),userArrayList);
             memberManageBaseAdapter.notifyDataSetChanged();

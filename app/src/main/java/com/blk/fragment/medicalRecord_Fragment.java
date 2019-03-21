@@ -201,8 +201,8 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         memberlist.add( new PersonMemberInfo("张三",2));
         memberlist.add( new PersonMemberInfo("李四",3));
         //设置用户头像
-        String path = getActivity().getFilesDir().getAbsolutePath() + "/image/";
-        Bitmap bitmap = BitmapFactory.decodeFile(path + "1.jpg");
+        String path = getActivity().getFilesDir().getAbsolutePath() + "/pic.jpg";
+        Bitmap bitmap = BitmapFactory.decodeFile(path);
         personImage.setImageBitmap(bitmap);
 
 //        //找到头像的目标文件

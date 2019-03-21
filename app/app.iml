@@ -119,6 +119,7 @@
     <orderEntry type="library" name="Gradle: com.android.support:support-media-compat-25.1.1" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7-25.1.1" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support.constraint:constraint-layout-solver:1.0.0-alpha7@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:E.\Android\new\app\libs\AndroidPicker-1.5.6.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-compat-25.1.1" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-annotations:25.1.1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.squareup:javawriter:2.1.1@jar" level="project" />
@@ -151,6 +152,8 @@
     <orderEntry type="library" name="Gradle: com.android.support:support-core-utils-25.1.1" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:E.\Android\new\app\libs\gson-2.2.4.jar:unspecified@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: net.sf.kxml:kxml2:2.3.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.bigkoo:pickerview-2.0.8" level="project" />
+    <orderEntry type="module" module-name="alarmmanagerclock" />
     <orderEntry type="module" module-name="ocr_ui" />
   </component>
 </module>

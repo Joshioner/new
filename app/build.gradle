@@ -10,6 +10,13 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    repositories {
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -26,6 +33,7 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(path: ':ocr_ui')
+    compile project(':alarmmanagerclock')
     compile files('libs/ocr-sdk.jar')
     compile files('libs/gson-2.2.4.jar')
     compile files('libs/Msc.jar')
@@ -45,4 +53,6 @@ dependencies {
     implementation files('libs/httpclient-4.2.2.jar')
     implementation files('libs/httpcore-4.2.2.jar')
     implementation files('libs/httpmime-4.1.1.jar')
+    implementation files('libs/AndroidPicker-1.5.6.jar')
+    implementation project(':alarmmanagerclock')
 }
