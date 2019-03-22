@@ -58,6 +58,7 @@ public class healthyTool_Fragment extends Fragment {
 
 
     private void initEvent() {
+        //药物查询
         drugCheck_right.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -81,6 +82,7 @@ public class healthyTool_Fragment extends Fragment {
                 startActivity(intent);
             }
         });
+        //健康资讯
         healthy_news.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

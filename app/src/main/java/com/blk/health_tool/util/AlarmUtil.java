@@ -28,7 +28,7 @@ public class AlarmUtil {
                 AlarmManagerUtil.setAlarm(MyApplication.getContext() , 0, calendar, id, 0, "主人，请按时吃药哦", 1,alarmInfo.getDrugName(),alarmInfo.getNums());
                 //一次性设置多个闹钟，id应该不同，不然后面的会覆盖前面的闹钟
                 id++;
-                Log.i("Main","TestTestSet " + calendar.get(Calendar.YEAR) + "-" + (calendar.get(Calendar.MONTH) + 1) + "-" + calendar.get(Calendar.DAY_OF_MONTH) + "  " +  calendar.get(Calendar.HOUR_OF_DAY) + ":" + calendar.get(Calendar.MINUTE));
+           //     Log.i("Main","TestTestSet " + calendar.get(Calendar.YEAR) + "-" + (calendar.get(Calendar.MONTH) + 1) + "-" + calendar.get(Calendar.DAY_OF_MONTH) + "  " +  calendar.get(Calendar.HOUR_OF_DAY) + ":" + calendar.get(Calendar.MINUTE));
                 if (calendar.get(Calendar.HOUR_OF_DAY) + alarmInfo.getIntervalTime() > 24 || (calendar.get(Calendar.HOUR_OF_DAY) + alarmInfo.getIntervalTime() == 24 && calendar.get(Calendar.MINUTE) >0)){
                     break;
                 }
@@ -66,7 +66,7 @@ public class AlarmUtil {
                         .FLAG_CANCEL_CURRENT);
                 am.cancel(sender);
                 id++;
-                Log.i("Main","TestTestCancel " + calendar.get(Calendar.YEAR) + "-" + (calendar.get(Calendar.MONTH) + 1) + "-" + calendar.get(Calendar.DAY_OF_MONTH) + "  " +  calendar.get(Calendar.HOUR_OF_DAY) + ":" + calendar.get(Calendar.MINUTE));
+              //  Log.i("Main","TestTestCancel " + calendar.get(Calendar.YEAR) + "-" + (calendar.get(Calendar.MONTH) + 1) + "-" + calendar.get(Calendar.DAY_OF_MONTH) + "  " +  calendar.get(Calendar.HOUR_OF_DAY) + ":" + calendar.get(Calendar.MINUTE));
                 if (calendar.get(Calendar.HOUR_OF_DAY) + alarmInfo.getIntervalTime() > 24 || (calendar.get(Calendar.HOUR_OF_DAY) + alarmInfo.getIntervalTime() == 24 && calendar.get(Calendar.MINUTE) >0)){
                     break;
                 }

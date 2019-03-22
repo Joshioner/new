@@ -31,11 +31,11 @@ import org.json.JSONObject;
 public class DrugCheckActivity extends AppCompatActivity implements View.OnClickListener {
     private final int SHOW_MEDICAL_RECORD = 1;
     private ImageView medicine_search_back;
-    private ImageView medicine_search_camera;
+  //  private ImageView medicine_search_camera;
     private LinearLayout medicine_search;
     private EditText drug_edittext;
     private String drug_id;
-    private RelativeLayout relativeLayout2;
+  //  private RelativeLayout relativeLayout2;
     private LinearLayout linearLayout3;
     private TextView drug_name;
     private TextView drug_cnumber;
@@ -61,13 +61,13 @@ public class DrugCheckActivity extends AppCompatActivity implements View.OnClick
 
     private void initView() {
         medicine_search_back = (ImageView)findViewById(R.id.medicine_search_back);
-        medicine_search_camera = (ImageView)findViewById(R.id.medicine_search_camera);
+        //medicine_search_camera = (ImageView)findViewById(R.id.medicine_search_camera);
         medicine_search = (LinearLayout)findViewById(R.id.medicine_search);
         drug_edittext = (EditText)findViewById(R.id.drug_edittext);
-        relativeLayout2 = (RelativeLayout)findViewById(R.id.relative2);
+//        relativeLayout2 = (RelativeLayout)findViewById(R.id.relative2);
         linearLayout3 = (LinearLayout)findViewById(R.id.linear2);
-        relativeLayout2.setVisibility(View.VISIBLE);
-        linearLayout3.setVisibility(View.GONE);
+    //    relativeLayout2.setVisibility(View.VISIBLE);
+        linearLayout3.setVisibility(View.VISIBLE);
 
         drug_name = (TextView)findViewById(R.id.drug_name);
         drug_cnumber = (TextView)findViewById(R.id.drug_cnumber);
@@ -83,7 +83,7 @@ public class DrugCheckActivity extends AppCompatActivity implements View.OnClick
 
     private void initEvent() {
         medicine_search_back.setOnClickListener(this);
-        medicine_search_camera.setOnClickListener(this);
+       // medicine_search_camera.setOnClickListener(this);
         medicine_search.setOnClickListener(this);
 
     }
@@ -107,8 +107,7 @@ public class DrugCheckActivity extends AppCompatActivity implements View.OnClick
                 DrugCheckActivity.this.finish();
                 startActivity(intent);
                 break;
-            case R.id.medicine_search_camera:
-                break;
+
         }
     }
     private void AddDrugDetailList(String drug_id) {
@@ -165,7 +164,7 @@ public class DrugCheckActivity extends AppCompatActivity implements View.OnClick
                 String contraindication = jsonObject.getString("contraindication");
                 //注意事项
                 String notice = jsonObject.getString("notice");
-                relativeLayout2.setVisibility(View.GONE);
+             //   relativeLayout2.setVisibility(View.GONE);
                 linearLayout3.setVisibility(View.VISIBLE);
                 drug_name.setText(dname);
                 drug_cnumber.setText(cnumber);

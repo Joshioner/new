@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="TeseTest" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="TestTest" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="info" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
@@ -17,50 +17,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ebb1d3f-03b0-4631-bd50-745c05f82753" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_23_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_23_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_23_3_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_23_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_23_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthyNewsActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthyNewsDetailActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/entity/HealthyNews.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/healthy_news_detail.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/healthy_news_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/collection.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/collection_checked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/collection_normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/collection_pressed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/good.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/good_checked.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskJars.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskJars.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/homePage_Fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/homePage_Fragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/Adapter/healthyNewsBaseAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/homePage/Adapter/HealthyNewsBaseAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/entity/healthy_news.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/healthy_news.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/healthy_news.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/healthy_tool_content.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/healthy_tool_content.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/home_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home_page.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/DrugCheckActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/DrugCheckActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/util/AlarmUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/util/AlarmUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/alarm_assistant.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/alarm_assistant.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_commom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_commom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/drug_check.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/drug_check.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -134,104 +107,106 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+            <state relative-caret-position="455">
+              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HealthyNewsBaseAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/homePage/Adapter/HealthyNewsBaseAdapter.java">
+      <file leaf-file-name="AlarmAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/AlarmAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="118" column="85" selection-start-line="118" selection-start-column="85" selection-end-line="118" selection-end-column="85" />
+            <state relative-caret-position="57">
+              <caret line="69" column="83" selection-start-line="69" selection-start-column="75" selection-end-line="69" selection-end-column="83" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homePage_Fragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/homePage_Fragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="87" column="11" selection-start-line="87" selection-start-column="11" selection-end-line="87" selection-end-column="11" />
-            </state>
+      <file leaf-file-name="alarm_assistant.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/alarm_assistant.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HealthyNewsDetailActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthyNewsDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="40" column="43" lean-forward="true" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+            <state relative-caret-position="432">
+              <caret line="84" column="40" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#866#867#0" expanded="true" />
-                <element signature="e#906#907#0" expanded="true" />
+                <element signature="e#2716#2736#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="healthy_news_detail.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_news_detail.xml">
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="742">
+              <caret line="95" column="32" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlarmAddActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="142" column="22" lean-forward="true" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommomDialog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/CommomDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="80" column="40" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dialog_commom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_commom.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="95" column="53" selection-start-line="95" selection-start-column="53" selection-end-line="95" selection-end-column="53" />
+            <state relative-caret-position="420">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlarmAssistantActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAssistantActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="122" column="63" selection-start-line="122" selection-start-column="63" selection-end-line="122" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlarmUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/util/AlarmUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
               <folding>
-                <element signature="e#279#1124#0" />
-                <element signature="e#999#1021#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home_page.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/home_page.xml">
+      <file leaf-file-name="alarm_add.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/alarm_add.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="140" column="50" selection-start-line="140" selection-start-column="50" selection-end-line="140" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="healthy_news.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_news.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1419">
-              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HealthyNewsActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthyNewsActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="76" column="54" selection-start-line="76" selection-start-column="54" selection-end-line="76" selection-end-column="54" />
+            <state relative-caret-position="266">
+              <caret line="38" column="36" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="36" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1454#1455#0" expanded="true" />
-                <element signature="e#1494#1495#0" expanded="true" />
-                <element signature="e#1646#1647#0" expanded="true" />
-                <element signature="e#1717#1718#0" expanded="true" />
+                <element signature="e#1426#1442#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -251,22 +226,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>alarmDb</find>
-      <find>drug_name</find>
-      <find>1.jpg</find>
-      <find>person.</find>
-      <find>android:editable=&quot;false&quot;</find>
-      <find>WheelPicker</find>
-      <find>AlarmDb</find>
-      <find>EditText</find>
-      <find>time</find>
-      <find>RECORD_AUDIO</find>
-      <find>timedate</find>
-      <find>drugName</find>
-      <find>dialog_simple</find>
-      <find>闹钟响啦</find>
-      <find>firm_add_alarm</find>
-      <find>id</find>
       <find>alarm_switch</find>
       <find>save</find>
       <find>ALARM_ACTION</find>
@@ -275,12 +234,28 @@
       <find>memberListView</find>
       <find>listView</find>
       <find>1111</find>
-      <find>alarmInfoNew</find>
       <find>#02aab0</find>
       <find>medicalListView</find>
       <find>重写</find>
       <find>健康zi</find>
+      <find>drug</find>
+      <find>Log.i</find>
       <find>relativeLayout</find>
+      <find>relativeLayout2</find>
+      <find>medicine_search_camera</find>
+      <find>medicine_search_back</find>
+      <find>medicine_search</find>
+      <find>history_search</find>
+      <find>shape_corner_down</find>
+      <find>android:layout_height=&quot;180px&quot;</find>
+      <find>View</find>
+      <find>linearLayout3</find>
+      <find>id</find>
+      <find>gone</find>
+      <find>add_alarm</find>
+      <find>确定</find>
+      <find>clockCancel</find>
+      <find>alarmInfoNew</find>
     </findStrings>
     <replaceStrings>
       <replace>AddMemberActivity</replace>
@@ -296,6 +271,8 @@
       <replace>AlarmDb</replace>
       <replace>android:focusable=&quot;false&quot;</replace>
       <replace />
+      <replace>shape_corner_up</replace>
+      <replace>android:layout_height=&quot;140px&quot;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -5440,9 +5417,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/line_long.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/line_middle.xml" />
-        <option value="$PROJECT_DIR$/alarmmanagerclock/build.gradle" />
         <option value="$PROJECT_DIR$/alarmmanagerclock/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/alarmmanagerclock/src/main/java/com/loonggg/lib/alarmmanager/clock/SimpleDialog.java" />
@@ -5464,24 +5438,17 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/switch_custom_track_off.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/common/identify/MyListView.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/delete_button.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/alarm_assistant.xml" />
         <option value="$PROJECT_DIR$/alarmmanagerclock/src/main/java/com/loonggg/lib/alarmmanager/clock/AlarmManagerUtil.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/common/MyApplication.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/util/AlarmUtil.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/alarm_add.xml" />
         <option value="$PROJECT_DIR$/alarmmanagerclock/src/main/java/com/loonggg/lib/alarmmanager/clock/LoongggAlarmReceiver.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/AlarmAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/alarm_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAssistantActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/entity/healthy_news.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/Adapter/healthyNewsBaseAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/homePage/util/InterClick.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/entity/HealthyNews.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/homePage/Adapter/healthyNewsBaseAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/healthy_tool_content.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/home_page.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/healthy_news_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
@@ -5491,6 +5458,16 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/homePage/Adapter/HealthyNewsBaseAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthyNewsDetailActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/healthy_news_detail.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/DrugCheckActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/drug_check.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/alarm_assistant.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAssistantActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_commom.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/alarm_add.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/util/AlarmUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java" />
       </list>
     </option>
   </component>
@@ -5613,6 +5590,28 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="blk" type="462c0819:PsiDirectoryNode" />
               <item name="health_tool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blk" type="462c0819:PsiDirectoryNode" />
+              <item name="health_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="Adapter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blk" type="462c0819:PsiDirectoryNode" />
+              <item name="health_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new" type="b2602c69:ProjectViewProjectNode" />
@@ -5745,7 +5744,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="healthy_new&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/healthy_news.xml&#10;alarm_&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/alarm_list.xml&#10;Healthy&#9;PSI&#9;JAVA://com.blk.fragment.healthyTool_Fragment&#10;Medic&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java&#10;color&#9;FILE&#9;file://E:/Android/new/app/src/main/res/values/colors.xml&#10;home&#9;PSI&#9;JAVA://com.blk.fragment.homePage_Fragment&#10;Medical&#9;PSI&#9;JAVA://com.blk.fragment.medicalRecord_Fragment&#10;AlarmA&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java&#10;alarm_list&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/alarm_list.xml&#10;alarm_add&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/alarm_add.xml&#10;alarm_li&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/alarm_list.xml&#10;style&#9;FILE&#9;file://E:/Android/new/app/src/main/res/values/styles.xml&#10;style.&#9;FILE&#9;file://E:/Android/new/alarmmanagerclock/src/main/res/values/styles.xml&#10;MedicalC&#9;PSI&#9;JAVA://com.blk.medical_record.medicalRecordContentActivity&#10;AlarmManagerUtil&#9;FILE&#9;file://E:/Android/new/alarmmanagerclock/src/main/java/com/loonggg/lib/alarmmanager/clock/AlarmManagerUtil.java&#10;ala&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/alarm_add.xml&#10;member&#9;PSI&#9;JAVA://com.blk.medical_record.MemberManageActivity&#10;register&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/register.xml&#10;perso&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/person_member.xml&#10;healthy&#9;PSI&#9;JAVA://com.blk.fragment.healthyTool_Fragment&#10;Android&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;colo&#9;FILE&#9;file://E:/Android/new/app/src/main/res/values/colors.xml&#10;Andro&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;FileUt&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/common/util/FileUtil.java&#10;Http&#9;PSI&#9;JAVA://com.blk.common.util.HttpRequestUtil&#10;Fileuti&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/utils/FileUtils.java&#10;medi&#9;PSI&#9;JAVA://com.blk.medical_record.medicalRecordContentActivity&#10;Me&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/MedicalAuscultation.java&#10;IAudioCallback&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/interfaces/IAudioCallback.java&#10;me&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/MedicalAuscultation.java&#10;And&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;Heal&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java&#10;healthy_tool_content&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/healthy_tool_content.xml&#10;activity_ma&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/activity_main.xml&#10;home_&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/home_page.xml&#10;me.xml&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/me.xml&#10;medica&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/medical_record.xml&#10;med&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/medical_record.xml&#10;homeP&#9;PSI&#9;JAVA://com.blk.fragment.homePage_Fragment&#10;healthyt&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/healthy_tool.xml&#10;medical&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java&#10;me_fra&#9;PSI&#9;JAVA://com.blk.fragment.me_Fragment&#10;medical_re&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/medical_record.xml&#10;User&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/entity/User.java&#10;heal&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java&#10;Register&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/RegisterActivity.java&#10;regi&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/register.xml&#10;Medicas&#9;PSI&#9;JAVA://com.blk.medical_record.medicalRecordSearchActivity&#10;A&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;medic&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java" />
+    <property name="SearchEverywhereHistoryKey" value="AlarmAd&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/Adapter/AlarmAdapter.java&#10;alarm_list&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/alarm_list.xml&#10;alarm_add&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/alarm_add.xml&#10;Alarm&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/AlarmAssistantActivity.java&#10;HealthyToo&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java&#10;and&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;AlarmAdd&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java&#10;healthy_new&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/healthy_news.xml&#10;alarm_&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/alarm_list.xml&#10;Healthy&#9;PSI&#9;JAVA://com.blk.fragment.healthyTool_Fragment&#10;Medic&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java&#10;color&#9;FILE&#9;file://E:/Android/new/app/src/main/res/values/colors.xml&#10;home&#9;PSI&#9;JAVA://com.blk.fragment.homePage_Fragment&#10;Medical&#9;PSI&#9;JAVA://com.blk.fragment.medicalRecord_Fragment&#10;AlarmA&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java&#10;alarm_li&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/alarm_list.xml&#10;style&#9;FILE&#9;file://E:/Android/new/app/src/main/res/values/styles.xml&#10;style.&#9;FILE&#9;file://E:/Android/new/alarmmanagerclock/src/main/res/values/styles.xml&#10;MedicalC&#9;PSI&#9;JAVA://com.blk.medical_record.medicalRecordContentActivity&#10;AlarmManagerUtil&#9;FILE&#9;file://E:/Android/new/alarmmanagerclock/src/main/java/com/loonggg/lib/alarmmanager/clock/AlarmManagerUtil.java&#10;ala&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/alarm_add.xml&#10;member&#9;PSI&#9;JAVA://com.blk.medical_record.MemberManageActivity&#10;register&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/register.xml&#10;perso&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/person_member.xml&#10;healthy&#9;PSI&#9;JAVA://com.blk.fragment.healthyTool_Fragment&#10;Android&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;colo&#9;FILE&#9;file://E:/Android/new/app/src/main/res/values/colors.xml&#10;Andro&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;FileUt&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/common/util/FileUtil.java&#10;Http&#9;PSI&#9;JAVA://com.blk.common.util.HttpRequestUtil&#10;Fileuti&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/utils/FileUtils.java&#10;medi&#9;PSI&#9;JAVA://com.blk.medical_record.medicalRecordContentActivity&#10;Me&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/MedicalAuscultation.java&#10;IAudioCallback&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/interfaces/IAudioCallback.java&#10;me&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/MedicalAuscultation.java&#10;And&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;Heal&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java&#10;healthy_tool_content&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/healthy_tool_content.xml&#10;activity_ma&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/activity_main.xml&#10;home_&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/home_page.xml&#10;me.xml&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/me.xml&#10;medica&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/medical_record.xml&#10;med&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/medical_record.xml&#10;homeP&#9;PSI&#9;JAVA://com.blk.fragment.homePage_Fragment&#10;healthyt&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/healthy_tool.xml&#10;medical&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java&#10;me_fra&#9;PSI&#9;JAVA://com.blk.fragment.me_Fragment&#10;medical_re&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/medical_record.xml&#10;User&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/entity/User.java&#10;heal&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -6030,7 +6029,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553233922001</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="健康资讯（查看资讯列表，并且查看资讯详情，增设了资讯的收藏效果）">
+      <created>1553249084925</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1553249084925</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -6049,16 +6055,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="12" sideWeight="0.49960256" weight="0.43696162" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007949" side_tool="true" weight="0.31480032" />
-      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.49920508" visible="true" weight="0.3469068" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="10" sideWeight="0.49920508" visible="true" weight="0.48159748" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49920508" weight="0.38136256" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49920508" weight="0.40798748" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" weight="0.3298887" />
@@ -6071,7 +6076,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49960256" weight="0.4064213" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.30070478" />
       <window_info id="Captures" order="4" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16414945" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16414945" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.29757243" />
       <window_info anchor="right" id="Gradle" order="6" weight="0.3298887" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -6123,50 +6128,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="健康资讯（查看资讯列表，并且查看资讯详情，增设了资讯的收藏效果）" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/identify/MyListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="70" column="52" lean-forward="true" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/switch_custom_track_off.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/track.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/dbHelper/AlarmDbHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/delete_button.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/database/sqlite/SQLiteDatabase.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -6195,36 +6156,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/alarm_add.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1015">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/util/AlarmUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="16" column="58" lean-forward="true" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="94" column="63" selection-start-line="94" selection-start-column="63" selection-end-line="94" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/medical_record.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -6232,30 +6163,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="74" column="32" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="261" column="39" selection-start-line="261" selection-start-column="39" selection-end-line="261" selection-end-column="39" />
-          <folding>
-            <element signature="e#6038#6399#0" expanded="true" />
-            <element signature="e#6398#6399#0" expanded="true" />
-            <element signature="e#6635#6989#0" expanded="true" />
-            <element signature="e#6988#6989#0" expanded="true" />
-            <element signature="e#7822#8204#0" expanded="true" />
-            <element signature="e#8203#8204#0" expanded="true" />
-            <element signature="e#8990#9344#0" expanded="true" />
-            <element signature="e#9343#9344#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/AlarmAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="68" column="42" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -6308,23 +6215,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAssistantActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="47" column="43" lean-forward="true" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/alarm_assistant.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="79" column="39" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/entity/medicalRecordDetail.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -6352,13 +6242,6 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/DrugCheckActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="55" column="34" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="55" selection-end-column="34" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_tool.xml">
@@ -6394,13 +6277,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-700">
           <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2662">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
         </state>
       </provider>
     </entry>
@@ -6450,13 +6326,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/alarm_list.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_healthy_news_detail.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="93" column="78" selection-start-line="93" selection-start-column="78" selection-end-line="93" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_news_detail.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="90" column="50" selection-start-line="90" selection-start-column="50" selection-end-line="90" selection-end-column="50" />
+          <folding>
+            <element signature="e#279#1124#0" />
+            <element signature="e#999#1021#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthyNewsDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="40" column="43" lean-forward="true" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/homePage_Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="87" column="11" selection-start-line="87" selection-start-column="11" selection-end-line="87" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/homePage/Adapter/HealthyNewsBaseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="118" column="85" selection-start-line="118" selection-start-column="85" selection-end-line="118" selection-end-column="85" />
         </state>
       </provider>
     </entry>
@@ -6467,10 +6391,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_news.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="212" selection-start-line="212" selection-end-line="212" />
+        <state relative-caret-position="-1419">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -6488,61 +6415,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_news.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="64" column="64" lean-forward="true" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/DrugCheckActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="76" column="71" selection-start-line="76" selection-start-column="55" selection-end-line="76" selection-end-column="71" />
+          <folding>
+            <element signature="e#4991#5339#0" expanded="true" />
+            <element signature="e#5338#5339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/drug_check.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1419">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        <state relative-caret-position="488">
+          <caret line="129" column="31" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
+          <folding>
+            <element signature="e#855#1942#0" />
+            <element signature="e#1951#2630#0" />
+            <element signature="e#2445#2470#0" expanded="true" />
+            <element signature="e#5533#6646#0" />
+            <element signature="e#6131#6150#0" expanded="true" />
+            <element signature="e#6593#6612#0" expanded="true" />
+            <element signature="e#6663#6917#0" />
+            <element signature="e#7408#8527#0" />
+            <element signature="e#8006#8028#0" expanded="true" />
+            <element signature="e#8474#8493#0" expanded="true" />
+            <element signature="e#8545#9723#0" />
+            <element signature="e#9195#9218#0" expanded="true" />
+            <element signature="e#9670#9689#0" expanded="true" />
+            <element signature="e#9740#9994#0" />
+            <element signature="e#10609#10630#0" expanded="true" />
+            <element signature="e#11080#11099#0" expanded="true" />
+            <element signature="e#12019#12038#0" expanded="true" />
+            <element signature="e#12486#12505#0" expanded="true" />
+            <element signature="e#13425#13446#0" expanded="true" />
+            <element signature="e#13896#13915#0" expanded="true" />
+            <element signature="e#14836#14856#0" expanded="true" />
+            <element signature="e#15305#15324#0" expanded="true" />
+            <element signature="e#16244#16261#0" expanded="true" />
+            <element signature="e#16707#16726#0" expanded="true" />
+            <element signature="e#17646#17672#0" expanded="true" />
+            <element signature="e#18127#18146#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/homePage/Adapter/HealthyNewsBaseAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/tool_clock_icon_add.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="118" column="85" selection-start-line="118" selection-start-column="85" selection-end-line="118" selection-end-column="85" />
+        <state relative-caret-position="742">
+          <caret line="95" column="32" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthyNewsDetailActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="40" column="43" lean-forward="true" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+        <state relative-caret-position="279">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_commom.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/alarm_add.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="38" column="36" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="36" />
+          <folding>
+            <element signature="e#1426#1442#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/alarm_assistant.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="84" column="40" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
+          <folding>
+            <element signature="e#2716#2736#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/alarm_list.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/AlarmAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="69" column="83" selection-start-line="69" selection-start-column="75" selection-end-line="69" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/CommomDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="80" column="40" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/util/AlarmUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_healthy_news_detail.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAssistantActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/homePage_Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="87" column="11" selection-start-line="87" selection-start-column="11" selection-end-line="87" selection-end-column="11" />
+        <state relative-caret-position="175">
+          <caret line="122" column="63" selection-start-line="122" selection-start-column="63" selection-end-line="122" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_news_detail.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="95" column="53" selection-start-line="95" selection-start-column="53" selection-end-line="95" selection-end-column="53" />
-          <folding>
-            <element signature="e#279#1124#0" />
-            <element signature="e#999#1021#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="364">
+          <caret line="142" column="22" lean-forward="true" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="22" />
         </state>
       </provider>
     </entry>

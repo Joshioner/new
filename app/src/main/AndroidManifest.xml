@@ -88,7 +88,8 @@
         <activity android:name=".pharmacy.MainActivity" />
         <activity android:name=".pharmacy.homePage.pharmacySearchActivity" />
         <activity android:name=".pharmacy.homePage.DrugListSearchActivity" />
-        <activity android:name=".health_tool.DrugCheckActivity" />
+        <activity android:name=".health_tool.DrugCheckActivity"
+            android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".pharmacy.homePage.pharmacyShopperPageActivity" />
         <activity android:name=".pharmacy.homePage.drug_information_detail" />
         <activity android:name=".pharmacy.homePage.firm_Order">

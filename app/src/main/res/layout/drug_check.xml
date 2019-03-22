@@ -35,15 +35,15 @@
                 android:background="@color/white"
                 android:gravity="center|left"
                 android:hint="请输入国药准字"
-                android:textColor="@color/text_gray"
+                android:textColor="@color/text_black"
                 android:textColorHint="@color/text_gray"
                 />
-            <ImageView
-                android:id="@+id/medicine_search_camera"
-                android:layout_width="28px"
-                android:layout_height="24px"
-                android:layout_gravity="center_vertical"
-                android:src="@mipmap/medicine_icon_camera"/>
+            <!--<ImageView-->
+                <!--android:id="@+id/medicine_search_camera"-->
+                <!--android:layout_width="28px"-->
+                <!--android:layout_height="24px"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:src="@mipmap/medicine_icon_camera"/>-->
 
         </LinearLayout>
         <LinearLayout
@@ -69,59 +69,14 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <RelativeLayout
-                android:id="@+id/relative2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:background="@color/white">
-                <TextView
-                    android:id="@+id/history_search"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="25dp"
-                    android:text="@string/history_search"
-                    android:textSize="18dp"
-                    android:textColor="@color/black" />
-                <RelativeLayout
-                    android:layout_below="@+id/history_search"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    >
-                    <TextView
-                        android:layout_marginLeft="30dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Z44022409"
-                        android:textColor="@color/black"
-                        android:paddingLeft="18dp"
-                        android:paddingRight="18dp"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:background="@drawable/shape_corner"
-                        />
-                    <TextView
-                        android:layout_marginLeft="160dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="H20023874"
-                        android:textColor="@color/black"
-                        android:paddingLeft="18dp"
-                        android:paddingRight="18dp"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:background="@drawable/shape_corner"
-                        />
-                </RelativeLayout>
-            </RelativeLayout>
             <LinearLayout
                 android:id="@+id/linear2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="15dp"
                 android:background="@color/general_background"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -154,7 +109,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="140px"
-                    android:background="@drawable/shape_corner_down">
+                    android:background="@drawable/shape_corner_up">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -176,7 +131,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="180px"
+                    android:layout_height="140px"
                     android:layout_marginTop="20px"
                     android:background="@drawable/shape_corner_up">
                     <TextView
@@ -205,8 +160,8 @@
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="180px"
-                    android:background="@drawable/shape_corner_none">
+                    android:layout_height="140px"
+                    android:background="@drawable/shape_corner_up">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -225,16 +180,11 @@
                         android:textColor="#333333"
                         android:text="@string/no_detail"/>
                 </LinearLayout>
-                <View
-                    android:layout_width="660px"
-                    android:layout_height="1px"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@color/border_background"
-                    />
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="180px"
-                    android:background="@drawable/shape_corner_none">
+                    android:layout_height="140px"
+                    android:background="@drawable/shape_corner_up">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -253,16 +203,11 @@
                         android:textColor="#333333"
                         android:text="@string/no_detail"/>
                 </LinearLayout>
-                <View
-                    android:layout_width="660px"
-                    android:layout_height="1px"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@color/border_background"
-                    />
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="180px"
-                    android:background="@drawable/shape_corner_none">
+                    android:layout_height="140px"
+                    android:background="@drawable/shape_corner_up">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -282,16 +227,11 @@
                         android:text="@string/no_detail"/>
 
                 </LinearLayout>
-                <View
-                    android:layout_width="660px"
-                    android:layout_height="1px"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@color/border_background"
-                    />
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="180px"
-                    android:background="@drawable/shape_corner_none">
+                    android:layout_height="140px"
+                    android:background="@drawable/shape_corner_up">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -310,16 +250,11 @@
                         android:textColor="#333333"
                         android:text="@string/no_detail"/>
                 </LinearLayout>
-                <View
-                    android:layout_width="660px"
-                    android:layout_height="1px"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@color/border_background"
-                    />
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="180px"
-                    android:background="@drawable/shape_corner_none">
+                    android:layout_height="140px"
+                    android:background="@drawable/shape_corner_up">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -338,16 +273,11 @@
                         android:textColor="#333333"
                         android:text="@string/no_detail"/>
                 </LinearLayout>
-                <View
-                    android:layout_width="660px"
-                    android:layout_height="1px"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@color/border_background"
-                    />
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="180px"
-                    android:background="@drawable/shape_corner_none">
+                    android:layout_height="140px"
+                    android:background="@drawable/shape_corner_up">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -366,16 +296,11 @@
                         android:textColor="#333333"
                         android:text="@string/no_detail"/>
                 </LinearLayout>
-                <View
-                    android:layout_width="660px"
-                    android:layout_height="1px"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@color/border_background"
-                    />
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="180px"
-                    android:background="@drawable/shape_corner_down">
+                    android:layout_height="140px"
+                    android:background="@drawable/shape_corner_up">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
