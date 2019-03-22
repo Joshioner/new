@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="200px"
     android:layout_marginTop="20px"
+    android:descendantFocusability="blocksDescendants"
     android:background="@drawable/shape_corner">
    <RelativeLayout
        android:id="@+id/alarmRelativeLayout"

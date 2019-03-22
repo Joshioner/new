@@ -1,5 +1,6 @@
 package com.blk.health_tool;
 
+import android.app.Dialog;
 import android.content.ContentValues;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -17,10 +18,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.blk.R;
+import com.blk.common.CommomDialog;
 import com.blk.common.MyApplication;
 import com.blk.common.ToolBarSet;
 import com.blk.health_tool.dbHelper.AlarmDbHelper;
 import com.blk.health_tool.Entity.AlarmInfo;
+import com.blk.health_tool.util.AlarmUtil;
 import com.loonggg.lib.alarmmanager.clock.AlarmManagerUtil;
 
 
@@ -56,6 +59,7 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
     private int currentHour;
     private int currentMinute;
     private AlarmInfo alarmInfo;
+    private AlarmInfo alarmInfoNew;
     private AlarmDbHelper alarmDbHelper;
 
     @Override
@@ -67,7 +71,6 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
             alarmId = bundle.getInt("id");
-            Log.i("TestTest","--- " + alarmId);
         }
         //初始化控件
         initView();
@@ -117,7 +120,7 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
             delete.setVisibility(View.VISIBLE);
             saveBtn.setText("更新闹钟信息");
             SQLiteDatabase db = alarmDbHelper.getReadableDatabase();
-            alarmInfo = new AlarmInfo();
+            alarmInfoNew = new AlarmInfo();
             Cursor cursor = db.query("alarm",null, "alarm_id = ?",new String[]{String.valueOf(alarmId)},null,null,null,null);
             while (cursor.moveToNext()){
                 drugName.setText(cursor.getString(cursor.getColumnIndex("drug_name")));
@@ -127,6 +130,22 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
                 intervalTime.setText(String.valueOf(cursor.getInt(cursor.getColumnIndex("interval_time"))));
                 date.setText(cursor.getString(cursor.getColumnIndex("date")));
                 days.setText(String.valueOf(cursor.getInt(cursor.getColumnIndex("days"))));
+                //药品名称
+                alarmInfoNew.setIntervalTime(cursor.getInt(cursor.getColumnIndex("alarm_id")));
+                //药品名称
+                alarmInfoNew.setDrugName(drugName.getText().toString());
+                //次数
+                alarmInfoNew.setTimes(Integer.parseInt(times.getText().toString()));
+                //用量
+                alarmInfoNew.setNums(Integer.parseInt(nums.getText().toString()));
+                //时间
+                alarmInfoNew.setTime(time.getText().toString());
+                //间隔时间
+                alarmInfoNew.setIntervalTime(Integer.parseInt(intervalTime.getText().toString()));
+                //日期
+                alarmInfoNew.setDate(date.getText().toString());
+                //天数
+                alarmInfoNew.setDays(Integer.valueOf(days.getText().toString()));
                 break;
             }
         }
@@ -221,10 +240,7 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
                 break;
                 //删除闹钟
             case R.id.delete:
-                SQLiteDatabase db = alarmDbHelper.getWritableDatabase();
-                db.delete("alarm","alarm_id = ?",new String[]{String.valueOf(alarmId)});
-                showToast("删除闹钟成功");
-                this.finish();
+                deleteAlarmClock();
                 break;
             default:
                 break;
@@ -232,6 +248,30 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
 
     }
 
+    //删除闹钟
+    private void deleteAlarmClock(){
+        //弹出提示框
+        new CommomDialog(this, R.style.dialog, "您确定删除此信息？", new CommomDialog.OnCloseListener() {
+            @Override
+            public void onClick(Dialog dialog, boolean confirm) {
+                if(confirm){
+                    SQLiteDatabase db = alarmDbHelper.getWritableDatabase();
+                    //删除闹钟
+                    db.delete("alarm","alarm_id = ?",new String[]{String.valueOf(alarmId)});
+                    //取消闹钟设置
+                    AlarmUtil.cancelAlarmClock(alarmInfoNew);
+                    dialog.dismiss();
+                    showToast("删除闹钟成功");
+                    finish();
+                } else
+                {
+                    dialog.dismiss();
+                }
+
+            }
+        }).setTitle("提示").show();
+
+    }
     /**
      * 设置闹钟提醒
      */
@@ -262,8 +302,9 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
                 //先删除操作
                 if (alarmId >= 0){
                     SQLiteDatabase db = alarmDbHelper.getWritableDatabase();
+                    //先删除闹钟
+                    AlarmUtil.cancelAlarmClock(alarmInfoNew);
                     db.delete("alarm","alarm_id = ?",new String[]{String.valueOf(alarmId)});
-                    showToast("删除闹钟成功");
                 }
                 //药品名称
                 alarmInfo.setDrugName(drugName.getText().toString());

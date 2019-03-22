@@ -110,7 +110,6 @@ public class AlarmAssistantActivity extends Activity implements View.OnClickList
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Log.i("TestTest","1111" + "  " + position );
                 int alarm_id = Integer.parseInt(((TextView)view.findViewById(R.id.alarm_id)).getText().toString());
                 Intent intent = new Intent(AlarmAssistantActivity.this,AlarmAddActivity.class);
                 Bundle bundle = new Bundle();
