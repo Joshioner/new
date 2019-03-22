@@ -154,6 +154,7 @@
     <orderEntry type="library" scope="TEST" name="Gradle: net.sf.kxml:kxml2:2.3.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.bigkoo:pickerview-2.0.8" level="project" />
     <orderEntry type="module" module-name="alarmmanagerclock" />
+    <orderEntry type="module" module-name="goodview" />
     <orderEntry type="module" module-name="ocr_ui" />
   </component>
 </module>

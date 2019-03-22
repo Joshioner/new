@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e9f1f3">
+
+    //标题栏
+    <RelativeLayout
+        android:id="@+id/drug_check_relative"
+        android:layout_width="match_parent"
+        android:layout_height="140px"
+        android:background="@drawable/background_gradient">
+        <ImageView
+            android:id="@+id/icon_back"
+            android:layout_width="20px"
+            android:layout_height="35px"
+            android:layout_marginTop="70px"
+            android:layout_marginLeft="35px"
+            android:background="@mipmap/icon_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70px"
+            android:layout_centerHorizontal="true"
+            android:text="@string/healthy_news"
+            android:textColor="#ffffff"
+            android:textSize="36px" />
+
+
+    </RelativeLayout>
+
+    //健康资讯列表
+    <LinearLayout
+        android:layout_marginTop="20px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:id="@+id/news_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

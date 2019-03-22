@@ -2,22 +2,27 @@ package com.blk.fragment;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
 
 import com.blk.MainActivity;
 import com.blk.R;
-import com.blk.medical_record.Adapter.healthyNewsBaseAdapter;
-import com.blk.medical_record.entity.healthy_news;
+import com.blk.health_tool.HealthyNewsActivity;
+import com.blk.health_tool.HealthyNewsDetailActivity;
+import com.blk.homePage.Adapter.HealthyNewsBaseAdapter;
+import com.blk.medical_record.entity.HealthyNews;
 import com.blk.rollviewpager.RollPagerView;
 import com.blk.rollviewpager.adapter.StaticPagerAdapter;
+import com.wx.goodview.GoodView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,12 +34,13 @@ import java.util.List;
 public class homePage_Fragment extends Fragment implements View.OnClickListener{
     private View view ;
     private RollPagerView mViewPager;
-    private healthy_news healthyNews;   //健康资讯对象
+    private HealthyNews healthyNews;   //健康资讯对象
     private ListView healthy_news_listView;   //存放健康资讯的ListView
-    private List<healthy_news> healthy_news_list;  //存放健康资讯的列表
-    private healthyNewsBaseAdapter healthy_news_BaseAdapter;   //适配器
+    private List<HealthyNews> healthyNews_list;  //存放健康资讯的列表
+    private HealthyNewsBaseAdapter healthy_news_BaseAdapter;   //适配器
     private RadioButton myCaseHistory,healthyTool,pharmacy,healthyServer; //首页的四个图标：我的病历、个人工具、居家药品、健康服务
-
+    private GoodView goodView;
+    private ImageView healthy_news_more;  //查看更多资讯
     public homePage_Fragment(){
     }
 
@@ -72,32 +78,56 @@ public class homePage_Fragment extends Fragment implements View.OnClickListener{
         pharmacy.setOnClickListener(this);
         //图标 -- 个人工具  点击事件
         healthyTool.setOnClickListener(this);
+        //查看更多健康资讯
+        healthy_news_more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),HealthyNewsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
     //初始化控件
-    private void initView()
-    {
+    private void initView() {
+        goodView = new GoodView(getActivity());
         healthy_news_listView = (ListView) view.findViewById(R.id.news_listView);
-        healthy_news_list = new ArrayList<healthy_news>();
-        AddHealthyNewsList();
-        healthy_news_BaseAdapter = new healthyNewsBaseAdapter(getActivity(),healthy_news_list);
-        healthy_news_listView.setAdapter(healthy_news_BaseAdapter);
-    }
-
-    private void AddHealthyNewsList()
-    {
-        String news_title = "孩子发烧，这三种物理降温才有效";
-        String author_name = "作者：海棠";
-        String news_content = "天一冷，感冒发烧的宝宝又增多了，本文盘点了几种常见的物理降温方法";
-        healthyNews = new healthy_news(news_title,author_name,news_content);
-        healthy_news_list.add(healthyNews);
-        healthy_news_list.add(healthyNews);
-        healthy_news_list.add(healthyNews);
-        healthy_news_list.add(healthyNews);
+        healthy_news_more = (ImageView) view.findViewById(R.id.healthy_news_more);
+        //加载健康资讯
+        new InitHealthyNewsListThread().execute();
 
     }
 
+
+    class InitHealthyNewsListThread extends AsyncTask<Void,Void,Void> {
+
+        @Override
+        protected void onPreExecute() {
+            healthy_news_listView = (ListView) view.findViewById(R.id.news_listView);
+            healthyNews_list = new ArrayList<HealthyNews>();
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            String news_title = "孩子发烧，这三种物理降温才有效";
+            String author_name = "作者：海棠";
+            String news_content = "天一冷，感冒发烧的宝宝又增多了，本文盘点了几种常见的物理降温方法";
+            healthyNews = new HealthyNews(1,news_title,author_name,news_content,"",0);
+            healthyNews_list.add(healthyNews);
+            healthyNews_list.add(healthyNews);
+            healthyNews_list.add(healthyNews);
+            healthyNews_list.add(healthyNews);
+            healthy_news_BaseAdapter = new HealthyNewsBaseAdapter(getActivity(), healthyNews_list,goodView);
+            healthy_news_listView.setAdapter(healthy_news_BaseAdapter);
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+
+        }
+    }
 
     private void initRadio() {
          myCaseHistory = (RadioButton) view.findViewById(R.id.myCaseHistory);

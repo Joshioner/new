@@ -4,12 +4,17 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="@mipmap/home_card_bottom"
+    android:descendantFocusability="blocksDescendants"
     android:layout_height="150dp">
 
-
+     <TextView
+         android:id="@+id/news_id"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:visibility="gone"/>
 
     <ImageView
-        android:id="@+id/news_img"
+        android:id="@+id/news_cover"
         android:layout_width="80dp"
         android:layout_height="100dp"
         android:layout_marginLeft="30dp"
@@ -20,15 +25,16 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
     <RelativeLayout
+        android:id="@+id/newsRelativeLayout"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:orientation="vertical"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/news_img"
-        android:layout_toEndOf="@+id/news_img"
+        android:layout_toRightOf="@+id/news_cover"
+        android:layout_toEndOf="@+id/news_cover"
         android:layout_marginStart="15dp"
-        android:id="@+id/relativeLayout">
+       >
         <TextView
             android:id="@+id/news_title"
             android:layout_width="wrap_content"
@@ -67,12 +73,22 @@
             />
 
     </RelativeLayout>
+
+
     <ImageView
-        android:layout_width="140dp"
-        android:layout_height="70dp"
-        android:src="@mipmap/home_collect"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/collection_icon"
+        android:layout_width="45dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/news_cover"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginRight="42dp"
+        android:src="@mipmap/collection_normal" />
+    <TextView
+        android:id="@+id/collection_flag"
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone"/>
 
 </RelativeLayout>

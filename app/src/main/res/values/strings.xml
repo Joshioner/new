@@ -204,9 +204,11 @@
     <string name="member_relation">关系</string>
     <string name="member_relation_hint">请输入家属与您的关系</string>
     <string name="finish_btn">完成</string>
-    
+
     //闹钟助手
-     <string name="drug_name_hint">请输入药品名称</string>
+    <string name="drug_name_hint">请输入药品名称</string>
     <string name="dosage_text">用  量</string>
     <string name="period">周  期</string>
+
+
 </resources>
