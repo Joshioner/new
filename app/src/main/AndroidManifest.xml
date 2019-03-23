@@ -88,8 +88,9 @@
         <activity android:name=".pharmacy.MainActivity" />
         <activity android:name=".pharmacy.homePage.pharmacySearchActivity" />
         <activity android:name=".pharmacy.homePage.DrugListSearchActivity" />
-        <activity android:name=".health_tool.DrugCheckActivity"
-            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".health_tool.DrugCheckActivity"
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name=".pharmacy.homePage.pharmacyShopperPageActivity" />
         <activity android:name=".pharmacy.homePage.drug_information_detail" />
         <activity android:name=".pharmacy.homePage.firm_Order">
@@ -127,7 +128,13 @@
             android:label="@string/title_activity_add_member"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".health_tool.HealthyNewsActivity" />
-        <activity android:name=".health_tool.HealthyNewsDetailActivity"></activity>
+        <activity android:name=".health_tool.HealthyNewsDetailActivity" />
+        <activity
+            android:name=".health_tool.HealthRecordActivity"
+            android:label="@string/title_activity_health_record" />
+        <activity
+            android:name=".health_tool.HealthRecordDetailActivity"
+            android:windowSoftInputMode="stateHidden"></activity>
     </application>
 
 </manifest>

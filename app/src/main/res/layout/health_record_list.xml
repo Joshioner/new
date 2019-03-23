@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/health_record_edit_relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingRight="10dp"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10.8dp"
+        android:background="#ffffff"
+        >
+
+        <ImageView
+            android:id="@+id/circle_image"
+            android:paddingTop="2dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@mipmap/circle"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/health_record_date"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:paddingTop="1dp"
+            android:text="2017年01月18日      12:15"
+            android:textColor="@color/half_black"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="23dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/linear_style"
+            >
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/item_ll_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/health_record_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+            //详细地点
+            <RelativeLayout
+                android:id="@+id/health_record_address_relativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/address_image"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/circle_textview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    />
+                <TextView
+                    android:id="@+id/health_record_address"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@+id/address_image"
+                    android:layout_height="wrap_content"
+                    android:text="家里的沙发"
+                    android:layout_centerVertical="true"
+                    android:textColor="#1d1c1c"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    />
+            </RelativeLayout>
+
+            //食物、饮料摄入
+            <RelativeLayout
+                android:id="@+id/health_record_food_relativeLayout"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/food_image"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/circle_textview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    />
+                <TextView
+                    android:id="@+id/health_record_food"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@+id/food_image"
+                    android:layout_height="wrap_content"
+                    android:text="苹果、梨、香蕉，喝酒"
+                    android:layout_centerVertical="true"
+                    android:textColor="#1d1c1c"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    />
+            </RelativeLayout>
+
+            //运动情况描述
+            <RelativeLayout
+                android:id="@+id/health_record_sport_relativeLayout"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/sport_image"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/circle_textview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    />
+                <TextView
+                    android:id="@+id/health_record_sport"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@+id/sport_image"
+                    android:layout_height="wrap_content"
+                    android:text="长跑30分钟，散步一个小时，打篮球半个小时"
+                    android:layout_centerVertical="true"
+                    android:textColor="#1d1c1c"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    />
+            </RelativeLayout>
+
+            //症状描述
+            <RelativeLayout
+                android:id="@+id/health_record_symptom_relativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/symptom_image"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/circle_textview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    />
+                <TextView
+                    android:id="@+id/health_record_symptom"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@+id/symptom_image"
+                    android:layout_height="wrap_content"
+                    android:text="胸口骨头疼痛，按压会痛，早上起床或走路时不会痛，久坐后活动肩膀或扩胸有时会有咯吱的轻微响声"
+                    android:layout_centerVertical="true"
+                    android:textColor="#1d1c1c"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingRight="5dp"
+                android:background="#ffffff"
+                >
+
+                <ImageView
+                    android:id="@+id/edit_image"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/edit"
+                    android:visibility="gone"
+                    />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:background="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#ffffff"
+    >
+
+    <include
+        layout="@layout/health_record_title"
+        />
+
+
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1"
+           android:paddingBottom="20dp"
+           android:paddingLeft="20dp"
+           >
+           //时间
+           <LinearLayout
+               android:id="@+id/time_linearLayout"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:paddingRight="20dp"
+               >
+
+               <RelativeLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginBottom="5dp"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <TextView
+                       android:id="@+id/health_record_time_text"
+                       android:layout_width="wrap_content"
+                       android:layout_height="40dp"
+                       android:gravity="center|left"
+                       android:text="时间"
+                       android:textColor="@color/text_black"
+                       android:textSize="15dp" />
+                   <View
+                       android:layout_below="@+id/health_record_time_text"
+                       android:layout_width="match_parent"
+                       android:layout_height="2dp"
+                       android:background="@color/general_background"
+                       />
+
+                   <EditText
+                       android:id="@+id/health_record_time"
+                       android:layout_width="match_parent"
+                       android:layout_height="40dp"
+                       android:layout_alignParentTop="true"
+                       android:layout_weight="13.83"
+                       android:background="@null"
+                       android:layout_marginLeft="20dp"
+                       android:layout_toRightOf="@+id/health_record_time_text"
+                       android:hint="请选择时间"
+                       android:textColorHint="@color/text_gray"
+                       android:textColor="@color/text_gray"
+                       android:focusable="false"
+                       android:textSize="15dp" />
+               </RelativeLayout>
+
+
+           </LinearLayout>
+
+           //详细地点
+           <LinearLayout
+               android:id="@+id/address_linearLayout"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:paddingRight="20dp"
+               android:layout_below="@+id/time_linearLayout"
+               >
+
+               <RelativeLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginBottom="5dp"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <TextView
+                       android:id="@+id/health_record_address_text"
+                       android:layout_width="wrap_content"
+                       android:layout_height="40dp"
+                       android:gravity="center|left"
+                       android:text="详细地点"
+                       android:textColor="@color/text_black"
+                       android:textSize="15dp" />
+                   <View
+                       android:layout_below="@+id/health_record_address_text"
+                       android:layout_width="match_parent"
+                       android:layout_height="2dp"
+                       android:background="@color/general_background"
+                       />
+
+                   <EditText
+                       android:id="@+id/health_record_address"
+                       android:layout_width="match_parent"
+                       android:layout_height="40dp"
+                       android:layout_alignParentTop="true"
+                       android:layout_weight="13.83"
+                       android:background="@null"
+                       android:layout_marginLeft="20dp"
+                       android:layout_toRightOf="@+id/health_record_address_text"
+                       android:hint="准确记录详细地点"
+                       android:textColorHint="@color/text_gray"
+                       android:textColor="@color/text_gray"
+                       android:textSize="15dp" />
+               </RelativeLayout>
+
+
+           </LinearLayout>
+           //食物、饮料摄入
+           <LinearLayout
+               android:id="@+id/food_linearLayout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:paddingRight="20dp"
+               android:layout_below="@+id/address_linearLayout"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="40dp"
+                   android:gravity="center|left"
+                   android:text="食物/饮料摄入"
+                   android:textColor="@color/text_black"
+                   android:textSize="15dp"
+                   />
+
+               <com.blk.health_tool.widget.LinedEditText
+                   android:id="@+id/health_record_food"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+                   android:background="@drawable/shape_add_diary_title"
+                   android:enabled="true"
+                   android:gravity="top"
+                   android:lineSpacingExtra="5dp"
+                   android:maxLines="8"
+                   android:minLines="5"
+                   android:paddingLeft="20dp"
+                   android:paddingRight="20dp"
+                   android:paddingTop="10dp"
+                   android:scrollbars="vertical"
+                   android:textSize="15dp"
+                   android:hint="记录食物和饮料的摄入，包括水、汽水、茶、咖啡或酒"
+                   android:textColorHint="@color/text_gray"
+                   android:textColor="@color/text_gray"
+                   />
+
+
+           </LinearLayout>
+
+           //运动描述
+           <LinearLayout
+               android:id="@+id/sport_linearLayout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:paddingRight="20dp"
+               android:layout_below="@+id/food_linearLayout"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="40dp"
+                   android:gravity="center|left"
+                   android:text="运动情况描述"
+                   android:textColor="@color/text_black"
+                   android:textSize="15dp"
+                   />
+
+               <com.blk.health_tool.widget.LinedEditText
+                   android:id="@+id/health_record_sport"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+                   android:background="@drawable/shape_add_diary_title"
+                   android:enabled="true"
+                   android:gravity="top"
+                   android:lineSpacingExtra="5dp"
+                   android:maxLines="8"
+                   android:minLines="5"
+                   android:paddingLeft="20dp"
+                   android:paddingRight="20dp"
+                   android:paddingTop="10dp"
+                   android:scrollbars="vertical"
+                   android:textSize="15dp"
+                   android:hint="记录下时间长度和运动的类型，以及相关的想法和感觉。如果没有，则可不填写"
+                   android:textColorHint="@color/text_gray"
+                   android:textColor="@color/text_gray"
+                   />
+
+
+           </LinearLayout>
+
+           //症状描述
+           <LinearLayout
+               android:id="@+id/symptom_linearLayout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:paddingRight="20dp"
+               android:layout_below="@+id/sport_linearLayout"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="40dp"
+                   android:gravity="center|left"
+                   android:text="症状描述"
+                   android:textColor="@color/text_black"
+                   android:textSize="15dp"
+                   />
+
+               <com.blk.health_tool.widget.LinedEditText
+                   android:id="@+id/health_record_symptom"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+                   android:background="@drawable/shape_add_diary_title"
+                   android:enabled="true"
+                   android:gravity="top"
+                   android:lineSpacingExtra="5dp"
+                   android:maxLines="8"
+                   android:minLines="5"
+                   android:paddingLeft="20dp"
+                   android:paddingRight="20dp"
+                   android:paddingTop="10dp"
+                   android:scrollbars="vertical"
+                   android:textSize="15dp"
+                   android:hint="记录下不适时的状态、想法和感觉"
+                   android:textColorHint="@color/text_gray"
+                   android:textColor="@color/text_gray"
+                   />
+
+
+           </LinearLayout>
+
+           <cc.trity.floatingactionbutton.FloatingActionsMenu
+               android:id="@+id/right_labels"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentStart="true"
+               app:fab_expandDirection="right"
+               app:fab_addButtonSize="mini"
+               app:fab_addButtonColorNormal="#49c998"
+               >
+
+               <cc.trity.floatingactionbutton.FloatingActionButton
+                   android:id="@+id/health_record_delete"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   app:fab_size="normal"
+                   app:fab_icon = "@mipmap/delete_new"
+                   app:fab_colorNormal="#ee0d18"
+                   android:visibility="gone"
+                   />
+
+               <cc.trity.floatingactionbutton.FloatingActionButton
+                   android:id="@+id/health_record_add"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:background="@mipmap/save"
+                   app:fab_size="normal"
+                   app:fab_title="FAB 2"
+                   app:fab_icon = "@mipmap/save_new"
+                   app:fab_colorNormal="#49c998"
+
+                   />
+
+               <cc.trity.floatingactionbutton.FloatingActionButton
+                   android:id="@+id/health_record_back_icon"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:background="@mipmap/delete"
+                   app:fab_colorNormal="#e33e46"
+                   app:fab_icon = "@mipmap/back_new"
+                   app:fab_size="normal"
+                   app:fab_title="FAB 2"
+
+                   />
+
+           </cc.trity.floatingactionbutton.FloatingActionsMenu>
+       </RelativeLayout>
+   </ScrollView>
+
+
+</LinearLayout>

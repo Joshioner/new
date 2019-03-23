@@ -21,12 +21,13 @@ import java.util.ArrayList;
 
 public class HealthyNewsActivity extends AppCompatActivity {
 
-    private ListView healthyNews_listView ;
+    private ListView healthyNews_listView;
     private ArrayList<HealthyNews> healthyNews_list;
     private HealthyNews healthyNews;
     private HealthyNewsBaseAdapter healthyNewsBaseAdapter;
     private GoodView goodView;
     private ImageView back_icon;  //返回按钮
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +40,7 @@ public class HealthyNewsActivity extends AppCompatActivity {
     }
 
     //初始化控件
-    private void initView()
-    {
+    private void initView() {
         goodView = new GoodView(this);
         back_icon = (ImageView) findViewById(R.id.icon_back);
         healthyNews_listView = (ListView) findViewById(R.id.news_listView);
@@ -56,8 +56,7 @@ public class HealthyNewsActivity extends AppCompatActivity {
     }
 
 
-
-    class InitHealthyNewsListThread extends AsyncTask<Void,Void,Void>{
+    class InitHealthyNewsListThread extends AsyncTask<Void, Void, Void> {
 
         @Override
         protected void onPreExecute() {
@@ -69,12 +68,12 @@ public class HealthyNewsActivity extends AppCompatActivity {
             String news_title = "孩子发烧，这三种物理降温才有效";
             String author_name = "作者：海棠";
             String news_content = "天一冷，感冒发烧的宝宝又增多了，本文盘点了几种常见的物理降温方法";
-            healthyNews = new HealthyNews(1,news_title,author_name,news_content,"",0);
+            healthyNews = new HealthyNews(1, news_title, author_name, news_content, "", 0);
             healthyNews_list.add(healthyNews);
             healthyNews_list.add(healthyNews);
             healthyNews_list.add(healthyNews);
             healthyNews_list.add(healthyNews);
-            healthyNewsBaseAdapter = new HealthyNewsBaseAdapter(HealthyNewsActivity.this, healthyNews_list,goodView);
+            healthyNewsBaseAdapter = new HealthyNewsBaseAdapter(HealthyNewsActivity.this, healthyNews_list, goodView);
             healthyNews_listView.setAdapter(healthyNewsBaseAdapter);
             return null;
         }

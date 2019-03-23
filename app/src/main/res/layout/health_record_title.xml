@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140px"
+    android:background="@drawable/background_gradient">
+
+
+    <ImageView
+        android:id="@+id/health_record_back"
+        android:layout_width="20px"
+        android:layout_height="35px"
+        android:layout_marginLeft="32px"
+        android:layout_marginTop="70px"
+        android:background="@mipmap/icon_back" />
+
+
+    <TextView
+        android:id="@+id/health_record_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65px"
+        android:text="康复记录表"
+        android:textColor="#ffffff"
+        android:textSize="36px"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
+
+

@@ -192,6 +192,7 @@
             //康复记录表
 
             <RelativeLayout
+                android:id="@+id/health_record"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"

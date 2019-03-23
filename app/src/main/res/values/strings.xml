@@ -209,6 +209,8 @@
     <string name="drug_name_hint">请输入药品名称</string>
     <string name="dosage_text">用  量</string>
     <string name="period">周  期</string>
+    <string name="title_activity_health_record">HealthRecordActivity</string>
+    <string name="title_activity_health_record_detail">HealthRecordDetailActivity</string>
 
 
 </resources>

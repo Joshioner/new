@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e9f1f3">
+    android:background="#e9f1f3"
+    android:orientation="vertical">
 
     //标题栏
+
     <RelativeLayout
-        android:id="@+id/drug_check_relative"
+        android:id="@+id/alarm_assistant_relative"
         android:layout_width="match_parent"
         android:layout_height="150px"
         android:background="@drawable/background_gradient">
+
         <ImageView
             android:id="@+id/alarm_back"
             android:layout_width="20px"
             android:layout_height="35px"
-            android:layout_marginTop="65px"
             android:layout_marginLeft="35px"
-            android:background="@mipmap/icon_back"/>
+            android:layout_marginTop="65px"
+            android:background="@mipmap/icon_back" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="65px"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="65px"
             android:text="@string/alarm_assistant"
             android:textColor="#ffffff"
             android:textSize="36px" />
 
-            //添加闹钟
+        //添加闹钟
 
         <ImageView
             android:id="@+id/add_alarm"
@@ -37,7 +40,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginTop="35dp"
             android:layout_marginRight="30dp"
-            android:background="@mipmap/cardhistory_icon_add"/>
+            android:background="@mipmap/cardhistory_icon_add" />
     </RelativeLayout>
     //展示栏
 
@@ -77,25 +80,23 @@
         </LinearLayout>
     </RelativeLayout>
     //闹钟列表
+
     <LinearLayout
-        android:layout_marginTop="20px"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px">
+
         <ListView
             android:id="@+id/alarm_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:dividerHeight="20dp"
-            >
-        </ListView>
+            android:dividerHeight="20dp"></ListView>
     </LinearLayout>
 
 
-
-
     <!--<ImageView-->
-        <!--android:id="@+id/add_alarm"-->
-        <!--android:layout_width="80px"-->
-        <!--android:layout_height="80px"-->
-        <!--android:background="@mipmap/tool_clock_icon_add"/>-->
+    <!--android:id="@+id/add_alarm"-->
+    <!--android:layout_width="80px"-->
+    <!--android:layout_height="80px"-->
+    <!--android:background="@mipmap/tool_clock_icon_add"/>-->
 </LinearLayout>

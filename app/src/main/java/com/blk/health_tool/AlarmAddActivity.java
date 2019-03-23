@@ -69,7 +69,7 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
         Window window = getWindow();
         ToolBarSet.setBar(window);
         Bundle bundle = getIntent().getExtras();
-        if (bundle != null){
+        if (bundle != null) {
             alarmId = bundle.getInt("id");
         }
         //初始化控件
@@ -116,13 +116,13 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
         alarmDbHelper = new AlarmDbHelper(this, "my.db", null, 1);
         //删除按钮
         delete = (TextView) findViewById(R.id.delete);
-        if (alarmId >= 0){
+        if (alarmId >= 0) {
             delete.setVisibility(View.VISIBLE);
             saveBtn.setText("更新闹钟信息");
             SQLiteDatabase db = alarmDbHelper.getReadableDatabase();
             alarmInfoNew = new AlarmInfo();
-            Cursor cursor = db.query("alarm",null, "alarm_id = ?",new String[]{String.valueOf(alarmId)},null,null,null,null);
-            while (cursor.moveToNext()){
+            Cursor cursor = db.query("alarm", null, "alarm_id = ?", new String[]{String.valueOf(alarmId)}, null, null, null, null);
+            while (cursor.moveToNext()) {
                 drugName.setText(cursor.getString(cursor.getColumnIndex("drug_name")));
                 times.setText(String.valueOf(cursor.getInt(cursor.getColumnIndex("times"))));
                 nums.setText(String.valueOf(cursor.getInt(cursor.getColumnIndex("nums"))));
@@ -238,7 +238,7 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
             case R.id.save_btn:
                 setClock();
                 break;
-                //删除闹钟
+            //删除闹钟
             case R.id.delete:
                 deleteAlarmClock();
                 break;
@@ -249,24 +249,23 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
     }
 
     //删除闹钟
-    private void deleteAlarmClock(){
+    private void deleteAlarmClock() {
         //弹出提示框
         new CommomDialog(this, R.style.dialog, "您确定删除此闹钟提醒信息？", new CommomDialog.OnCloseListener() {
             @Override
             public void onClick(Dialog dialog, boolean confirm) {
-                if(confirm){
+                if (confirm) {
                     SQLiteDatabase db = alarmDbHelper.getWritableDatabase();
                     //删除闹钟
-                 //   Log.i("TestTest","clockDelete id:" + alarmId);
-                    db.delete("alarm","alarm_id = ?",new String[]{String.valueOf(alarmId)});
+                    //   Log.i("TestTest","clockDelete id:" + alarmId);
+                    db.delete("alarm", "alarm_id = ?", new String[]{String.valueOf(alarmId)});
                     //取消闹钟设置
-                 //   Log.i("TestTest","clockCancel id:" + alarmInfoNew.getId());
+                    //   Log.i("TestTest","clockCancel id:" + alarmInfoNew.getId());
                     AlarmUtil.cancelAlarmClock(alarmInfoNew);
                     dialog.dismiss();
                     showToast("删除闹钟成功");
                     finish();
-                } else
-                {
+                } else {
                     dialog.dismiss();
                 }
 
@@ -274,6 +273,7 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
         }).setTitle("提示").show();
 
     }
+
     /**
      * 设置闹钟提醒
      */
@@ -302,13 +302,13 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
             @Override
             protected Void doInBackground(Void... voids) {
                 //先删除操作
-                if (alarmId >= 0){
+                if (alarmId >= 0) {
                     SQLiteDatabase db = alarmDbHelper.getWritableDatabase();
                     //先删除闹钟
                     AlarmUtil.cancelAlarmClock(alarmInfoNew);
-                    db.delete("alarm","alarm_id = ?",new String[]{String.valueOf(alarmId)});
-                  //  Log.i("TestTest","Update clockDelete id:" + alarmId);
-                  //  Log.i("TestTest","Update clockCancel id:" + alarmInfoNew.getId());
+                    db.delete("alarm", "alarm_id = ?", new String[]{String.valueOf(alarmId)});
+                    //  Log.i("TestTest","Update clockDelete id:" + alarmId);
+                    //  Log.i("TestTest","Update clockCancel id:" + alarmInfoNew.getId());
                 }
                 //药品名称
                 alarmInfo.setDrugName(drugName.getText().toString());
@@ -333,7 +333,7 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
                 //利用SharedPreferences来存取id数据，保证id的唯一性，不存在id覆盖的问题
                 SharedPreferences preferences = getSharedPreferences("clockData", MODE_PRIVATE);
                 int id = preferences.getInt("id", 0);
-            //    Log.i("TestTest","clockSet id:" + id);
+                //    Log.i("TestTest","clockSet id:" + id);
                 //获取数据库SQLiteDatabase
                 SQLiteDatabase db = alarmDbHelper.getWritableDatabase();
                 ContentValues values = new ContentValues();
@@ -353,7 +353,7 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
                         AlarmManagerUtil.setAlarm(MyApplication.getContext(), 0, calendar, id, 0, "主人，请按时吃药哦", 1, alarmInfo.getDrugName(), alarmInfo.getNums());
                         //一次性设置多个闹钟，id应该不同，不然后面的会覆盖前面的闹钟
                         id++;
-                      //  Log.i("Main", "TestTest " + calendar.get(Calendar.YEAR) + "-" + (calendar.get(Calendar.MONTH) + 1) + "-" + calendar.get(Calendar.DAY_OF_MONTH) + "  " + calendar.get(Calendar.HOUR_OF_DAY) + ":" + calendar.get(Calendar.MINUTE));
+                        //  Log.i("Main", "TestTest " + calendar.get(Calendar.YEAR) + "-" + (calendar.get(Calendar.MONTH) + 1) + "-" + calendar.get(Calendar.DAY_OF_MONTH) + "  " + calendar.get(Calendar.HOUR_OF_DAY) + ":" + calendar.get(Calendar.MINUTE));
                         if (calendar.get(Calendar.HOUR_OF_DAY) + alarmInfo.getIntervalTime() > 24 || (calendar.get(Calendar.HOUR_OF_DAY) + alarmInfo.getIntervalTime() == 24 && calendar.get(Calendar.MINUTE) > 0)) {
                             break;
                         }

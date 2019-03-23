@@ -7,7 +7,7 @@
 
     //标题栏
     <RelativeLayout
-        android:id="@+id/drug_check_relative"
+        android:id="@+id/alarm_add_relative"
         android:layout_width="match_parent"
         android:layout_height="140px"
         android:background="@drawable/background_gradient">
@@ -25,6 +25,7 @@
             android:layout_centerHorizontal="true"
             android:text="@string/alarm_add_title"
             android:textColor="#ffffff"
+            android:textStyle="bold"
             android:textSize="36px" />
         <TextView
             android:id="@+id/delete"
@@ -385,6 +386,7 @@
                     android:textSize="20dp"
                     android:background="@drawable/login_btn_circle"
                     android:text="设置提醒"
+                    android:textStyle="bold"
                     />
 
 
