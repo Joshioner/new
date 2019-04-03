@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         viewPager.setAdapter(myFragmentPagerAdapter);
         viewPager.setCurrentItem(0);
         homePage.setChecked(true);
-       InitEvent();
+        InitEvent();
     }
 
 

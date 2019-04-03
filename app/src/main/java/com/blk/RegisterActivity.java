@@ -12,9 +12,11 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
@@ -27,8 +29,14 @@ import com.blk.common.TimePickerView;
 import com.blk.common.ToolBarSet;
 import com.blk.common.alterdialog.ActionSheetDialog;
 import com.blk.common.util.FileUtil;
-import com.blk.medical_record.medicalRecordContentActivity;
 
+import com.blk.R;
+
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -41,6 +49,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private ImageView uploadPhoto;   //上传头像
     private static final int REQUEST_CODE_PICK_IMAGE = 101;    //选择图片的请求码
     private static final int REQUEST_CODE_CAMERA = 102;        //拍照的请求码
+    private static final int CROP_PHOTO = 103;  //裁剪的请求码
+    private Uri imageUri;  //图片路径
+    private String imagePath;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -140,11 +151,20 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         .addSheetItem("拍照", ActionSheetDialog.SheetItemColor.Blue, new ActionSheetDialog.OnSheetItemClickListener() {
                             @Override
                             public void onClick(int which) {
-                                Intent intent = new Intent(RegisterActivity.this, CameraActivity.class);
-                                intent.putExtra(CameraActivity.KEY_OUTPUT_FILE_PATH,
-                                        FileUtil.getPersonPhoto(getApplication()).getAbsolutePath());
-                                intent.putExtra(CameraActivity.KEY_CONTENT_TYPE,
-                                        CameraActivity.CONTENT_TYPE_GENERAL);
+                                File outputImage = new File(Environment.getExternalStorageDirectory(),
+                                        "tempImage" + ".jpg");
+                                try{
+                                    if(outputImage.exists()){
+                                        outputImage.delete();
+                                    }
+                                    outputImage.createNewFile();
+                                }catch(IOException e){
+                                    e.printStackTrace();
+                                }
+
+                                imageUri = Uri.fromFile(outputImage);
+                                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                                intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
                                 startActivityForResult(intent, REQUEST_CODE_CAMERA);
                             }
                         })
@@ -182,17 +202,45 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         //选择图片，sd卡上
         if (requestCode == REQUEST_CODE_PICK_IMAGE && resultCode == Activity.RESULT_OK) {
             Uri uri = data.getData();
-            String imagePath = getRealPathFromURI(uri);
-            //填充用户头像
-            setPersonPhoto(imagePath);
+            String personPhotoPath  = getRealPathFromURI(uri);
+           try{
+               Bitmap bitmap = BitmapFactory.decodeFile(personPhotoPath);
+               imagePath = FileUtil.getPersonPhoto(getApplicationContext()).getAbsolutePath();
+               File personPhoto = new File(imagePath);
+               BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(personPhoto));
+               bitmap.compress(Bitmap.CompressFormat.JPEG, 80, bos);//向缓冲区压缩图片
+               bos.flush();
+               bos.close();
+               //填充用户头像
+               uploadPhoto.setImageBitmap(bitmap);
+           }catch (Exception e){
+               e.printStackTrace();
+           }
         }
-
         //拍照
         else if (requestCode == REQUEST_CODE_CAMERA && resultCode == Activity.RESULT_OK) {
-            //图片路径
-          String  imagePath = FileUtil.getPersonPhoto(getApplicationContext()).getAbsolutePath();
-          //填充用户头像
-            setPersonPhoto(imagePath);
+            Intent intent = new Intent("com.android.camera.action.CROP");
+            intent.setDataAndType(imageUri, "image/*");
+            intent.putExtra("scale", true);
+            intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+            startActivityForResult(intent, CROP_PHOTO); // 启动裁剪程序
+        }  else if (requestCode == CROP_PHOTO && resultCode == Activity.RESULT_OK) {
+            try {
+                Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver()
+                        .openInputStream(imageUri));
+                imagePath = FileUtil.getPersonPhoto(getApplicationContext()).getAbsolutePath();
+                File personPhoto = new File(imagePath);
+                BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(personPhoto));
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 80, bos);//向缓冲区压缩图片
+                bos.flush();
+                bos.close();
+                uploadPhoto.setImageBitmap(bitmap);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }
     }
 

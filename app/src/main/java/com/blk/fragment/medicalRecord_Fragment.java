@@ -16,6 +16,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -137,6 +138,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         personImage = (ImageView) view.findViewById(R.id.person_photo);
         personName = (TextView) view.findViewById(R.id.person_name);
         medicalRecordSearchBox = (ImageView) view.findViewById(R.id.medicalRecordSearchBox);
+        alertDialog = new AlertDialog.Builder(getActivity());
         //加载病历信息
         new MedicalRecordDetailThread().execute(123);
         //解决scrollview中嵌套listview只显示一个item的问题
@@ -201,9 +203,9 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         memberlist.add( new PersonMemberInfo("张三",2));
         memberlist.add( new PersonMemberInfo("李四",3));
         //设置用户头像
-        String path = getActivity().getFilesDir().getAbsolutePath() + "/pic.jpg";
-        Bitmap bitmap = BitmapFactory.decodeFile(path);
-        personImage.setImageBitmap(bitmap);
+//        String path = getActivity().getFilesDir().getAbsolutePath() + "/pic.jpg";
+//        Bitmap bitmap = BitmapFactory.decodeFile(path);
+//        personImage.setImageBitmap(bitmap);
 
 //        //找到头像的目标文件
 //        File file = new File("D:\\test_photo.png");
@@ -328,7 +330,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         });
 
         // 请选择您的初始化方式
-        initAccessToken();
+         initAccessToken();
 
     }
 //
@@ -448,6 +450,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
             @Override
             public void onResult(AccessToken accessToken) {
                 String token = accessToken.getAccessToken();
+                Log.i("TestTest","result " + token);
             }
 
             @Override

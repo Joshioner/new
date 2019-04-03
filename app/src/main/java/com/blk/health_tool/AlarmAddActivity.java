@@ -364,6 +364,7 @@ public class AlarmAddActivity extends AppCompatActivity implements View.OnClickL
                     //天数
                     calendar.add(Calendar.DAY_OF_MONTH, 1 * (index + 1));
                 }
+                //保存当前最后一个闹钟的id
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putInt("id", id);
                 editor.commit();

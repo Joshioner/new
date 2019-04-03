@@ -22,6 +22,7 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.support.annotation.IntDef;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -111,6 +112,7 @@ public class CameraView extends FrameLayout {
         cameraViewTakePictureCallback.file = file;
         cameraViewTakePictureCallback.callback = callback;
         cameraControl.takePicture(cameraViewTakePictureCallback);
+        Log.i("TestTest","-----qqqqqqq" );
     }
 
     public void setMaskType(@MaskView.MaskType int maskType) {

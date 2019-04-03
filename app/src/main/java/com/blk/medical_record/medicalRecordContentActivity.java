@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Message;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
@@ -40,6 +41,7 @@ import com.blk.common.util.HttpSendUtil;
 import com.blk.common.ToolBarSet;
 import com.blk.common.util.WeiboDialogUtils;
 
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.ByteArrayOutputStream;
@@ -48,6 +50,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
@@ -61,6 +64,8 @@ public class medicalRecordContentActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_CAMERA = 102;        //拍照的请求码
     private static final int SAVE = 103;
     private static final int SHOW_DETAIL = 104;
+    private static final int CROP_PHOTO = 105;  //裁剪的请求码
+    private Uri imageUri;  //图片路径
     private Dialog weiboDialogUtils;                         //加载框
     private ImageView imageView;
     private EditText patient_name;                       //病人姓名
@@ -119,11 +124,26 @@ public class medicalRecordContentActivity extends AppCompatActivity {
         else if(data==1)
         {
             weiboDialogUtils = WeiboDialogUtils.createLoadingDialog(this,"识别中");
-            Intent intent = new Intent(medicalRecordContentActivity.this, CameraActivity.class);
-            intent.putExtra(CameraActivity.KEY_OUTPUT_FILE_PATH,
-                    FileUtil.getSaveFile(getApplication()).getAbsolutePath());
-            intent.putExtra(CameraActivity.KEY_CONTENT_TYPE,
-                    CameraActivity.CONTENT_TYPE_GENERAL);
+//            Intent intent = new Intent(medicalRecordContentActivity.this, CameraActivity.class);
+//            intent.putExtra(CameraActivity.KEY_OUTPUT_FILE_PATH,
+//                    FileUtil.getSaveFile(getApplication()).getAbsolutePath());
+//            intent.putExtra(CameraActivity.KEY_CONTENT_TYPE,
+//                    CameraActivity.CONTENT_TYPE_GENERAL);
+//            startActivityForResult(intent, REQUEST_CODE_CAMERA);
+            File outputImage = new File(Environment.getExternalStorageDirectory(),
+                    "tempMedicalImage" + ".jpg");
+            try{
+                if(outputImage.exists()){
+                    outputImage.delete();
+                }
+                outputImage.createNewFile();
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+
+            imageUri = Uri.fromFile(outputImage);
+            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
             startActivityForResult(intent, REQUEST_CODE_CAMERA);
         }
         else if(data == 2){
@@ -302,16 +322,33 @@ public class medicalRecordContentActivity extends AppCompatActivity {
 
         //拍照
         else if (requestCode == REQUEST_CODE_CAMERA && resultCode == Activity.RESULT_OK) {
-            //识别图片并给ui赋值
-            recGeneral(FileUtil.getSaveFile(getApplicationContext()).getAbsolutePath());
-            //图片路径
-            imagePath = FileUtil.getSaveFile(getApplicationContext()).getAbsolutePath();
+            Intent intent = new Intent("com.android.camera.action.CROP");
+            intent.setDataAndType(imageUri, "image/*");
+            intent.putExtra("scale", true);
+            intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+            startActivityForResult(intent, CROP_PHOTO); // 启动裁剪程序
+//            //识别图片并给ui赋值
+//            recGeneral(FileUtil.getSaveFile(getApplicationContext()).getAbsolutePath());
+//            //图片路径
+//            imagePath = FileUtil.getSaveFile(getApplicationContext()).getAbsolutePath();
+        } else if (requestCode == CROP_PHOTO && resultCode == Activity.RESULT_OK) {
+            try {
+                Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver()
+                        .openInputStream(imageUri));
+                imagePath = FileUtil.getSaveFile(getApplicationContext()).getAbsolutePath();
+                File personPhoto = new File(imagePath);
+                BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(personPhoto));
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 80, bos);//向缓冲区压缩图片
+                bos.flush();
+                bos.close();
+                recGeneral(imagePath);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }
-//        //返回键
-//        else if(resultCode == 5)
-//        {
-//            hospital_name.setText("jkabs");
-//        }
         else
             finish();
 

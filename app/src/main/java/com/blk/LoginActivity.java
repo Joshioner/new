@@ -1,6 +1,8 @@
 package com.blk;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -15,12 +17,22 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private TextView forgetPassword,register;
     private Button loginButton;
+    private SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         Window window = getWindow();
         ToolBarSet.setBar(window);
+//        sharedPreferences = getSharedPreferences("userInfo",Context.MODE_PRIVATE);
+//        String accountName = sharedPreferences.getString("accountName","");
+//        String password = sharedPreferences.getString("password","");
+//        if ( (accountName != null && accountName != "") && (password != null && password != "")){
+//            Intent intent = new Intent(this,MainActivity.class);
+//            startActivity(intent);
+//            this.finish();
+//        }
+
         setContentView(R.layout.login);
 
         //初始化控件

@@ -317,6 +317,34 @@
                     android:layout_gravity="center_horizontal"
                     android:background="@color/border_background"
                     />
+                //退出
+                <RelativeLayout
+                    android:id="@+id/logoutRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:background="#FFFFFF">
+                    <ImageView
+                        android:layout_width="24px"
+                        android:layout_height="24px"
+                        android:layout_marginLeft="45px"
+                        android:layout_marginTop="41px"
+                        app:srcCompat="@mipmap/logout"/>
+                    <TextView
+                        android:layout_width="200px"
+                        android:layout_height="40px"
+                        android:layout_marginTop="30px"
+                        android:layout_marginLeft="112px"
+                        android:gravity="center_vertical"
+                        android:text="退出"
+                        android:textSize="30px"
+                        android:textColor="#333333"/>
+                </RelativeLayout>
+                <View
+                    android:layout_width="660px"
+                    android:layout_height="2px"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/border_background"
+                    />
 
 
 

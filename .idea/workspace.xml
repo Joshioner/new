@@ -15,41 +15,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ebb1d3f-03b0-4631-bd50-745c05f82753" name="Default" comment="修复删除闹钟提醒后，仍会提醒的bug">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__cc_trity_floatingactionbutton_library_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/HealthRecordAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Entity/HealthRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordDetailActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/util/GetDate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/widget/LinedEditText.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circle_shape.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/linear_style.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_add_diary_title.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/health_record.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/health_record_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/health_record_title.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/healthy_record_detail.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/alarm_add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/app_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/app_watermelon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/back_new.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/circle_green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/circle_textview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/delete_new.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/ic_arrow_back_black_24dp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/line.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/save.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/save_new.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap/watermelon.png" afterDir="false" />
+    <list default="true" id="5785da25-4477-454c-b3e4-bfec48667424" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -61,21 +27,153 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/AndroidPicker-1.5.6.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/AndroidPicker-1.5.6.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/RegisterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/common/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/common/util/FileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/me_Fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/me_Fragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthyNewsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthyNewsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/alarm_add.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/alarm_add.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/alarm_assistant.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/alarm_assistant.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/healthy_tool_content.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/healthy_tool_content.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/MemberManageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/MemberManageActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/pharmacy/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/pharmacy/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/me.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/me.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/ocr_ui.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/Camera1Control.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/Camera2Control.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/CameraActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/CameraView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/ICameraControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/MaskView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/OCRCameraLayout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/OCRFrameLayout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/PermissionCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/crop/CropView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/crop/FrameOverlayView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/util/DimensionUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/util/ImageUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_cancel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_confirm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_gallery.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_hint_align_bank_card.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_hint_align_id_card.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_hint_align_id_card_back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_id_card_locator_back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_id_card_locator_front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_light_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_light_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_reset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_rotate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_take_photo_highlight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_take_photo_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_take_photo_selector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/layout/bd_ocr_activity_camera.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/layout/bd_ocr_confirm_result.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/layout/bd_ocr_crop.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/layout/bd_ocr_take_picture.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/values/bd_ocr_dimensions.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/values/bd_ocr_widgets.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/build/classes/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/aapt_friendly_merged_manifests/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/annotation_processor_list/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/check-manifest/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/incremental/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/intermediate-jars/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/javac/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/jniLibs/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/library_assets/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/merged_manifests/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/packaged_res/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/public_res/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/res/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/rs/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/shader_assets/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/shaders/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/symbols/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/transforms/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/outputs/" />
+    <ignored path="$PROJECT_DIR$/ocr_ui/build/tmp/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/annotation_processor_list/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/apk_list/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/blame/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/check-libraries/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/check-manifest/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/checkDebugClasspath/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/compatible_screen_manifest/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/incremental/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/instant_run_merged_manifests/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/javac/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/jniLibs/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/merged_assets/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/merged_manifests/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/prebuild/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/processed_res/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/res/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/rs/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/shader_assets/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/shaders/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/split_list/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/symbols/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/transforms/" />
+    <ignored path="$PROJECT_DIR$/app/build/outputs/" />
+    <ignored path="$PROJECT_DIR$/app/build/tmp/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/aapt_friendly_merged_manifests/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/annotation_processor_list/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/check-manifest/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/incremental/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/intermediate-jars/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/javac/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/jniLibs/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/library_assets/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/merged_manifests/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/packaged_res/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/public_res/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/res/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/rs/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/shader_assets/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/shaders/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/symbols/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/intermediates/transforms/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/outputs/" />
+    <ignored path="$PROJECT_DIR$/goodview/build/tmp/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/aapt_friendly_merged_manifests/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/annotation_processor_list/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/check-manifest/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/incremental/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/intermediate-jars/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/javac/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/jniLibs/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/library_assets/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/merged_manifests/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/packaged_res/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/public_res/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/res/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/rs/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/shader_assets/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/shaders/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/symbols/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/intermediates/transforms/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/outputs/" />
+    <ignored path="$PROJECT_DIR$/alarmmanagerclock/build/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,9 +189,6 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <task path="$PROJECT_DIR$/alarmmanagerclock">
-          <activation />
-        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -142,36 +237,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AlarmAssistantActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAssistantActivity.java">
+      <file leaf-file-name="RegisterActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/RegisterActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1827">
-              <caret line="122" column="63" selection-start-line="122" selection-start-column="63" selection-end-line="122" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HealthRecordActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="65" column="89" selection-start-line="65" selection-start-column="89" selection-end-line="65" selection-end-column="89" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1581#1582#0" expanded="true" />
-                <element signature="e#1640#1641#0" expanded="true" />
-                <element signature="e#1780#1781#0" expanded="true" />
-                <element signature="e#1830#1831#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HealthRecordAdapter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/HealthRecordAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="749">
-              <caret line="86" column="41" lean-forward="true" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
+            <state relative-caret-position="35">
+              <caret line="208" column="54" selection-start-line="208" selection-start-column="54" selection-end-line="208" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -179,146 +249,98 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HealthRecordDetailActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordDetailActivity.java">
+      <file leaf-file-name="medicalRecord_Fragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="38" column="45" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="12443">
+              <caret line="448" selection-start-line="448" selection-end-line="448" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="health_record_list.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/health_record_list.xml">
+      <file leaf-file-name="OCR.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/OCR.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-              <folding>
-                <element signature="e#1549#1745#0" />
-                <element signature="e#1702#4328#0" />
-                <element signature="e#1985#2179#0" />
-                <element signature="e#1985#2186#0" />
-                <element signature="e#3163#4286#0" />
-                <element signature="e#5492#6623#0" />
-                <element signature="e#5520#6683#0" />
-                <element signature="e#3442#4103#0" />
-                <element signature="e#4117#4302#0" />
-              </folding>
+            <state relative-caret-position="639">
+              <caret line="182" selection-start-line="182" selection-end-line="182" />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
+        </entry>
+      </file>
+      <file leaf-file-name="HttpUtil.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/utils/HttpUtil.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-96">
+              <caret line="93" column="37" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="healthy_record_detail.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_record_detail.xml">
+      <file leaf-file-name="medicalRecordContentActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="749">
-              <caret line="275" column="54" selection-start-line="275" selection-start-column="54" selection-end-line="275" selection-end-column="54" />
+            <state relative-caret-position="183">
+              <caret line="146" column="66" lean-forward="true" selection-start-line="132" selection-start-column="11" selection-end-line="146" selection-end-column="66" />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="health_record.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/health_record.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
+      <file leaf-file-name="app-release.apk" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/app-release.apk">
+          <provider selected="true" editor-type-id="apk-viewer">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlarmAddActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-24">
-              <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="circle_shape.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/circle_shape.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+            <state relative-caret-position="298">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="layoutResourceFile" />
-        <option value="Class" />
-        <option value="resourceFile" />
-      </list>
-    </option>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>#02aab0</find>
-      <find>medicalListView</find>
-      <find>重写</find>
-      <find>健康zi</find>
-      <find>drug</find>
-      <find>relativeLayout</find>
-      <find>relativeLayout2</find>
-      <find>medicine_search_camera</find>
-      <find>medicine_search_back</find>
-      <find>medicine_search</find>
-      <find>history_search</find>
-      <find>shape_corner_down</find>
-      <find>android:layout_height=&quot;180px&quot;</find>
-      <find>View</find>
-      <find>linearLayout3</find>
-      <find>id</find>
-      <find>add_alarm</find>
-      <find>确定</find>
-      <find>clockCancel</find>
-      <find>alarmInfoNew</find>
-      <find>Log</find>
-      <find>back</find>
-      <find>gone</find>
-      <find>Log.i</find>
-      <find>circle</find>
-      <find>color</find>
-      <find>new CommomDialog</find>
-      <find>oncli</find>
-      <find>DiaryBean</find>
-      <find>play</find>
+      <find>Intent</find>
+      <find>FILE</find>
+      <find>outputFile</find>
+      <find>image</find>
+      <find>imagePath</find>
+      <find>initAccess</find>
+      <find>initAcc</find>
+      <find>initAccessToken</find>
+      <find>imageUri</find>
+      <find>alertDialog</find>
+      <find>CAMERA</find>
+      <find>INTERNET</find>
+      <find>READ_EXTERNAL_STORAGE</find>
+      <find>WRITE_EXTERNAL_STORAGE</find>
     </findStrings>
     <replaceStrings>
-      <replace>AddMemberActivity</replace>
-      <replace>getMemberPhoto</replace>
-      <replace>MemberManageBaseAdapter</replace>
-      <replace>mediaRecorder</replace>
-      <replace>startPlay</replace>
-      <replace>LENGTH_SHORT</replace>
-      <replace>setClickable</replace>
-      <replace>MedicalAuscultation</replace>
-      <replace>MedicalAuscultationActivity</replace>
-      <replace>AudioRecordFunc</replace>
-      <replace>AlarmDb</replace>
-      <replace>android:focusable=&quot;false&quot;</replace>
       <replace />
-      <replace>shape_corner_up</replace>
-      <replace>android:layout_height=&quot;140px&quot;</replace>
-      <replace>sport</replace>
-      <replace>HealthRecord</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -5463,21 +5485,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/common/identify/MyListener.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/switch_custom_track_on.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/switch_custom_track_off.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/common/identify/MyListView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/delete_button.xml" />
-        <option value="$PROJECT_DIR$/alarmmanagerclock/src/main/java/com/loonggg/lib/alarmmanager/clock/AlarmManagerUtil.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/common/MyApplication.java" />
-        <option value="$PROJECT_DIR$/alarmmanagerclock/src/main/java/com/loonggg/lib/alarmmanager/clock/LoongggAlarmReceiver.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/AlarmAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/alarm_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/entity/healthy_news.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/Adapter/healthyNewsBaseAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/homePage/util/InterClick.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/entity/HealthyNews.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/homePage/Adapter/healthyNewsBaseAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/home_page.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/healthy_news_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
@@ -5497,23 +5504,38 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/alarm_assistant.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthyNewsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/health_record_title.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/util/GetDate.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/widget/LinedEditText.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/health_record.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/HealthyRecordAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/circle_shape.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Entity/HealthRecord.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/DiaryAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/health_record_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/healthy_record_detail.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/HealthRecordAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/HealthRecordAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/pharmacy/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/me.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/me_Fragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/MemberManageActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/util/AndroidUploadFile.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/common/util/FileUtil.java" />
+        <option value="$PROJECT_DIR$/ocr_ui/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordSearchActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordDetailActivity.java" />
+        <option value="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/CameraView.java" />
+        <option value="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/CameraActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/RegisterActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java" />
       </list>
     </option>
   </component>
@@ -5522,7 +5544,7 @@
     <option name="width" value="1936" />
     <option name="height" value="1176" />
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -5532,6 +5554,39 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="new" type="58d84e3e:PackageViewProjectNode" />
+              <item name="app" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="new" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="new" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="new" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="blk" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -5582,7 +5637,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="blk" type="462c0819:PsiDirectoryNode" />
-              <item name="health_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="fragment" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new" type="b2602c69:ProjectViewProjectNode" />
@@ -5592,163 +5647,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="blk" type="462c0819:PsiDirectoryNode" />
-              <item name="health_tool" type="462c0819:PsiDirectoryNode" />
-              <item name="Adapter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blk" type="462c0819:PsiDirectoryNode" />
-              <item name="health_tool" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blk" type="462c0819:PsiDirectoryNode" />
-              <item name="health_tool" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blk" type="462c0819:PsiDirectoryNode" />
-              <item name="homePage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blk" type="462c0819:PsiDirectoryNode" />
-              <item name="homePage" type="462c0819:PsiDirectoryNode" />
-              <item name="Adapter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="drawable" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Android API 25 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Android API 25 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="android.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Android API 25 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="android.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Android API 25 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="android.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Android API 25 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="android.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="widget" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Android API 25 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="android.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Android API 25 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="android.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="new" type="58d84e3e:PackageViewProjectNode" />
-              <item name="app" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="new" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="new" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="new" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="blk" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="medical_record" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -5757,36 +5656,18 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="AlarmA&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java&#10;Alarm&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/AlarmAssistantActivity.java&#10;Add&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java&#10;Android&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;register&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/register.xml&#10;regis&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/register.xml&#10;HealthyTo&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java&#10;ala&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/alarm_add.xml&#10;color&#9;FILE&#9;file://E:/Android/new/app/src/main/res/values/colors.xml&#10;AlarmAd&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/Adapter/AlarmAdapter.java&#10;alarm_list&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/alarm_list.xml&#10;alarm_add&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/alarm_add.xml&#10;HealthyToo&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java&#10;and&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;AlarmAdd&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java&#10;healthy_new&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/healthy_news.xml&#10;alarm_&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/alarm_list.xml&#10;Healthy&#9;PSI&#9;JAVA://com.blk.fragment.healthyTool_Fragment&#10;Medic&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java&#10;home&#9;PSI&#9;JAVA://com.blk.fragment.homePage_Fragment&#10;Medical&#9;PSI&#9;JAVA://com.blk.fragment.medicalRecord_Fragment&#10;alarm_li&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/alarm_list.xml&#10;style&#9;FILE&#9;file://E:/Android/new/app/src/main/res/values/styles.xml&#10;style.&#9;FILE&#9;file://E:/Android/new/alarmmanagerclock/src/main/res/values/styles.xml&#10;MedicalC&#9;PSI&#9;JAVA://com.blk.medical_record.medicalRecordContentActivity&#10;AlarmManagerUtil&#9;FILE&#9;file://E:/Android/new/alarmmanagerclock/src/main/java/com/loonggg/lib/alarmmanager/clock/AlarmManagerUtil.java&#10;member&#9;PSI&#9;JAVA://com.blk.medical_record.MemberManageActivity&#10;perso&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/person_member.xml&#10;healthy&#9;PSI&#9;JAVA://com.blk.fragment.healthyTool_Fragment&#10;colo&#9;FILE&#9;file://E:/Android/new/app/src/main/res/values/colors.xml&#10;Andro&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;FileUt&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/common/util/FileUtil.java&#10;Http&#9;PSI&#9;JAVA://com.blk.common.util.HttpRequestUtil&#10;Fileuti&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/utils/FileUtils.java&#10;medi&#9;PSI&#9;JAVA://com.blk.medical_record.medicalRecordContentActivity&#10;Me&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/MedicalAuscultation.java&#10;IAudioCallback&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/interfaces/IAudioCallback.java&#10;me&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/MedicalAuscultation.java&#10;And&#9;FILE&#9;file://E:/Android/new/app/src/main/AndroidManifest.xml&#10;Heal&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java&#10;healthy_tool_content&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/healthy_tool_content.xml&#10;activity_ma&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/activity_main.xml&#10;home_&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/home_page.xml&#10;me.xml&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/me.xml&#10;medica&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/medical_record.xml&#10;med&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/medical_record.xml&#10;homeP&#9;PSI&#9;JAVA://com.blk.fragment.homePage_Fragment&#10;healthyt&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/healthy_tool.xml&#10;medical&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java&#10;me_fra&#9;PSI&#9;JAVA://com.blk.fragment.me_Fragment" />
-    <property name="android.project.structure.last.selected" value="SDK Location" />
+    <property name="SearchEverywhereHistoryKey" value="MedicalRe&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java&#10;Aus&#9;PSI&#9;JAVA://com.blk.health_tool.AuscultationDetail" />
+    <property name="android.project.structure.last.selected" value="ocr_ui" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="device.picker.selection" value="7N3GSN158E091849" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SuperCalendar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../OCRDemo" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Android\new\app\src\main\res\mipmap" />
-      <recent name="E:\Android\new\app\src\main\res\layout" />
-      <recent name="E:\Android\new\app\src\main\res\drawable" />
+      <recent name="E:\Android\new\app\src\main\assets" />
       <recent name="E:\Android\new\app\libs" />
-      <recent name="E:\Android\new" />
-    </key>
-    <key name="android.template.packageName">
-      <recent name="com.blk.health_tool" />
-      <recent name="com.blk.medical_record" />
-    </key>
-    <key name="android.template.parentActivityClass">
-      <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.blk.health_tool.Adapter" />
-      <recent name="com.blk.health_tool.widget" />
-      <recent name="com.blk.health_tool.util" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Android\new\app\src\main\res\mipmap" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -5801,7 +5682,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -5874,74 +5755,6 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="new:alarmmanagerclock [androidDependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/alarmmanagerclock" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="androidDependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-    </configuration>
-    <configuration name="new:alarmmanagerclock [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/alarmmanagerclock" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="check" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-    </configuration>
-    <configuration name="new:alarmmanagerclock [installDebugAndroidTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/alarmmanagerclock" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="installDebugAndroidTest" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-    </configuration>
-    <configuration name="new:alarmmanagerclock [signingReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/alarmmanagerclock" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="signingReport" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -5968,28 +5781,13 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
-    <list>
-      <item itemvalue="Android App.app" />
-      <item itemvalue="Gradle.new:alarmmanagerclock [androidDependencies]" />
-      <item itemvalue="Gradle.new:alarmmanagerclock [signingReport]" />
-      <item itemvalue="Gradle.new:alarmmanagerclock [installDebugAndroidTest]" />
-      <item itemvalue="Gradle.new:alarmmanagerclock [check]" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.new:alarmmanagerclock [check]" />
-        <item itemvalue="Gradle.new:alarmmanagerclock [installDebugAndroidTest]" />
-        <item itemvalue="Gradle.new:alarmmanagerclock [signingReport]" />
-        <item itemvalue="Gradle.new:alarmmanagerclock [androidDependencies]" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7ebb1d3f-03b0-4631-bd50-745c05f82753" name="Default" comment="" />
+      <changelist id="5785da25-4477-454c-b3e4-bfec48667424" name="Default" comment="" />
       <created>1552626345459</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -6058,22 +5856,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553261626063</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="康复记录表">
+      <created>1553329932062</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1553329932062</updated>
+    </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="new_alarmmanagerclock_[check] - 2019.03.20 at 15h 16m 51s.xml">
-      <configuration name="new:alarmmanagerclock [check]" configurationId="GradleRunConfiguration" />
-    </history-entry>
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -6086,542 +5876,580 @@
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007949" side_tool="true" weight="0.31480032" />
-      <window_info anchor="right" id="Preview" order="4" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.30618638" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49960256" weight="0.4064213" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49960256" weight="0.47924823" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.30070478" />
-      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.49920508" visible="true" weight="0.18637432" />
-      <window_info id="Captures" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.49920508" weight="0.48786217" />
+      <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16414945" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49920508" weight="0.54502743" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.29757243" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16653419" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49920508" weight="0.3359436" />
       <window_info anchor="right" id="Gradle" order="6" weight="0.3298887" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" weight="0.3298887" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.26938137" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" id="Assistant" order="7" weight="0.3298887" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Preview" order="4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.29757243" />
     </layout>
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="家庭组管理功能" />
-    <MESSAGE value="就医听诊--录音功能" />
-    <MESSAGE value="就医听诊--录音功能（实现文件上传并语音识别）" />
-    <MESSAGE value="闹钟助手（可以实现开启、关闭、删除）" />
-    <MESSAGE value="健康资讯（查看资讯列表，并且查看资讯详情，增设了资讯的收藏效果）" />
-    <MESSAGE value="修复删除闹钟提醒后，仍会提醒的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复删除闹钟提醒后，仍会提醒的bug" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java</url>
+          <line>332</line>
+          <properties />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java</url>
+          <line>448</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/OCR.class</url>
+          <line>171</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/OCR.class</url>
+          <line>172</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/OCR.class</url>
+          <line>173</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/OCR.class</url>
+          <line>177</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/OCR.class</url>
+          <line>180</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/OCR.class</url>
+          <line>182</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java</url>
+          <line>457</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java</url>
+          <line>458</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java</url>
+          <line>451</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java</url>
+          <line>452</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/OCR.class</url>
+          <line>174</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/OCR.class</url>
+          <line>175</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/OCR.class</url>
+          <line>181</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/utils/HttpUtil.class</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/utils/HttpUtil.class</url>
+          <line>90</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/utils/HttpUtil.class</url>
+          <line>91</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/utils/HttpUtil.class</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/utils/HttpUtil.class</url>
+          <line>93</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/utils/HttpUtil.class</url>
+          <line>95</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/utils/HttpUtil.class</url>
+          <line>99</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/utils/HttpUtil.class</url>
+          <line>102</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/utils/HttpUtil.class</url>
+          <line>101</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/utils/HttpUtil.class</url>
+          <line>103</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/utils/HttpUtil.class</url>
+          <line>105</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="28" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/drug_check.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="129" column="31" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
-          <folding>
-            <element signature="e#855#1942#0" />
-            <element signature="e#1951#2630#0" />
-            <element signature="e#2445#2470#0" expanded="true" />
-            <element signature="e#5533#6646#0" />
-            <element signature="e#6131#6150#0" expanded="true" />
-            <element signature="e#6593#6612#0" expanded="true" />
-            <element signature="e#6663#6917#0" />
-            <element signature="e#7408#8527#0" />
-            <element signature="e#8006#8028#0" expanded="true" />
-            <element signature="e#8474#8493#0" expanded="true" />
-            <element signature="e#8545#9723#0" />
-            <element signature="e#9195#9218#0" expanded="true" />
-            <element signature="e#9670#9689#0" expanded="true" />
-            <element signature="e#9740#9994#0" />
-            <element signature="e#10609#10630#0" expanded="true" />
-            <element signature="e#11080#11099#0" expanded="true" />
-            <element signature="e#12019#12038#0" expanded="true" />
-            <element signature="e#12486#12505#0" expanded="true" />
-            <element signature="e#13425#13446#0" expanded="true" />
-            <element signature="e#13896#13915#0" expanded="true" />
-            <element signature="e#14836#14856#0" expanded="true" />
-            <element signature="e#15305#15324#0" expanded="true" />
-            <element signature="e#16244#16261#0" expanded="true" />
-            <element signature="e#16707#16726#0" expanded="true" />
-            <element signature="e#17646#17672#0" expanded="true" />
-            <element signature="e#18127#18146#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/tool_clock_icon_add.png">
+    <entry file="file://$PROJECT_DIR$/ocr_ui/src/main/res/drawable-xhdpi/bd_ocr_light_off.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/rollviewpager/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="95" column="32" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="32" />
+        <state relative-caret-position="805">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/alarm_list.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocr_ui/src/main/res/layout/bd_ocr_confirm_result.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/AlarmAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="69" column="83" selection-start-line="69" selection-start-column="75" selection-end-line="69" selection-end-column="83" />
+    <entry file="file://$PROJECT_DIR$/ocr_ui/src/main/res/layout/bd_ocr_crop.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocr_ui/src/main/res/layout/bd_ocr_activity_camera.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/CommomDialog.java">
+    <entry file="file://$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/huawei-chm_tl00h-7N3GSN158E091849/data/data/com.baidu.ocr.user/files/pic.jpg" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/medical_record_detail.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/testActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="80" column="40" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+        <state relative-caret-position="140">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/util/AlarmUtil.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/medical_record.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+        <state relative-caret-position="6685">
+          <caret line="191" column="28" selection-start-line="191" selection-start-column="28" selection-end-line="191" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/AddMemberActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5600">
+          <caret line="191" column="41" selection-start-line="191" selection-start-column="41" selection-end-line="191" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocr_ui/src/main/res/layout/bd_ocr_take_picture.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/libs/AndroidPicker-1.5.6.jar!/cn/qqtheme/framework/util/FileUtils.class" />
+    <entry file="jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/utils/DeviceUtil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2765">
+          <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAssistantActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="36" column="52" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4060">
+          <caret line="135" column="35" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/content/res/Configuration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/checkResultActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_commom.xml">
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/content/Intent.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="248">
+          <caret line="112" column="31" selection-start-line="112" selection-start-column="31" selection-end-line="112" selection-end-column="31" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/auscultation_detail.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/aa.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/fab_label_background.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/circle_orange.png" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_health_record.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_tool.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AuscultationDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+        <state relative-caret-position="-202">
+          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_tool_content.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="194" column="47" selection-start-line="194" selection-start-column="47" selection-end-line="194" selection-end-column="47" />
+        <state relative-caret-position="-119">
+          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
           <folding>
-            <element signature="e#3334#5633#0" />
-            <element signature="e#5668#7995#0" />
-            <element signature="e#7627#7965#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/medical_auscultation.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
         <state />
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/recyclerview-v7/25.1.1/recyclerview-v7-25.1.1-sources.jar!/android/support/v7/widget/RecyclerView.java">
+    <entry file="file://$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/ICameraControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="150" column="13" selection-start-line="150" selection-start-column="13" selection-end-line="150" selection-end-column="13" />
+        <state relative-caret-position="35">
+          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/linear_style.xml">
+    <entry file="file://$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/CameraView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="3045">
+          <caret line="113" column="28" selection-start-line="113" selection-start-column="28" selection-end-line="113" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/alarm_add.xml">
+    <entry file="file://$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/huawei-chm_tl00h-7N3GSN158E091849/data/data/com.beHealthy/files/pic.jpg" />
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/os/Environment.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2660">
-          <caret line="388" column="44" selection-start-line="388" selection-start-column="44" selection-end-line="388" selection-end-column="44" />
+        <state relative-caret-position="342">
+          <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/net/Uri.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/provider/MediaStore.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="17" column="89" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/MedicalAuscultationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="377" column="17" selection-start-line="377" selection-start-column="17" selection-end-line="377" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/util/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/CameraActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="224" lean-forward="true" selection-start-line="224" selection-end-line="224" />
           <folding>
-            <element signature="e#1003#1028#0" expanded="true" />
+            <element signature="e#2154#2466#0" expanded="true" />
+            <element signature="e#2465#2466#0" expanded="true" />
+            <element signature="e#7207#8015#0" expanded="true" />
+            <element signature="e#8014#8015#0" expanded="true" />
+            <element signature="e#8080#8527#0" expanded="true" />
+            <element signature="e#8526#8527#0" expanded="true" />
+            <element signature="e#8591#8805#0" expanded="true" />
+            <element signature="e#8804#8805#0" expanded="true" />
+            <element signature="e#8875#9625#0" expanded="true" />
+            <element signature="e#9017#9607#0" expanded="true" />
+            <element signature="e#9606#9607#0" expanded="true" />
+            <element signature="e#9624#9625#0" expanded="true" />
+            <element signature="e#9688#9895#0" expanded="true" />
+            <element signature="e#9894#9895#0" expanded="true" />
+            <element signature="e#9959#10801#0" expanded="true" />
+            <element signature="e#10800#10801#0" expanded="true" />
+            <element signature="e#10889#11060#0" expanded="true" />
+            <element signature="e#11059#11060#0" expanded="true" />
+            <element signature="e#11127#12091#0" expanded="true" />
+            <element signature="e#11224#12066#0" expanded="true" />
+            <element signature="e#12065#12066#0" expanded="true" />
+            <element signature="e#12090#12091#0" expanded="true" />
+            <element signature="e#12164#12346#0" expanded="true" />
+            <element signature="e#12345#12346#0" expanded="true" />
+            <element signature="e#12412#12545#0" expanded="true" />
+            <element signature="e#12544#12545#0" expanded="true" />
+            <element signature="e#15544#15579#0" expanded="true" />
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/alarm_assistant.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordSearchActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding>
-            <element signature="e#1064#1089#0" expanded="true" />
-            <element signature="e#2778#2798#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/healthyTool_Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="95" column="15" selection-start-line="95" selection-start-column="15" selection-end-line="95" selection-end-column="15" />
+        <state relative-caret-position="2402">
+          <caret line="126" column="77" lean-forward="true" selection-start-line="126" selection-start-column="77" selection-end-line="126" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap/delete_new.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_add_diary_title.xml">
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/graphics/BitmapFactory.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthyNewsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-997">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        <state relative-caret-position="105">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_health_record_detail.xml">
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/widget/ImageView.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cc.trity.floatingactionbutton/library/1.0.0/3d6261bfa1426fc1cae581f650db4fa9d33843dc/library-1.0.0-sources.jar!/cc/trity/floatingactionbutton/FloatingActionsMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="39" />
+        <state relative-caret-position="334">
+          <caret line="120" column="16" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+    <entry file="file://$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/huawei-chm_tl00h-7N3GSN158E091849/data/data/com.beHealthy/files/personPhoto.jpg" />
+    <entry file="jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/OnResultListener.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+        <state relative-caret-position="210">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/widget/LinedEditText.java">
+    <entry file="file://$PROJECT_DIR$/ocr_ui/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="134" column="17" selection-start-line="134" selection-start-column="17" selection-end-line="134" selection-end-column="17" />
-          <folding>
-            <element signature="e#6617#6655#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="350">
+          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
         </state>
       </provider>
       <provider editor-type-id="android-manifest">
         <state />
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/view/View.class">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="279" column="24" selection-start-line="279" selection-start-column="19" selection-end-line="279" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/widget/ImageView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/widget/ImageButton.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cc.trity.floatingactionbutton/library/1.0.0/3d6261bfa1426fc1cae581f650db4fa9d33843dc/library-1.0.0-sources.jar!/cc/trity/floatingactionbutton/FloatingActionButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/health_record_title.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/register.xml">
+    <entry file="file://$PROJECT_DIR$/app/app-release.apk">
+      <provider selected="true" editor-type-id="apk-viewer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="270" column="48" selection-start-line="270" selection-start-column="48" selection-end-line="270" selection-end-column="48" />
+        <state relative-caret-position="140">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
-            <element signature="e#2519#5473#0" />
-            <element signature="e#5512#8063#0" />
-            <element signature="e#8557#10513#0" />
+            <element signature="e#0#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/RegisterActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="308" column="41" selection-start-line="292" selection-start-column="14" selection-end-line="308" selection-end-column="41" />
+        <state relative-caret-position="35">
+          <caret line="208" column="54" selection-start-line="208" selection-start-column="54" selection-end-line="208" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="886">
-          <caret line="59" column="3" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
+        <state relative-caret-position="298">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Entity/HealthRecord.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/assets/aip.license">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-          <folding>
-            <element signature="e#986#987#0" expanded="true" />
-            <element signature="e#1011#1012#0" expanded="true" />
-            <element signature="e#1044#1045#0" expanded="true" />
-            <element signature="e#1072#1073#0" expanded="true" />
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1130#1131#0" expanded="true" />
-            <element signature="e#1170#1171#0" expanded="true" />
-            <element signature="e#1202#1203#0" expanded="true" />
-            <element signature="e#1233#1234#0" expanded="true" />
-            <element signature="e#1260#1261#0" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#1332#1333#0" expanded="true" />
-            <element signature="e#1366#1367#0" expanded="true" />
-            <element signature="e#1396#1397#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-            <element signature="e#1480#1481#0" expanded="true" />
-            <element signature="e#1511#1512#0" expanded="true" />
-            <element signature="e#1538#1539#0" expanded="true" />
-            <element signature="e#1578#1579#0" expanded="true" />
-            <element signature="e#1610#1611#0" expanded="true" />
-            <element signature="e#1642#1643#0" expanded="true" />
-            <element signature="e#1670#1671#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAssistantActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1827">
-          <caret line="122" column="63" selection-start-line="122" selection-start-column="63" selection-end-line="122" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/HealthRecordAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/health_record.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/circle_shape.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/aip.license">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/java/lang/StringBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="162" column="18" selection-start-line="162" selection-start-column="18" selection-end-line="162" selection-end-column="18" />
-          <folding>
-            <element signature="e#4249#4250#0" expanded="true" />
-            <element signature="e#4300#4301#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/util/GetDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/AuscultationDetailListBaseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="25" column="5" selection-start-line="21" selection-start-column="2" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/homePage/Adapter/HealthyNewsBaseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2240">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_record_detail.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="275" column="54" selection-start-line="275" selection-start-column="54" selection-end-line="275" selection-end-column="54" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/health_record_list.xml">
+    <entry file="jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/OCR.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-          <folding>
-            <element signature="e#1549#1745#0" />
-            <element signature="e#1702#4328#0" />
-            <element signature="e#1985#2179#0" />
-            <element signature="e#1985#2186#0" />
-            <element signature="e#3163#4286#0" />
-            <element signature="e#5492#6623#0" />
-            <element signature="e#5520#6683#0" />
-            <element signature="e#3442#4103#0" />
-            <element signature="e#4117#4302#0" />
-          </folding>
+        <state relative-caret-position="639">
+          <caret line="182" selection-start-line="182" selection-end-line="182" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/utils/HttpUtil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-96">
+          <caret line="93" column="37" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAddActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+        <state relative-caret-position="12443">
+          <caret line="448" selection-start-line="448" selection-end-line="448" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordDetailActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="38" column="45" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="65" column="89" selection-start-line="65" selection-start-column="89" selection-end-line="65" selection-end-column="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1581#1582#0" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
-            <element signature="e#1780#1781#0" expanded="true" />
-            <element signature="e#1830#1831#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/HealthRecordAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="86" column="41" lean-forward="true" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="183">
+          <caret line="146" column="66" lean-forward="true" selection-start-line="132" selection-start-column="11" selection-end-line="146" selection-end-column="66" />
         </state>
       </provider>
     </entry>
