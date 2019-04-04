@@ -33,41 +33,38 @@
         android:weightSum="1">
 
         <EditText
-            android:id="@+id/account"
+            android:id="@+id/email"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="请输入账号"
-            android:inputType="phone"
+            android:layout_height="match_parent"
+            android:hint="请输入邮箱号码"
             android:textColor="@color/text_gray"
             android:textColorHint="@color/text_gray"
+            android:textCursorDrawable="@color/black"
             android:textSize="15dp" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_below="@+id/account"
+            android:layout_below="@+id/email"
             android:background="@color/general_background" />
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="15dp"
-            android:src="@mipmap/account_error" />
+        <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:src="@mipmap/account_error" />-->
 
 
     </RelativeLayout>
 
     <ImageView
         android:id="@+id/password_image"
-        android:layout_below="@+id/account_image"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="34dp"
-        android:layout_marginLeft="34dp"
+        android:layout_below="@+id/account_image"
+        android:layout_marginLeft="42dp"
         android:layout_marginTop="50dp"
         android:src="@mipmap/login_password" />
 
@@ -93,6 +90,8 @@
             android:hint="请输入密码"
             android:textSize="15dp"
             android:textColorHint="@color/text_gray"
+            android:textCursorDrawable="@color/black"
+            android:layout_marginLeft="5dp"
             android:inputType="textPassword"
             />
 
@@ -101,12 +100,12 @@
             android:layout_height="1dp"
             android:layout_below="@+id/password"
             android:background="@color/general_background" />
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@mipmap/login_password_none"/>
+        <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@mipmap/login_password_none"/>-->
 
     </RelativeLayout>
 
