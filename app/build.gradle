@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion '28.0.3'
     defaultConfig {
-        applicationId "com.baidu.ocr.user"
+        applicationId "com.beHealthy"
         minSdkVersion 14
         targetSdkVersion 22
         versionCode 1
@@ -59,4 +59,5 @@ dependencies {
     implementation project(':goodview')
     compile 'cc.trity.floatingactionbutton:library:1.0.0'
     implementation project(':ocr_ui')
+    implementation files('libs/fastjson-1.2.54.jar')
 }

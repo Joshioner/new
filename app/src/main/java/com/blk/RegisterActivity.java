@@ -13,24 +13,40 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Looper;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSONObject;
 import com.baidu.ocr.ui.camera.CameraActivity;
 import com.blk.common.TimePickerView;
 import com.blk.common.ToolBarSet;
 import com.blk.common.alterdialog.ActionSheetDialog;
+import com.blk.common.entity.User;
+import com.blk.common.identify.XCRoundImageView;
+import com.blk.common.util.AlterUtil;
+import com.blk.common.util.AndroidUploadFile;
+import com.blk.common.util.ConfigUtil;
 import com.blk.common.util.FileUtil;
 
 import com.blk.R;
+import com.blk.common.util.HttpCallbackListener;
+import com.blk.common.util.HttpRequestUtil;
+import com.blk.common.util.HttpSendUtil;
+import com.google.gson.JsonObject;
+
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -46,18 +62,23 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     private RadioButton maleRadio,femaleRadio;  //男、女单选框
     private EditText birthday;
-    private ImageView uploadPhoto;   //上传头像
+    private XCRoundImageView uploadPhoto;   //上传头像
     private static final int REQUEST_CODE_PICK_IMAGE = 101;    //选择图片的请求码
     private static final int REQUEST_CODE_CAMERA = 102;        //拍照的请求码
     private static final int CROP_PHOTO = 103;  //裁剪的请求码
     private Uri imageUri;  //图片路径
     private String imagePath;
+    private String fileName = null;
+    private EditText accountName,password,repeatPassword,email,phone;
+    private Button register;  //注册
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         Window window = getWindow();
         ToolBarSet.setBar(window);
+        //防止软键盘遮挡
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         setContentView(R.layout.register);
 
         //初始化控件
@@ -94,8 +115,15 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         maleRadio = (RadioButton) findViewById(R.id.male);
         femaleRadio = (RadioButton) findViewById(R.id.female);
         birthday = (EditText) findViewById(R.id.birthday_text_hint);
-        uploadPhoto = (ImageView) findViewById(R.id.upload_photo);
-
+        uploadPhoto = (XCRoundImageView) findViewById(R.id.upload_photo);
+        accountName = (EditText) findViewById(R.id.account_hint);
+        password = (EditText) findViewById(R.id.password_hint);
+        repeatPassword = (EditText) findViewById(R.id.repeat_password_hint);
+        email = (EditText) findViewById(R.id.email_hint);
+        phone = (EditText) findViewById(R.id.phone_hint);
+        register = (Button) findViewById(R.id.register_btn);
+        maleRadio = (RadioButton) findViewById(R.id.male);
+        femaleRadio = (RadioButton) findViewById(R.id.female);
     }
 
     /**
@@ -106,6 +134,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
        birthday.setOnClickListener(this);
        //上传头像
         uploadPhoto.setOnClickListener(this);
+        //注册按钮
+        register.setOnClickListener(this);
     }
 
     @Override
@@ -118,7 +148,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     @Override
                     public void onTimeSelect(Date date, View v) {//选中事件回调
                         String time = getTime(date);
-                        Toast.makeText(RegisterActivity.this,time,Toast.LENGTH_LONG).show();
                         birthday.setFocusable(true);
                         birthday.setText(time);
                         birthday.setFocusable(false);
@@ -187,9 +216,79 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             }
                         }).show();
                 break;
+            case R.id.register_btn:
+                registerUser();
+                break;
              default:
                  break;
         }
+    }
+
+    //注册用户
+    private void registerUser(){
+        User user = new User();
+        //头像路径
+        user.setProfile(fileName);
+        //邮箱
+        if (TextUtils.isEmpty(email.getText())){
+            AlterUtil.alterTextLong(RegisterActivity.this,"邮箱不能为空");
+            return;
+        }
+        user.setEmail(email.getText().toString());
+        //密码
+        if (TextUtils.isEmpty(password.getText())){
+            AlterUtil.alterTextLong(RegisterActivity.this,"密码不能为空");
+            return;
+        }
+        //确认密码
+        if (TextUtils.isEmpty(repeatPassword.getText())){
+            AlterUtil.alterTextLong(RegisterActivity.this,"确认密码不能为空");
+            return;
+        }
+        if (!password.getText().toString().equals(repeatPassword.getText().toString())){
+            AlterUtil.alterTextLong(RegisterActivity.this,"两次输入的密码不一致");
+            return;
+        }
+        user.setPassword(password.getText().toString());
+        //账号名
+        if (TextUtils.isEmpty(accountName.getText())){
+            AlterUtil.alterTextLong(RegisterActivity.this,"昵称不能为空");
+            return;
+        }
+        user.setAccountName(accountName.getText().toString());
+        //性别
+        user.setGender(maleRadio.isChecked() ? 1 : 0);
+        //出生日期
+        user.setBirthday(birthday.getText().toString());
+        //手机号码
+        user.setPhone(phone.getText().toString());
+        String address = ConfigUtil.getServerAddress() + "/user/register";
+        //转user对象转为json字符串
+        HttpSendUtil.sendHttpRequest(address,JSONObject.toJSONString(user),new HttpCallbackListener(){
+            @Override
+            public void onFinish(String response) {
+                Log.i("TestTest","---- " + response);
+                JSONObject jsonObject = JSONObject.parseObject(response);
+                int code = jsonObject.getIntValue("code");
+                if (code == 0){
+                    Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
+                    RegisterActivity.this.finish();
+                    startActivity(intent);
+                    Looper.prepare();
+                    AlterUtil.alterTextLong(RegisterActivity.this,"注册成功");
+                    Looper.loop();
+                }else {
+                    Looper.prepare();
+                    AlterUtil.alterTextLong(RegisterActivity.this,"注册失败");
+                    Looper.loop();
+                }
+            }
+
+            @Override
+            public void onError(Exception e) {
+
+            }
+        });
     }
 
     public String getTime(Date date) {//可根据需要自行截取数据显示
@@ -211,6 +310,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                bitmap.compress(Bitmap.CompressFormat.JPEG, 80, bos);//向缓冲区压缩图片
                bos.flush();
                bos.close();
+               //上传头像到服务器
+               uploadPersonPhoto(imagePath);
                //填充用户头像
                uploadPhoto.setImageBitmap(bitmap);
            }catch (Exception e){
@@ -234,6 +335,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 80, bos);//向缓冲区压缩图片
                 bos.flush();
                 bos.close();
+                //上传头像到服务器
+                uploadPersonPhoto(imagePath);
                 uploadPhoto.setImageBitmap(bitmap);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -270,5 +373,46 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private void setPersonPhoto(String imagePath){
         Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
         uploadPhoto.setImageBitmap(bitmap);
+    }
+
+    public Integer uploadPersonPhoto(String imagePath){
+
+        if (fileName == null){
+            fileName =  new Date().getTime()  + imagePath.substring(imagePath.lastIndexOf("."));
+        }
+        String address = ConfigUtil.getServerAddress() + "/uploadImage/1/" + fileName;
+        try {
+            AndroidUploadFile.uploadFile(imagePath, address, new HttpCallbackListener() {
+                @Override
+                public void onFinish(String response) {
+                    JSONObject  jsonObject = JSONObject.parseObject(response);
+                    int code = jsonObject.getIntValue("code");
+                    if (code == 0){
+                        Looper.prepare();
+                        AlterUtil.alterTextLong(RegisterActivity.this,"头像上传成功");
+                        Looper.loop();
+                    }else if (code ==1){
+                        Looper.prepare();
+                        AlterUtil.alterTextLong(RegisterActivity.this,"头像为空");
+                        Looper.loop();
+                    }else {
+                        Looper.prepare();
+                        AlterUtil.alterTextLong(RegisterActivity.this,"头像上传失败");
+                        Looper.loop();
+                    }
+                }
+
+                @Override
+                public void onError(Exception e) {
+
+                   return;
+                }
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        return 0;
     }
 }

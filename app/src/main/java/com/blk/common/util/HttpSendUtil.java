@@ -32,6 +32,7 @@ public class HttpSendUtil {
                     connection.setDoOutput(true);
                     //设置长连接
                     connection.setRequestProperty("connection","keep-alive");
+                    connection.setRequestProperty("Content-type","application/json");
                     OutputStream out = connection.getOutputStream();
                     if (data != null){
                         out.write(data.getBytes());

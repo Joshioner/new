@@ -27,13 +27,12 @@ import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
-import android.util.Log;
 import android.view.Surface;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class CameraActivity extends Activity {
+public class CameraActivity extends Activity implements ActivityCompat.OnRequestPermissionsResultCallback {
 
     public static final String KEY_OUTPUT_FILE_PATH = "outputFilePath";
     public static final String KEY_CONTENT_TYPE = "contentType";
@@ -175,7 +174,6 @@ public class CameraActivity extends Activity {
 
     // take photo;
     private void updateFlashMode() {
-        Log.i("TestTest","-----ddddd");
         int flashMode = cameraView.getCameraControl().getFlashMode();
         if (flashMode == ICameraControl.FLASH_MODE_TORCH) {
             lightButton.setImageResource(R.drawable.bd_ocr_light_on);
@@ -255,7 +253,6 @@ public class CameraActivity extends Activity {
         @Override
         public void onClick(View v) {
             int maskType = cropMaskView.getMaskType();
-            Log.i("TestTest","-----bbbb");
             Rect rect;
             switch (maskType) {
                 case MaskView.MASK_TYPE_BANK_CARD:
@@ -268,7 +265,6 @@ public class CameraActivity extends Activity {
                     rect = overlayView.getFrameRect();
                     break;
             }
-            Log.i("TestTest","-----ccc");
             Bitmap cropped = cropView.crop(rect);
             displayImageView.setImageBitmap(cropped);
             showResultConfirm();

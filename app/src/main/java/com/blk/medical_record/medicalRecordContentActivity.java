@@ -327,7 +327,7 @@ public class medicalRecordContentActivity extends AppCompatActivity {
             intent.putExtra("scale", true);
             intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
             startActivityForResult(intent, CROP_PHOTO); // 启动裁剪程序
-//            //识别图片并给ui赋值
+            //识别图片并给ui赋值
 //            recGeneral(FileUtil.getSaveFile(getApplicationContext()).getAbsolutePath());
 //            //图片路径
 //            imagePath = FileUtil.getSaveFile(getApplicationContext()).getAbsolutePath();

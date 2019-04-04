@@ -3,20 +3,16 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_background"
+    android:background="@mipmap/photo_bg"
   >
 
     //注册账号
     <RelativeLayout
         android:id="@+id/register_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="36dp"
-        android:background="@color/login_background"
-        android:layout_alignParentTop="true"
-        android:paddingBottom="10dp"
-        >
+        android:layout_height="426px"
+        android:layout_marginTop="30dp"
+        android:background="@mipmap/photo_bg">
 
         <ImageView
             android:id="@+id/icon_back"
@@ -26,7 +22,7 @@
             android:layout_marginLeft="11dp"
             android:src="@mipmap/icon_back"
             android:layout_marginStart="11dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="8dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
@@ -34,11 +30,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/register_title"
+            android:textStyle="bold"
             android:textSize="20dp"
+            android:layout_marginTop="5dp"
             android:textColor="@color/text_white"
             android:layout_centerHorizontal="true"
             android:id="@+id/textView" />
 
+
+        <com.blk.common.identify.XCRoundImageView
+            android:id="@+id/upload_photo"
+            android:layout_width="160px"
+            android:layout_height="170px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:src="@mipmap/upload_person_photo"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="50px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_horizontal"
+            android:text="上传头像"
+            android:textColor="#333333"
+            android:textSize="30px"
+            android:typeface="sans" />
     </RelativeLayout>
 
 
@@ -55,6 +76,7 @@
         android:layout_marginBottom="0dp"
         android:background="@color/white">
 
+
         <ScrollView
             android:id="@+id/view2"
             android:layout_width="wrap_content"
@@ -62,23 +84,22 @@
             android:background="@color/white"
             android:fadingEdge="vertical"
             android:scrollbars="vertical">
-
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                //上传头像
+                //邮箱
                 <LinearLayout
-                    android:id="@+id/photoLinearLayout"
+                    android:id="@+id/emailLinearLayout"
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
                     android:layout_marginRight="20dp"
                     android:orientation="vertical">
 
                     <RelativeLayout
-                        android:id="@+id/photoRelativeLayout"
+                        android:id="@+id/emailRelativeLayout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -87,41 +108,34 @@
                         android:weightSum="1">
 
                         <TextView
-                            android:id="@+id/person_photo_text"
+                            android:id="@+id/email_text"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:gravity="center|left"
-                            android:text="@string/register_person_photo"
+                            android:text="@string/register_email"
                             android:textColor="@color/text_black"
                             android:textSize="15dp" />
                         <View
-                            android:layout_below="@+id/person_photo_text"
+                            android:layout_below="@+id/email_text"
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="@color/general_background"
                             />
 
                         <EditText
-                            android:id="@+id/person_photo_hint"
+                            android:id="@+id/email_hint"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_alignParentTop="true"
                             android:layout_weight="13.83"
-                            android:focusable="false"
-                            android:textColor="@color/text_gray"
                             android:background="@null"
                             android:layout_marginLeft="20dp"
-                            android:layout_toRightOf="@+id/person_photo_text"
-                            android:hint="@string/register_person_photo_hint"
+                            android:textColor="@color/text_gray"
+                            android:layout_toRightOf="@+id/email_text"
+                            android:hint="@string/register_email_hint"
                             android:textColorHint="@color/text_gray"
+                            android:textCursorDrawable="@color/black"
                             android:textSize="15dp" />
-                           <ImageView
-                               android:id="@+id/upload_photo"
-                               android:layout_width="40dp"
-                               android:layout_height="40dp"
-                               android:src="@mipmap/upload_photo"
-                               android:layout_alignParentRight="true"
-                               />
                     </RelativeLayout>
 
 
@@ -129,117 +143,66 @@
 
                 </LinearLayout>
 
-                //账号
-                <LinearLayout
-                    android:id="@+id/accountLinearLayout"
-                    android:layout_below="@+id/photoLinearLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="20dp"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:id="@+id/accountRelativeLayout"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:orientation="horizontal"
-                        android:weightSum="1">
-
-                        <TextView
-                            android:id="@+id/account_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:gravity="center|left"
-                            android:text="@string/register_account"
-                            android:textColor="@color/text_black"
-                            android:textSize="15dp" />
-                        <View
-                            android:layout_below="@+id/account_text"
-                            android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:background="@color/general_background"
-                            />
-
-                        <EditText
-                            android:id="@+id/account_hint"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_weight="13.83"
-                            android:background="@null"
-                            android:textColor="@color/text_gray"
-                            android:layout_marginLeft="20dp"
-                            android:layout_toRightOf="@+id/account_text"
-                            android:hint="@string/register_account_hint"
-                            android:textColorHint="@color/text_gray"
-                            android:textSize="15dp" />
-                    </RelativeLayout>
 
 
-
-
-                </LinearLayout>
 
 
                 //密码
                 <LinearLayout
-                android:id="@+id/passwordLinearLayout"
-                android:layout_below="@+id/accountLinearLayout"
+                    android:id="@+id/passwordLinearLayout"
+                    android:layout_below="@+id/emailLinearLayout"
                     android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:id="@+id/passwordRelativeLayout"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/password_text"
+                    <RelativeLayout
+                        android:id="@+id/passwordRelativeLayout"
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:gravity="center|left"
-                        android:text="@string/register_password"
-                        android:textColor="@color/text_black"
-                        android:textSize="15dp" />
-                    <View
-                        android:layout_below="@+id/password_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:background="@color/general_background"
-                        />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
-                    <EditText
-                        android:id="@+id/password_hint"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_weight="13.83"
-                        android:background="@null"
-                        android:layout_marginLeft="20dp"
-                        android:textColor="@color/text_gray"
-                        android:layout_toRightOf="@+id/password_text"
-                        android:hint="@string/register_password_hint"
-                        android:textColorHint="@color/text_gray"
-                        android:inputType="textPassword"
-                        android:textSize="15dp" />
-                </RelativeLayout>
+                        <TextView
+                            android:id="@+id/password_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="center|left"
+                            android:text="@string/register_password"
+                            android:textColor="@color/text_black"
+                            android:textSize="15dp" />
+                        <View
+                            android:layout_below="@+id/password_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/general_background"
+                            />
+
+                        <EditText
+                            android:id="@+id/password_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="13.83"
+                            android:background="@null"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/text_gray"
+                            android:layout_toRightOf="@+id/password_text"
+                            android:textCursorDrawable="@color/black"
+                            android:hint="@string/register_password_hint"
+                            android:textColorHint="@color/text_gray"
+                            android:inputType="textPassword"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
 
 
 
 
-            </LinearLayout>
+                </LinearLayout>
 
                 //确认密码
                 <LinearLayout
@@ -285,6 +248,7 @@
                             android:background="@null"
                             android:layout_marginLeft="20dp"
                             android:textColor="@color/text_gray"
+                            android:textCursorDrawable="@color/black"
                             android:layout_toRightOf="@+id/repeat_password_text"
                             android:hint="@string/register_password_hint"
                             android:inputType="textPassword"
@@ -297,13 +261,10 @@
 
                 </LinearLayout>
 
-
-
-                //性别
-
+                //账号
                 <LinearLayout
-                    android:id="@+id/sexLinearLayout"
-                    android:layout_below="@+id/repeatPasswordLinearLayout"
+                    android:id="@+id/accountLinearLayout"
+                    android:layout_below="@id/repeatPasswordLinearLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -312,7 +273,62 @@
                     android:orientation="vertical">
 
                     <RelativeLayout
-                       android:id="@+id/sexRelativeLayout"
+                        android:id="@+id/accountRelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/account_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="center|left"
+                            android:text="@string/register_account"
+                            android:textColor="@color/text_black"
+                            android:textSize="15dp" />
+                        <View
+                            android:layout_below="@+id/account_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/general_background"
+                            />
+
+                        <EditText
+                            android:id="@+id/account_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="13.83"
+                            android:background="@null"
+                            android:textColor="@color/text_gray"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/account_text"
+                            android:textCursorDrawable="@color/black"
+                            android:hint="@string/register_account_hint"
+                            android:textColorHint="@color/text_gray"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+                //性别
+                <LinearLayout
+                    android:id="@+id/sexLinearLayout"
+                    android:layout_below="@+id/accountLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/sexRelativeLayout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -335,13 +351,13 @@
                             android:background="@color/general_background"
                             />
                         <RadioGroup
-                        android:id="@+id/sexRadio"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_toRightOf="@+id/sex_text"
-                        android:layout_marginLeft="30dp"
-                        android:orientation="horizontal">
+                            android:id="@+id/sexRadio"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_toRightOf="@+id/sex_text"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/male"
@@ -353,6 +369,7 @@
                                 android:drawableLeft="@drawable/register_sex_male"
                                 android:text="@string/register_male"
                                 android:textColor="@drawable/bottom_icon_text_selector"
+                                android:checked="true"
                                 android:textSize="15sp" />
 
 
@@ -417,6 +434,7 @@
                             android:layout_marginLeft="20dp"
                             android:layout_toRightOf="@+id/birthday_text"
                             android:hint="@string/register_birthday_hint"
+                            android:textCursorDrawable="@color/black"
                             android:focusable="false"
                             android:textColor="@color/text_gray"
                             android:textColorHint="@color/text_gray"
@@ -428,18 +446,73 @@
 
                 </LinearLayout>
 
+                //手机号码
+                <LinearLayout
+                    android:id="@+id/phoneLinearLayout"
+                    android:layout_below="@+id/birthdayLinearLayout"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/phoneRelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/phone_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="center|left"
+                            android:text="@string/register_phone"
+                            android:textColor="@color/text_black"
+                            android:textSize="15dp" />
+                        <View
+                            android:layout_below="@+id/phone_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/general_background"
+                            />
+
+                        <EditText
+                            android:id="@+id/phone_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="13.83"
+                            android:background="@null"
+                            android:layout_marginLeft="20dp"
+                            android:textCursorDrawable="@color/black"
+                            android:textColor="@color/text_gray"
+                            android:layout_toRightOf="@+id/phone_text"
+                            android:hint="@string/register_phone_hint"
+                            android:textColorHint="@color/text_gray"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
 
                 //注册按钮
                 <LinearLayout
-                    android:id="@+id/register_save"
+                    android:id="@+id/registerLinearLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@+id/birthdayLinearLayout"
-                    android:layout_marginTop="70dp"
+                    android:layout_below="@+id/phoneLinearLayout"
+                    android:layout_marginTop="50dp"
                     android:background="@drawable/rectangle_shape"
                     android:orientation="vertical">
                     <Button
-                        android:id="@+id/login_btn"
+                        android:id="@+id/register_btn"
                         android:layout_width="match_parent"
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="30dp"
@@ -453,6 +526,8 @@
 
 
             </RelativeLayout>
+
+
 
         </ScrollView>
 

@@ -22,7 +22,7 @@ import android.widget.Toast;
 import com.blk.R;
 import com.blk.common.ToolBarSet;
 import com.blk.common.util.HttpCallbackListener;
-import com.blk.health_tool.util.AndroidUploadFile;
+import com.blk.common.util.AndroidUploadFile;
 
 import java.io.File;
 import java.io.FileInputStream;

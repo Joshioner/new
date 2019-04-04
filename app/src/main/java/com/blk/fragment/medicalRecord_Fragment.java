@@ -450,7 +450,6 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
             @Override
             public void onResult(AccessToken accessToken) {
                 String token = accessToken.getAccessToken();
-                Log.i("TestTest","result " + token);
             }
 
             @Override
@@ -477,7 +476,6 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
     }
 
     //动态处理权限问题
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[]  permissions,
                                            @NonNull int[] grantResults) {
