@@ -1,10 +1,10 @@
 package com.blk.fragment;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -29,28 +29,31 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.baidu.ocr.sdk.OCR;
-import com.baidu.ocr.sdk.OnResultListener;
-import com.baidu.ocr.sdk.exception.OCRError;
-import com.baidu.ocr.sdk.model.AccessToken;
 import com.blk.R;
+import com.blk.RegisterActivity;
 import com.blk.common.CommomDialog;
-import com.blk.common.util.HttpCallbackListener;
-import com.blk.common.util.HttpSendUtil;
+import com.blk.common.entity.CaseHistory;
+import com.blk.common.entity.User;
 import com.blk.common.ShowAllListView;
-import com.blk.medical_record.Adapter.medicalRecordDetailBaseAdapter;
+import com.blk.common.util.AlterUtil;
+import com.blk.common.util.ConfigUtil;
+import com.blk.common.util.HttpCallbackListener;
+import com.blk.common.util.HttpRequestUtil;
+import com.blk.common.util.HttpSendUtil;
+import com.blk.medical_record.Adapter.CaseHistoryDetailBaseAdapter;
 import com.blk.medical_record.Adapter.personMemberInfoBaseAdapter;
 import com.blk.medical_record.MemberManageActivity;
 import com.blk.medical_record.dataAnalyseActivity;
 import com.blk.medical_record.entity.PersonMemberInfo;
-import com.blk.medical_record.entity.medicalRecordDetail;
 import com.blk.medical_record.medicalRecordContentActivity;
 import com.blk.medical_record.medicalRecordSearchActivity;
 import com.blk.medical_record.testActivity;
+import com.blk.medical_record.util.GetAccessTokenUtil;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,9 +73,9 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
   //  private PersonMemberInfo member_info ;   //家庭成员具体信息
     private AlertDialog.Builder alertDialog;
     private ListView medicalListView;    //显示病历详细信息的ListView
-    private List<medicalRecordDetail> medicalDetailList;  //病历信息的列表
-    private medicalRecordDetail medicalRecordDetail ;   //病历详细信息
-    private medicalRecordDetailBaseAdapter detail_baseAdapter; //传递给medicalListView的适配器
+    private List<CaseHistory> caseHistoryList;  //病历信息的列表
+    private CaseHistory CaseHistory ;   //病历详细信息
+    private CaseHistoryDetailBaseAdapter detail_baseAdapter; //传递给medicalListView的适配器
 
     private PopupWindow chooseTakeSelectPop;   //选择图片或者拍照的弹出框
     private ImageView closeSelect,takePhoto,choosePhoto;  //关闭弹出框，选择图片，拍照
@@ -88,18 +91,8 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
     private TextView personName;   //当前用户名
 
     private TextView memberManage;  //成员管理
-    private final Handler handler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case SHOW_MEDICAL_RECORD:
-                    String result = (String) msg.obj;
-                    onPostExecute(result);
-                    break;
-            }
-            super.handleMessage(msg);
-        }
-    };
+    private SharedPreferences sharedPreferences;
+    private User user;  //用户信息
 
     public  static Dialog weiboDialogUtils;
     public medicalRecord_Fragment(){
@@ -110,6 +103,10 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
+        //获取sharedPreferences中的userInfo信息
+        sharedPreferences = getActivity().getSharedPreferences("userInfo",Context.MODE_PRIVATE);
+        String userInfo = sharedPreferences.getString("userInfo",null);
+        user = com.alibaba.fastjson.JSONObject.parseObject(userInfo,User.class);
        if (view == null){
            view=inflater.inflate(R.layout.medical_record,container,false);
        }else {
@@ -122,8 +119,6 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         initView();
         //事件
        initEvent();
-       // medicalDetailList.add(new medicalRecordDetail("22","2015-12-15","哈哈","111"));
-
         return view;
     }
     //初始化控件
@@ -140,7 +135,8 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         medicalRecordSearchBox = (ImageView) view.findViewById(R.id.medicalRecordSearchBox);
         alertDialog = new AlertDialog.Builder(getActivity());
         //加载病历信息
-        new MedicalRecordDetailThread().execute(123);
+     //   AddMedicalRecordDetailList(user.getUid());
+         new CaseHistoryThread().execute();
         //解决scrollview中嵌套listview只显示一个item的问题
         //ShowAllListView.setListViewHeightBasedOnChildren(medicalListView);
         memberListView = (ListView) view.findViewById(R.id.person_member_list);
@@ -153,40 +149,52 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
       //  ShowAllListView.setListViewHeightBasedOnChildren(memberListView);
     }
 //
-    //根据用户的id来查询所有病历列表
-    private void AddMedicalRecordDetailList(String pid) {
 
-//        String address = "http://47.95.246.177:8080/gdufs_blk_ssh/case_findPerson";
-//        String data = "pid=" + pid;
-//        HttpSendUtil.sendHttpRequest(address,data,new HttpCallbackListener() {
-//            @Override
-//            public void onFinish(String response) {
-//                // Toast.makeText(medical_record_detail.this, "6666", Toast.LENGTH_SHORT).show();
-//                Message message = new Message();
-//                message.what = SHOW_MEDICAL_RECORD;
-//                message.obj = response;
-//                handler.sendMessage(message);
-//            }
-//
-//            @Override
-//            public void onError(Exception e) {
-//            }
-//        });
 
-    }
 
-    class MedicalRecordDetailThread extends AsyncTask<Integer,Void,Void>{
+    class CaseHistoryThread extends AsyncTask<Void,Void,Void>{
         @Override
         protected void onPreExecute() {
-            medicalDetailList = new ArrayList<medicalRecordDetail>();
-            medicalDetailList.add(new medicalRecordDetail("1","2019-12-11","广东省大学城省中医","急诊室"));
-            medicalDetailList.add(new medicalRecordDetail("1","2018-11-10","中山第一附属医院","五官科"));
-            medicalDetailList.add(new medicalRecordDetail("1","2017-03-11","汕头第一人民医院","内科"));
+            caseHistoryList = new ArrayList<CaseHistory>();
         }
 
         @Override
-        protected Void doInBackground(Integer... integers) {
-            detail_baseAdapter = new medicalRecordDetailBaseAdapter(getActivity(),medicalDetailList);//初始化适配器
+        protected Void doInBackground(Void... integers) {
+            String address = ConfigUtil.getServerAddress() + "/caseHistory/getAll/" + user.getUid()+"/true";
+            HttpRequestUtil.sendHttpRequest(address, new HttpCallbackListener() {
+                @Override
+                public void onFinish(String response) {
+                    com.alibaba.fastjson.JSONObject jsonObject = com.alibaba.fastjson.JSONObject.parseObject(response);
+                    int code = jsonObject.getIntValue("code");
+                    if (code == 0){
+                        String data = jsonObject.getString("data");
+                        JSONArray jsonArray = JSONArray.parseArray(data);
+                        if (jsonArray.size() > 0){
+                            for (int i = 0; i < jsonArray.size();i++){
+                                JSONObject object = jsonArray.getJSONObject(i);
+                                CaseHistory caseHistory = new CaseHistory();
+                                caseHistory.setCid(object.getIntValue("cid"));
+                                caseHistory.setUid(object.getIntValue("uid"));
+                                caseHistory.setVisitDate(object.getString("visitDate"));
+                                caseHistory.setHospitalName(object.getString("hospitalName"));
+                                caseHistory.setPhoto(object.getString("photo"));
+                                caseHistory.setOffice(object.getString("office"));
+                                caseHistoryList.add(caseHistory);
+                            }
+                        }
+                    }else {
+                        Looper.prepare();
+                        AlterUtil.alterTextLong(getActivity(),"获取病历列表详情失败");
+                        Looper.loop();
+                    }
+                }
+
+                @Override
+                public void onError(Exception e) {
+
+                }
+            });
+            detail_baseAdapter = new CaseHistoryDetailBaseAdapter(getActivity(),caseHistoryList);//初始化适配器
             return null;
         }
 
@@ -202,63 +210,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         memberlist.add( new PersonMemberInfo(person_member_name,1));
         memberlist.add( new PersonMemberInfo("张三",2));
         memberlist.add( new PersonMemberInfo("李四",3));
-        //设置用户头像
-//        String path = getActivity().getFilesDir().getAbsolutePath() + "/pic.jpg";
-//        Bitmap bitmap = BitmapFactory.decodeFile(path);
-//        personImage.setImageBitmap(bitmap);
 
-//        //找到头像的目标文件
-//        File file = new File("D:\\test_photo.png");
-//        //建立缓冲字符串对象
-//        StringBuilder sb = null;
-//        //建立字节输入流对象
-//        try {
-//            FileInputStream fileInputStream = new FileInputStream(file);
-//            //建立字节数组
-//            byte[] bytes = new byte[1024];
-//            int length = 0;
-//            while ((length = fileInputStream.read(bytes)) != -1)
-//            {
-//                sb.append(new String(bytes,0,length));
-//            }
-//            //关闭资源
-//            fileInputStream.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-        //对象初始化
-
-
-//        member_info.setPerson_name(person_member_name);
-//        member_info.setPerson_photo();
-        //将家庭成员的具体信息添加到成员列表中
-
-
-    }
-    protected void onPostExecute(String result) {
-        if (result != null) {
-            // Log.i("MainActivity","111"+result);
-            try {
-                JSONArray jsonArray = new JSONArray(result);
-
-                for(int i=0;i<jsonArray.length();i++){
-                    JSONObject jsonObject = jsonArray.getJSONObject(i);
-                 //   test.setText(jsonObject.toString());
-                    String id = jsonObject.getString("cid");
-                    String date = jsonObject.getString("vdate");
-                    String hospital_name = jsonObject.getString("hospital");
-                    String department = jsonObject.getString("office");
-                    medicalDetailList.add(new medicalRecordDetail(id,date,hospital_name,department));
-                }
-                //解决scrollview中嵌套listview只显示一个item的问题
-                ShowAllListView.setListViewHeightBasedOnChildren(medicalListView);
-
-            } catch (JSONException e) {
-                e.printStackTrace();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
 
     }
     //事件
@@ -278,12 +230,12 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         medicalListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Intent medicalRecordContentIntent = new Intent(getActivity(),medicalRecordContentActivity.class);
-//                Bundle bundle = new Bundle();
-//                bundle.putInt("data",2);
-//                bundle.putInt("position",position);
-//                medicalRecordContentIntent.putExtras(bundle);
-                Intent medicalRecordContentIntent = new Intent(getActivity(),testActivity.class);
+                TextView cid = (TextView) view.findViewById(R.id.list_id);
+                Intent medicalRecordContentIntent = new Intent(getActivity(),medicalRecordContentActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("data",2);
+                bundle.putInt("cid",Integer.valueOf(cid.getText().toString()));
+                medicalRecordContentIntent.putExtras(bundle);
                 startActivity(medicalRecordContentIntent);
             }
         });
@@ -297,7 +249,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                     @Override
                     public void onClick(Dialog dialog, boolean confirm) {
                         if(confirm){
-                            medicalDetailList.remove(position);
+                            caseHistoryList.remove(position);
                             detail_baseAdapter.notifyDataSetChanged();
                             dialog.dismiss();
                             Toast.makeText(getActivity(), "删除成功", Toast.LENGTH_SHORT).show();
@@ -329,8 +281,8 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
             }
         });
 
-        // 请选择您的初始化方式
-         initAccessToken();
+        //accessToken初始化
+        GetAccessTokenUtil.getInstance(getActivity()).initAccessToken();
 
     }
 //
@@ -444,21 +396,6 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
 
 
 
-    private void initAccessToken() {
-
-        OCR.getInstance().initAccessToken(new OnResultListener<AccessToken>() {
-            @Override
-            public void onResult(AccessToken accessToken) {
-                String token = accessToken.getAccessToken();
-            }
-
-            @Override
-            public void onError(OCRError error) {
-                error.printStackTrace();
-                alertText("licence方式获取token失败", error.getMessage());
-            }
-        }, getActivity());
-    }
 
     private void alertText(String title, String message) {
         boolean isNeedLoop = false;
@@ -481,7 +418,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                                            @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            initAccessToken();
+            GetAccessTokenUtil.getInstance(getActivity()).initAccessToken();
         } else {
             Toast.makeText(getActivity(), "需要android.permission.READ_PHONE_STATE", Toast.LENGTH_LONG).show();
         }

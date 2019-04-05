@@ -267,7 +267,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         HttpSendUtil.sendHttpRequest(address,JSONObject.toJSONString(user),new HttpCallbackListener(){
             @Override
             public void onFinish(String response) {
-                Log.i("TestTest","---- " + response);
                 JSONObject jsonObject = JSONObject.parseObject(response);
                 int code = jsonObject.getIntValue("code");
                 if (code == 0){

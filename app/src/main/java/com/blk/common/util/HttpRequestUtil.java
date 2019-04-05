@@ -1,5 +1,7 @@
 package com.blk.common.util;
 
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -25,6 +27,9 @@ public class HttpRequestUtil {
                     connection.setConnectTimeout(8000);
                     connection.setDoInput(true);
                     connection.setDoOutput(true);
+                    //设置长连接
+                    connection.setRequestProperty("connection","keep-alive");
+                    connection.setRequestProperty("Content-type","application/json");
                     if(connection.getResponseCode() == 200)
                     {
                         InputStream in = connection.getInputStream();

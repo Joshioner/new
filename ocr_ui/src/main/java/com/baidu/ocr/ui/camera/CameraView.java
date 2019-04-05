@@ -112,7 +112,7 @@ public class CameraView extends FrameLayout {
         cameraViewTakePictureCallback.file = file;
         cameraViewTakePictureCallback.callback = callback;
         cameraControl.takePicture(cameraViewTakePictureCallback);
-        Log.i("TestTest","-----qqqqqqq" );
+
     }
 
     public void setMaskType(@MaskView.MaskType int maskType) {

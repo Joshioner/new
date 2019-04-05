@@ -14,7 +14,8 @@ import android.widget.TextView;
 
 import com.blk.R;
 import com.blk.common.MyApplication;
-import com.blk.health_tool.Entity.HealthRecord;
+import com.blk.common.entity.HealthRecord;
+import com.blk.health_tool.HealthRecordActivity;
 import com.blk.health_tool.HealthRecordDetailActivity;
 import com.blk.health_tool.util.GetDate;
 
@@ -37,6 +38,14 @@ public class HealthRecordAdapter extends RecyclerView.Adapter<HealthRecordAdapte
         return new HealthRecordViewHolder(mLayoutInflater.inflate(R.layout.health_record_list, parent, false));
     }
 
+    public List<HealthRecord> getList() {
+        return list;
+    }
+
+    public void setList(List<HealthRecord> list) {
+        this.list = list;
+    }
+
     @Override
     public void onBindViewHolder(final HealthRecordViewHolder viewHolder, final int position) {
 
@@ -44,7 +53,7 @@ public class HealthRecordAdapter extends RecyclerView.Adapter<HealthRecordAdapte
         if(list.get(position).getDate().equals(dateSystem)){
             viewHolder.circleImage.setImageResource(R.mipmap.circle_green);
         }
-        viewHolder.id.setText(String.valueOf(list.get(position).getId()));
+        viewHolder.id.setText(String.valueOf(list.get(position).getHid()));
         viewHolder.date.setText(list.get(position).getDate() + "    " + list.get(position).getTime());
         viewHolder.address.setText(list.get(position).getAddress());
         if (null != list.get(position).getFood() && !"".equals(list.get(position).getFood())){
@@ -82,8 +91,7 @@ public class HealthRecordAdapter extends RecyclerView.Adapter<HealthRecordAdapte
             public void onClick(View v) {
                 Intent intent = new Intent(mContext,HealthRecordDetailActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putInt("id",list.get(position).getId());
-                bundle.putString("symptom",list.get(position).getSymptom());
+                bundle.putInt("hid",list.get(position).getHid());
                 intent.putExtras(bundle);
                 mContext.startActivity(intent);
             }

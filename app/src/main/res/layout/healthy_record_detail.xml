@@ -23,6 +23,12 @@
            android:paddingBottom="20dp"
            android:paddingLeft="20dp"
            >
+           <TextView
+               android:id="@+id/hid"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:visibility="gone"/>
+
            //时间
            <LinearLayout
                android:id="@+id/time_linearLayout"
@@ -66,7 +72,8 @@
                        android:layout_toRightOf="@+id/health_record_time_text"
                        android:hint="请选择时间"
                        android:textColorHint="@color/text_gray"
-                       android:textColor="@color/text_gray"
+                       android:textColor="@color/black"
+                       android:textCursorDrawable="@color/black"
                        android:focusable="false"
                        android:textSize="15dp" />
                </RelativeLayout>
@@ -117,8 +124,9 @@
                        android:layout_marginLeft="20dp"
                        android:layout_toRightOf="@+id/health_record_address_text"
                        android:hint="准确记录详细地点"
+                       android:textCursorDrawable="@color/black"
                        android:textColorHint="@color/text_gray"
-                       android:textColor="@color/text_gray"
+                       android:textColor="@color/black"
                        android:textSize="15dp" />
                </RelativeLayout>
 
@@ -160,7 +168,8 @@
                    android:textSize="15dp"
                    android:hint="记录食物和饮料的摄入，包括水、汽水、茶、咖啡或酒"
                    android:textColorHint="@color/text_gray"
-                   android:textColor="@color/text_gray"
+                   android:textColor="@color/black"
+                   android:textCursorDrawable="@color/black"
                    />
 
 
@@ -202,7 +211,8 @@
                    android:textSize="15dp"
                    android:hint="记录下时间长度和运动的类型，以及相关的想法和感觉。如果没有，则可不填写"
                    android:textColorHint="@color/text_gray"
-                   android:textColor="@color/text_gray"
+                   android:textColor="@color/black"
+                   android:textCursorDrawable="@color/black"
                    />
 
 
@@ -244,7 +254,8 @@
                    android:textSize="15dp"
                    android:hint="记录下不适时的状态、想法和感觉"
                    android:textColorHint="@color/text_gray"
-                   android:textColor="@color/text_gray"
+                   android:textColor="@color/black"
+                   android:textCursorDrawable="@color/black"
                    />
 
 

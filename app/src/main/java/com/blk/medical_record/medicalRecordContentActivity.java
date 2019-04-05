@@ -3,7 +3,9 @@ package com.blk.medical_record;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -13,6 +15,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Looper;
 import android.os.Message;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
@@ -20,11 +23,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSONPObject;
 import com.baidu.ocr.sdk.OCR;
 import com.baidu.ocr.sdk.OnResultListener;
 import com.baidu.ocr.sdk.exception.OCRError;
@@ -32,14 +41,29 @@ import com.baidu.ocr.sdk.model.GeneralParams;
 import com.baidu.ocr.sdk.model.GeneralResult;
 import com.baidu.ocr.sdk.model.Word;
 import com.baidu.ocr.ui.camera.CameraActivity;
+import com.blk.LoginActivity;
 import com.blk.MainActivity;
 import com.blk.R;
+import com.blk.RegisterActivity;
 import com.blk.common.CommomDialog;
+import com.blk.common.MyApplication;
+import com.blk.common.entity.CaseHistory;
+import com.blk.common.entity.User;
+import com.blk.common.util.AlterUtil;
+import com.blk.common.util.AndroidUploadFile;
+import com.blk.common.util.ConfigUtil;
 import com.blk.common.util.FileUtil;
 import com.blk.common.util.HttpCallbackListener;
+import com.blk.common.util.HttpRequestUtil;
 import com.blk.common.util.HttpSendUtil;
 import com.blk.common.ToolBarSet;
 import com.blk.common.util.WeiboDialogUtils;
+import com.blk.fragment.medicalRecord_Fragment;
+import com.blk.health_tool.HealthRecordDetailActivity;
+import com.blk.medical_record.Adapter.CaseHistoryDetailBaseAdapter;
+import com.google.gson.JsonObject;
+
+import org.w3c.dom.Text;
 
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
@@ -55,6 +79,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -83,11 +109,23 @@ public class medicalRecordContentActivity extends AppCompatActivity {
     private ImageView icon_back;                       //返回键按钮
     private Map<String,String> map;
     private String imagePath;                         //图片路径
+    private SharedPreferences sharedPreferences;
+    private User user;  //用户信息
+    private String fileName; //病历文件名
+    private int cid = 0;
+    private TextView cidText;
+    private CaseHistory caseHistoryDetail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Window window = getWindow();
         ToolBarSet.setBar(window);
+        //获取sharedPreferences中的userInfo信息
+        sharedPreferences = getSharedPreferences("userInfo",Context.MODE_PRIVATE);
+        String userInfo = sharedPreferences.getString("userInfo",null);
+        user = JSONObject.parseObject(userInfo,User.class);
+        //防止软键盘遮挡
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         setContentView(R.layout.medical_record_content);
 
         //初始化组件
@@ -98,7 +136,7 @@ public class medicalRecordContentActivity extends AppCompatActivity {
         Bundle bundle = this.getIntent().getExtras();
 
         int data=bundle.getInt("data");
-
+        cid = bundle.getInt("cid",0);
 
         //data ==0 || data == 1 表示是通过拍照识别，data == 2 表示点击病历查看具体病历详情
         //选择图片
@@ -124,12 +162,6 @@ public class medicalRecordContentActivity extends AppCompatActivity {
         else if(data==1)
         {
             weiboDialogUtils = WeiboDialogUtils.createLoadingDialog(this,"识别中");
-//            Intent intent = new Intent(medicalRecordContentActivity.this, CameraActivity.class);
-//            intent.putExtra(CameraActivity.KEY_OUTPUT_FILE_PATH,
-//                    FileUtil.getSaveFile(getApplication()).getAbsolutePath());
-//            intent.putExtra(CameraActivity.KEY_CONTENT_TYPE,
-//                    CameraActivity.CONTENT_TYPE_GENERAL);
-//            startActivityForResult(intent, REQUEST_CODE_CAMERA);
             File outputImage = new File(Environment.getExternalStorageDirectory(),
                     "tempMedicalImage" + ".jpg");
             try{
@@ -147,29 +179,80 @@ public class medicalRecordContentActivity extends AppCompatActivity {
             startActivityForResult(intent, REQUEST_CODE_CAMERA);
         }
         else if(data == 2){
-//           // Log.i("MainActivity","lala");
-//            String cid = bundle.getString("cid");
-//            //  Log.i("MainActivity",cid);
-//            String address = "http://47.95.246.177:8080/gdufs_blk/GetCase?method=selectById&cid="+cid;
-//            HttpRequestUtil.sendHttpRequest(address, new HttpCallbackListener() {
-//                @Override
-//                public void onFinish(String response) {
-//                   // Log.i("MainActivity",1111+"");
-//                    Message message = new Message();
-//                    message.what = SHOW_DETAIL;
-//                    message.obj = response;
-//                  //  handler.sendMessage(message);
-//                }
-//
-//                @Override
-//                public void onError(Exception e) {
-//
-//                }
-//            });
-            int position = bundle.getInt("position");
-            Toast.makeText(this, "第" + position + "个", Toast.LENGTH_SHORT).show();
+            //加载病历信息
+            if (cid <= 0){
+                AlterUtil.alterTextLong(this,"加载病历信息失败");
+            }else {
+                new CaseHistoryThread().execute();
+            }
+
         }
 
+    }
+
+    class CaseHistoryThread extends AsyncTask<Void,Void,Void>{
+
+        @Override
+        protected void onPreExecute() {
+            weiboDialogUtils = WeiboDialogUtils.createLoadingDialog(medicalRecordContentActivity.this,"加载中...");
+        }
+
+        @Override
+        protected Void doInBackground(Void... integers) {
+            String address = ConfigUtil.getServerAddress() + "/caseHistory/findById/" + cid ;
+            HttpRequestUtil.sendHttpRequest(address, new HttpCallbackListener() {
+                @Override
+                public void onFinish(String response) {
+                    com.alibaba.fastjson.JSONObject jsonObject = com.alibaba.fastjson.JSONObject.parseObject(response);
+                    int code = jsonObject.getIntValue("code");
+                    if (code == 0){
+                        String data = jsonObject.getString("data");
+                        caseHistoryDetail = JSONObject.parseObject(data,CaseHistory.class);
+                        //设置病历编号
+                        cidText.setText(String.valueOf(caseHistoryDetail.getCid()));
+                        //图片信息
+                        String fileName = caseHistoryDetail.getPhoto();
+                        Bitmap bitmap = BitmapFactory.decodeFile(MyApplication.getContext().getFilesDir().getAbsolutePath() + "/image/" + fileName.substring(fileName.lastIndexOf("\\") + 1));
+                        imageView.setImageBitmap(bitmap);
+                        //就诊人
+                        patient_name.setText(caseHistoryDetail.getVisitName());
+                        //就诊日期
+                        date.setText(caseHistoryDetail.getVisitDate());
+                        //医院名称
+                        hospital_name.setText(caseHistoryDetail.getHospitalName());
+                        //科室
+                        department.setText(caseHistoryDetail.getOffice());
+                        //就诊医生
+                        doctor_name.setText(caseHistoryDetail.getDoctorName());
+                        //主诉
+                        chiefComplaint.setText(caseHistoryDetail.getMainSuit());
+                        //现病史
+                        presentIllness.setText(caseHistoryDetail.getHistoryNow());
+                        //体格检查
+                        physicalExamination.setText(caseHistoryDetail.getCheckup());
+                        //诊断结果
+                        diagnosisResult.setText(caseHistoryDetail.getDiagnosisResult());
+                        //处理意见
+                        handleAdvice.setText(caseHistoryDetail.getSuggestion());
+                    }else {
+                        Looper.prepare();
+                        AlterUtil.alterTextLong(medicalRecordContentActivity.this,"加载病历信息失败");
+                        Looper.loop();
+                    }
+                }
+
+                @Override
+                public void onError(Exception e) {
+
+                }
+            });
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            WeiboDialogUtils.closeDialog(weiboDialogUtils);
+        }
     }
     //初始化控件
     private void InitView() {
@@ -187,6 +270,7 @@ public class medicalRecordContentActivity extends AppCompatActivity {
         diagnosisResult = (EditText) findViewById(R.id.DiagnosisResult);
         handleAdvice = (EditText) findViewById(R.id.HandleAdvice);
         map = new HashMap<String,String>();
+        cidText = (TextView) findViewById(R.id.cid);
     }
 
     //事件
@@ -198,69 +282,21 @@ public class medicalRecordContentActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-                new CommomDialog(medicalRecordContentActivity.this, R.style.dialog, "您确定保存此病历么？", new CommomDialog.OnCloseListener() {
+                new CommomDialog(medicalRecordContentActivity.this, R.style.dialog, "您确定"  +  (cid > 0 ? "更新":"保存") + "此病历么？", new CommomDialog.OnCloseListener() {
                     @Override
                     public void onClick(Dialog dialog, boolean confirm) {
                         //保存成功
                         if (confirm) {
-                            //保存病历图片到本地
-                            downloadImage();
-                            //病历保存成功，对话框消失，跳转到病历详情页面
                             dialog.dismiss();
-                            Intent confirmIntent = new Intent(medicalRecordContentActivity.this, MainActivity.class);
-                            Bundle bundle = new Bundle();
-                            bundle.putInt("data", 1);
-                            confirmIntent.putExtras(bundle);
-                            String relator = null;
-                            String vdate = null;
-                            String hospital = null;
-                            String coffice = null;
-                            String cdoctor = null;
-                            String mainsuit = null;
-                            String historyNow = null;
-                            String checkup = null;
-                            String diagnosis = null;
-                            String suggestion = null;
-                            try {
-                                relator = URLEncoder.encode(patient_name.getText().toString(),"UTF-8");
-                                vdate = URLEncoder.encode(date.getText().toString(),"UTF-8");
-                                hospital = URLEncoder.encode(hospital_name.getText().toString(),"UTF-8");
-                                coffice = URLEncoder.encode(department.getText().toString(),"UTF-8");
-                                cdoctor = URLEncoder.encode(doctor_name.getText().toString(),"UTF-8");
-                                mainsuit = URLEncoder.encode(chiefComplaint.getText().toString(),"UTF-8");
-                                historyNow = URLEncoder.encode(presentIllness.getText().toString(),"UTF-8");
-                                checkup = URLEncoder.encode(physicalExamination.getText().toString(),"UTF-8");
-                                diagnosis = URLEncoder.encode(diagnosisResult.getText().toString(),"UTF-8");
-                                suggestion = URLEncoder.encode(handleAdvice.getText().toString(),"UTF-8");
-                                String address = "http://47.95.246.177:8080/gdufs_blk_ssh/case_save";
-                                String data = "pid=123&acase.cname=123123&acase.relator="+relator+"&acase.vdate="+vdate+"&acase.hospital="+hospital+"&acase.office="+coffice
-                                        +"&acase.doctor="+cdoctor+"&acase.mainsuit="+mainsuit+"&acase.historynow="+historyNow+"&acase.checkup="+checkup
-                                        +"acase.&diagnosis="+diagnosis+"&acase.suggestion="+suggestion;
-                                // Toast.makeText(medical_record_detail.this, "lalal", Toast.LENGTH_SHORT).show();
-                                HttpSendUtil.sendHttpRequest(address,data,new HttpCallbackListener() {
-                                    @Override
-                                    public void onFinish(String response) {
-                                        // Toast.makeText(medical_record_detail.this, "6666", Toast.LENGTH_SHORT).show();
-                                        Message message = new Message();
-                                        message.what = SAVE;
-                                        message.obj = response;
-                                      //  handler.sendMessage(message);
+                            weiboDialogUtils = WeiboDialogUtils.createLoadingDialog(medicalRecordContentActivity.this,"保存中");
+                             if (cid <= 0){
+                                 saveCaseHistory(dialog);
+                                 WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                             }else {
+                                 updateCaseHistory(dialog);
+                                 WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                             }
 
-//                                Toast.makeText(medical_record_detail.this, response, Toast.LENGTH_SHORT).show();
-                                    }
-
-                                    @Override
-                                    public void onError(Exception e) {
-//                                Toast.makeText(medical_record_detail.this, "6666", Toast.LENGTH_SHORT).show();
-
-                                    }
-                                });
-                            } catch (UnsupportedEncodingException e) {
-                                e.printStackTrace();
-                            }
-                            medicalRecordContentActivity.this.finish();
-                            startActivity(confirmIntent);
                         }
                         //取消保存
                         else {
@@ -305,19 +341,187 @@ public class medicalRecordContentActivity extends AppCompatActivity {
         });
     }
 
+    //保存病历信息
+    public void  saveCaseHistory(Dialog dialog){
+        if (user.getUid() <= 0){
+            AlterUtil.alterTextLong(medicalRecordContentActivity.this,"请先登陆");
+            Intent intent = new Intent(medicalRecordContentActivity.this,LoginActivity.class);
+            startActivity(intent);
+        }
+        //保存病历图片到本地
+        downloadImage();
+        //上传图片到服务器
+        String address = ConfigUtil.getServerAddress() + "/uploadImage/2/" + fileName.substring(fileName.lastIndexOf("/") + 1);
+        try {
+            AndroidUploadFile.uploadFile(fileName, address, new HttpCallbackListener() {
+                @Override
+                public void onFinish(String response) {
+                    JSONObject  jsonObject = JSONObject.parseObject(response);
+                    int code = jsonObject.getIntValue("code");
+                    if (code == 0){
+                        CaseHistory caseHistory = new CaseHistory();
+                        //用户信息
+                        caseHistory.setUid(user.getUid());
+                        //图片路径
+                        caseHistory.setPhoto(fileName.substring(fileName.lastIndexOf("/") + 1));
+                        //就诊人
+                        caseHistory.setVisitName(patient_name.getText().toString());
+                        //医院名称
+                        caseHistory.setHospitalName(hospital_name.getText().toString());
+                        //科室
+                        caseHistory.setOffice(department.getText().toString());
+                        //就诊医生
+                        caseHistory.setDoctorName(doctor_name.getText().toString());
+                        //就诊日期
+                        caseHistory.setVisitDate(date.getText().toString());
+                        //体格检查
+                        caseHistory.setCheckup(physicalExamination.getText().toString());
+                        //诊断结果
+                        caseHistory.setDiagnosisResult(diagnosisResult.getText().toString());
+                        //主诉
+                        caseHistory.setMainSuit(chiefComplaint.getText().toString());
+                        //现病史
+                        caseHistory.setHistoryNow(presentIllness.getText().toString());
+                        //处理意见
+                        caseHistory.setSuggestion(handleAdvice.getText().toString());
+                        try {
+                            String address = ConfigUtil.getServerAddress() + "/caseHistory/addCaseHistory";
+                            HttpSendUtil.sendHttpRequest(address,JSONObject.toJSONString(caseHistory),new HttpCallbackListener() {
+                                @Override
+                                public void onFinish(String response) {
+                                    JSONObject  jsonObject = JSONObject.parseObject(response);
+                                    int code = jsonObject.getIntValue("code");
+                                    if (code == 0){
+                                        //病历保存成功，对话框消失，跳转到病历详情页面
+                                        dialog.dismiss();
+                                        Intent confirmIntent = new Intent(medicalRecordContentActivity.this, MainActivity.class);
+                                        Bundle bundle = new Bundle();
+                                        bundle.putInt("data", 1);
+                                        confirmIntent.putExtras(bundle);
+                                        medicalRecordContentActivity.this.finish();
+                                        startActivity(confirmIntent);
+                                    }else {
+                                        Looper.prepare();
+                                        AlterUtil.alterTextLong(medicalRecordContentActivity.this,"病历保存失败");
+                                        Looper.loop();
+                                    }
 
+                                }
+
+                                @Override
+                                public void onError(Exception e) {
+                                    Looper.prepare();
+                                    AlterUtil.alterTextLong(medicalRecordContentActivity.this,"病历保存失败");
+                                    Looper.loop();
+                                }
+                            });
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }else if (code ==1){
+                        Looper.prepare();
+                        AlterUtil.alterTextLong(medicalRecordContentActivity.this,"头像为空");
+                        Looper.loop();
+                    }else {
+                        Looper.prepare();
+                        AlterUtil.alterTextLong(medicalRecordContentActivity.this,"头像上传失败");
+                        Looper.loop();
+
+                    }
+                }
+
+                @Override
+                public void onError(Exception e) {
+                    Looper.prepare();
+                    AlterUtil.alterTextLong(medicalRecordContentActivity.this,"头像上传失败");
+                    Looper.loop();
+                }
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+     //更新病历信息
+    public void  updateCaseHistory(Dialog dialog){
+        if (user.getUid() <= 0){
+            AlterUtil.alterTextLong(medicalRecordContentActivity.this,"请先登陆");
+            Intent intent = new Intent(medicalRecordContentActivity.this,LoginActivity.class);
+            startActivity(intent);
+        }
+        CaseHistory caseHistory = new CaseHistory();
+        //病历编号
+        caseHistory.setCid(Integer.valueOf(cidText.getText().toString()));
+        //用户信息
+        caseHistory.setUid(user.getUid());
+        //图片路径
+        caseHistory.setPhoto(caseHistoryDetail.getPhoto());
+        //就诊人
+        caseHistory.setVisitName(patient_name.getText().toString());
+        //医院名称
+        caseHistory.setHospitalName(hospital_name.getText().toString());
+        //科室
+        caseHistory.setOffice(department.getText().toString());
+        //就诊医生
+        caseHistory.setDoctorName(doctor_name.getText().toString());
+        //就诊日期
+        caseHistory.setVisitDate(date.getText().toString());
+        //体格检查
+        caseHistory.setCheckup(physicalExamination.getText().toString());
+        //诊断结果
+        caseHistory.setDiagnosisResult(diagnosisResult.getText().toString());
+        //主诉
+        caseHistory.setMainSuit(chiefComplaint.getText().toString());
+        //现病史
+        caseHistory.setHistoryNow(presentIllness.getText().toString());
+        //处理意见
+        caseHistory.setSuggestion(handleAdvice.getText().toString());
+        try {
+            String address = ConfigUtil.getServerAddress() + "/caseHistory/updateCaseHistory";
+            HttpSendUtil.sendHttpRequest(address,JSONObject.toJSONString(caseHistory),new HttpCallbackListener() {
+                @Override
+                public void onFinish(String response) {
+                    JSONObject  jsonObject = JSONObject.parseObject(response);
+                    int code = jsonObject.getIntValue("code");
+                    if (code == 0){
+                        //病历保存成功，对话框消失，跳转到病历详情页面
+                        dialog.dismiss();
+                        Intent confirmIntent = new Intent(medicalRecordContentActivity.this, MainActivity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("data", 1);
+                        confirmIntent.putExtras(bundle);
+                        medicalRecordContentActivity.this.finish();
+                        startActivity(confirmIntent);
+                        AlterUtil.alterTextLong(medicalRecordContentActivity.this,"病历信息更新成功");
+                    }else {
+                        Looper.prepare();
+                        AlterUtil.alterTextLong(medicalRecordContentActivity.this,"病历信息更新失败");
+                        Looper.loop();
+                    }
+
+                }
+
+                @Override
+                public void onError(Exception e) {
+                    Looper.prepare();
+                    AlterUtil.alterTextLong(medicalRecordContentActivity.this,"病历信息更新失败");
+                    Looper.loop();
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         //选择图片，sd卡上
         if (requestCode == REQUEST_CODE_PICK_IMAGE && resultCode == Activity.RESULT_OK) {
-            Uri uri = data.getData();
-            String filePath = getRealPathFromURI(uri);
+            imageUri = data.getData();
+            imagePath = getRealPathFromURI(imageUri);
             //识别图片并给ui赋值
-            recGeneral(filePath);
-            //图片路径
-            imagePath = filePath;
+            recGeneral(imagePath);
+
         }
 
         //拍照
@@ -332,22 +536,9 @@ public class medicalRecordContentActivity extends AppCompatActivity {
 //            //图片路径
 //            imagePath = FileUtil.getSaveFile(getApplicationContext()).getAbsolutePath();
         } else if (requestCode == CROP_PHOTO && resultCode == Activity.RESULT_OK) {
-            try {
-                Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver()
-                        .openInputStream(imageUri));
-                imagePath = FileUtil.getSaveFile(getApplicationContext()).getAbsolutePath();
-                File personPhoto = new File(imagePath);
-                BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(personPhoto));
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 80, bos);//向缓冲区压缩图片
-                bos.flush();
-                bos.close();
+                 imagePath = getRealPathFromURI(imageUri);
+                //识别图片并给ui赋值
                 recGeneral(imagePath);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
         }
         else
             finish();
@@ -359,40 +550,30 @@ public class medicalRecordContentActivity extends AppCompatActivity {
      * @return
      */
     private Void downloadImage(){
-        File inFile = new File(this.imagePath);
-        FileInputStream inputStream = null;
-        FileOutputStream outputStream = null;
         try {
-            inputStream = new FileInputStream(inFile);
+            //创建目录
             File dir = new File(getFilesDir().getAbsolutePath() + "/image/");
             if (!dir.exists()){
                 dir.mkdir();
             }
-            File file = new File(dir,"1." + imagePath.substring(imagePath.lastIndexOf(".") + 1));
-            Log.i("REQUEST_CODE_CAMERA","---->" + file.getAbsolutePath());
-            outputStream = new FileOutputStream(file);
-            byte[] bytes = new byte[1024];
-            while ( inputStream.read(bytes) != -1){
-                outputStream.write(bytes,0,bytes.length);
-                outputStream.flush();
-            }
+            fileName = dir.getAbsolutePath() + "/" +  user.getUid() + "_" + new Date().getTime() + imagePath.substring(imagePath.lastIndexOf("."));
+
+            File personPhoto = new File(fileName);
+            //将uri中的图片转换为bitmap
+            Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver()
+                    .openInputStream(imageUri));
+            imagePath = FileUtil.getSaveFile(getApplicationContext()).getAbsolutePath();
+            BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(personPhoto));
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 80, bos);//向缓冲区压缩图片
+            bos.flush();
+            bos.close();
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
-            try{
-                if (outputStream != null){
-                    outputStream.close();
-                }
-                if (inputStream != null){
-                    inputStream.close();
-                }
-            }catch (Exception e){
-                e.printStackTrace();
-            }
         }
         return null;
     }
 
+    //根据uri获取图片的真实路径
     private String getRealPathFromURI(Uri contentURI) {
         String result;
         Cursor cursor = getContentResolver().query(contentURI, null, null, null, null);

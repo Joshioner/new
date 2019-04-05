@@ -24,9 +24,9 @@ public class MyListener implements CompoundButton.OnCheckedChangeListener{
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean flag) {
         if (flag) {     //开启闹钟
-            Log.i("TestTest",alarminfo.getId() + " ");
+
         } else {     //关闭闹钟
-            Log.i("TestTest","关闭状态");
+
         }
     }
 

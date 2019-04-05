@@ -48,6 +48,14 @@ public class CaseHistory {
     public CaseHistory() {
     }
 
+    public CaseHistory(int cid, String photo, String hospitalName, String office, String visitDate) {
+        this.cid = cid;
+        this.photo = photo;
+        this.hospitalName = hospitalName;
+        this.office = office;
+        this.visitDate = visitDate;
+    }
+
     public int getCid() {
         return cid;
     }
@@ -198,5 +206,17 @@ public class CaseHistory {
 
     public void setFid(int fid) {
         this.fid = fid;
+    }
+
+    @Override
+    public String toString() {
+        return "CaseHistory{" +
+                "cid=" + cid +
+                ", photo='" + photo + '\'' +
+                ", hospitalName='" + hospitalName + '\'' +
+                ", office='" + office + '\'' +
+                ", visitDate='" + visitDate + '\'' +
+                ", uid=" + uid +
+                '}';
     }
 }

@@ -111,9 +111,9 @@ public class AlarmAdapter extends BaseAdapter {
                         AlarmUtil.setAlarmClock(alarmInfo);
 
                     } catch (Exception e) {
-                        Log.e("TestTest", e.getMessage());
+
                     }
-                    Log.i("TestTest", lists.get(position).getId() + " ");
+
                 }
                 //关闭闹钟（更新闹钟状态，并且设置闹钟）
                 else {
@@ -124,9 +124,9 @@ public class AlarmAdapter extends BaseAdapter {
                         //关闭闹钟
                         AlarmUtil.cancelAlarmClock(alarmInfo);
                     } catch (Exception e) {
-                        Log.e("TestTest", e.getMessage());
+
                     }
-                    Log.i("TestTest", "关闭状态");
+
                 }
             }
         });
