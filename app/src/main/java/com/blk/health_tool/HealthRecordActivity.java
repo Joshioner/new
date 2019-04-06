@@ -1,7 +1,10 @@
 package com.blk.health_tool;
 
+import android.app.Dialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -27,6 +30,7 @@ import com.blk.common.util.AlterUtil;
 import com.blk.common.util.ConfigUtil;
 import com.blk.common.util.HttpCallbackListener;
 import com.blk.common.util.HttpRequestUtil;
+import com.blk.common.util.WeiboDialogUtils;
 import com.blk.health_tool.Adapter.HealthRecordAdapter;
 import com.blk.medical_record.Adapter.CaseHistoryDetailBaseAdapter;
 
@@ -46,7 +50,7 @@ public class HealthRecordActivity extends AppCompatActivity implements View.OnCl
     private TextView main_tv_date;
     private User user;  //用户信息
     private LinearLayout itemFirstLinearLayout;  //第一个item
-    private Boolean isPause = false;
+    private Dialog weiboDialogUtils;                         //加载框
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,13 +62,24 @@ public class HealthRecordActivity extends AppCompatActivity implements View.OnCl
         user = com.alibaba.fastjson.JSONObject.parseObject(userInfo,User.class);
         setContentView(R.layout.health_record);
 
+        //注册广播信息
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("action.refreshHealthRecord");
+        registerReceiver(refreshBroadcastReceiver,intentFilter);
         //初始化控件
         initView();
         //加载康复记录
         new InitHealthRecordThread().execute();
     }
 
-
+    //广播
+    private BroadcastReceiver refreshBroadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            //加载康复记录
+            new InitHealthRecordThread().execute();
+        }
+    };
     public void initView(){
         enter_icon = (FloatingActionButton) findViewById(R.id.enter_icon);
         enter_icon.setOnClickListener(this);
@@ -83,6 +98,7 @@ public class HealthRecordActivity extends AppCompatActivity implements View.OnCl
         @Override
         protected void onPreExecute() {
             healthRecordList = new ArrayList<HealthRecord>();
+            weiboDialogUtils = WeiboDialogUtils.createLoadingDialog(HealthRecordActivity.this,"加载中...");
         }
 
         @Override
@@ -113,26 +129,30 @@ public class HealthRecordActivity extends AppCompatActivity implements View.OnCl
                                 healthRecordList.add(healthRecord);
                             }
                         }
+                        healthRecordAdapter = new HealthRecordAdapter(HealthRecordActivity.this,healthRecordList);
+                        health_record_recyclerView.setLayoutManager(new LinearLayoutManager(HealthRecordActivity.this));
+                        health_record_recyclerView.setAdapter(healthRecordAdapter);
+                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
                     }else {
                         Looper.prepare();
                         AlterUtil.alterTextLong(HealthRecordActivity.this,"获取康复记录列表详情失败");
                         Looper.loop();
+                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
                     }
                 }
 
                 @Override
                 public void onError(Exception e) {
-
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
                 }
             });
-            healthRecordAdapter = new HealthRecordAdapter(HealthRecordActivity.this,healthRecordList);
+
             return null;
         }
 
         @Override
         protected void onPostExecute(Void aVoid) {
-            health_record_recyclerView.setLayoutManager(new LinearLayoutManager(HealthRecordActivity.this));
-            health_record_recyclerView.setAdapter(healthRecordAdapter);
+
         }
     }
 
@@ -142,22 +162,9 @@ public class HealthRecordActivity extends AppCompatActivity implements View.OnCl
             case R.id.enter_icon:
                 Intent intent = new Intent(HealthRecordActivity.this,HealthRecordDetailActivity.class);
                 startActivity(intent);
-                this.finish();
                 break;
 
         }
     }
 
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        this.finish();
-        Intent intent = new Intent(this,MainActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putInt("data",2);
-        intent.putExtras(bundle);
-        startActivity(intent);
-
-    }
 }

@@ -16,36 +16,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5785da25-4477-454c-b3e4-bfec48667424" name="Default" comment="登陆接口联调 + 保持登陆状态">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/util/GetAccessTokenUtil.java" afterDir="false" />
+    <list default="true" id="5785da25-4477-454c-b3e4-bfec48667424" name="Default" comment="病历信息接口 + 就医听诊接口联调">
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskJars.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskJars.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/RegisterActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/common/entity/CaseHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/common/entity/CaseHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/common/entity/HealthRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/common/entity/HealthRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/common/identify/MyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/common/identify/MyListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/common/util/HttpRequestUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/common/util/HttpRequestUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/AlarmAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/AlarmAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/HealthRecordAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/HealthRecordAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordDetailActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/Adapter/medicalRecordDetailBaseAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/Adapter/CaseHistoryDetailBaseAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/healthy_record_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/healthy_record_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/medical_record_content.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/medical_record_content.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/medical_record_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/medical_record_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/CameraView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_ui/src/main/java/com/baidu/ocr/ui/camera/CameraView.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <ignored path="$PROJECT_DIR$/ocr_ui/build/intermediates/aapt_friendly_merged_manifests/" />
@@ -195,36 +181,34 @@
       <file leaf-file-name="medicalRecord_Fragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="158" column="9" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
+            <state relative-caret-position="236">
+              <caret line="252" column="14" selection-start-line="252" selection-start-column="14" selection-end-line="252" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6122#6123#0" expanded="true" />
-                <element signature="e#6192#6193#0" expanded="true" />
+                <element signature="e#8642#8643#0" expanded="true" />
+                <element signature="e#8728#8729#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HealthRecordActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordActivity.java">
+      <file leaf-file-name="medical_record.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/medical_record.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="154" column="22" selection-start-line="154" selection-start-column="22" selection-end-line="154" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1603#1604#0" expanded="true" />
-                <element signature="e#1675#1676#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="3" column="33" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="33" />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/MainActivity.java">
+      <file leaf-file-name="medicalRecordContentActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="805">
-              <caret line="98" column="22" selection-start-line="90" selection-start-column="11" selection-end-line="98" selection-end-column="22" />
+            <state relative-caret-position="630">
+              <caret line="546" column="37" selection-start-line="546" selection-start-column="37" selection-end-line="546" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -232,21 +216,8 @@
       <file leaf-file-name="HealthRecordDetailActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-621">
-              <caret line="404" column="87" lean-forward="true" selection-start-line="404" selection-start-column="87" selection-end-line="404" selection-end-column="87" />
-              <folding>
-                <element signature="e#4935#4936#0" expanded="true" />
-                <element signature="e#5005#5006#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpSendUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/util/HttpSendUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+            <state relative-caret-position="-2208">
+              <caret line="299" column="46" selection-start-line="296" selection-start-column="21" selection-end-line="299" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -254,8 +225,8 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="135" column="60" selection-start-line="135" selection-start-column="60" selection-end-line="135" selection-end-column="60" />
+            <state relative-caret-position="407">
+              <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
             </state>
           </provider>
           <provider editor-type-id="android-manifest">
@@ -263,36 +234,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlarmAssistantActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAssistantActivity.java">
+      <file leaf-file-name="HttpRequestUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/util/HttpRequestUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="142" column="5" selection-start-line="139" selection-start-column="2" selection-end-line="142" selection-end-column="5" />
-              <folding>
-                <element signature="e#5067#5068#0" expanded="true" />
-                <element signature="e#5096#5097#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="246">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="healthy_record_detail.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_record_detail.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
+      <file leaf-file-name="WeiboDialogUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/util/WeiboDialogUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="276" column="56" selection-start-line="276" selection-start-column="36" selection-end-line="276" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="medicalRecordContentActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4467">
-              <caret line="344" column="23" selection-start-line="344" selection-start-column="17" selection-end-line="344" selection-end-column="23" />
+            <state relative-caret-position="350">
+              <caret line="27" column="41" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -300,14 +255,10 @@
       <file leaf-file-name="HealthRecordAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/HealthRecordAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="2520">
               <caret line="95" column="47" selection-start-line="95" selection-start-column="47" selection-end-line="95" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1301#1302#0" expanded="true" />
-                <element signature="e#1328#1329#0" expanded="true" />
-                <element signature="e#1380#1381#0" expanded="true" />
-                <element signature="e#1412#1413#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -324,36 +275,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cidText</find>
-      <find>detail_baseAdapter</find>
-      <find>TestTest</find>
-      <find>update</find>
-      <find>left</find>
-      <find>layout_gravity</find>
-      <find>识别中</find>
-      <find>save</find>
-      <find>registerU</find>
-      <find>weiboDialogUtils</find>
-      <find>symptom</find>
-      <find>TextUtils.isEmpty</find>
-      <find>saveC</find>
-      <find>main_tv_date</find>
-      <find>health_record_id</find>
-      <find>addre</find>
-      <find>EditText</find>
-      <find>health_record_delete</find>
       <find>saveHis</find>
       <find>backpre</find>
       <find>healthRecordAdapter</find>
-      <find>Intent</find>
       <find>saveCa</find>
       <find>startActivit</find>
       <find>enter_icon</find>
       <find>alterTextLong</find>
-      <find>delete</find>
       <find>HealthRec</find>
       <find>findById</find>
       <find>CaseHistoryTh</find>
+      <find>加载中</find>
+      <find>android:textStyle</find>
+      <find>EditText</find>
+      <find>save</find>
+      <find>Inten</find>
+      <find>保存成功</find>
+      <find>识别中</find>
+      <find>createLoadingDialog</find>
+      <find>病历信息更新失败</find>
+      <find>删除</find>
+      <find>delet</find>
+      <find>drawerLayout</find>
+      <find>weiboDialogUtils</find>
+      <find>deleteHea</find>
+      <find>Intent</find>
+      <find>setAc</find>
+      <find>更新</find>
+      <find>delete</find>
+      <find>保存</find>
+      <find>mainA</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -5504,7 +5455,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/health_record_title.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/util/GetDate.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/widget/LinedEditText.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/health_record.xml" />
@@ -5542,19 +5492,20 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/common/util/GetUserInfo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/util/GetAccessTokenUtil.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/common/entity/CaseHistory.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/common/util/HttpRequestUtil.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/Adapter/CaseHistoryDetailBaseAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/medical_record_detail.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/medical_record_content.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/common/entity/HealthRecord.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/health_record_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/healthy_record_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/HealthRecordAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordDetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/healthy_record_detail.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/common/util/WeiboDialogUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/common/util/HttpRequestUtil.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordDetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java" />
       </list>
     </option>
   </component>
@@ -5572,29 +5523,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="new" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="new" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="new" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="blk" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -5730,6 +5658,23 @@
             <path>
               <item name="new" type="b2602c69:ProjectViewProjectNode" />
               <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="ocr_ui" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -5817,6 +5762,14 @@
               <item name="&lt; Android API 25 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
               <item name="android.jar" type="462c0819:PsiDirectoryNode" />
               <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Android API 25 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="android.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
               <item name="os" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -5874,6 +5827,28 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="new" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="new" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="new" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="blk" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -5885,10 +5860,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="MainA&#9;PSI&#9;JAVA://com.blk.MainActivity&#10;MedicalRe&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java&#10;Medic&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java&#10;medical&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/medical_record.xml&#10;medica&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/medical_record_detail.xml&#10;Android&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/common/util/AndroidUploadFile.java&#10;LoginAc&#9;PSI&#9;JAVA://com.blk.LoginActivity&#10;Medical&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java&#10;register&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/register.xml&#10;Login&#9;PSI&#9;JAVA://com.blk.LoginActivity&#10;me.xml&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/me.xml&#10;Regis&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/RegisterActivity.java&#10;Aus&#9;PSI&#9;JAVA://com.blk.health_tool.AuscultationDetail" />
+    <property name="SearchEverywhereHistoryKey" value="HealthRe&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/health_tool/HealthRecordActivity.java&#10;medical&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java&#10;MainA&#9;PSI&#9;JAVA://com.blk.MainActivity&#10;MedicalRe&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java&#10;Medic&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java&#10;medica&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/medical_record_detail.xml&#10;Android&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/common/util/AndroidUploadFile.java&#10;LoginAc&#9;PSI&#9;JAVA://com.blk.LoginActivity&#10;Medical&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java&#10;register&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/register.xml&#10;Login&#9;PSI&#9;JAVA://com.blk.LoginActivity&#10;me.xml&#9;FILE&#9;file://E:/Android/new/app/src/main/res/layout/me.xml&#10;Regis&#9;FILE&#9;file://E:/Android/new/app/src/main/java/com/blk/RegisterActivity.java&#10;Aus&#9;PSI&#9;JAVA://com.blk.health_tool.AuscultationDetail" />
     <property name="android.project.structure.last.selected" value="ocr_ui" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -6048,12 +6024,12 @@
       <option name="project" value="LOCAL" />
       <updated>1554393610535</updated>
     </task>
-    <task id="LOCAL-00004" summary="就医听诊--录音功能">
-      <created>1552893369948</created>
+    <task id="LOCAL-00004" summary="病历信息接口 + 就医听诊接口联调">
+      <created>1554480943563</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1552893369948</updated>
+      <updated>1554480943563</updated>
     </task>
     <task id="LOCAL-00005" summary="就医听诊--录音功能（实现文件上传并语音识别）">
       <created>1552978807763</created>
@@ -6097,7 +6073,7 @@
       <option name="project" value="LOCAL" />
       <updated>1553329932062</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -6115,16 +6091,16 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.017227877" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49960256" weight="0.33907595" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.51135474" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="10" sideWeight="0.49920508" visible="true" weight="0.31714958" />
+      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.49920508" weight="0.23649178" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12957075" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49920508" weight="0.3414252" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49920508" weight="0.45027408" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.29757243" />
       <window_info anchor="right" id="Gradle" order="6" weight="0.3298887" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.45105717" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3899765" />
       <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" weight="0.3298887" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -6155,7 +6131,8 @@
     <MESSAGE value="fix bug --文字识别接口" />
     <MESSAGE value="注册接口联调" />
     <MESSAGE value="登陆接口联调 + 保持登陆状态" />
-    <option name="LAST_COMMIT_MESSAGE" value="登陆接口联调 + 保持登陆状态" />
+    <MESSAGE value="病历信息接口 + 就医听诊接口联调" />
+    <option name="LAST_COMMIT_MESSAGE" value="病历信息接口 + 就医听诊接口联调" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -6354,39 +6331,57 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java</url>
-          <line>483</line>
+          <line>498</line>
           <properties />
           <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java</url>
-          <line>482</line>
+          <line>497</line>
           <properties />
           <option name="timeStamp" value="127" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java</url>
+          <line>499</line>
+          <properties />
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java</url>
+          <line>505</line>
+          <properties />
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java</url>
+          <line>506</line>
+          <properties />
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java</url>
+          <line>514</line>
+          <properties />
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java</url>
+          <line>519</line>
+          <properties />
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java</url>
+          <line>529</line>
+          <properties />
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="128" />
+      <option name="time" value="147" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/MedicalAuscultationActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="337" column="98" selection-start-line="337" selection-start-column="18" selection-end-line="337" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/util/ConfigUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="42" />
-          <folding>
-            <element signature="e#93#94#0" expanded="true" />
-            <element signature="e#117#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/assets/aip.license">
       <provider selected="true" editor-type-id="text-editor">
         <state />
@@ -6396,40 +6391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
           <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-          <folding>
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#488#489#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#796#797#0" expanded="true" />
-            <element signature="e#826#827#0" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#932#933#0" expanded="true" />
-            <element signature="e#967#968#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-            <element signature="e#1086#1087#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1152#1153#0" expanded="true" />
-            <element signature="e#1200#1201#0" expanded="true" />
-            <element signature="e#1240#1241#0" expanded="true" />
-            <element signature="e#1267#1268#0" expanded="true" />
-            <element signature="e#1293#1294#0" expanded="true" />
-            <element signature="e#1328#1329#0" expanded="true" />
-            <element signature="e#1358#1359#0" expanded="true" />
-            <element signature="e#1393#1394#0" expanded="true" />
-            <element signature="e#1424#1425#0" expanded="true" />
-            <element signature="e#1472#1473#0" expanded="true" />
-            <element signature="e#1512#1513#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -6437,39 +6398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
           <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#511#512#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#581#582#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
-            <element signature="e#721#722#0" expanded="true" />
-            <element signature="e#757#758#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#911#912#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
-            <element signature="e#970#971#0" expanded="true" />
-            <element signature="e#1011#1012#0" expanded="true" />
-            <element signature="e#1047#1048#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1104#1105#0" expanded="true" />
-            <element signature="e#1143#1144#0" expanded="true" />
-            <element signature="e#1177#1178#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#1241#1242#0" expanded="true" />
-            <element signature="e#1287#1288#0" expanded="true" />
-            <element signature="e#1325#1326#0" expanded="true" />
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1391#1392#0" expanded="true" />
-            <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1479#1480#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -6477,27 +6405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
           <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding>
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
-            <element signature="e#803#804#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#869#870#0" expanded="true" />
-            <element signature="e#917#918#0" expanded="true" />
-            <element signature="e#957#958#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -6539,13 +6446,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1925">
           <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/huawei-chm_tl00h-7N3GSN158E091849/data/data/com.beHealthy/shared_prefs/userInfo.xml" />
@@ -6553,54 +6460,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#535#536#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-            <element signature="e#603#604#0" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-            <element signature="e#691#692#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#803#804#0" expanded="true" />
-            <element signature="e#851#852#0" expanded="true" />
-            <element signature="e#891#892#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#991#992#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-            <element signature="e#1062#1063#0" expanded="true" />
-            <element signature="e#1093#1094#0" expanded="true" />
-            <element signature="e#1141#1142#0" expanded="true" />
-            <element signature="e#1181#1182#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-            <element signature="e#1245#1246#0" expanded="true" />
-            <element signature="e#1291#1292#0" expanded="true" />
-            <element signature="e#1329#1330#0" expanded="true" />
-            <element signature="e#1361#1362#0" expanded="true" />
-            <element signature="e#1389#1390#0" expanded="true" />
-            <element signature="e#1431#1432#0" expanded="true" />
-            <element signature="e#1465#1466#0" expanded="true" />
-            <element signature="e#1497#1498#0" expanded="true" />
-            <element signature="e#1525#1526#0" expanded="true" />
-            <element signature="e#1567#1568#0" expanded="true" />
-            <element signature="e#1601#1602#0" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
-            <element signature="e#1675#1676#0" expanded="true" />
-            <element signature="e#1731#1732#0" expanded="true" />
-            <element signature="e#1779#1780#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/util/GetUserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/util/GetUserInfo.java" />
     <entry file="jar://$PROJECT_DIR$/app/libs/ocr-sdk.jar!/com/baidu/ocr/sdk/OCR.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -6655,24 +6518,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/huawei-chm_tl00h-7N3GSN158E091849/data/data/com.beHealthy/files/image/36_1554433357996.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/huawei-chm_tl00h-7N3GSN158E091849/data/data/com.beHealthy/files/image/36_1554434677042.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/huawei-chm_tl00h-7N3GSN158E091849/data/data/com.beHealthy/files/image/36_1554433357996.jpg" />
+    <entry file="file://$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/huawei-chm_tl00h-7N3GSN158E091849/data/data/com.beHealthy/files/image/36_1554434677042.jpg" />
     <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/widget/ListView.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="84" column="16" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
-          <folding>
-            <element signature="e#2401#2402#0" expanded="true" />
-            <element signature="e#2452#2453#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -6682,11 +6533,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/test.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-105" />
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/testActivity.java">
@@ -6697,30 +6548,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/medical_record_detail.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3185">
           <caret line="97" column="39" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/util/HttpRequestUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/medical_record_content.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/medical_record_content.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="664" column="33" selection-start-line="664" selection-start-column="25" selection-end-line="664" selection-end-column="33" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/Adapter/CaseHistoryDetailBaseAdapter.java">
@@ -6734,13 +6578,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/register.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="691">
           <caret line="57" column="47" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/RegisterActivity.java">
@@ -6750,16 +6594,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/medical_record.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -6774,50 +6608,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="809">
           <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
-          <folding>
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#512#513#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#709#710#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#799#800#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#903#904#0" expanded="true" />
-            <element signature="e#931#932#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1007#1008#0" expanded="true" />
-            <element signature="e#1041#1042#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1117#1118#0" expanded="true" />
-            <element signature="e#1155#1156#0" expanded="true" />
-            <element signature="e#1182#1183#0" expanded="true" />
-            <element signature="e#1208#1209#0" expanded="true" />
-            <element signature="e#1243#1244#0" expanded="true" />
-            <element signature="e#1273#1274#0" expanded="true" />
-            <element signature="e#1308#1309#0" expanded="true" />
-            <element signature="e#1339#1340#0" expanded="true" />
-            <element signature="e#1387#1388#0" expanded="true" />
-            <element signature="e#1427#1428#0" expanded="true" />
-            <element signature="e#1528#1529#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
-            <element signature="e#1612#1613#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/health_record_list.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
@@ -6826,11 +6620,11 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/health_record.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/health_record.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
           <caret line="27" column="49" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="49" />
@@ -6841,28 +6635,21 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/health_record_title.xml">
       <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_record_detail.xml">
-      <provider editor-type-id="android-designer2">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/health_record_title.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="276" column="56" selection-start-line="276" selection-start-column="36" selection-end-line="276" selection-end-column="56" />
-        </state>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/AlarmAssistantActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
+        <state relative-caret-position="3850">
           <caret line="142" column="5" selection-start-line="139" selection-start-column="2" selection-end-line="142" selection-end-column="5" />
           <folding>
             <element signature="e#5067#5068#0" expanded="true" />
@@ -6871,83 +6658,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4467">
-          <caret line="344" column="23" selection-start-line="344" selection-start-column="17" selection-end-line="344" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/Adapter/HealthRecordAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
+        <state relative-caret-position="2520">
           <caret line="95" column="47" selection-start-line="95" selection-start-column="47" selection-end-line="95" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1301#1302#0" expanded="true" />
-            <element signature="e#1328#1329#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1412#1413#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="98" column="22" selection-start-line="90" selection-start-column="11" selection-end-line="98" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/util/HttpSendUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
+        <state relative-caret-position="315">
           <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/healthy_record_detail.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="63" column="28" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="28" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="98" column="22" selection-start-line="90" selection-start-column="11" selection-end-line="98" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/app/Dialog.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+          <folding>
+            <element signature="e#1350#1351#0" expanded="true" />
+            <element signature="e#1401#1402#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/util/WeiboDialogUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/common/util/HttpRequestUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/medical_record.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2208">
+          <caret line="299" column="46" selection-start-line="296" selection-start-column="21" selection-end-line="299" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="252" column="14" selection-start-line="252" selection-start-column="14" selection-end-line="252" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8642#8643#0" expanded="true" />
+            <element signature="e#8728#8729#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="135" column="60" selection-start-line="135" selection-start-column="60" selection-end-line="135" selection-end-column="60" />
+        <state relative-caret-position="407">
+          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
         </state>
       </provider>
       <provider editor-type-id="android-manifest">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-621">
-          <caret line="404" column="87" lean-forward="true" selection-start-line="404" selection-start-column="87" selection-end-line="404" selection-end-column="87" />
-          <folding>
-            <element signature="e#4935#4936#0" expanded="true" />
-            <element signature="e#5005#5006#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/fragment/medicalRecord_Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="158" column="9" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6122#6123#0" expanded="true" />
-            <element signature="e#6192#6193#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/health_tool/HealthRecordActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="154" column="22" selection-start-line="154" selection-start-column="22" selection-end-line="154" selection-end-column="22" />
+        <state relative-caret-position="3774">
+          <caret line="167" column="5" lean-forward="true" selection-start-line="167" selection-start-column="5" selection-end-line="167" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1675#1676#0" expanded="true" />
+            <element signature="e#2809#3005#0" expanded="true" />
+            <element signature="e#3004#3005#0" expanded="true" />
+            <element signature="e#6587#6588#0" expanded="true" />
+            <element signature="e#6673#6674#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/blk/medical_record/medicalRecordContentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="546" column="37" selection-start-line="546" selection-start-column="37" selection-end-line="546" selection-end-column="37" />
         </state>
       </provider>
     </entry>

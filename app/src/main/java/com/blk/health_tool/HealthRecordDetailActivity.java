@@ -211,21 +211,13 @@ public class HealthRecordDetailActivity extends Activity implements View.OnClick
                             if (hid <= 0){
                                 //保存康复记录信息
                                 saveHealthRecord(dialog);
-                                WeiboDialogUtils.closeDialog(weiboDialogUtils);
-                                AlterUtil.alterTextShort(HealthRecordDetailActivity.this,"康复基本信息保存成功");
                                 HealthRecordDetailActivity.this.finish();
-                                Intent intent = new Intent(HealthRecordDetailActivity.this,HealthRecordActivity.class);
-                                startActivity(intent);
                             }else {
                                 //更新康复记录信息
                                 updateHealthRecord(dialog);
-                                WeiboDialogUtils.closeDialog(weiboDialogUtils);
                                 HealthRecordDetailActivity.this.finish();
-                                AlterUtil.alterTextShort(HealthRecordDetailActivity.this,"康复基本信息更新成功");
-                                Intent intent = new Intent(HealthRecordDetailActivity.this,HealthRecordActivity.class);
-                                startActivity(intent);
-                            }
 
+                            }
                         }
                         //取消保存
                         else {
@@ -302,17 +294,24 @@ public class HealthRecordDetailActivity extends Activity implements View.OnClick
                     if (code == 0){
                         //病历保存成功，对话框消失，跳转到病历详情页面
                         dialog.dismiss();
-                        HealthRecordDetailActivity.this.finish();
+                        //更新或者增加的时候进行广播
+                        Intent intent = new Intent();
+                        intent.setAction("action.refreshHealthRecord");
+                        sendBroadcast(intent);
+                        Looper.prepare();
+                        AlterUtil.alterTextShort(HealthRecordDetailActivity.this,"康复记录信息保存成功");
+                        Looper.loop();
                     }else {
                         Looper.prepare();
                         AlterUtil.alterTextShort(HealthRecordDetailActivity.this,"康复记录信息保存失败");
                         Looper.loop();
                     }
-
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
                 }
 
                 @Override
                 public void onError(Exception e) {
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
                     Looper.prepare();
                     AlterUtil.alterTextShort(HealthRecordDetailActivity.this,"康复记录信息保存失败");
                     Looper.loop();
@@ -372,17 +371,24 @@ public class HealthRecordDetailActivity extends Activity implements View.OnClick
                     if (code == 0){
                         //病历保存成功，对话框消失，跳转到病历详情页面
                         dialog.dismiss();
-                        HealthRecordDetailActivity.this.finish();
+                        //更新或者增加的时候进行广播
+                        Intent intent = new Intent();
+                        intent.setAction("action.refreshHealthRecord");
+                        sendBroadcast(intent);
+                        Looper.prepare();
+                        AlterUtil.alterTextShort(HealthRecordDetailActivity.this,"康复记录信息更新成功");
+                        Looper.loop();
                     }else {
                         Looper.prepare();
                         AlterUtil.alterTextShort(HealthRecordDetailActivity.this,"康复记录信息更新失败");
                         Looper.loop();
                     }
-
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
                 }
 
                 @Override
                 public void onError(Exception e) {
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
                     Looper.prepare();
                     AlterUtil.alterTextShort(HealthRecordDetailActivity.this,"康复记录信息保存失败");
                     Looper.loop();
@@ -395,7 +401,7 @@ public class HealthRecordDetailActivity extends Activity implements View.OnClick
      //删除康复记录信息
     public void  deleteHealthRecord(){
          if (hid < 0){
-            AlterUtil.alterTextShort(HealthRecordDetailActivity.this,"更新康复记录信息失败");
+            AlterUtil.alterTextShort(HealthRecordDetailActivity.this,"删除康复记录信息失败");
             return;
           }
             String address = ConfigUtil.getServerAddress() + "/healthRecord/deleteHealthRecord/" + hid;
@@ -417,7 +423,9 @@ public class HealthRecordDetailActivity extends Activity implements View.OnClick
 
                 @Override
                 public void onError(Exception e) {
-
+                    Looper.prepare();
+                    AlterUtil.alterTextShort(HealthRecordDetailActivity.this,"删除康复记录信息失败");
+                    Looper.loop();
                 }
             });
     }

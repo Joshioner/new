@@ -134,6 +134,7 @@
         <activity android:name=".health_tool.HealthyNewsDetailActivity" />
         <activity
             android:name=".health_tool.HealthRecordActivity"
+            android:launchMode="singleTask"
             android:label="@string/title_activity_health_record" />
         <activity
             android:name=".health_tool.HealthRecordDetailActivity"

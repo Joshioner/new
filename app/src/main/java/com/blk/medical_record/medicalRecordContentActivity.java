@@ -191,7 +191,6 @@ public class medicalRecordContentActivity extends AppCompatActivity {
     }
 
     class CaseHistoryThread extends AsyncTask<Void,Void,Void>{
-
         @Override
         protected void onPreExecute() {
             weiboDialogUtils = WeiboDialogUtils.createLoadingDialog(medicalRecordContentActivity.this,"加载中...");
@@ -200,6 +199,7 @@ public class medicalRecordContentActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... integers) {
             String address = ConfigUtil.getServerAddress() + "/caseHistory/findById/" + cid ;
+
             HttpRequestUtil.sendHttpRequest(address, new HttpCallbackListener() {
                 @Override
                 public void onFinish(String response) {
@@ -239,11 +239,13 @@ public class medicalRecordContentActivity extends AppCompatActivity {
                         AlterUtil.alterTextLong(medicalRecordContentActivity.this,"加载病历信息失败");
                         Looper.loop();
                     }
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
                 }
 
                 @Override
                 public void onError(Exception e) {
-
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                    AlterUtil.alterTextShort(medicalRecordContentActivity.this,"加载病历信息失败");
                 }
             });
             return null;
@@ -251,7 +253,7 @@ public class medicalRecordContentActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Void aVoid) {
-            WeiboDialogUtils.closeDialog(weiboDialogUtils);
+
         }
     }
     //初始化控件
@@ -290,11 +292,11 @@ public class medicalRecordContentActivity extends AppCompatActivity {
                             dialog.dismiss();
                             weiboDialogUtils = WeiboDialogUtils.createLoadingDialog(medicalRecordContentActivity.this,"保存中");
                              if (cid <= 0){
+                                 //保存病历信息
                                  saveCaseHistory(dialog);
-                                 WeiboDialogUtils.closeDialog(weiboDialogUtils);
                              }else {
+                                 //更新病历信息
                                  updateCaseHistory(dialog);
-                                 WeiboDialogUtils.closeDialog(weiboDialogUtils);
                              }
 
                         }
@@ -392,6 +394,10 @@ public class medicalRecordContentActivity extends AppCompatActivity {
                                     JSONObject  jsonObject = JSONObject.parseObject(response);
                                     int code = jsonObject.getIntValue("code");
                                     if (code == 0){
+                                        //更新或者增加的时候进行广播
+                                        Intent intent = new Intent();
+                                        intent.setAction("action.refreshCaseHistory");
+                                        sendBroadcast(intent);
                                         //病历保存成功，对话框消失，跳转到病历详情页面
                                         dialog.dismiss();
                                         Intent confirmIntent = new Intent(medicalRecordContentActivity.this, MainActivity.class);
@@ -400,7 +406,12 @@ public class medicalRecordContentActivity extends AppCompatActivity {
                                         confirmIntent.putExtras(bundle);
                                         medicalRecordContentActivity.this.finish();
                                         startActivity(confirmIntent);
+                                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                                        Looper.prepare();
+                                        AlterUtil.alterTextLong(medicalRecordContentActivity.this,"病历保存成功");
+                                        Looper.loop();
                                     }else {
+                                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
                                         Looper.prepare();
                                         AlterUtil.alterTextLong(medicalRecordContentActivity.this,"病历保存失败");
                                         Looper.loop();
@@ -410,6 +421,7 @@ public class medicalRecordContentActivity extends AppCompatActivity {
 
                                 @Override
                                 public void onError(Exception e) {
+                                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
                                     Looper.prepare();
                                     AlterUtil.alterTextLong(medicalRecordContentActivity.this,"病历保存失败");
                                     Looper.loop();
@@ -419,10 +431,12 @@ public class medicalRecordContentActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                     }else if (code ==1){
+                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
                         Looper.prepare();
                         AlterUtil.alterTextLong(medicalRecordContentActivity.this,"头像为空");
                         Looper.loop();
                     }else {
+                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
                         Looper.prepare();
                         AlterUtil.alterTextLong(medicalRecordContentActivity.this,"头像上传失败");
                         Looper.loop();
@@ -432,6 +446,7 @@ public class medicalRecordContentActivity extends AppCompatActivity {
 
                 @Override
                 public void onError(Exception e) {
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
                     Looper.prepare();
                     AlterUtil.alterTextLong(medicalRecordContentActivity.this,"头像上传失败");
                     Looper.loop();
@@ -483,6 +498,10 @@ public class medicalRecordContentActivity extends AppCompatActivity {
                     JSONObject  jsonObject = JSONObject.parseObject(response);
                     int code = jsonObject.getIntValue("code");
                     if (code == 0){
+                        //更新或者增加的时候进行广播
+                        Intent intent = new Intent();
+                        intent.setAction("action.refreshCaseHistory");
+                        sendBroadcast(intent);
                         //病历保存成功，对话框消失，跳转到病历详情页面
                         dialog.dismiss();
                         Intent confirmIntent = new Intent(medicalRecordContentActivity.this, MainActivity.class);
@@ -491,8 +510,12 @@ public class medicalRecordContentActivity extends AppCompatActivity {
                         confirmIntent.putExtras(bundle);
                         medicalRecordContentActivity.this.finish();
                         startActivity(confirmIntent);
+                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                        Looper.prepare();
                         AlterUtil.alterTextLong(medicalRecordContentActivity.this,"病历信息更新成功");
+                        Looper.loop();
                     }else {
+                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
                         Looper.prepare();
                         AlterUtil.alterTextLong(medicalRecordContentActivity.this,"病历信息更新失败");
                         Looper.loop();
@@ -502,6 +525,7 @@ public class medicalRecordContentActivity extends AppCompatActivity {
 
                 @Override
                 public void onError(Exception e) {
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
                     Looper.prepare();
                     AlterUtil.alterTextLong(medicalRecordContentActivity.this,"病历信息更新失败");
                     Looper.loop();
@@ -511,6 +535,7 @@ public class medicalRecordContentActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

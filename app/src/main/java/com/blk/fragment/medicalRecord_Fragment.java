@@ -1,8 +1,10 @@
 package com.blk.fragment;
 
 import android.app.Dialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.BitmapDrawable;
@@ -44,6 +46,9 @@ import com.blk.common.util.ConfigUtil;
 import com.blk.common.util.HttpCallbackListener;
 import com.blk.common.util.HttpRequestUtil;
 import com.blk.common.util.HttpSendUtil;
+import com.blk.common.util.WeiboDialogUtils;
+import com.blk.health_tool.HealthRecordActivity;
+import com.blk.health_tool.HealthRecordDetailActivity;
 import com.blk.medical_record.Adapter.CaseHistoryDetailBaseAdapter;
 import com.blk.medical_record.Adapter.personMemberInfoBaseAdapter;
 import com.blk.medical_record.MemberManageActivity;
@@ -115,16 +120,30 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                parent.removeView(view);
            }
        }
+        //注册广播信息
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("action.refreshCaseHistory");
+        getActivity().registerReceiver(refreshBroadcastReceiver,intentFilter);
         //初始化控件
         initView();
         //事件
        initEvent();
         return view;
     }
+    //广播
+    private BroadcastReceiver refreshBroadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            //加载病历信息
+            new CaseHistoryThread().execute();
+        }
+    };
     //初始化控件
     private void initView()
     {
         drawerLayout = (DrawerLayout) view.findViewById(R.id.drawerLayout);
+        // 禁止手势滑动
+        drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         icon_more = (ImageView) view.findViewById(R.id.icon_more);
         icon_add = (ImageView) view.findViewById(R.id.icon_add);
         medicalListView = (ListView) view.findViewById(R.id.medical_record_detail_list);
@@ -156,6 +175,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         @Override
         protected void onPreExecute() {
             caseHistoryList = new ArrayList<CaseHistory>();
+            weiboDialogUtils = WeiboDialogUtils.createLoadingDialog(getActivity(),"加载中...");
         }
 
         @Override
@@ -180,27 +200,33 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                                 caseHistory.setPhoto(object.getString("photo"));
                                 caseHistory.setOffice(object.getString("office"));
                                 caseHistoryList.add(caseHistory);
+
                             }
                         }
+                        detail_baseAdapter = new CaseHistoryDetailBaseAdapter(getActivity(),caseHistoryList);//初始化适配器
+                        medicalListView.setAdapter(detail_baseAdapter);//将适配器传递给medicalListView，类似于填充数据
+                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
                     }else {
                         Looper.prepare();
                         AlterUtil.alterTextLong(getActivity(),"获取病历列表详情失败");
                         Looper.loop();
+                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
                     }
                 }
 
                 @Override
                 public void onError(Exception e) {
-
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
                 }
+
             });
-            detail_baseAdapter = new CaseHistoryDetailBaseAdapter(getActivity(),caseHistoryList);//初始化适配器
+
             return null;
         }
 
         @Override
         protected void onPostExecute(Void aVoid) {
-            medicalListView.setAdapter(detail_baseAdapter);//将适配器传递给medicalListView，类似于填充数据
+
         }
     }
     //方法：填充家庭成员信息的list列表
@@ -245,14 +271,15 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
             public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
                 TextView text_list_id = (TextView) view.findViewById(R.id.list_id);
                 //弹出提示框
-                new CommomDialog(getActivity(), R.style.dialog, "您确定删除此信息？", new CommomDialog.OnCloseListener() {
+                new CommomDialog(getActivity(), R.style.dialog, "您确定删除该病历信息？", new CommomDialog.OnCloseListener() {
                     @Override
                     public void onClick(Dialog dialog, boolean confirm) {
                         if(confirm){
+                            //删除病历信息
+                            deleteCaseHistory(Integer.valueOf(text_list_id.getText().toString()));
+                            dialog.dismiss();
                             caseHistoryList.remove(position);
                             detail_baseAdapter.notifyDataSetChanged();
-                            dialog.dismiss();
-                            Toast.makeText(getActivity(), "删除成功", Toast.LENGTH_SHORT).show();
                         }
                         else
                         {
@@ -319,9 +346,37 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
           //关闭弹出选择框
           closeSelect.setOnClickListener(this);
 
+    }
+    //删除病历信息
+    private void deleteCaseHistory(int cid){
+        if (cid < 0){
+            AlterUtil.alterTextShort(getActivity(),"删除病历信息失败");
+            return;
+        }
+        String address = ConfigUtil.getServerAddress() + "/caseHistory/deleteCaseHistory/" + cid;
+        HttpRequestUtil.sendHttpRequest(address, new HttpCallbackListener() {
+            @Override
+            public void onFinish(String response) {
+                com.alibaba.fastjson.JSONObject jsonObject = com.alibaba.fastjson.JSONObject.parseObject(response);
+                int code = jsonObject.getIntValue("code");
+                if (code == 0){
+                    Looper.prepare();
+                    AlterUtil.alterTextShort(getActivity(),"删除病历信息成功");
+                    Looper.loop();
+                }else {
+                    Looper.prepare();
+                    AlterUtil.alterTextShort(getActivity(),"删除病历信息失败");
+                    Looper.loop();
+                }
+            }
 
-
-
+            @Override
+            public void onError(Exception e) {
+                Looper.prepare();
+                AlterUtil.alterTextShort(getActivity(),"删除病历信息失败");
+                Looper.loop();
+            }
+        });
     }
     private void backgroundAlpha(float f) {
         WindowManager.LayoutParams lp =getActivity().getWindow().getAttributes();
