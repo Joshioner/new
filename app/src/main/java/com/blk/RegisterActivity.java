@@ -379,7 +379,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if (fileName == null){
             fileName =  new Date().getTime()  + imagePath.substring(imagePath.lastIndexOf("."));
         }
-        String address = ConfigUtil.getServerAddress() + "/uploadImage/1/" + fileName;
+        String address = ConfigUtil.getServerAddress() + "/uploadImage/1" ;
         try {
             AndroidUploadFile.uploadFile(imagePath, address, new HttpCallbackListener() {
                 @Override

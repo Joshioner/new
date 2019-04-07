@@ -125,7 +125,7 @@
             android:name=".RegisterActivity"
             android:label="@string/title_activity_register"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".medical_record.MemberManageActivity" />
+        <activity android:name=".medical_record.MemberManageActivity" android:launchMode="singleTask" />
         <activity
             android:name=".medical_record.AddMemberActivity"
             android:label="@string/title_activity_add_member"

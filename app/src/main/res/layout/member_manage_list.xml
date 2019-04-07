@@ -22,6 +22,11 @@
         android:layout_toRightOf="@+id/member_photo">
 
         <TextView
+            android:id="@+id/member_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <TextView
             android:id="@+id/member_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,7 +41,7 @@
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:layout_alignTop="@+id/member_name"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="4dp"
             android:layout_toRightOf="@+id/member_name"
             android:src="@mipmap/male_normal" />

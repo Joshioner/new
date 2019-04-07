@@ -19,8 +19,8 @@ public class FileUtil {
         File file = new File(context.getFilesDir(), "personPhoto.jpg");
         return file;
     }
-    public static File getMemberPhoto(Context context) {
-        File file = new File(context.getFilesDir(), "member.jpg");
+    public static File getMemberPhoto(Context context,String fileName) {
+        File file = new File(context.getFilesDir(), fileName);
         return file;
     }
 

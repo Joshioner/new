@@ -115,6 +115,7 @@ public class medicalRecordContentActivity extends AppCompatActivity {
     private int cid = 0;
     private TextView cidText;
     private CaseHistory caseHistoryDetail;
+    private int fid = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -137,6 +138,7 @@ public class medicalRecordContentActivity extends AppCompatActivity {
 
         int data=bundle.getInt("data");
         cid = bundle.getInt("cid",0);
+        fid = bundle.getInt("fid");
 
         //data ==0 || data == 1 表示是通过拍照识别，data == 2 表示点击病历查看具体病历详情
         //选择图片
@@ -353,7 +355,7 @@ public class medicalRecordContentActivity extends AppCompatActivity {
         //保存病历图片到本地
         downloadImage();
         //上传图片到服务器
-        String address = ConfigUtil.getServerAddress() + "/uploadImage/2/" + fileName.substring(fileName.lastIndexOf("/") + 1);
+        String address = ConfigUtil.getServerAddress() + "/uploadImage/2" ;
         try {
             AndroidUploadFile.uploadFile(fileName, address, new HttpCallbackListener() {
                 @Override
@@ -362,6 +364,8 @@ public class medicalRecordContentActivity extends AppCompatActivity {
                     int code = jsonObject.getIntValue("code");
                     if (code == 0){
                         CaseHistory caseHistory = new CaseHistory();
+                        //成员id
+                        caseHistory.setFid(fid);
                         //用户信息
                         caseHistory.setUid(user.getUid());
                         //图片路径
@@ -400,12 +404,13 @@ public class medicalRecordContentActivity extends AppCompatActivity {
                                         sendBroadcast(intent);
                                         //病历保存成功，对话框消失，跳转到病历详情页面
                                         dialog.dismiss();
-                                        Intent confirmIntent = new Intent(medicalRecordContentActivity.this, MainActivity.class);
-                                        Bundle bundle = new Bundle();
-                                        bundle.putInt("data", 1);
-                                        confirmIntent.putExtras(bundle);
+//                                        Intent confirmIntent = new Intent(medicalRecordContentActivity.this, MainActivity.class);
+//                                        Bundle bundle = new Bundle();
+//                                        bundle.putInt("data", 1);
+//                                        confirmIntent.putExtras(bundle);
+//                                        medicalRecordContentActivity.this.finish();
+//                                        startActivity(confirmIntent);
                                         medicalRecordContentActivity.this.finish();
-                                        startActivity(confirmIntent);
                                         WeiboDialogUtils.closeDialog(weiboDialogUtils);
                                         Looper.prepare();
                                         AlterUtil.alterTextLong(medicalRecordContentActivity.this,"病历保存成功");
@@ -504,12 +509,13 @@ public class medicalRecordContentActivity extends AppCompatActivity {
                         sendBroadcast(intent);
                         //病历保存成功，对话框消失，跳转到病历详情页面
                         dialog.dismiss();
-                        Intent confirmIntent = new Intent(medicalRecordContentActivity.this, MainActivity.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("data", 1);
-                        confirmIntent.putExtras(bundle);
+//                        Intent confirmIntent = new Intent(medicalRecordContentActivity.this, MainActivity.class);
+//                        Bundle bundle = new Bundle();
+//                        bundle.putInt("data", 1);
+//                        confirmIntent.putExtras(bundle);
+//                        medicalRecordContentActivity.this.finish();
+//                        startActivity(confirmIntent);
                         medicalRecordContentActivity.this.finish();
-                        startActivity(confirmIntent);
                         WeiboDialogUtils.closeDialog(weiboDialogUtils);
                         Looper.prepare();
                         AlterUtil.alterTextLong(medicalRecordContentActivity.this,"病历信息更新成功");

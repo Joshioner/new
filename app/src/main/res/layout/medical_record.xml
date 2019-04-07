@@ -3,6 +3,7 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
     android:background="@color/white"
+    android:clickable="true"
     >
 
     <LinearLayout
@@ -99,7 +100,7 @@
         android:background="@mipmap/cardhistory_person_bg"
         android:orientation="vertical">
 
-        <ImageView
+        <com.blk.common.identify.XCRoundImageView
             android:id="@+id/person_photo"
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -110,6 +111,27 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/person_uid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/person_fid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/person_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/person_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/person_name"
@@ -125,12 +147,11 @@
                 android:id="@+id/person_member_list"
                 android:layout_below="@+id/person_name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:divider="#00000000"
                 android:dividerHeight="18dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/medical_record_background"
                 >
             </ListView>
         <!--</ScrollView>-->

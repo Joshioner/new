@@ -39,10 +39,14 @@ import com.blk.R;
 import com.blk.RegisterActivity;
 import com.blk.common.CommomDialog;
 import com.blk.common.entity.CaseHistory;
+import com.blk.common.entity.FamilyMember;
 import com.blk.common.entity.User;
 import com.blk.common.ShowAllListView;
+import com.blk.common.identify.XCRoundImageView;
 import com.blk.common.util.AlterUtil;
+import com.blk.common.util.BitmapFactoryUtil;
 import com.blk.common.util.ConfigUtil;
+import com.blk.common.util.FileUtil;
 import com.blk.common.util.HttpCallbackListener;
 import com.blk.common.util.HttpRequestUtil;
 import com.blk.common.util.HttpSendUtil;
@@ -60,6 +64,7 @@ import com.blk.medical_record.testActivity;
 import com.blk.medical_record.util.GetAccessTokenUtil;
 
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -87,19 +92,45 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
 
     private ImageView medicalRecordSearchBox;   //病历搜索框
 
-    private ImageView personImage;     //用户头像
+    private XCRoundImageView personImage;     //用户头像
 
     private final int medicalRecordSearchRequestCode = 101;   //病历搜索框请求码
 
     private TextView data_analyse;       //成员管理、数据对比
 
-    private TextView personName;   //当前用户名
+    private TextView personName,personUid,personFid,personProfile,personFlag;   //当前用户名
 
     private TextView memberManage;  //成员管理
     private SharedPreferences sharedPreferences;
     private User user;  //用户信息
 
     public  static Dialog weiboDialogUtils;
+
+    private final int Init_MedicalHistory_Adapter = 1;
+    private final int DELETE_MEDICAL = 2;
+    private final int Init_Member_Adapter = 3;
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case Init_MedicalHistory_Adapter:
+                    //加载适配器并关闭加载框
+                    medicalListView.setAdapter(detail_baseAdapter);//将适配器传递给medicalListView，类似于填充数据
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                    break;
+                case DELETE_MEDICAL:
+                    int position = (int) msg.obj;
+                    caseHistoryList.remove(position);
+                    detail_baseAdapter.notifyDataSetChanged();
+                    break;
+                case Init_Member_Adapter:
+                    //加载适配器并关闭加载框
+                    memberListView.setAdapter(member_info_baseAdapter);//将适配器传递给memberListView，类似于填充数据
+                    break;
+
+            }
+        }
+    };
     public medicalRecord_Fragment(){
 
     }
@@ -128,6 +159,10 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         initView();
         //事件
        initEvent();
+        //加载病历信息
+        new CaseHistoryThread().execute(user.getUid(),0);
+        //加载家庭成员信息
+       new MemberListInfo().execute();
         return view;
     }
     //广播
@@ -135,7 +170,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         @Override
         public void onReceive(Context context, Intent intent) {
             //加载病历信息
-            new CaseHistoryThread().execute();
+            new CaseHistoryThread().execute(user.getUid(),Integer.valueOf(personFid.getText().toString()));
         }
     };
     //初始化控件
@@ -149,29 +184,105 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         medicalListView = (ListView) view.findViewById(R.id.medical_record_detail_list);
         memberManage = (TextView) view.findViewById(R.id.member_manage);
         data_analyse = (TextView) view.findViewById(R.id.data_analyse);
-        personImage = (ImageView) view.findViewById(R.id.person_photo);
+        //用户头像
+        personImage = (XCRoundImageView) view.findViewById(R.id.person_photo);
+        File file = FileUtil.getPersonPhoto(getActivity());
+        if (file.exists()){
+            personImage.setImageBitmap(BitmapFactoryUtil.getBitmap(file.getAbsolutePath()));
+        }else {
+            personImage.setImageResource(R.mipmap.person_profile);
+        }
+        //用户名
         personName = (TextView) view.findViewById(R.id.person_name);
+        personName.setText(user.getAccountName());
+        //uid
+        personUid = (TextView) view.findViewById(R.id.person_uid);
+        personUid.setText(String.valueOf(user.getUid()));
+        //fid
+        personFid = (TextView) view.findViewById(R.id.person_fid);
+        personFid.setText(String.valueOf(0));
+        //flag
+        personFlag = (TextView) view.findViewById(R.id.person_flag);
+        personFlag.setText(String.valueOf("true"));
+        //头像
+        personProfile = (TextView) view.findViewById(R.id.person_profile);
+        personProfile.setText(user.getPhone());
         medicalRecordSearchBox = (ImageView) view.findViewById(R.id.medicalRecordSearchBox);
         alertDialog = new AlertDialog.Builder(getActivity());
-        //加载病历信息
-     //   AddMedicalRecordDetailList(user.getUid());
-         new CaseHistoryThread().execute();
         //解决scrollview中嵌套listview只显示一个item的问题
         //ShowAllListView.setListViewHeightBasedOnChildren(medicalListView);
         memberListView = (ListView) view.findViewById(R.id.person_member_list);
-        memberlist = new ArrayList<PersonMemberInfo>();
-       // list.add(new PersonMemberInfo("张三"));
-        AddpersonMemberInfoList();   //填充list列表
-        member_info_baseAdapter = new personMemberInfoBaseAdapter(getActivity(),memberlist);  //初始化适配器
-        memberListView.setAdapter(member_info_baseAdapter);  //将适配器传递给memberList，类似于填充数据
-        //解决scrollview中嵌套listview只显示一个item的问题
-      //  ShowAllListView.setListViewHeightBasedOnChildren(memberListView);
     }
-//
 
 
+    //加载家庭成员信息
+    class MemberListInfo extends AsyncTask<Void,Void,Void>{
+        @Override
+        protected void onPreExecute() {
+            memberlist = new ArrayList<PersonMemberInfo>();
+        }
 
-    class CaseHistoryThread extends AsyncTask<Void,Void,Void>{
+        @Override
+        protected Void doInBackground(Void... integers) {
+            Message message = Message.obtain();
+            message.what = Init_Member_Adapter;
+            String address = ConfigUtil.getServerAddress() + "/member/getAll/" + user.getUid();
+            HttpRequestUtil.sendHttpRequest(address, new HttpCallbackListener() {
+                @Override
+                public void onFinish(String response) {
+                    com.alibaba.fastjson.JSONObject jsonObject = com.alibaba.fastjson.JSONObject.parseObject(response);
+                    int code = jsonObject.getIntValue("code");
+                    if (code == 0){
+                        String data = jsonObject.getString("data");
+                        JSONArray jsonArray = JSONArray.parseArray(data);
+                        if (jsonArray.size() > 0){
+                            for (int i = 0; i < jsonArray.size();i++){
+                                JSONObject object = jsonArray.getJSONObject(i);
+                                PersonMemberInfo memberInfo = new PersonMemberInfo();
+                                //uid
+                                memberInfo.setUid(object.getInteger("uid"));
+                                //fid
+                                memberInfo.setFid(object.getInteger("fid"));
+                                //头像路径
+                                memberInfo.setProfile(object.getString("profile"));
+                                //名字
+                                memberInfo.setName(object.getString("name"));
+                                memberInfo.setFlag(false);
+                                memberlist.add(memberInfo);
+                            }
+                        }
+                        member_info_baseAdapter = new personMemberInfoBaseAdapter(getActivity(),memberlist);//初始化适配器
+                        handler.sendMessage(message);  //发送handle消息
+                    }else {
+                        Looper.prepare();
+                        AlterUtil.alterTextLong(getActivity(),"获取家庭成员列表详情失败");
+                        Looper.loop();
+                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                    }
+                }
+
+                @Override
+                public void onError(Exception e) {
+                    Looper.prepare();
+                    AlterUtil.alterTextLong(getActivity(),"获取家庭成员列表详情失败");
+                    Looper.loop();
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                }
+
+            });
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+
+        }
+    }
+
+
+    //加载病历信息列表
+    class CaseHistoryThread extends AsyncTask<Integer,Void,Void>{
         @Override
         protected void onPreExecute() {
             caseHistoryList = new ArrayList<CaseHistory>();
@@ -179,8 +290,10 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         }
 
         @Override
-        protected Void doInBackground(Void... integers) {
-            String address = ConfigUtil.getServerAddress() + "/caseHistory/getAll/" + user.getUid()+"/true";
+        protected Void doInBackground(Integer... integers) {
+            Message message = Message.obtain();
+            message.what = Init_MedicalHistory_Adapter;
+            String address = ConfigUtil.getServerAddress() + "/caseHistory/getAll/" + integers[0] +"/" + integers[1];
             HttpRequestUtil.sendHttpRequest(address, new HttpCallbackListener() {
                 @Override
                 public void onFinish(String response) {
@@ -204,8 +317,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                             }
                         }
                         detail_baseAdapter = new CaseHistoryDetailBaseAdapter(getActivity(),caseHistoryList);//初始化适配器
-                        medicalListView.setAdapter(detail_baseAdapter);//将适配器传递给medicalListView，类似于填充数据
-                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                        handler.sendMessage(message);  //发送handle消息
                     }else {
                         Looper.prepare();
                         AlterUtil.alterTextLong(getActivity(),"获取病历列表详情失败");
@@ -229,16 +341,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
 
         }
     }
-    //方法：填充家庭成员信息的list列表
-    private void AddpersonMemberInfoList() {
-        String person_member_name = "胡先生";
-       // PersonMemberInfo member_info  = new PersonMemberInfo(person_member_name);
-        memberlist.add( new PersonMemberInfo(person_member_name,1));
-        memberlist.add( new PersonMemberInfo("张三",2));
-        memberlist.add( new PersonMemberInfo("李四",3));
 
-
-    }
     //事件
     private void initEvent()
     {
@@ -276,10 +379,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                     public void onClick(Dialog dialog, boolean confirm) {
                         if(confirm){
                             //删除病历信息
-                            deleteCaseHistory(Integer.valueOf(text_list_id.getText().toString()));
-                            dialog.dismiss();
-                            caseHistoryList.remove(position);
-                            detail_baseAdapter.notifyDataSetChanged();
+                            deleteCaseHistory(Integer.valueOf(text_list_id.getText().toString()),dialog,position);
                         }
                         else
                         {
@@ -290,21 +390,64 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                 }).setTitle("提示").show();
 
 
-                return false;
+                return true;
             }
         });
 
         //用户家庭组病历信息管理
         memberListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                TextView personMemberName = (TextView) view.findViewById(R.id.person_member_name);
-                memberlist.add(new PersonMemberInfo((String) personName.getText(),4));
-                memberlist.remove(new PersonMemberInfo(personMemberName.getText().toString(),1));
-                personName.setText(personMemberName.getText());
-                Toast.makeText(getActivity(),  personMemberName.getText(),Toast.LENGTH_LONG).show();
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                //移除的成员信息
+                 TextView member_uid = (TextView) view.findViewById(R.id.member_uid);
+                 TextView member_fid = (TextView) view.findViewById(R.id.member_fid);
+                 TextView member_name = (TextView) view.findViewById(R.id.member_name);
+                 TextView member_profile = (TextView) view.findViewById(R.id.member_profile);
+                 TextView member_flag = (TextView) view.findViewById(R.id.member_flag);
+                 //当前成员信息
+                 PersonMemberInfo memberInfo =  new PersonMemberInfo();
+                 memberInfo.setUid(Integer.valueOf(personUid.getText().toString()));
+                 memberInfo.setFid(Integer.valueOf(personFid.getText().toString()));
+                 memberInfo.setName(personName.getText().toString());
+                 memberInfo.setProfile(personProfile.getText().toString());
+                 memberInfo.setFlag(personFlag.getText().toString().equals("true"));
+                 //设置当前成员信息
+                personUid.setText(member_uid.getText());
+                personFid.setText(member_fid.getText());
+                personName.setText(member_name.getText());
+                personProfile.setText(member_profile.getText());
+                personFlag.setText(member_flag.getText());
+                //移除点击的成员信息
+                memberlist.remove(position);
+                //添加当前成员信息
+                memberlist.add(memberInfo);
+                //刷新adapter
                 member_info_baseAdapter.notifyDataSetChanged();
+                //设置头像
+                File file = null;
+                if (personFlag.getText().toString().equals("true")){
+                     file = FileUtil.getPersonPhoto(getActivity());
 
+                }else {
+                    String fileName = personProfile.getText().toString();
+                    if (fileName != null && fileName != ""){
+                        fileName = fileName.substring(fileName.lastIndexOf("\\") + 1);
+                        file = FileUtil.getMemberPhoto(getActivity(),fileName);
+                    }
+                }
+                if (file != null && file.exists()){
+                    personImage.setImageBitmap(BitmapFactoryUtil.getBitmap(file.getAbsolutePath()));
+                }else {
+                    personImage.setImageResource(R.mipmap.person_profile);
+                }
+                //刷新病历列表信息
+                if (Integer.valueOf(personFid.getText().toString()) > 0){
+                    //获取某个家庭成员病历列表
+                    new CaseHistoryThread().execute(user.getUid(),Integer.valueOf(personFid.getText().toString()));
+                }else {
+                    //获取用户病历列表
+                    new CaseHistoryThread().execute(user.getUid(),0);
+                }
             }
         });
 
@@ -348,8 +491,9 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
 
     }
     //删除病历信息
-    private void deleteCaseHistory(int cid){
-        if (cid < 0){
+    private void deleteCaseHistory(int cid,Dialog dialog,int position){
+        if (cid <= 0){
+            dialog.dismiss();
             AlterUtil.alterTextShort(getActivity(),"删除病历信息失败");
             return;
         }
@@ -360,10 +504,18 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                 com.alibaba.fastjson.JSONObject jsonObject = com.alibaba.fastjson.JSONObject.parseObject(response);
                 int code = jsonObject.getIntValue("code");
                 if (code == 0){
+                    //刷新adapter
+                    Message message = Message.obtain();
+                    message.what = DELETE_MEDICAL;
+                    message.obj = position;
+                    handler.sendMessage(message);
+                    dialog.dismiss();
+                    dialog.dismiss();
                     Looper.prepare();
                     AlterUtil.alterTextShort(getActivity(),"删除病历信息成功");
                     Looper.loop();
                 }else {
+                    dialog.dismiss();
                     Looper.prepare();
                     AlterUtil.alterTextShort(getActivity(),"删除病历信息失败");
                     Looper.loop();
@@ -372,6 +524,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
 
             @Override
             public void onError(Exception e) {
+                dialog.dismiss();
                 Looper.prepare();
                 AlterUtil.alterTextShort(getActivity(),"删除病历信息失败");
                 Looper.loop();
@@ -412,6 +565,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                    /* 通过Bundle对象存储需要传递的数据 */
                 Bundle bundleTake=new Bundle();
                 bundleTake.putInt("data",1);
+                bundleTake.putInt("fid",Integer.valueOf(personFid.getText().toString()));
                 /*把bundle对象assign给Intent*/
                 takePhotoIntent.putExtras(bundleTake);
                 startActivity(takePhotoIntent);
@@ -425,6 +579,7 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                    /* 通过Bundle对象存储需要传递的数据 */
                 Bundle bundleChoose=new Bundle();
                 bundleChoose.putInt("data",0);
+                bundleChoose.putInt("fid",Integer.valueOf(personFid.getText().toString()));
                 /*把bundle对象assign给Intent*/
                 choosePhotoIntent.putExtras(bundleChoose);
                 startActivity(choosePhotoIntent);

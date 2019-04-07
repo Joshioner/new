@@ -5,6 +5,12 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient"
     >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/family_member_id"/>
+
 
     //添加成员
     <RelativeLayout
@@ -109,11 +115,11 @@
                             android:layout_alignParentTop="true"
                             android:layout_weight="13.83"
                             android:focusable="false"
-                            android:textColor="@color/text_gray"
+                            android:textColor="@color/black"
                             android:background="@null"
+                            android:textCursorDrawable="@color/black"
                             android:layout_marginLeft="20dp"
                             android:layout_toRightOf="@+id/person_photo"
-                            android:hint="@string/register_person_photo_hint"
                             android:textColorHint="@color/text_gray"
                             android:textSize="15dp" />
                         <ImageView
@@ -173,10 +179,11 @@
                             android:layout_alignParentTop="true"
                             android:layout_weight="13.83"
                             android:background="@null"
-                            android:textColor="@color/text_gray"
+                            android:textColor="@color/black"
                             android:layout_marginLeft="20dp"
                             android:layout_toRightOf="@+id/member_name"
                             android:hint="@string/member_name_hint"
+                            android:textCursorDrawable="@color/black"
                             android:textColorHint="@color/text_gray"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -231,11 +238,11 @@
                             android:layout_weight="13.83"
                             android:background="@null"
                             android:layout_marginLeft="20dp"
-                            android:textColor="@color/text_gray"
+                            android:textColor="@color/black"
                             android:layout_toRightOf="@+id/member_relation"
                             android:hint="@string/member_relation_hint"
+                            android:textCursorDrawable="@color/black"
                             android:textColorHint="@color/text_gray"
-                            android:inputType="textPassword"
                             android:textSize="15dp" />
                     </RelativeLayout>
 
@@ -299,6 +306,7 @@
                                 android:layout_marginTop="5dp"
                                 android:drawableLeft="@drawable/register_sex_male"
                                 android:text="@string/register_male"
+                                android:checked="true"
                                 android:textColor="@drawable/bottom_icon_text_selector"
                                 android:textSize="15sp" />
 
@@ -364,8 +372,9 @@
                             android:layout_toRightOf="@+id/birthday"
                             android:hint="@string/register_birthday_hint"
                             android:focusable="false"
-                            android:textColor="@color/text_gray"
+                            android:textColor="@color/black"
                             android:textColorHint="@color/text_gray"
+                            android:textCursorDrawable="@color/black"
                             android:textSize="15dp" />
                     </RelativeLayout>
 

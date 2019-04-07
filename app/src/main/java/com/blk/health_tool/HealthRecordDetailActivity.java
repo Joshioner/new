@@ -109,16 +109,21 @@ public class HealthRecordDetailActivity extends Activity implements View.OnClick
                         sports.setText(healthRecordDetail.getSport());
                         //症状
                         symptom.setText(healthRecordDetail.getSymptom());
+                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
                     }else {
                         Looper.prepare();
                         AlterUtil.alterTextShort(HealthRecordDetailActivity.this,"加载康复记录信息失败");
                         Looper.loop();
+                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
                     }
                 }
 
                 @Override
                 public void onError(Exception e) {
-
+                    Looper.prepare();
+                    AlterUtil.alterTextShort(HealthRecordDetailActivity.this,"加载康复记录信息失败");
+                    Looper.loop();
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
                 }
             });
             return null;
@@ -330,7 +335,7 @@ public class HealthRecordDetailActivity extends Activity implements View.OnClick
             Intent intent = new Intent(HealthRecordDetailActivity.this,LoginActivity.class);
             startActivity(intent);
         }
-        if (hid < 0){
+        if (hid <= 0){
             AlterUtil.alterTextShort(HealthRecordDetailActivity.this,"更新康复记录信息失败");
             return;
         }

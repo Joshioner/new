@@ -5,45 +5,73 @@ package com.blk.medical_record.entity;
  */
 
 public class PersonMemberInfo {
-    private String person_name;
-    private int id;
+    private int uid;
+    private int fid;
+    private String name;
+    private String profile;
+    private boolean flag;
 
-    public int getId() {
-        return id;
+    public PersonMemberInfo() {
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public PersonMemberInfo(int uid, int fid, String name, String profile, boolean flag) {
+        this.uid = uid;
+        this.fid = fid;
+        this.name = name;
+        this.profile = profile;
+        this.flag = flag;
     }
 
-    public PersonMemberInfo(String person_name, int id) {
-        this.person_name = person_name;
-        this.id = id;
+    public int getUid() {
+        return uid;
     }
 
-    public PersonMemberInfo(String person_name)
-    {
-        this.person_name = person_name;
-    }
-    public void setPerson_name(String person_name) {
-        this.person_name = person_name;
+    public void setUid(int uid) {
+        this.uid = uid;
     }
 
-    public String getPerson_name() {
-        return person_name;
+    public int getFid() {
+        return fid;
     }
 
-
-    @Override
-    public int hashCode() {
-       return this.id;
+    public void setFid(int fid) {
+        this.fid = fid;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof PersonMemberInfo){
-            return ((PersonMemberInfo) obj).id == this.id && ((PersonMemberInfo) obj).person_name.equals(this.person_name);
-        }
-        return false;
+    public String getName() {
+        return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        this.profile = profile;
+    }
+
+    public boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
+    }
+
+//    @Override
+//    public int hashCode() {
+//       return this.id;
+//    }
+//
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (obj instanceof PersonMemberInfo){
+//            return ((PersonMemberInfo) obj).id == this.id && ((PersonMemberInfo) obj).person_name.equals(this.person_name);
+//        }
+//        return false;
+//    }
 }

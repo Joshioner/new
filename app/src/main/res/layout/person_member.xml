@@ -12,7 +12,7 @@
         />
 
     <TextView
-        android:id="@+id/person_member_name"
+        android:id="@+id/member_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="胡先生"
@@ -22,5 +22,25 @@
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/person_member_photo"
         android:layout_toEndOf="@+id/person_member_photo" />
+    <TextView
+        android:id="@+id/member_uid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/member_fid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/member_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/member_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
 
 </RelativeLayout>

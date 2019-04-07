@@ -44,7 +44,11 @@ public class personMemberInfoBaseAdapter extends BaseAdapter {
 
     private class ViewHolder
     {
-        TextView person_member_name;
+        TextView member_name;
+        TextView member_uid;
+        TextView member_fid;
+        TextView member_profile;
+        TextView member_flag;
     }
 
     @Override
@@ -54,14 +58,22 @@ public class personMemberInfoBaseAdapter extends BaseAdapter {
         {
             viewHolder = new ViewHolder();
             convertView = LayoutInflater.from(context).inflate(R.layout.person_member,parent,false);
-            viewHolder.person_member_name = (TextView) convertView.findViewById(R.id.person_member_name);
+            viewHolder.member_uid = (TextView) convertView.findViewById(R.id.member_uid);
+            viewHolder.member_fid = (TextView) convertView.findViewById(R.id.member_fid);
+            viewHolder.member_name = (TextView) convertView.findViewById(R.id.member_name);
+            viewHolder.member_profile = (TextView) convertView.findViewById(R.id.member_profile);
+            viewHolder.member_flag = (TextView) convertView.findViewById(R.id.member_flag);
             convertView.setTag(viewHolder);
         }
         else
         {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewHolder.person_member_name.setText(list.get(position).getPerson_name());
+        viewHolder.member_uid.setText(String.valueOf(list.get(position).getUid()));
+        viewHolder.member_fid.setText(String.valueOf(list.get(position).getFid()));
+        viewHolder.member_name.setText(list.get(position).getName());
+        viewHolder.member_profile.setText(list.get(position).getProfile());
+        viewHolder.member_flag.setText(String.valueOf(list.get(position).isFlag()));
         return convertView;
     }
 }

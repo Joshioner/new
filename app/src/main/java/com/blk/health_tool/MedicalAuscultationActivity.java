@@ -1,11 +1,15 @@
 package com.blk.health_tool;
 
 
+import android.app.Dialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -19,10 +23,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.blk.R;
 import com.blk.common.ToolBarSet;
+import com.blk.common.entity.FamilyMember;
+import com.blk.common.entity.MedicalAuscultation;
+import com.blk.common.entity.User;
+import com.blk.common.util.AlterUtil;
+import com.blk.common.util.ConfigUtil;
 import com.blk.common.util.HttpCallbackListener;
 import com.blk.common.util.AndroidUploadFile;
+import com.blk.common.util.WeiboDialogUtils;
+import com.blk.medical_record.AddMemberActivity;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -64,12 +76,20 @@ public class MedicalAuscultationActivity extends AppCompatActivity implements Vi
     private int hour = 0;
     private View whichSelecte = null;// 记录被选中的Item
     private long limitTime = 0;// 录音文件最短事件1秒
+    private SharedPreferences sharedPreferences;
+    private User user;  //用户信息
+    private Dialog weiboDialogUtils;                         //加载框
+    private boolean isFinish = false;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Window window = getWindow();
         ToolBarSet.setBar(window);
         setContentView(R.layout.medical_auscultation);
+        //获取sharedPreferences中的userInfo信息
+        sharedPreferences = getSharedPreferences("userInfo",Context.MODE_PRIVATE);
+        String userInfo = sharedPreferences.getString("userInfo",null);
+        user = com.alibaba.fastjson.JSONObject.parseObject(userInfo,User.class);
         // 初始化控件
         initView();
     }
@@ -214,7 +234,7 @@ public class MedicalAuscultationActivity extends AppCompatActivity implements Vi
     private void playRecord() {
         // 对按钮的可点击事件的控制是保证不出现空指针的重点！！
         startRecord.setClickable(false);
-        finishRecord.setClickable(true);
+        finishRecord.setClickable(false);
         reset.setClickable(false);
         stopPlay.setClickable(true);
         startPlay.setClickable(false);
@@ -233,7 +253,10 @@ public class MedicalAuscultationActivity extends AppCompatActivity implements Vi
                 mPlayer.release();
                 mPlayer = null;
                 startRecord.setClickable(true);
-                finishRecord.setClickable(false);
+                if (!isFinish){
+                    finishRecord.setClickable(true);
+                }
+
                 startPlay.setClickable(true);
                 stopPlay.setClickable(false);
                 reset.setClickable(true);
@@ -265,9 +288,11 @@ public class MedicalAuscultationActivity extends AppCompatActivity implements Vi
             Toast.makeText(this,"文件已保存成功",Toast.LENGTH_SHORT).show();
             return;
         }
+        weiboDialogUtils = WeiboDialogUtils.createLoadingDialog(this,"保存中...");
         mRecorder.release();
         mRecorder = null;
         isPause = false;
+        isFinish = true;
         startRecord.setClickable(true);
         startRecordText.setText("开始录音");
         startRecordImage.setImageResource(R.mipmap.record);
@@ -299,13 +324,14 @@ public class MedicalAuscultationActivity extends AppCompatActivity implements Vi
                 // 之后的文件，去掉前六位
                 else {
                     while (fileInputStream.read(mByte) != -1) {
-
                         fileOutputStream.write(mByte, 6, length - 6);
                     }
                 }
             }
         } catch (Exception e) {
             // 这里捕获流的IO异常，万一系统错误需要提示用户
+            //关闭加载框
+            WeiboDialogUtils.closeDialog(weiboDialogUtils);
             e.printStackTrace();
             Toast.makeText(this, "录音合成出错，请重试！", Toast.LENGTH_SHORT).show();
         } finally {
@@ -330,25 +356,41 @@ public class MedicalAuscultationActivity extends AppCompatActivity implements Vi
         //文件清除
         mList.clear();
         try {
-            String  address = "http://192.168.165.31:8080/upload";
-            Log.i("MedicalAuscultation","MedicalAuscultationActivity---111 " +  address);
+            String  address = ConfigUtil.getServerAddress() + "/uploadVideo/" + user.getUid();
+            //上传音频至服务器并进行语音识别
             AndroidUploadFile.uploadFile(fileName, address, new HttpCallbackListener() {
                @Override
                public void onFinish(String response) {
-                   Log.i("MedicalAuscultation","MedicalAuscultationActivity---  response " +  response);
+                   com.alibaba.fastjson.JSONObject jsonObject = com.alibaba.fastjson.JSONObject.parseObject(response);
+                   int code = jsonObject.getIntValue("code");
+                   if (code == 0){
+                       WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                       Looper.prepare();
+                       AlterUtil.alterTextShort(MedicalAuscultationActivity.this,"保存音频文件信息成功");
+                       Looper.loop();
+                   }else {
+                       WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                       Looper.prepare();
+                       AlterUtil.alterTextShort(MedicalAuscultationActivity.this,"保存音频文件信息失败");
+                       Looper.loop();
+                   }
                }
 
                @Override
                public void onError(Exception e) {
-                   Log.i("MedicalAuscultation","MedicalAuscultationActivity---  error " +  e.getMessage());
+                   WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                   Looper.prepare();
+                   AlterUtil.alterTextShort(MedicalAuscultationActivity.this,"保存音频文件信息失败");
+                   Looper.loop();
                }
            });
         } catch (Exception e) {
-            Log.i("MedicalAuscultation","MedicalAuscultationActivity---4444 " +  e.getMessage());
-            e.printStackTrace();
+            WeiboDialogUtils.closeDialog(weiboDialogUtils);
+            Looper.prepare();
+            AlterUtil.alterTextShort(MedicalAuscultationActivity.this,"保存音频文件信息失败");
+            Looper.loop();
         }
-        //保存成功
-        Toast.makeText(this,"保存成功",Toast.LENGTH_SHORT).show();
+
     }
 
     // 暂停录音
