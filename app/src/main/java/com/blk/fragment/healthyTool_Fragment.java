@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,7 @@ import android.widget.RelativeLayout;
 import com.blk.R;
 import com.blk.health_tool.DrugCheckActivity;
 import com.blk.health_tool.AlarmAssistantActivity;
-import com.blk.health_tool.AuscultationDetail;
+import com.blk.health_tool.AuscultationListActivity;
 import com.blk.health_tool.HealthRecordActivity;
 import com.blk.health_tool.HealthyNewsActivity;
 
@@ -73,7 +72,7 @@ public class healthyTool_Fragment extends Fragment {
         auscultation_right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), AuscultationDetail.class);
+                Intent intent = new Intent(getActivity(), AuscultationListActivity.class);
                 startActivity(intent);
             }
         });

@@ -5,17 +5,17 @@
 
     <!-- &lt;!&ndash;获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 &ndash;&gt; -->
     <!-- <uses-permission android:name="android.permission.RECORD_AUDIO"/> -->
-    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>-->
-    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> -->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <!-- 在SDCard中创建与删除文件权限 -->
     <!-- <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/> -->
     <!-- SD卡权限 -->
-    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
     <uses-permission
         android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
         tools:ignore="ProtectedPermissions" />
@@ -52,9 +52,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
 
         <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -97,7 +95,7 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".health_tool.AuscultationDetail" />
+        <activity android:name=".health_tool.AuscultationListActivity" android:launchMode="singleTask" />
         <activity android:name=".medical_record.testActivity" />
 
         <service
@@ -111,9 +109,7 @@
             </intent-filter>
         </receiver>
 
-        <activity
-            android:name=".LoginActivity"
-            >
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -125,7 +121,9 @@
             android:name=".RegisterActivity"
             android:label="@string/title_activity_register"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".medical_record.MemberManageActivity" android:launchMode="singleTask" />
+        <activity
+            android:name=".medical_record.MemberManageActivity"
+            android:launchMode="singleTask" />
         <activity
             android:name=".medical_record.AddMemberActivity"
             android:label="@string/title_activity_add_member"
@@ -134,11 +132,12 @@
         <activity android:name=".health_tool.HealthyNewsDetailActivity" />
         <activity
             android:name=".health_tool.HealthRecordActivity"
-            android:launchMode="singleTask"
-            android:label="@string/title_activity_health_record" />
+            android:label="@string/title_activity_health_record"
+            android:launchMode="singleTask" />
         <activity
             android:name=".health_tool.HealthRecordDetailActivity"
-            android:windowSoftInputMode="stateHidden"></activity>
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".health_tool.MedicalAuscultationDetailActivity"></activity>
     </application>
 
 </manifest>

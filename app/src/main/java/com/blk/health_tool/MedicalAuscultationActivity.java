@@ -3,6 +3,7 @@ package com.blk.health_tool;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
@@ -51,9 +52,6 @@ public class MedicalAuscultationActivity extends AppCompatActivity implements Vi
     private String fileName = null;
     // 音频文件保存的路径
     private String path = "";
-    public static final String APP_ID = "10118987";
-    public static final String API_KEY = "f9c21zGI0TiHcgcaVYMaVDYp";
-    public static final String SECRET_KEY = "KcYw0Vw5Kw7TQ51KP1vSfI95gnsHCsoE";
     //界面控件
     private LinearLayout startRecord,finishRecord,reset,startPlay,stopPlay,pausePlay;
     private ImageView startRecordImage,finishRecordImage;
@@ -364,6 +362,10 @@ public class MedicalAuscultationActivity extends AppCompatActivity implements Vi
                    com.alibaba.fastjson.JSONObject jsonObject = com.alibaba.fastjson.JSONObject.parseObject(response);
                    int code = jsonObject.getIntValue("code");
                    if (code == 0){
+                       //更新或者增加的时候进行广播
+                       Intent intent = new Intent();
+                       intent.setAction("action.refreshAuscultation");
+                       sendBroadcast(intent);
                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
                        Looper.prepare();
                        AlterUtil.alterTextShort(MedicalAuscultationActivity.this,"保存音频文件信息成功");

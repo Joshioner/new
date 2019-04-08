@@ -274,19 +274,19 @@ public class MemberManageActivity extends AppCompatActivity implements View.OnCl
                         memberManageBaseAdapter = new MemberManageBaseAdapter(MemberManageActivity.this,familyMemberArrayList);
                         handler.sendMessage(message);
                     }else {
+                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
                         Looper.prepare();
                         AlterUtil.alterTextLong(MemberManageActivity.this,"获取家庭成员列表失败");
                         Looper.loop();
-                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
                     }
                 }
 
                 @Override
                 public void onError(Exception e) {
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
                     Looper.prepare();
                     AlterUtil.alterTextLong(MemberManageActivity.this,"获取家庭成员列表失败");
                     Looper.loop();
-                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
                 }
             });
             return null;

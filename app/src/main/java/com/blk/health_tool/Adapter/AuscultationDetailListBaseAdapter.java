@@ -8,9 +8,10 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.blk.R;
-import com.blk.health_tool.Entity.auscultation_detail_list;
+import com.blk.common.entity.MedicalAuscultation;
 
 import java.util.List;
+
 
 /**
  * Created by lzx on 2018/3/28.
@@ -18,8 +19,8 @@ import java.util.List;
 
 public class AuscultationDetailListBaseAdapter extends BaseAdapter {
     private Context context;
-    private List<auscultation_detail_list> list;
-    public AuscultationDetailListBaseAdapter(Context context, List<auscultation_detail_list> list)
+    private List<MedicalAuscultation> list;
+    public AuscultationDetailListBaseAdapter(Context context, List<MedicalAuscultation> list)
     {
         this.context = context;
         this.list = list;
@@ -27,9 +28,9 @@ public class AuscultationDetailListBaseAdapter extends BaseAdapter {
 
     private class ViewHolder
     {
-        TextView auscultation_message;
-        TextView auscultation_date;
-        TextView auscultation_time;
+        TextView mid;
+        TextView content;
+        TextView operTime;
     }
     @Override
     public int getCount() {
@@ -53,17 +54,17 @@ public class AuscultationDetailListBaseAdapter extends BaseAdapter {
         {
             convertView = LayoutInflater.from(context).inflate(R.layout.auscultation_detail_list,parent,false);
             viewHolder = new ViewHolder();
-            viewHolder.auscultation_message = (TextView) convertView.findViewById(R.id.auscultation_message);
-            viewHolder.auscultation_date = (TextView) convertView.findViewById(R.id.auscultation_date);
-            viewHolder.auscultation_time = (TextView) convertView.findViewById(R.id.auscultation_time);
+            viewHolder.mid = (TextView) convertView.findViewById(R.id.mid);
+            viewHolder.content = (TextView) convertView.findViewById(R.id.content);
+            viewHolder.operTime = (TextView) convertView.findViewById(R.id.operTime);
             convertView.setTag(viewHolder);
         }
         else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewHolder.auscultation_message.setText(list.get(position).getAuscultation_message());
-        viewHolder.auscultation_date.setText(list.get(position).getAuscultation_date());
-        viewHolder.auscultation_time.setText(list.get(position).getAuscultation_time());
+        viewHolder.mid.setText(String.valueOf(list.get(position).getMid()));
+        viewHolder.content.setText(list.get(position).getContent());
+        viewHolder.operTime.setText(list.get(position).getOperTime());
         return convertView;
     }
 }
