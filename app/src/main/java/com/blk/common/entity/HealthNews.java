@@ -21,6 +21,8 @@ public class HealthNews {
     private String content;
     //操作时间
     private String operTime;
+    //收藏状态
+    private  int collection_status; //收藏状态
 
     public int getNid() {
         return nid;
@@ -84,5 +86,13 @@ public class HealthNews {
 
     public void setOperTime(String operTime) {
         this.operTime = operTime;
+    }
+
+    public int getCollection_status() {
+        return collection_status;
+    }
+
+    public void setCollection_status(int collection_status) {
+        this.collection_status = collection_status;
     }
 }

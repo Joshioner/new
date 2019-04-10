@@ -53,6 +53,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/search_content"
                     android:gravity="center|left"
+                    android:textCursorDrawable="@color/black"
                     android:textColor="@color/text_gray"
                     android:textColorHint="@color/text_gray" />
             </LinearLayout>

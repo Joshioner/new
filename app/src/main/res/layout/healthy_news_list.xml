@@ -24,6 +24,7 @@
             android:layout_marginTop="70px"
             android:layout_centerHorizontal="true"
             android:text="@string/healthy_news"
+            android:textStyle="bold"
             android:textColor="#ffffff"
             android:textSize="36px" />
 

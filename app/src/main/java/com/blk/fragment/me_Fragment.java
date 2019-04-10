@@ -1,6 +1,9 @@
 package com.blk.fragment;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,6 +14,8 @@ import android.widget.RelativeLayout;
 
 import com.blk.LoginActivity;
 import com.blk.R;
+import com.blk.common.CommomDialog;
+import com.blk.medical_record.MemberManageActivity;
 
 /**
  * Created by asus on 2017/8/9.
@@ -18,7 +23,7 @@ import com.blk.R;
 
 public class me_Fragment extends Fragment implements View.OnClickListener {
     private View view ;
-    private RelativeLayout logoutRelativeLayout;
+    private RelativeLayout logoutRelativeLayout,memberRelativeLayout;
     public me_Fragment(){
     }
 
@@ -42,12 +47,37 @@ public class me_Fragment extends Fragment implements View.OnClickListener {
     private void initView(){
         logoutRelativeLayout = (RelativeLayout) view.findViewById(R.id.logoutRelativeLayout);
         logoutRelativeLayout.setOnClickListener(this);
+        memberRelativeLayout = (RelativeLayout) view.findViewById(R.id.member_relativeLayout);
+        memberRelativeLayout.setOnClickListener(this);
     }
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+            //退出登录
             case R.id.logoutRelativeLayout:
-                Intent intent = new Intent(getActivity(),LoginActivity.class);
+                //弹出提示框
+                new CommomDialog(getActivity(), R.style.dialog, "您确定退出登录么？", new CommomDialog.OnCloseListener() {
+                    @Override
+                    public void onClick(Dialog dialog, boolean confirm) {
+                        if(confirm){
+                            //清除登录信息
+                            SharedPreferences sharedPreferences = getActivity().getSharedPreferences("userInfo",Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.clear();
+                            editor.commit();
+                            Intent intent = new Intent(getActivity(),LoginActivity.class);
+                            startActivity(intent);
+                        }
+                        else
+                        {
+                            dialog.dismiss();
+                        }
+                    }
+                }).setTitle("提示").show();
+                break;
+             //家庭组管理
+            case R.id.member_relativeLayout:
+                Intent intent = new Intent(getActivity(),MemberManageActivity.class);
                 startActivity(intent);
                 break;
             default:

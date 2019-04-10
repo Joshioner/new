@@ -38,7 +38,7 @@
         <TextView
             android:id="@+id/news_title"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="15dp"
             android:text="孩子发烧，这三种物理降温才有效"
             android:textColor="@color/news_title"
             android:textSize="12dp"
@@ -60,7 +60,7 @@
             android:id="@+id/news_content"
             android:layout_below="@+id/author_name"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:layout_marginTop="7dp"
             android:singleLine="false"
             android:ellipsize="none"
@@ -68,6 +68,7 @@
             android:inputType="textMultiLine"
             android:text="天一冷，感冒发烧的宝宝又增多了，本文盘点了几种常见的物理降温方法"
             android:textSize="10dp"
+            android:layout_marginRight="13dp"
             android:textColor="@color/news_content"
             android:lineSpacingMultiplier = "1.5"
             />
@@ -81,7 +82,7 @@
         android:layout_height="25dp"
         android:layout_alignBottom="@+id/news_cover"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="42dp"
+        android:layout_marginRight="25dp"
         android:src="@mipmap/collection_normal" />
     <TextView
         android:id="@+id/collection_flag"

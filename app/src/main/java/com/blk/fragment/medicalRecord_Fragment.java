@@ -60,7 +60,6 @@ import com.blk.medical_record.dataAnalyseActivity;
 import com.blk.medical_record.entity.PersonMemberInfo;
 import com.blk.medical_record.medicalRecordContentActivity;
 import com.blk.medical_record.medicalRecordSearchActivity;
-import com.blk.medical_record.testActivity;
 import com.blk.medical_record.util.GetAccessTokenUtil;
 
 
@@ -116,7 +115,9 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
                 case Init_MedicalHistory_Adapter:
                     //加载适配器并关闭加载框
                     medicalListView.setAdapter(detail_baseAdapter);//将适配器传递给medicalListView，类似于填充数据
-                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                    if (weiboDialogUtils != null){
+                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                    }
                     break;
                 case DELETE_MEDICAL:
                     int position = (int) msg.obj;
@@ -138,7 +139,6 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         //获取sharedPreferences中的userInfo信息
         sharedPreferences = getActivity().getSharedPreferences("userInfo",Context.MODE_PRIVATE);
         String userInfo = sharedPreferences.getString("userInfo",null);
@@ -286,7 +286,9 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
         @Override
         protected void onPreExecute() {
             caseHistoryList = new ArrayList<CaseHistory>();
-            weiboDialogUtils = WeiboDialogUtils.createLoadingDialog(getActivity(),"加载中...");
+            if (weiboDialogUtils == null){
+                weiboDialogUtils = WeiboDialogUtils.createLoadingDialog(getActivity(),"加载中...");
+            }
         }
 
         @Override

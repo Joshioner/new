@@ -1,25 +1,34 @@
 package com.blk.fragment;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.blk.MainActivity;
 import com.blk.R;
+import com.blk.common.entity.HealthNews;
+import com.blk.common.util.AlterUtil;
+import com.blk.common.util.ConfigUtil;
+import com.blk.common.util.HttpCallbackListener;
+import com.blk.common.util.HttpRequestUtil;
+import com.blk.common.util.WeiboDialogUtils;
 import com.blk.health_tool.HealthyNewsActivity;
-import com.blk.health_tool.HealthyNewsDetailActivity;
 import com.blk.homePage.Adapter.HealthyNewsBaseAdapter;
-import com.blk.medical_record.entity.HealthyNews;
 import com.blk.rollviewpager.RollPagerView;
 import com.blk.rollviewpager.adapter.StaticPagerAdapter;
 import com.wx.goodview.GoodView;
@@ -34,16 +43,29 @@ import java.util.List;
 public class homePage_Fragment extends Fragment implements View.OnClickListener{
     private View view ;
     private RollPagerView mViewPager;
-    private HealthyNews healthyNews;   //健康资讯对象
+
     private ListView healthy_news_listView;   //存放健康资讯的ListView
-    private List<HealthyNews> healthyNews_list;  //存放健康资讯的列表
+    private List<HealthNews> healthyNews_list;  //存放健康资讯的列表
     private HealthyNewsBaseAdapter healthy_news_BaseAdapter;   //适配器
     private RadioButton myCaseHistory,healthyTool,pharmacy,healthyServer; //首页的四个图标：我的病历、个人工具、居家药品、健康服务
     private GoodView goodView;
     private ImageView healthy_news_more;  //查看更多资讯
+    private Dialog weiboDialogUtils;
     public homePage_Fragment(){
     }
-
+    private final int Init_Adapter = 1;
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case Init_Adapter:
+                    //加载适配器并关闭加载框
+                    healthy_news_listView.setAdapter(healthy_news_BaseAdapter);
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                    break;
+            }
+        }
+    };
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -100,26 +122,58 @@ public class homePage_Fragment extends Fragment implements View.OnClickListener{
     }
 
 
-    class InitHealthyNewsListThread extends AsyncTask<Void,Void,Void> {
+    class InitHealthyNewsListThread extends AsyncTask<Void, Void, Void> {
 
         @Override
         protected void onPreExecute() {
-            healthy_news_listView = (ListView) view.findViewById(R.id.news_listView);
-            healthyNews_list = new ArrayList<HealthyNews>();
+            weiboDialogUtils = WeiboDialogUtils.createLoadingDialog(getActivity(),"加载中");
+            healthyNews_list = new ArrayList<HealthNews>();
         }
 
         @Override
         protected Void doInBackground(Void... voids) {
-            String news_title = "孩子发烧，这三种物理降温才有效";
-            String author_name = "作者：海棠";
-            String news_content = "天一冷，感冒发烧的宝宝又增多了，本文盘点了几种常见的物理降温方法";
-            healthyNews = new HealthyNews(1,news_title,author_name,news_content,"",0);
-            healthyNews_list.add(healthyNews);
-            healthyNews_list.add(healthyNews);
-            healthyNews_list.add(healthyNews);
-            healthyNews_list.add(healthyNews);
-            healthy_news_BaseAdapter = new HealthyNewsBaseAdapter(getActivity(), healthyNews_list,goodView);
-            healthy_news_listView.setAdapter(healthy_news_BaseAdapter);
+            Message message = Message.obtain();
+            message.what = Init_Adapter;
+            String address = ConfigUtil.getServerAddress() + "/healthNews/getAllByCondition/" ;
+            HttpRequestUtil.sendHttpRequest(address, new HttpCallbackListener() {
+                @Override
+                public void onFinish(String response) {
+                    com.alibaba.fastjson.JSONObject jsonObject = com.alibaba.fastjson.JSONObject.parseObject(response);
+                    int code = jsonObject.getIntValue("code");
+                    if (code == 0){
+                        String data = jsonObject.getString("data");
+                        JSONArray jsonArray = JSONArray.parseArray(data);
+                        if (jsonArray.size() > 0){
+                            for (int i = 0; i < jsonArray.size();i++){
+                                JSONObject object = jsonArray.getJSONObject(i);
+                                //健康资讯信息
+                                HealthNews healthNews = new HealthNews();
+                                healthNews.setNid(object.getIntValue("nid"));
+                                healthNews.setAuthor(object.getString("author"));
+                                healthNews.setContent(object.getString("content"));
+                                healthNews.setCoverUrl(object.getString("coverUrl"));
+                                healthNews.setTitle(object.getString("title"));
+                                healthyNews_list.add(healthNews);
+                            }
+                        }
+                        healthy_news_BaseAdapter = new HealthyNewsBaseAdapter(getActivity(),healthyNews_list,goodView);
+                        handler.sendMessage(message);
+                    }else {
+                        WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                        Looper.prepare();
+                        AlterUtil.alterTextLong(getActivity(),"获取健康资讯列表失败");
+                        Looper.loop();
+                    }
+                }
+
+                @Override
+                public void onError(Exception e) {
+                    WeiboDialogUtils.closeDialog(weiboDialogUtils);
+                    Looper.prepare();
+                    AlterUtil.alterTextLong(getActivity(),"获取健康资讯列表失败");
+                    Looper.loop();
+                }
+            });
             return null;
         }
 

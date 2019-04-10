@@ -33,8 +33,9 @@
                     android:layout_marginTop="33dp"
                     android:gravity="center_horizontal"
                     android:text="@string/my"
+                    android:textStyle="bold"
                     android:textColor="#FFFFFF"
-                    android:textSize="48px"
+                    android:textSize="20dp"
                     android:typeface="sans" />
 
                 <com.blk.common.identify.XCRoundImageView
@@ -63,6 +64,7 @@
 
              // 家庭组
             <RelativeLayout
+                android:id="@+id/member_relativeLayout"
                 android:layout_width="match_parent"
                 android:layout_height="180px"
                 android:layout_marginTop="10px"
@@ -206,33 +208,33 @@
                     android:background="@color/border_background"
                     />
 
-                //订单
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="100px"
-                    android:background="#FFFFFF">
-                    <ImageView
-                        android:layout_width="21px"
-                        android:layout_height="24px"
-                        android:layout_marginLeft="45px"
-                        android:layout_marginTop="41px"
-                        app:srcCompat="@mipmap/my_icon_order"/>
-                    <TextView
-                        android:layout_width="200px"
-                        android:layout_height="40px"
-                        android:layout_marginTop="30px"
-                        android:layout_marginLeft="112px"
-                        android:gravity="center_vertical"
-                        android:text="@string/my_order"
-                        android:textSize="30px"
-                        android:textColor="#333333"/>
-                </RelativeLayout>
-                <View
-                    android:layout_width="660px"
-                    android:layout_height="2px"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@color/border_background"
-                    />
+                <!--//订单-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="100px"-->
+                    <!--android:background="#FFFFFF">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="21px"-->
+                        <!--android:layout_height="24px"-->
+                        <!--android:layout_marginLeft="45px"-->
+                        <!--android:layout_marginTop="41px"-->
+                        <!--app:srcCompat="@mipmap/my_icon_order"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="200px"-->
+                        <!--android:layout_height="40px"-->
+                        <!--android:layout_marginTop="30px"-->
+                        <!--android:layout_marginLeft="112px"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:text="@string/my_order"-->
+                        <!--android:textSize="30px"-->
+                        <!--android:textColor="#333333"/>-->
+                <!--</RelativeLayout>-->
+                <!--<View-->
+                    <!--android:layout_width="660px"-->
+                    <!--android:layout_height="2px"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:background="@color/border_background"-->
+                    <!--/>-->
 
                 //帮助中心
                 <RelativeLayout

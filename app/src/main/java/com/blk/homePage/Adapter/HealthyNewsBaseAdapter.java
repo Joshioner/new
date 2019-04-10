@@ -2,7 +2,10 @@ package com.blk.homePage.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,12 +16,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.blk.R;
-import com.blk.common.MyApplication;
+import com.blk.common.entity.HealthNews;
 import com.blk.common.util.BitmapFactoryUtil;
+import com.blk.common.util.ConfigUtil;
 import com.blk.health_tool.HealthyNewsDetailActivity;
-import com.blk.medical_record.entity.HealthyNews;
 import com.wx.goodview.GoodView;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -27,9 +31,9 @@ import java.util.List;
 
 public class HealthyNewsBaseAdapter extends BaseAdapter {
     private Context context;
-    private List<HealthyNews> list;
+    private List<HealthNews> list;
     private GoodView goodView;
-    public HealthyNewsBaseAdapter(Context context, List<HealthyNews> list, GoodView goodView)
+    public HealthyNewsBaseAdapter(Context context, List<HealthNews> list, GoodView goodView)
     {
         this.context = context;
         this.list = list;
@@ -56,7 +60,7 @@ public class HealthyNewsBaseAdapter extends BaseAdapter {
     {
         RelativeLayout newsRelativeLayout;
         TextView news_id;
-      //  ImageView news_cover;
+        ImageView news_cover;
         TextView news_title;
         TextView news_author_name;
         TextView news_content;
@@ -72,7 +76,7 @@ public class HealthyNewsBaseAdapter extends BaseAdapter {
             viewHolder = new ViewHolder();
             viewHolder.newsRelativeLayout = (RelativeLayout) convertView.findViewById(R.id.newsRelativeLayout);
             viewHolder.news_id = (TextView) convertView.findViewById(R.id.news_id);
-        //    viewHolder.news_cover = (ImageView) convertView.findViewById(R.id.news_cover);
+            viewHolder.news_cover = (ImageView) convertView.findViewById(R.id.news_cover);
             viewHolder.news_title = (TextView) convertView.findViewById(R.id.news_title);
             viewHolder.news_author_name = (TextView) convertView.findViewById(R.id.author_name);
             viewHolder.news_content = (TextView) convertView.findViewById(R.id.news_content);
@@ -82,13 +86,19 @@ public class HealthyNewsBaseAdapter extends BaseAdapter {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewHolder.news_id.setText(String.valueOf(list.get(position).getNews_id()));
-      //  viewHolder.news_cover.setImageBitmap(BitmapFactoryUtil.getBitmap(list.get(position).getImage_cover()));
+        viewHolder.news_id.setText(String.valueOf(list.get(position).getNid()));
+        String coverUrl = list.get(position).getCoverUrl();
+        File file = new File(context.getFilesDir().getAbsolutePath() + "/healthNews/",coverUrl.substring(coverUrl.lastIndexOf("/") + 1));
+        if (file.exists()){
+            viewHolder.news_cover.setImageBitmap(BitmapFactoryUtil.getBitmap(file.getAbsolutePath()));
+        }else {
+            BitmapFactoryUtil.setNetworkBitmap(context,viewHolder.news_cover,ConfigUtil.getServerAddress() + "/"  + list.get(position).getCoverUrl());
+        }
         viewHolder.news_title.setText(list.get(position).getTitle());
-        viewHolder.news_author_name.setText(list.get(position).getAuthor_name());
-        viewHolder.news_content.setText(list.get(position).getContent());
-        viewHolder.collection_icon.setImageResource(list.get(position).getCollection_status() == 1 ?R.mipmap.collection_pressed:R.mipmap.collection_normal);
-        viewHolder.collection_flag.setText(String.valueOf(list.get(position).getCollection_status()));
+        viewHolder.news_author_name.setText("作者：" + list.get(position).getAuthor());
+        viewHolder.news_content.setText(Html.fromHtml(list.get(position).getContent()));
+         viewHolder.collection_icon.setImageResource(list.get(position).getCollection_status() == 1 ?R.mipmap.collection_pressed:R.mipmap.collection_normal);
+         viewHolder.collection_flag.setText(String.valueOf(list.get(position).getCollection_status()));
 
         // 设置位置，获取点击的条目按钮
         viewHolder.collection_icon.setTag(position);
@@ -120,6 +130,9 @@ public class HealthyNewsBaseAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context,HealthyNewsDetailActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("nid",list.get(position).getNid());
+                intent.putExtras(bundle);
                 context.startActivity(intent);
             }
         });

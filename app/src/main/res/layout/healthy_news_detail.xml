@@ -24,6 +24,7 @@
             android:layout_marginTop="70px"
             android:layout_centerHorizontal="true"
             android:text="@string/healthy_news"
+            android:textStyle="bold"
             android:textColor="#ffffff"
             android:textSize="36px" />
 
@@ -41,7 +42,6 @@
                android:id="@+id/news_title"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:text="孩子发烧，这三种物理降温才有效,孩子发烧"
                android:textColor="@color/text_black"
                android:textSize="20dp"
                android:layout_marginTop="10dp"
@@ -61,7 +61,6 @@
                    android:id="@+id/news_author"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:text="小姐姐"
                    android:textColor="@color/login_background"
                    android:textSize="15dp"/>
 
@@ -70,7 +69,6 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:textSize="15dp"
-                   android:text="2019/3/22"
                    android:layout_marginLeft="25dp"
                    android:textColor="@color/text_gray"
                    />
@@ -82,7 +80,7 @@
                android:layout_height="wrap_content"
                android:layout_centerHorizontal="true"
                android:layout_marginTop="5dp"
-               android:src="@mipmap/home_img"/>
+              />
            <TextView
                android:id="@+id/news_content"
                android:singleLine="false"

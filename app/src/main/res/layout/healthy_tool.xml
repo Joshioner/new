@@ -31,9 +31,10 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="35dp"
                 android:text="@string/healthy_tool"
+                android:textStyle="bold"
                 android:textColor="#ffffff"
                 android:paddingBottom="15dp"
-                android:textSize="18dp" />
+                android:textSize="20dp" />
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
