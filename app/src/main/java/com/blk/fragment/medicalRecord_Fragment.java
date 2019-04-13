@@ -548,6 +548,9 @@ public class medicalRecord_Fragment extends Fragment implements View.OnClickList
             //病历信息搜索框
             case R.id.medicalRecordSearchBox:
                  Intent searchIntent = new Intent(getActivity(),medicalRecordSearchActivity.class);
+                 Bundle bundle = new Bundle();
+                 bundle.putInt("fid",Integer.valueOf(personFid.getText().toString()));
+                 searchIntent.putExtras(bundle);
                  startActivity(searchIntent);
                 break;
             //选择按钮，选择图片或者拍照

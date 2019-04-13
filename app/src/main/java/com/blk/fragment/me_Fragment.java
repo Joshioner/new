@@ -11,11 +11,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.blk.LoginActivity;
 import com.blk.R;
 import com.blk.common.CommomDialog;
+import com.blk.common.entity.User;
+import com.blk.common.identify.XCRoundImageView;
+import com.blk.common.util.BitmapFactoryUtil;
+import com.blk.common.util.FileUtil;
 import com.blk.medical_record.MemberManageActivity;
+
+import java.io.File;
 
 /**
  * Created by asus on 2017/8/9.
@@ -24,12 +31,20 @@ import com.blk.medical_record.MemberManageActivity;
 public class me_Fragment extends Fragment implements View.OnClickListener {
     private View view ;
     private RelativeLayout logoutRelativeLayout,memberRelativeLayout;
+    private SharedPreferences sharedPreferences;
+    private User user;  //用户信息
+    private XCRoundImageView personImage;
+    private TextView personName;
     public me_Fragment(){
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        //获取sharedPreferences中的userInfo信息
+        sharedPreferences = getActivity().getSharedPreferences("userInfo",Context.MODE_PRIVATE);
+        String userInfo = sharedPreferences.getString("userInfo",null);
+        user = com.alibaba.fastjson.JSONObject.parseObject(userInfo,User.class);
        if (view == null){
            view = inflater.inflate(R.layout.me,container,false);
        }else {
@@ -49,6 +64,17 @@ public class me_Fragment extends Fragment implements View.OnClickListener {
         logoutRelativeLayout.setOnClickListener(this);
         memberRelativeLayout = (RelativeLayout) view.findViewById(R.id.member_relativeLayout);
         memberRelativeLayout.setOnClickListener(this);
+        //用户头像
+        personImage = (XCRoundImageView) view.findViewById(R.id.XCRoundImageView);
+        File file = FileUtil.getPersonPhoto(getActivity());
+        if (file.exists()){
+            personImage.setImageBitmap(BitmapFactoryUtil.getBitmap(file.getAbsolutePath()));
+        }else {
+            personImage.setImageResource(R.mipmap.person_profile);
+        }
+        //用户名
+        personName = (TextView) view.findViewById(R.id.person_name);
+        personName.setText(user.getAccountName());
     }
     @Override
     public void onClick(View view) {

@@ -47,6 +47,7 @@
                     android:src="@mipmap/search_icon"
                     />
                 <EditText
+                    android:id="@+id/search_content"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
@@ -70,6 +71,28 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/medical_record_background"
+        >
+
+        <ListView
+            android:id="@+id/medical_record_detail_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+        </ListView>
+
+
+        <!--<include layout="@layout/medical_record_detail"/>-->
+
+
+
+
+
+    </RelativeLayout>
     <RelativeLayout
         android:visibility="gone"
         android:layout_width="wrap_content"
@@ -144,6 +167,7 @@
                   <!--android:src="@mipmap/chsearch_bt_date" />-->
           <!--</RelativeLayout>-->
         </RelativeLayout>
+
     </RelativeLayout>
 
 </LinearLayout>
